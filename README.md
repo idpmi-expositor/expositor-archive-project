@@ -32,3 +32,8 @@ The only canonical unit of truth is one lesson per YAML file.
 - `scripts/canonical/`: canonical YAML generation, schema validation, and index building.
 
 Python script files are intentionally empty placeholders at this stage.
+
+## Architecture Specification
+
+The authoritative project design is maintained in
+[`docs/master-architecture-specification.md`](docs/master-architecture-specification.md).
