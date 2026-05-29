@@ -152,6 +152,13 @@ over:
 - probabilistic inference
 - AI interpretation
 
+Script implementations must make deterministic behavior visible in code:
+
+- default input and output folders are defined as constants
+- file iteration is sorted before processing
+- scripts explain their allowed responsibilities in module docstrings
+- comments clarify configuration and beginner-facing Python concepts
+
 ## 7. OCR Rules
 
 OCR is strictly extraction-only.
@@ -209,6 +216,7 @@ Allowed segmentation signals:
 
 - "LECCIÓN X"
 - explicit lesson headers
+- source `Contenido` entries with lesson title and page number
 - predefined publication markers
 - known structural formatting patterns
 
@@ -330,6 +338,30 @@ canonical_reference:
   verse_end:
 ```
 
+Biblical reading sections such as `Lectura Biblica: Santiago 2:14-24` MUST be
+stored as reference metadata only. Canonical lesson YAML MUST NOT store
+translated Bible text for this section. Downstream systems may replace Bible
+text by using the normalized canonical reference, including future integrations
+with providers such as api.bible.
+
+The canonical YAML structure for a biblical reading must include:
+
+```yaml
+lesson_sections:
+  biblical_reading:
+    reference_display:
+    replacement_policy:
+      provider: api.bible
+      strategy: replace_by_canonical_reference
+      source_text_included: false
+    canonical_references:
+      - testament:
+        book_standardized:
+        chapter:
+        verse_start:
+        verse_end:
+```
+
 ## 18. Semantic Metadata Requirements
 
 Each lesson must contain semantic metadata.
@@ -355,6 +387,18 @@ The archive must preserve educational semantic structures including:
 - bibliography
 - educational metadata
 - pedagogical sections
+
+Every lesson must validate at least the following normalized sections:
+
+- `lesson_header`
+- `title`
+- `biblical_reading`
+- `lesson_outline`
+- `teacher_notes`
+- `summary_application`
+
+The required section contract is enforced by
+`schemas/base/lesson_schema.yaml` and `scripts/canonical/07_schema_validator.py`.
 
 ## 20. Lesson Storage Model
 
@@ -447,6 +491,15 @@ This improves:
 
 ## 23. Required Script Responsibilities
 
+All scripts must include enough internal documentation for a novice programmer
+to follow:
+
+- where the script sits in the pipeline
+- which directories it reads and writes
+- which tasks are allowed in that layer
+- which tasks are forbidden in that layer
+- how command-line arguments affect the script
+
 ### Ingestion
 
 #### 01_pdf_discovery.py
@@ -458,6 +511,13 @@ Responsibilities:
 - register intake metadata
 - generate intake logs
 
+Current implementation status:
+
+- discovers PDFs in deterministic order
+- prepares the intake log directory
+- prints discovered source paths
+- does not inspect lesson content
+
 #### 02_pdf_to_raw_text.py
 
 Responsibilities:
@@ -466,6 +526,13 @@ Responsibilities:
 - OCR fallback via Tesseract
 - preserve page boundaries
 - generate raw text artifacts
+
+Current implementation status:
+
+- extracts raw text with PyMuPDF
+- preserves page boundaries with deterministic `PDF_PAGE` markers
+- writes a JSON extraction log with page counts and word counts
+- leaves OCR fallback pending for scanned PDFs without embedded text
 
 ### Structuring
 
@@ -478,6 +545,15 @@ Responsibilities:
 - broken hyphen correction
 - minimal deterministic cleanup only
 
+Current implementation status:
+
+- normalizes Unicode and line endings
+- removes repeated horizontal whitespace
+- repairs simple OCR hyphen breaks
+- reflows hard-wrapped PDF prose into paragraphs while preserving structural
+  lines
+- writes normalized text files without semantic rewriting
+
 #### 04_document_structure_detector.py
 
 Responsibilities:
@@ -487,6 +563,14 @@ Responsibilities:
 - lesson boundary detection
 - intermediate DocumentStructure creation
 
+Current implementation status:
+
+- detects explicit lesson headers
+- detects known section labels
+- detects PDF page markers
+- extracts `Contenido` entries from PDF page 5 when available
+- writes JSON marker reports under `structured/document_structure`
+
 #### 05_lesson_segmenter.py
 
 Responsibilities:
@@ -495,6 +579,15 @@ Responsibilities:
 - assign stable IDs
 - map source pages
 - preserve traceability
+
+Current implementation status:
+
+- reads structure JSON files
+- prefers `Contenido` entries for expected lesson number, title, date, and page
+  start
+- falls back to explicit lesson markers when no `Contenido` index is available
+- validates expected lesson numbers against observed lesson headers
+- writes intermediate lesson segment metadata
 
 ### Canonical
 
@@ -506,6 +599,12 @@ Responsibilities:
 - apply schema normalization
 - serialize lesson metadata
 
+Current implementation status:
+
+- documents canonical YAML output configuration
+- defines the standard lesson output path pattern
+- leaves full YAML serialization pending until lesson segment metadata is mature
+
 #### 07_schema_validator.py
 
 Responsibilities:
@@ -515,6 +614,16 @@ Responsibilities:
 - enforce deterministic schema rules
 - verify metadata completeness
 
+Current implementation status:
+
+- validates required root fields
+- validates required nested metadata fields such as `page_range.start`,
+  `processing_audit.ocr_engine`, `source_trace.page_start`, and
+  `semantic_metadata.educational_level`
+- validates required lesson sections
+- validates api.bible replacement policy for biblical readings
+- validates normalized scripture reference fields
+
 #### 08_index_builder.py
 
 Responsibilities:
@@ -523,6 +632,13 @@ Responsibilities:
 - generate scripture indexes
 - generate topic indexes
 - generate semantic indexes
+
+Current implementation status:
+
+- generates `lessons_index.yaml`
+- generates `scripture_index.yaml`
+- validates every lesson YAML before writing index files
+- keeps indexes reference-only and excludes Bible passage text
 
 ## 24. Required Indexes
 
@@ -537,6 +653,40 @@ Additional indexes may include:
 - doctrinal indexes
 - publication indexes
 - semantic theme indexes
+
+Current index structure:
+
+```yaml
+lessons_index:
+  schema_version:
+  lessons:
+    - lesson_id:
+      publication_id:
+      collection_type:
+      year:
+      cycle:
+      lesson_number:
+      title:
+      biblical_reading:
+        reference_display:
+        replacement_provider:
+        replacement_strategy:
+```
+
+```yaml
+scripture_index:
+  schema_version:
+  scripture_references:
+    - lesson_id:
+      reference_display:
+      canonical_reference:
+        testament:
+        book_standardized:
+        chapter:
+        verse_start:
+        verse_end:
+      replacement_provider:
+```
 
 ## 25. Versioning Requirement
 

@@ -31,9 +31,89 @@ The only canonical unit of truth is one lesson per YAML file.
 - `scripts/structuring/`: deterministic cleanup, document structure detection, and lesson segmentation.
 - `scripts/canonical/`: canonical YAML generation, schema validation, and index building.
 
-Python script files are intentionally empty placeholders at this stage.
+The Python scripts are intentionally documented for maintainers who are still
+learning Python. Each script includes:
+
+- a module-level explanation of its pipeline role
+- default path configuration near the top of the file
+- beginner-oriented comments for the main functions
+- explicit notes about what the script must not do
 
 ## Architecture Specification
 
 The authoritative project design is maintained in
 [`docs/master-architecture-specification.md`](docs/master-architecture-specification.md).
+
+## Lesson Segmentation Contract
+
+Canonical lesson YAML must validate the required lesson sections documented in
+[`docs/lesson-yaml-contract.md`](docs/lesson-yaml-contract.md). The biblical
+reading section is stored as normalized reference metadata only, so downstream
+systems can replace Bible text by reference through providers such as api.bible.
+
+Install script dependencies before running canonical validation or index
+generation:
+
+```text
+python -m pip install -r requirements.txt
+```
+
+## Current Script Commands
+
+Run these from the repository root.
+
+```text
+python scripts/ingestion/01_pdf_discovery.py
+python scripts/ingestion/02_pdf_to_raw_text.py
+python scripts/structuring/03_minimal_text_normalizer.py
+python scripts/structuring/04_document_structure_detector.py
+python scripts/structuring/05_lesson_segmenter.py
+python scripts/canonical/06_yaml_generator.py
+python scripts/canonical/07_schema_validator.py
+python scripts/canonical/08_index_builder.py
+```
+
+The early ingestion and structuring scripts provide deterministic scaffolding
+and documented interfaces. Canonical validation and index building are active
+for lesson YAML files that follow the schema in
+[`schemas/base/lesson_schema.yaml`](schemas/base/lesson_schema.yaml).
+
+The index builder validates lesson YAML before writing index files. If a lesson
+does not satisfy the required root fields, nested metadata fields, lesson
+sections, or biblical reading replacement policy, index generation stops.
+
+For source publications with a `Contenido` section, the structuring layer reads
+the table of contents from PDF page 5 and records expected lesson numbers,
+titles, dates, and page starts. Lesson segmentation uses that source index as
+the preferred validation map before falling back to repeated `LECCION X`
+markers.
+
+## Paragraph Reflow Check
+
+PDF extraction often hard-wraps normal prose across many short lines. Script
+`03_minimal_text_normalizer.py` reflows plain paragraph lines while preserving
+structural lines such as lesson headers, section labels, outline markers,
+questions, Bible-reference-only lines, dates, and `Contenido` rows.
+
+After changing reflow rules, rerun:
+
+```text
+python scripts/structuring/03_minimal_text_normalizer.py
+python scripts/structuring/04_document_structure_detector.py
+python scripts/structuring/05_lesson_segmenter.py
+```
+
+Then inspect a known paragraph, such as `Justificados por la Fe`, to confirm
+that prose is joined and lesson structure remains intact.
+
+## Index Policy
+
+The generated indexes are reference-oriented:
+
+- `indexes/lessons_index.yaml` lists lesson metadata and the biblical reading
+  reference.
+- `indexes/scripture_index.yaml` lists normalized scripture references by
+  lesson.
+
+Neither index stores Bible passage text. Bible text replacement belongs to a
+downstream system that can use the canonical reference metadata with api.bible.
