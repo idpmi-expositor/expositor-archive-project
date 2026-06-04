@@ -1,6 +1,7 @@
 # expositor-archive-project
 
-Archival-grade canonical metadata repository for Expositor publications from Iglesia de Dios Pentecostal M.I.
+Archival-grade canonical metadata repository for Expositor publications from
+Iglesia de Dios Pentecostal M.I.
 
 This repository is reserved for deterministic archival processing only:
 
@@ -25,6 +26,22 @@ This project does not include translation, multilingual workflows, publication r
 
 The only canonical unit of truth is one lesson per YAML file.
 
+## Repository Map
+
+```text
+source_assets/original_pdfs/   Immutable input PDFs.
+ocr/raw_txt/                   Extracted text with PDF_PAGE markers.
+ocr/processing_logs/           Per-PDF extraction audit logs.
+normalized/                    Minimally cleaned text for structure detection.
+structured/document_structure/ DocumentStructure JSON marker reports.
+metadata/lessons/              Intermediate lesson segment metadata.
+archive/lessons/               Canonical one-lesson-per-file YAML archive.
+schemas/base/                  Validation contracts for canonical YAML.
+indexes/                       Generated search/reference indexes.
+scripts/                       Deterministic pipeline scripts.
+docs/                          Architecture, sync, contract, and trace docs.
+```
+
 ## Pipeline Layers
 
 - `scripts/ingestion/`: PDF discovery, source validation, intake logging, and raw text extraction.
@@ -43,6 +60,9 @@ learning Python. Each script includes:
 
 The authoritative project design is maintained in
 [`docs/master-architecture-specification.md`](docs/master-architecture-specification.md).
+
+For operational traceability from one PDF through every generated artifact, see
+[`docs/pipeline-traceability.md`](docs/pipeline-traceability.md).
 
 ## Lesson Segmentation Contract
 
@@ -73,9 +93,23 @@ python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py
 ```
 
-The early ingestion and structuring scripts provide deterministic scaffolding
-and documented interfaces. Canonical validation and index building are active
-for lesson YAML files that follow the schema in
+Each script reads from the previous layer and writes to the next layer. The
+current pipeline state is:
+
+- `01_pdf_discovery.py` discovers immutable source PDFs.
+- `02_pdf_to_raw_text.py` extracts embedded PDF text and writes page-aware logs.
+- `03_minimal_text_normalizer.py` preserves structure while reflowing plain prose.
+- `04_document_structure_detector.py` detects page markers, section labels,
+  lesson headers, and `Contenido` rows.
+- `05_lesson_segmenter.py` writes lesson segment metadata and validation
+  summaries.
+- `06_yaml_generator.py` documents the future canonical YAML output path but
+  intentionally does not serialize lesson YAML yet.
+- `07_schema_validator.py` validates canonical lesson YAML.
+- `08_index_builder.py` validates lessons before writing indexes.
+
+Canonical validation and index building are active for lesson YAML files that
+follow the schema in
 [`schemas/base/lesson_schema.yaml`](schemas/base/lesson_schema.yaml).
 
 The index builder validates lesson YAML before writing index files. If a lesson

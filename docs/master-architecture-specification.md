@@ -159,6 +159,10 @@ Script implementations must make deterministic behavior visible in code:
 - scripts explain their allowed responsibilities in module docstrings
 - comments clarify configuration and beginner-facing Python concepts
 
+Every generated artifact should also be traceable to the previous layer. The
+operational trace chain is documented in
+[`pipeline-traceability.md`](pipeline-traceability.md).
+
 ## 7. OCR Rules
 
 OCR is strictly extraction-only.
@@ -323,6 +327,14 @@ source_trace:
   extraction_block:
 ```
 
+Current intermediate artifacts support this future YAML trace model by carrying:
+
+- source PDF-relative paths in raw extraction logs
+- deterministic `PDF_PAGE` markers in raw and normalized text
+- marker line numbers in `DocumentStructure` JSON
+- `Contenido` expectations for lesson number, title, date, and page start
+- segmentation validation summaries under `metadata/lessons`
+
 ## 17. Scripture Normalization
 
 All scripture references must be normalized into canonical structured metadata.
@@ -471,6 +483,12 @@ expositor-archive-project/
 |   +-- ingestion/
 |   +-- structuring/
 |   +-- canonical/
+|
++-- docs/
+|   +-- master-architecture-specification.md
+|   +-- lesson-yaml-contract.md
+|   +-- google-drive-sync.md
+|   +-- pipeline-traceability.md
 |
 +-- README.md
 ```

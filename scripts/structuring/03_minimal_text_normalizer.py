@@ -57,6 +57,9 @@ SECTION_LABELS = (
     "contenido",
 )
 
+# These short labels are protected from paragraph reflow because they often
+# appear alone in the source publication. If they were joined to neighboring
+# prose, the structure detector could lose a meaningful boundary.
 SHORT_STANDALONE_LABELS = {
     "maestro",
     "alumno",
@@ -142,7 +145,11 @@ def is_structural_line(line: str) -> bool:
 
 
 def reflow_paragraph_lines(text: str) -> str:
-    """Join hard-wrapped prose lines while preserving structural lines."""
+    """Join hard-wrapped prose lines while preserving structural lines.
+
+    The output is still an intermediate artifact. Reflow improves readability
+    and detector stability, but it is not canonical text.
+    """
 
     output_lines: list[str] = []
     paragraph_parts: list[str] = []
@@ -161,6 +168,8 @@ def reflow_paragraph_lines(text: str) -> str:
             continue
 
         if is_structural_line(stripped):
+            # Flush before structural lines so headings, dates, and labels stay
+            # on their own lines for the next script.
             flush_paragraph()
             output_lines.append(stripped)
             continue

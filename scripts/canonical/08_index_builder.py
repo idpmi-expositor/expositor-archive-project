@@ -202,6 +202,8 @@ def main() -> int:
     args = parser.parse_args()
 
     lesson_files = iter_lesson_files(args.archive)
+    # Index files are public-looking outputs, so validation is the guardrail
+    # that keeps incomplete lesson YAML from becoming searchable metadata.
     if not validate_lesson_files(lesson_files, args.schema):
         print("Index generation stopped because lesson validation failed.")
         return 1

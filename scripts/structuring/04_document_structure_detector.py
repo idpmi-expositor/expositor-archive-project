@@ -168,7 +168,11 @@ def parse_content_entry_buffer(
 
 
 def detect_markers(text: str) -> list[StructureMarker]:
-    """Find known structural markers in normalized text."""
+    """Find known structural markers in normalized text.
+
+    Markers are intentionally lightweight: type, line number, and source text.
+    Lesson slicing and canonical field mapping happen later.
+    """
 
     markers: list[StructureMarker] = []
     active_page: int | None = None
@@ -302,6 +306,9 @@ def write_structure_file(input_path: Path, output_path: Path) -> None:
 
     text = input_path.read_text(encoding="utf-8")
     markers = detect_markers(text)
+    # Page 5 is where current Expositor samples expose the Contenido table.
+    # Keeping the page number explicit makes this source assumption easy to
+    # audit and easy to change if another collection uses a different layout.
     content_index = parse_content_index(text, contenido_page=5)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(

@@ -29,6 +29,10 @@ Run validation from the repository root:
 python scripts/canonical/07_schema_validator.py
 ```
 
+Validation is intentionally a canonical-layer gate. Earlier artifacts may be
+partial or intermediate, but lesson YAML under `archive/lessons` must satisfy
+this contract before indexes are generated.
+
 ## Indexing
 
 The index builder reads canonical lesson YAML and writes:
@@ -65,6 +69,8 @@ index:
 - `lesson_number` must match the `Contenido` entry.
 - `title` must match the `Contenido` title.
 - `page_range.start` must match the `Contenido` page start.
+- `source_trace.page_start` should remain explainable from the extracted page
+  marker or source `Contenido` page value.
 
 Example shape:
 

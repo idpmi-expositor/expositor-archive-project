@@ -274,6 +274,9 @@ def main() -> int:
         print(f"No lesson segment metadata found under {args.input_dir}")
         return 0
 
+    # This generator now writes minimal schema-shaped YAML from segment metadata.
+    # Placeholder values are explicit so reviewers can distinguish generated
+    # scaffolding from human-reviewed canonical truth.
     imported_at = datetime.now(UTC).replace(microsecond=0).isoformat()
     written_files: list[Path] = []
 

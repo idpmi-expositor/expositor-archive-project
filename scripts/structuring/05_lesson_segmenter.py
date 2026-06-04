@@ -42,7 +42,11 @@ LESSON_NUMBER_PATTERN = re.compile(r"LECCI[OÓ]N\s+(\d+)", re.IGNORECASE)
 
 @dataclass(frozen=True)
 class LessonSegment:
-    """A deterministic intermediate record for one lesson boundary."""
+    """A deterministic intermediate record for one lesson boundary.
+
+    This is not canonical YAML. It is the bridge between structure detection
+    and future one-lesson-per-file serialization.
+    """
 
     lesson_number: int
     start_line: int
@@ -68,6 +72,8 @@ def extract_lesson_segments(structure: dict[str, Any]) -> list[LessonSegment]:
 
     content_entries = structure.get("content_index", [])
     if content_entries:
+        # The source table of contents is preferred because it carries the
+        # expected title, date, and page start in addition to lesson number.
         return [
             LessonSegment(
                 lesson_number=int(entry["lesson_number"]),
@@ -122,7 +128,11 @@ def build_segmentation_validation(
     structure: dict[str, Any],
     segments: list[LessonSegment],
 ) -> dict[str, Any]:
-    """Summarize how Contenido expectations compare with observed headers."""
+    """Summarize how Contenido expectations compare with observed headers.
+
+    The summary is a review aid. It does not silently repair mismatches because
+    correction should remain explicit and auditable.
+    """
 
     observed = observed_lesson_headers(structure)
     expected_numbers = {str(segment.lesson_number) for segment in segments}

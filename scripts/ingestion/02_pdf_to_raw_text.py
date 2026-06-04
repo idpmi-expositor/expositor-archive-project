@@ -72,7 +72,12 @@ def page_header(page_number: int) -> str:
 
 
 def extract_pdf_text(pdf_path: Path) -> tuple[str, list[dict[str, object]]]:
-    """Extract text from one PDF while preserving page boundaries."""
+    """Extract text from one PDF while preserving page boundaries.
+
+    The returned tuple has two parts:
+        1. the raw text artifact consumed by the normalization layer
+        2. the per-page audit data consumed by human reviewers
+    """
 
     output_parts: list[str] = []
     page_logs: list[dict[str, object]] = []
@@ -80,6 +85,9 @@ def extract_pdf_text(pdf_path: Path) -> tuple[str, list[dict[str, object]]]:
     with fitz.open(pdf_path) as document:
         for page_index, page in enumerate(document, start=1):
             text = page.get_text("text").replace("\r\n", "\n").replace("\r", "\n")
+            # The page header becomes the trace anchor used by later layers.
+            # If a lesson section is later mapped to PDF page 6, this marker is
+            # the evidence trail back to the source extraction.
             output_parts.append(page_header(page_index))
             output_parts.append(text.strip())
             output_parts.append("")
@@ -106,6 +114,8 @@ def extract_pdf_file(pdf_path: Path, output_dir: Path, log_dir: Path) -> None:
     output_path.write_text(raw_text, encoding="utf-8", newline="\n")
 
     log_path.parent.mkdir(parents=True, exist_ok=True)
+    # Keep the log small and factual. Structure detection belongs to the next
+    # layer, so this audit only records source paths and extraction counts.
     log_path.write_text(
         json.dumps(
             {
