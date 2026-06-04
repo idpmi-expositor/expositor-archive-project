@@ -32,11 +32,12 @@ gdrive
 4. Choose Google Drive as the storage provider.
 5. Use the default OAuth flow unless you have a dedicated Google Cloud OAuth client.
 6. Sign in as the owner of the `ExpositorMain` folder when the browser opens.
-7. Confirm the remote can see the folder:
+7. Choose a Drive scope that can read file contents, such as full Drive access or read-only Drive access.
+8. Confirm the remote can see the folder by using the folder ID as the remote root:
 
 ```bash
-rclone lsd 'gdrive:{18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n}'
-rclone ls 'gdrive:{18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n}' --max-depth 1
+rclone lsd 'gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:'
+rclone ls 'gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:' --max-depth 1
 ```
 
 ## Add the GitHub secret
