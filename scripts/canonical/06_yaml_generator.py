@@ -27,13 +27,28 @@ Beginner note:
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
+from datetime import UTC, datetime
 from pathlib import Path
+from typing import Any
+
+try:
+    import yaml
+except ImportError as exc:  # pragma: no cover - environment guard
+    raise SystemExit(
+        "PyYAML is required to generate canonical lesson YAML files. "
+        "Install it with: python -m pip install pyyaml"
+    ) from exc
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SEGMENT_DIR = PROJECT_ROOT / "metadata" / "lessons"
 DEFAULT_ARCHIVE_DIR = PROJECT_ROOT / "archive" / "lessons"
 DEFAULT_SCHEMA_VERSION = "1.0.0"
+DEFAULT_COLLECTION_TYPE = "Expositor Maestro"
+DEFAULT_CYCLE = "C1"
+DEFAULT_LANGUAGE = "es"
 
 
 def lesson_output_path(
@@ -52,8 +67,185 @@ def lesson_output_path(
     return archive_dir / str(year) / cycle / filename
 
 
+def load_json(path: Path) -> dict[str, Any]:
+    """Read one segmentation JSON file."""
+
+    with path.open("r", encoding="utf-8") as handle:
+        data = json.load(handle)
+    if not isinstance(data, dict):
+        raise ValueError(f"{path}: root document must be a JSON object")
+    return data
+
+
+def write_yaml(path: Path, data: dict[str, Any]) -> None:
+    """Write a generated lesson YAML file with stable formatting."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        yaml.safe_dump(
+            data,
+            handle,
+            allow_unicode=True,
+            sort_keys=False,
+            explicit_start=True,
+        )
+
+
+def sha256_file(path: Path) -> str:
+    """Return the SHA-256 digest for a source file, or a pending marker."""
+
+    if not path.exists():
+        return "pending-source-file-verification"
+
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def infer_year(segments: list[dict[str, Any]]) -> int:
+    """Infer publication year from the first lesson date in the segment file."""
+
+    for segment in segments:
+        lesson_date = str(segment.get("lesson_date", ""))
+        if lesson_date.endswith("/24"):
+            return 2024
+    return datetime.now(UTC).year
+
+
+def source_pdf_from_segment_file(segment_file: Path) -> Path:
+    """Infer the original PDF path from a lesson metadata filename."""
+
+    return PROJECT_ROOT / "source_assets" / "original_pdfs" / f"{segment_file.stem}.pdf"
+
+
+def page_end_for(index: int, segments: list[dict[str, Any]]) -> int:
+    """Use the next lesson's start page as the best available page boundary."""
+
+    current_start = int(segments[index].get("expected_page_start") or 0)
+    if index + 1 >= len(segments):
+        return current_start
+
+    next_start = int(segments[index + 1].get("expected_page_start") or current_start)
+    return max(current_start, next_start - 1)
+
+
+def build_minimal_lesson(
+    *,
+    segment: dict[str, Any],
+    segment_file: Path,
+    source_structure: str,
+    segment_index: int,
+    segments: list[dict[str, Any]],
+    schema_version: str,
+    imported_at: str,
+) -> dict[str, Any]:
+    """Create the smallest schema-valid lesson record from segment metadata."""
+
+    lesson_number = int(segment["lesson_number"])
+    year = infer_year(segments)
+    cycle = DEFAULT_CYCLE
+    source_pdf = source_pdf_from_segment_file(segment_file)
+    publication_id = segment_file.stem
+    lesson_id = f"LES-{year}-{cycle}-{lesson_number:03d}"
+    page_start = int(segment.get("expected_page_start") or 0)
+    page_end = page_end_for(segment_index, segments)
+    title = str(segment.get("expected_title") or f"Lesson {lesson_number}")
+    lesson_date = str(segment.get("lesson_date") or "TBD")
+
+    return {
+        "schema_version": schema_version,
+        "lesson_id": lesson_id,
+        "publication_id": publication_id,
+        "collection_type": DEFAULT_COLLECTION_TYPE,
+        "year": year,
+        "cycle": cycle,
+        "lesson_number": lesson_number,
+        "title": title,
+        "language": DEFAULT_LANGUAGE,
+        "page_range": {
+            "start": page_start,
+            "end": page_end,
+        },
+        "lesson_sections": {
+            "lesson_header": {
+                "marker": str(segment.get("marker") or "Contenido"),
+                "lesson_number": lesson_number,
+                "lesson_date": lesson_date,
+            },
+            "title": {
+                "text": title,
+            },
+            "biblical_reading": {
+                "reference_display": "TBD",
+                "canonical_references": [
+                    {
+                        "testament": "TBD",
+                        "book_standardized": "TBD",
+                        "chapter": 0,
+                        "verse_start": 0,
+                        "verse_end": 0,
+                    }
+                ],
+                "replacement_policy": {
+                    "provider": "api.bible",
+                    "strategy": "replace_by_canonical_reference",
+                    "source_text_included": False,
+                },
+            },
+            "lesson_outline": {
+                "items": ["TBD"],
+            },
+            "teacher_notes": {
+                "items": ["TBD"],
+            },
+            "summary_application": {
+                "items": ["TBD"],
+            },
+        },
+        "processing_audit": {
+            "intake_date": imported_at,
+            "ocr_engine": "PyMuPDF",
+            "ocr_engine_version": "pending-version-capture",
+            "extraction_method": "pdf_text_extraction",
+            "extraction_confidence": "minimal-valid-placeholder",
+            "manual_review_required": True,
+            "reviewed_by": "pending-human-review",
+            "review_status": "pending",
+        },
+        "source_integrity": {
+            "original_filename": source_pdf.name,
+            "sha256": sha256_file(source_pdf),
+            "imported_at": imported_at,
+            "source_scan_quality": "pending-human-review",
+        },
+        "processing_status": {
+            "intake_completed": True,
+            "ocr_completed": True,
+            "metadata_extracted": True,
+            "semantic_indexed": False,
+            "human_review_completed": False,
+            "yaml_generated": True,
+            "validated": False,
+        },
+        "source_trace": {
+            "source_pdf": source_pdf.relative_to(PROJECT_ROOT).as_posix(),
+            "page_start": page_start,
+            "page_end": page_end,
+            "extraction_block": source_structure or segment_file.relative_to(PROJECT_ROOT).as_posix(),
+        },
+        "semantic_metadata": {
+            "doctrinal_categories": ["TBD"],
+            "theological_themes": ["TBD"],
+            "educational_level": "adult",
+            "intended_audience": DEFAULT_COLLECTION_TYPE,
+        },
+    }
+
+
 def main() -> int:
-    """Command-line entry point for canonical YAML generation planning."""
+    """Command-line entry point for minimal canonical YAML generation."""
 
     parser = argparse.ArgumentParser(
         description="Generate canonical lesson YAML from structured metadata."
@@ -82,10 +274,40 @@ def main() -> int:
         print(f"No lesson segment metadata found under {args.input_dir}")
         return 0
 
-    print("Canonical YAML generation is intentionally pending.")
-    print(f"Schema version configured for future output: {args.schema_version}")
+    imported_at = datetime.now(UTC).replace(microsecond=0).isoformat()
+    written_files: list[Path] = []
+
+    for segment_file in segment_files:
+        metadata = load_json(segment_file)
+        segments = metadata.get("segments", [])
+        if not isinstance(segments, list):
+            raise ValueError(f"{segment_file}: segments must be a list")
+        source_structure = str(metadata.get("source_structure") or "")
+
+        for index, segment in enumerate(segments):
+            if not isinstance(segment, dict):
+                raise ValueError(f"{segment_file}: segment {index} must be an object")
+
+            lesson = build_minimal_lesson(
+                segment=segment,
+                segment_file=segment_file,
+                source_structure=source_structure,
+                segment_index=index,
+                segments=segments,
+                schema_version=args.schema_version,
+                imported_at=imported_at,
+            )
+            output_path = lesson_output_path(
+                args.archive_dir,
+                lesson["year"],
+                lesson["cycle"],
+                lesson["lesson_number"],
+            )
+            write_yaml(output_path, lesson)
+            written_files.append(output_path)
+
+    print(f"Generated {len(written_files)} minimal lesson YAML file(s).")
     print(f"Archive output folder: {args.archive_dir}")
-    print(f"Segment metadata files found: {len(segment_files)}")
     return 0
 
 

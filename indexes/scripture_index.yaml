@@ -1,3 +1,237 @@
 ---
 schema_version: 1.0.0
-scripture_references: []
+scripture_references:
+- lesson_id: LES-2024-C1-001
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-002
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-003
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-004
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-005
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-006
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-008
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-010
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-011
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-012
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-013
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-014
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-015
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-016
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-017
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-018
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-019
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-020
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-021
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-022
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-023
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-024
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-025
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-026
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
