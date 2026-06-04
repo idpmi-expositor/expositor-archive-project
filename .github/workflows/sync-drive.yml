@@ -52,12 +52,14 @@ jobs:
           rclone listremotes
 
       - name: Sync Drive folder into repository
+        env:
+          DRIVE_SOURCE: ${{ env.DRIVE_REMOTE }},root_folder_id=${{ env.DRIVE_FOLDER_ID }}:
         run: |
           mkdir -p "$DESTINATION_DIR"
           if [ "${{ inputs.dry_run }}" = "true" ]; then
-            rclone copy "$DRIVE_REMOTE:{${DRIVE_FOLDER_ID}}" "$DESTINATION_DIR" --drive-export-formats docx,xlsx,pptx,pdf --dry-run --verbose
+            rclone copy "$DRIVE_SOURCE" "$DESTINATION_DIR" --drive-export-formats docx,xlsx,pptx,pdf --dry-run --verbose
           else
-            rclone sync "$DRIVE_REMOTE:{${DRIVE_FOLDER_ID}}" "$DESTINATION_DIR" --drive-export-formats docx,xlsx,pptx,pdf --verbose
+            rclone sync "$DRIVE_SOURCE" "$DESTINATION_DIR" --drive-export-formats docx,xlsx,pptx,pdf --verbose
           fi
 
       - name: Commit synced files
