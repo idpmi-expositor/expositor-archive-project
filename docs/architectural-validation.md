@@ -456,17 +456,18 @@ docs/pipeline-traceability.md
 docs/architectural-validation.md
 ```
 
-### Missing Documentation
+### Documentation Gap Closure
 
-The repository still needs:
+The documentation gaps identified during this validation pass are now covered by
+dedicated documents:
 
 - `CONTRIBUTING.md`
 - `PROCESS.md`
 - `INSTALL.md`
-- human review checklist
-- draft-to-canonical promotion instructions
-- OCR quality policy
-- exact criteria for production-ready canonical YAML
+- `docs/human-review-checklist.md`
+- `docs/draft-to-canonical-promotion.md`
+- `docs/ocr-quality-policy.md`
+- `docs/production-ready-canonical-yaml.md`
 
 ### Documentation Drift
 
@@ -483,35 +484,15 @@ that they are not fully implemented.
 
 ### Risks
 
-Without a human review process, maintainers may understand that drafts are not
-canonical but still lack a concrete checklist for promoting them safely.
-
-Without installation and process documentation, future maintainers may run
-scripts manually in the wrong order.
+If these documents drift from the validator or schema, maintainers may follow
+outdated review criteria. Treat `schemas/base/lesson_schema.yaml` and
+`scripts/canonical/07_schema_validator.py` as the executable source of truth for
+canonical YAML requirements.
 
 ### Recommendations
 
-Add `PROCESS.md` with:
-
-- pipeline command order
-- expected outputs
-- failure modes
-- review gates
-- draft promotion rules
-
-Add `CONTRIBUTING.md` with:
-
-- how to add a PDF
-- how to rerun processing
-- how to inspect OCR quality
-- how to avoid committing invalid canonical YAML
-
-Add `INSTALL.md` with:
-
-- Python version expectations
-- dependency installation
-- optional OCR tooling
-- validation commands
+Keep `PROCESS.md`, `CONTRIBUTING.md`, `INSTALL.md`, and the focused policy docs
+aligned whenever the pipeline, schema, validator, or OCR behavior changes.
 
 ### Confidence Level
 

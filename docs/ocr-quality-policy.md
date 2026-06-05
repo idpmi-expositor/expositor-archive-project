@@ -1,0 +1,71 @@
+# OCR Quality Policy
+
+OCR and embedded text extraction are intermediary steps. They are not canonical
+truth. A lesson may become canonical only when extraction quality is good enough
+to support reviewed source traceability.
+
+## Quality Report Location
+
+Extraction logs are written under:
+
+```text
+ocr/processing_logs/
+```
+
+Future dedicated quality summaries should be written under:
+
+```text
+ocr/quality_reports/
+```
+
+## Page Status Values
+
+Use these status values when reporting page-level quality:
+
+- `pass`: extracted text is complete enough for downstream structuring
+- `warning`: extraction is usable but needs reviewer attention
+- `fail`: extraction is not usable for canonical promotion
+- `needs_ocr`: embedded text is absent or too weak and OCR fallback is needed
+- `needs_human_review`: automated checks cannot determine quality safely
+
+## Blocking Conditions
+
+The affected lesson must not be promoted to canonical YAML when:
+
+- a content page has zero extracted text
+- a content page has very low word count without explanation
+- lesson headings or section labels are missing from extracted text
+- scripture references are malformed or merged into surrounding text
+- source paragraphs are merged across unrelated sections
+- header, footer, date, or page layout text contaminates lesson sections
+- OCR confidence is unavailable or low and no human review has resolved it
+
+## Warning Conditions
+
+These conditions require reviewer attention but may be resolved by source
+comparison:
+
+- front matter or final blank pages have low word count
+- repeated headers appear inside lesson pages
+- decorative separators are present
+- page numbers appear near content
+- OCR fallback was applied to only part of a lesson
+
+## Minimum Review Checks
+
+For each source PDF:
+
+1. Confirm total extracted page count.
+2. Review zero-text pages.
+3. Review low-word-count pages.
+4. Spot-check section labels in raw and normalized text.
+5. Spot-check scripture references in raw and normalized text.
+6. Confirm OCR fallback pages, if any, are readable.
+7. Record unresolved extraction problems before draft promotion.
+
+## Canonical Promotion Rule
+
+OCR quality is production-ready only when every canonical lesson can be traced
+to readable source text or manually reviewed source evidence. Automated
+extraction alone is not enough when logs contain blocking conditions.
+
