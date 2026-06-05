@@ -71,8 +71,8 @@ Canonical lesson YAML must validate the required lesson sections documented in
 reading section is stored as normalized reference metadata only, so downstream
 systems can replace Bible text by reference through providers such as api.bible.
 
-Install script dependencies before running canonical validation or index
-generation:
+Install script dependencies before running extraction, canonical validation, or
+index generation:
 
 ```text
 python -m pip install -r requirements.txt
@@ -97,14 +97,16 @@ Each script reads from the previous layer and writes to the next layer. The
 current pipeline state is:
 
 - `01_pdf_discovery.py` discovers immutable source PDFs.
-- `02_pdf_to_raw_text.py` extracts embedded PDF text and writes page-aware logs.
+- `02_pdf_to_raw_text.py` extracts embedded PDF text, applies optional Tesseract
+  OCR fallback on weak or empty text-layer pages, preserves page markers, and
+  writes page-aware quality logs.
 - `03_minimal_text_normalizer.py` preserves structure while reflowing plain prose.
 - `04_document_structure_detector.py` detects page markers, section labels,
-  lesson headers, and `Contenido` rows.
-- `05_lesson_segmenter.py` writes lesson segment metadata and validation
-  summaries.
-- `06_yaml_generator.py` documents the future canonical YAML output path but
-  intentionally does not serialize lesson YAML yet.
+  lesson headers, and dynamically detected `Contenido` rows.
+- `05_lesson_segmenter.py` writes lesson segment metadata with validation status,
+  warnings, and errors.
+- `06_yaml_generator.py` writes minimal schema-shaped YAML from segment metadata
+  while preserving placeholders when source evidence is still missing.
 - `07_schema_validator.py` validates canonical lesson YAML.
 - `08_index_builder.py` validates lessons before writing indexes.
 
@@ -116,11 +118,32 @@ The index builder validates lesson YAML before writing index files. If a lesson
 does not satisfy the required root fields, nested metadata fields, lesson
 sections, or biblical reading replacement policy, index generation stops.
 
-For source publications with a `Contenido` section, the structuring layer reads
-the table of contents from PDF page 5 and records expected lesson numbers,
-titles, dates, and page starts. Lesson segmentation uses that source index as
-the preferred validation map before falling back to repeated `LECCION X`
-markers.
+For source publications with a `Contenido` section, the structuring layer now
+scans normalized text for `CONTENIDO`, `INDICE`, or `ÍNDICE` labels and selects
+the strongest deterministic table-of-contents candidate based on lesson/date row
+signals. Lesson segmentation uses that source index as the preferred validation
+map before falling back to repeated `LECCION X` markers.
+
+## OCR Fallback and Extraction Quality
+
+`02_pdf_to_raw_text.py` uses PyMuPDF text extraction first. If a page has a weak
+or empty text layer, the script attempts Tesseract OCR fallback when `Pillow`,
+`pytesseract`, and the `tesseract` executable are available.
+
+OCR fallback can be disabled:
+
+```text
+python scripts/ingestion/02_pdf_to_raw_text.py --no-ocr-fallback
+```
+
+Processing logs include:
+
+- direct text character and word counts
+- weak text-layer detection
+- OCR attempted/applied flags
+- OCR confidence when available
+- extraction method per page
+- summary lists of weak pages and OCR fallback pages
 
 ## Paragraph Reflow Check
 
@@ -139,6 +162,22 @@ python scripts/structuring/05_lesson_segmenter.py
 
 Then inspect a known paragraph, such as `Justificados por la Fe`, to confirm
 that prose is joined and lesson structure remains intact.
+
+## Segmentation Validation
+
+`05_lesson_segmenter.py` writes a `validation_summary` containing:
+
+```text
+validation_status: pass|warning|error
+validation_warnings: []
+validation_errors: []
+```
+
+Warnings identify review conditions such as missing `Contenido` entries,
+missing observed lesson headers, unexpected lesson headers, and duplicate
+observed headers. Errors identify blocking conditions such as duplicate
+`Contenido` lesson numbers, duplicate generated segments, or no created lesson
+segments.
 
 ## Index Policy
 
