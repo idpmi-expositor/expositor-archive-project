@@ -1,0 +1,78 @@
+# Install
+
+This project is a Python-based archival processing pipeline. Run all commands
+from the repository root unless a document says otherwise.
+
+## Requirements
+
+- Python 3.11 or newer is recommended.
+- Git is required for normal repository work.
+- Tesseract OCR is optional but recommended for scanned or weak text-layer
+  pages.
+
+Install Python dependencies:
+
+```text
+python -m pip install -r requirements.txt
+```
+
+## Optional OCR Tooling
+
+`scripts/ingestion/02_pdf_to_raw_text.py` uses embedded PDF text extraction
+first. When a page has weak or empty embedded text, it can attempt OCR fallback
+if these are available:
+
+- `Pillow`
+- `pytesseract`
+- the `tesseract` executable on the system path
+
+If OCR tooling is unavailable, the script still writes extraction artifacts and
+quality logs, but weak pages must be reviewed manually.
+
+OCR fallback can be disabled:
+
+```text
+python scripts/ingestion/02_pdf_to_raw_text.py --no-ocr-fallback
+```
+
+## Verify The Setup
+
+Run tests:
+
+```text
+python -m unittest discover -s tests
+```
+
+Run canonical validation:
+
+```text
+python scripts/canonical/07_schema_validator.py
+```
+
+When no reviewed canonical lesson YAML exists, validation may report:
+
+```text
+No lesson YAML files found under archive/lessons
+```
+
+That message is acceptable for an empty canonical archive. It is not proof that
+draft YAML is production-ready.
+
+## Current Pipeline Commands
+
+Run the pipeline in order:
+
+```text
+python scripts/ingestion/01_pdf_discovery.py
+python scripts/ingestion/02_pdf_to_raw_text.py
+python scripts/structuring/03_minimal_text_normalizer.py
+python scripts/structuring/04_document_structure_detector.py
+python scripts/structuring/05_lesson_segmenter.py
+python scripts/canonical/06_yaml_generator.py
+python scripts/canonical/07_schema_validator.py
+python scripts/canonical/08_index_builder.py
+```
+
+The current scripts are intentionally separate so maintainers can inspect each
+layer. For the review and promotion process, see [PROCESS.md](PROCESS.md).
+

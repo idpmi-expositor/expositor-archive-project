@@ -65,6 +65,12 @@ The authoritative project design is maintained in
 For operational traceability from one PDF through every generated artifact, see
 [`docs/pipeline-traceability.md`](docs/pipeline-traceability.md).
 
+For contributor setup and operating rules, see:
+
+- [`INSTALL.md`](INSTALL.md)
+- [`PROCESS.md`](PROCESS.md)
+- [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
 ## Lesson Segmentation Contract
 
 Canonical lesson YAML must validate the required lesson sections documented in
@@ -114,6 +120,13 @@ current pipeline state is:
 Canonical validation and index building are active only for reviewed lesson
 YAML files under `archive/lessons`. Generated scaffold YAML belongs under
 `archive/drafts` until placeholders are replaced and human review is complete.
+
+The human review and promotion rules are documented in:
+
+- [`docs/human-review-checklist.md`](docs/human-review-checklist.md)
+- [`docs/draft-to-canonical-promotion.md`](docs/draft-to-canonical-promotion.md)
+- [`docs/ocr-quality-policy.md`](docs/ocr-quality-policy.md)
+- [`docs/production-ready-canonical-yaml.md`](docs/production-ready-canonical-yaml.md)
 
 The index builder validates lesson YAML before writing index files. If a lesson
 does not satisfy the required root fields, nested metadata fields, lesson
