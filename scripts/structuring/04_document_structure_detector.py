@@ -49,6 +49,7 @@ CONTENT_ENTRY_START_PATTERN = re.compile(
     r"^(?P<lesson_number>\d{1,3})\.\s*(?P<rest>.+)$"
 )
 CONTENT_ENTRY_PAGE_PATTERN = re.compile(r"(?P<title>.*?)(?P<page>\d{1,4})\s*$")
+CONTENIDO_LABELS = {"contenido", "indice", "índice"}
 SECTION_LABELS = (
     "Titulo",
     "Título",
@@ -214,8 +215,68 @@ def detect_markers(text: str) -> list[StructureMarker]:
     return markers
 
 
+def page_text_blocks(text: str) -> dict[int, list[str]]:
+    """Group normalized text lines by PDF page marker."""
+
+    pages: dict[int, list[str]] = {}
+    active_page: int | None = None
+    for line in text.splitlines():
+        updated_page = current_pdf_page(line, active_page)
+        if updated_page != active_page:
+            active_page = updated_page
+            pages.setdefault(active_page, [])
+            continue
+        if active_page is not None:
+            pages.setdefault(active_page, []).append(line)
+    return pages
+
+
+def content_entry_signal_count(lines: list[str]) -> int:
+    """Count deterministic Contenido row signals on a page."""
+
+    count = 0
+    for line in lines:
+        stripped_line = line.strip()
+        if not stripped_line:
+            continue
+        if DATE_PATTERN.match(stripped_line):
+            count += 1
+            continue
+        if CONTENT_ENTRY_START_PATTERN.match(stripped_line):
+            count += 1
+    return count
+
+
+def detect_contenido_pages(text: str) -> list[int]:
+    """Return candidate PDF pages that contain the source Contenido table.
+
+    The detector is deterministic. It searches for a page with a standalone
+    ``CONTENIDO``/``INDICE`` label and table-like lesson/date rows instead of
+    relying on a fixed page number.
+    """
+
+    candidates: list[tuple[int, int]] = []
+    for page_number, lines in page_text_blocks(text).items():
+        normalized_lines = [normalize_for_matching(line.strip()) for line in lines]
+        has_contenido_label = any(line in CONTENIDO_LABELS for line in normalized_lines)
+        if not has_contenido_label:
+            continue
+        signal_count = content_entry_signal_count(lines)
+        candidates.append((page_number, signal_count))
+
+    # Prefer pages that look most like a table of contents, then lowest page
+    # number for deterministic tie-breaking.
+    return [
+        page_number
+        for page_number, _signal_count in sorted(
+            candidates,
+            key=lambda item: (-item[1], item[0]),
+        )
+    ]
+
+
 def parse_content_index(text: str, contenido_page: int) -> list[ContentIndexEntry]:
-    """Extract lesson title/page rows from the Contenido page.
+    """Extract lesson title/page rows from one Contenido page.
 
     The parser is deterministic: entries must start with a lesson number such as
     ``15.`` and eventually end with a page number. Wrapped title lines are
@@ -257,7 +318,7 @@ def parse_content_index(text: str, contenido_page: int) -> list[ContentIndexEntr
             continue
 
         normalized_line = normalize_for_matching(stripped_line)
-        if normalized_line in {"contenido", "indice", "índice"}:
+        if normalized_line in CONTENIDO_LABELS:
             continue
 
         if DATE_PATTERN.match(stripped_line):
@@ -301,21 +362,50 @@ def parse_content_index(text: str, contenido_page: int) -> list[ContentIndexEntr
     return entries
 
 
+def build_content_index(text: str) -> tuple[list[ContentIndexEntry], dict[str, object]]:
+    """Detect Contenido dynamically and return entries plus audit metadata."""
+
+    candidate_pages = detect_contenido_pages(text)
+    attempted_pages: list[dict[str, object]] = []
+    for page_number in candidate_pages:
+        entries = parse_content_index(text, contenido_page=page_number)
+        attempted_pages.append(
+            {
+                "pdf_page": page_number,
+                "entry_count": len(entries),
+            }
+        )
+        if entries:
+            return entries, {
+                "detection_method": "dynamic_contenido_label",
+                "selected_pdf_page": page_number,
+                "candidate_pdf_pages": candidate_pages,
+                "attempted_pages": attempted_pages,
+                "warning": None,
+            }
+
+    return [], {
+        "detection_method": "dynamic_contenido_label",
+        "selected_pdf_page": None,
+        "candidate_pdf_pages": candidate_pages,
+        "attempted_pages": attempted_pages,
+        "warning": "No parseable Contenido table was detected.",
+    }
+
+
 def write_structure_file(input_path: Path, output_path: Path) -> None:
     """Write a simple JSON structure report for one normalized text file."""
 
     text = input_path.read_text(encoding="utf-8")
     markers = detect_markers(text)
-    # Page 5 is where current Expositor samples expose the Contenido table.
-    # Keeping the page number explicit makes this source assumption easy to
-    # audit and easy to change if another collection uses a different layout.
-    content_index = parse_content_index(text, contenido_page=5)
+    content_index, content_index_detection = build_content_index(text)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
         json.dumps(
             {
                 "source_text": safe_relative_to_project(input_path),
                 "markers": [asdict(marker) for marker in markers],
+                "content_index_detection": content_index_detection,
                 "content_index": [asdict(entry) for entry in content_index],
             },
             indent=2,
