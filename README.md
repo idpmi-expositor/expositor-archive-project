@@ -147,6 +147,13 @@ Processing logs include:
 - extraction method per page
 - summary lists of weak pages and OCR fallback pages
 
+## Architectural Validation
+
+The full current architectural validation report is maintained in
+[`docs/architectural-validation.md`](docs/architectural-validation.md). It
+records the latest findings, risks, confidence levels, production-readiness
+verdict, and improvement roadmap.
+
 ## Paragraph Reflow Check
 
 PDF extraction often hard-wraps normal prose across many short lines. Script
