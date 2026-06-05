@@ -1,22 +1,22 @@
-"""Generate canonical lesson YAML from structured lesson metadata.
+"""Generate draft lesson YAML from structured lesson metadata.
 
 This is the first script in the canonical output layer.
 
 Pipeline position:
     PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
                                                           ^
-                                                          This script writes YAML.
+                                                          This script writes draft YAML.
 
 What this script will eventually do:
     1. Read lesson segment metadata from the structuring layer.
     2. Convert each lesson into the canonical YAML shape.
-    3. Store one YAML file per lesson under ``archive/lessons``.
+    3. Store one draft YAML file per lesson under ``archive/drafts``.
     4. Preserve biblical readings as references only, never as Bible text.
 
 Why this matters:
-    The archive's permanent unit is one lesson YAML file. Downstream systems can
-    translate, render, or replace Bible text later, but this repository keeps the
-    archival structure stable and source-traceable.
+    The archive's permanent unit is one reviewed lesson YAML file. Generated
+    draft YAML is intentionally separated from canonical lesson YAML so
+    scaffolding cannot be indexed as archival truth.
 
 Beginner note:
     YAML is a human-readable data format. It works well for this project because
@@ -44,7 +44,7 @@ except ImportError as exc:  # pragma: no cover - environment guard
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SEGMENT_DIR = PROJECT_ROOT / "metadata" / "lessons"
-DEFAULT_ARCHIVE_DIR = PROJECT_ROOT / "archive" / "lessons"
+DEFAULT_DRAFT_DIR = PROJECT_ROOT / "archive" / "drafts"
 DEFAULT_SCHEMA_VERSION = "1.0.0"
 DEFAULT_COLLECTION_TYPE = "Expositor Maestro"
 DEFAULT_CYCLE = "C1"
@@ -52,19 +52,19 @@ DEFAULT_LANGUAGE = "es"
 
 
 def lesson_output_path(
-    archive_dir: Path,
+    draft_dir: Path,
     year: int,
     cycle: str,
     lesson_number: int,
 ) -> Path:
-    """Build the standard archive path for one lesson YAML file.
+    """Build the standard draft path for one lesson YAML file.
 
     Example:
-        archive/lessons/2026/C1/LES-2026-C1-001.yaml
+        archive/drafts/2026/C1/LES-2026-C1-001.yaml
     """
 
     filename = f"LES-{year}-{cycle}-{lesson_number:03d}.yaml"
-    return archive_dir / str(year) / cycle / filename
+    return draft_dir / str(year) / cycle / filename
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -149,8 +149,8 @@ def build_minimal_lesson(
     source_pdf = source_pdf_from_segment_file(segment_file)
     publication_id = segment_file.stem
     lesson_id = f"LES-{year}-{cycle}-{lesson_number:03d}"
-    page_start = int(segment.get("expected_page_start") or 0)
-    page_end = page_end_for(segment_index, segments)
+    page_start = int(segment.get("page_start") or segment.get("expected_page_start") or 0)
+    page_end = int(segment.get("page_end") or page_end_for(segment_index, segments))
     title = str(segment.get("expected_title") or f"Lesson {lesson_number}")
     lesson_date = str(segment.get("lesson_date") or "TBD")
 
@@ -233,6 +233,8 @@ def build_minimal_lesson(
             "source_pdf": source_pdf.relative_to(PROJECT_ROOT).as_posix(),
             "page_start": page_start,
             "page_end": page_end,
+            "line_start": int(segment.get("start_line") or 0),
+            "line_end": int(segment.get("end_line") or 0),
             "extraction_block": source_structure or segment_file.relative_to(PROJECT_ROOT).as_posix(),
         },
         "semantic_metadata": {
@@ -245,10 +247,10 @@ def build_minimal_lesson(
 
 
 def main() -> int:
-    """Command-line entry point for minimal canonical YAML generation."""
+    """Command-line entry point for minimal draft YAML generation."""
 
     parser = argparse.ArgumentParser(
-        description="Generate canonical lesson YAML from structured metadata."
+        description="Generate draft lesson YAML from structured metadata."
     )
     parser.add_argument(
         "--input-dir",
@@ -257,10 +259,10 @@ def main() -> int:
         help="Folder containing lesson segment metadata.",
     )
     parser.add_argument(
-        "--archive-dir",
-        default=DEFAULT_ARCHIVE_DIR,
+        "--draft-dir",
+        default=DEFAULT_DRAFT_DIR,
         type=Path,
-        help="Folder where canonical lesson YAML files will be written.",
+        help="Folder where draft lesson YAML files will be written.",
     )
     parser.add_argument(
         "--schema-version",
@@ -274,9 +276,9 @@ def main() -> int:
         print(f"No lesson segment metadata found under {args.input_dir}")
         return 0
 
-    # This generator now writes minimal schema-shaped YAML from segment metadata.
-    # Placeholder values are explicit so reviewers can distinguish generated
-    # scaffolding from human-reviewed canonical truth.
+    # This generator writes minimal schema-shaped draft YAML from segment
+    # metadata. Placeholder values are explicit so reviewers can distinguish
+    # generated scaffolding from human-reviewed canonical truth.
     imported_at = datetime.now(UTC).replace(microsecond=0).isoformat()
     written_files: list[Path] = []
 
@@ -301,7 +303,7 @@ def main() -> int:
                 imported_at=imported_at,
             )
             output_path = lesson_output_path(
-                args.archive_dir,
+                args.draft_dir,
                 lesson["year"],
                 lesson["cycle"],
                 lesson["lesson_number"],
@@ -309,8 +311,8 @@ def main() -> int:
             write_yaml(output_path, lesson)
             written_files.append(output_path)
 
-    print(f"Generated {len(written_files)} minimal lesson YAML file(s).")
-    print(f"Archive output folder: {args.archive_dir}")
+    print(f"Generated {len(written_files)} draft lesson YAML file(s).")
+    print(f"Draft output folder: {args.draft_dir}")
     return 0
 
 

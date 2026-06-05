@@ -202,6 +202,11 @@ def main() -> int:
     args = parser.parse_args()
 
     lesson_files = iter_lesson_files(args.archive)
+    if not lesson_files:
+        print(f"No canonical lesson YAML files found under {args.archive}")
+        print("Index generation stopped because there is no canonical data.")
+        return 1
+
     # Index files are public-looking outputs, so validation is the guardrail
     # that keeps incomplete lesson YAML from becoming searchable metadata.
     if not validate_lesson_files(lesson_files, args.schema):

@@ -17,15 +17,16 @@ source_assets/original_pdfs/expositor-guia-maestro-volumen-45.pdf
   -> normalized/expositor-guia-maestro-volumen-45.txt
   -> structured/document_structure/expositor-guia-maestro-volumen-45.json
   -> metadata/lessons/expositor-guia-maestro-volumen-45.json
+  -> archive/drafts/YYYY/CYCLE/LES-YYYY-CYCLE-###.yaml
   -> archive/lessons/YYYY/CYCLE/LES-YYYY-CYCLE-###.yaml
   -> indexes/lessons_index.yaml
   -> indexes/scripture_index.yaml
 ```
 
-The final canonical YAML step is still pending in
-`scripts/canonical/06_yaml_generator.py`. Until that generator is implemented,
-`metadata/lessons/*.json` is the last automatically produced lesson-level
-artifact.
+`scripts/canonical/06_yaml_generator.py` writes draft YAML only. Draft YAML may
+contain explicit placeholders and must not be indexed. A lesson becomes
+canonical only after placeholders are replaced, source traceability is reviewed,
+and the file is promoted into `archive/lessons`.
 
 ## Layer Responsibilities
 
@@ -35,10 +36,10 @@ artifact.
 | Ingestion | `02_pdf_to_raw_text.py` | source PDFs | `ocr/raw_txt/*.txt`, `ocr/processing_logs/*.json` | Preserves page boundaries with `PDF_PAGE` markers and records extraction counts. |
 | Structuring | `03_minimal_text_normalizer.py` | `ocr/raw_txt/*.txt` | `normalized/*.txt` | Keeps page and section markers visible while making prose stable for detection. |
 | Structuring | `04_document_structure_detector.py` | `normalized/*.txt` | `structured/document_structure/*.json` | Records marker type, line number, source text path, and `Contenido` expectations. |
-| Structuring | `05_lesson_segmenter.py` | structure JSON | `metadata/lessons/*.json` | Converts source markers into lesson segment records and validation summaries. |
-| Canonical | `06_yaml_generator.py` | segment JSON | future `archive/lessons/**/*.yaml` | Will serialize one lesson per canonical YAML file. |
-| Canonical | `07_schema_validator.py` | lesson YAML and schema | validation result | Blocks malformed canonical records. |
-| Canonical | `08_index_builder.py` | validated lesson YAML | `indexes/*.yaml` | Builds reference-only indexes after validation passes. |
+| Structuring | `05_lesson_segmenter.py` | structure JSON | `metadata/lessons/*.json` | Converts source markers into lesson segment records with page/line spans and validation summaries. |
+| Canonical | `06_yaml_generator.py` | segment JSON | `archive/drafts/**/*.yaml` | Serializes draft lesson YAML with explicit review placeholders. |
+| Canonical | `07_schema_validator.py` | lesson YAML and schema | validation result | Blocks malformed or placeholder-bearing canonical records. |
+| Canonical | `08_index_builder.py` | validated canonical lesson YAML | `indexes/*.yaml` | Builds reference-only indexes after validation passes. |
 
 ## What To Check During Review
 
@@ -53,9 +54,12 @@ Start with the source PDF and move forward one layer at a time:
    entries from the publication's `Contenido` page.
 6. Confirm segment metadata includes expected lesson numbers, titles, dates, and
    validation summaries.
-7. Once canonical YAML generation is implemented, confirm each lesson YAML
-   preserves `source_trace`, `source_integrity`, `processing_audit`, and
-   reference-only biblical reading metadata.
+7. Confirm generated draft YAML is stored under `archive/drafts`, not
+   `archive/lessons`.
+8. Before promotion, confirm each lesson YAML preserves `source_trace`,
+   including page and line spans, `source_integrity`, `processing_audit`, and
+   reference-only biblical reading metadata with no `TBD`, `pending-*`, or zero
+   scripture placeholder values.
 
 ## Deterministic Review Rules
 
@@ -66,6 +70,9 @@ Start with the source PDF and move forward one layer at a time:
 - Preserve relative paths when writing artifacts so parallel collections cannot
   overwrite one another.
 - Treat `metadata/lessons/*.json` as intermediate data, not canonical truth.
+- Treat `archive/drafts/**/*.yaml` as generated scaffold data, not canonical
+  truth.
+- Build indexes only from reviewed files under `archive/lessons`.
 
 ## Common Mismatch Points
 

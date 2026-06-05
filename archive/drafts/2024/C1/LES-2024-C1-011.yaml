@@ -1,23 +1,23 @@
 ---
 schema_version: 1.0.0
-lesson_id: LES-2024-C1-012
+lesson_id: LES-2024-C1-011
 publication_id: expositor-guia-maestro-volumen-45
 collection_type: Expositor Maestro
 year: 2024
 cycle: C1
-lesson_number: 12
-title: Timoteo y Epafrodito, ejemplos de servicio
+lesson_number: 11
+title: ¡Cristo, Mesías crucificado y exaltado!
 language: es
 page_range:
-  start: 94
-  end: 101
+  start: 86
+  end: 93
 lesson_sections:
   lesson_header:
     marker: Contenido
-    lesson_number: 12
-    lesson_date: 19/may/24
+    lesson_number: 11
+    lesson_date: 12/may/24
   title:
-    text: Timoteo y Epafrodito, ejemplos de servicio
+    text: ¡Cristo, Mesías crucificado y exaltado!
   biblical_reading:
     reference_display: TBD
     canonical_references:
@@ -40,7 +40,7 @@ lesson_sections:
     items:
     - TBD
 processing_audit:
-  intake_date: '2026-06-04T21:08:08+00:00'
+  intake_date: '2026-06-05T16:41:18+00:00'
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
@@ -51,7 +51,7 @@ processing_audit:
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
-  imported_at: '2026-06-04T21:08:08+00:00'
+  imported_at: '2026-06-05T16:41:18+00:00'
   source_scan_quality: pending-human-review
 processing_status:
   intake_completed: true
@@ -63,8 +63,10 @@ processing_status:
   validated: false
 source_trace:
   source_pdf: source_assets/original_pdfs/expositor-guia-maestro-volumen-45.pdf
-  page_start: 94
-  page_end: 101
+  page_start: 86
+  page_end: 93
+  line_start: 1420
+  line_end: 1555
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
 semantic_metadata:
   doctrinal_categories:

@@ -459,6 +459,7 @@ expositor-archive-project/
 |   +-- document_structure/
 |
 +-- archive/
+|   +-- drafts/
 |   +-- lessons/
 |       +-- YYYY/
 |           +-- CYCLE/
@@ -619,9 +620,12 @@ Responsibilities:
 
 Current implementation status:
 
-- documents canonical YAML output configuration
+- writes generated draft YAML under `archive/drafts`
 - defines the standard lesson output path pattern
-- leaves full YAML serialization pending until lesson segment metadata is mature
+- uses explicit placeholders to separate generated scaffolding from
+  human-reviewed canonical truth
+- requires placeholder-free validation before files are promoted into
+  `archive/lessons`
 
 #### 07_schema_validator.py
 
@@ -641,6 +645,8 @@ Current implementation status:
 - validates required lesson sections
 - validates api.bible replacement policy for biblical readings
 - validates normalized scripture reference fields
+- rejects generated placeholders such as `TBD`, `pending-*`, and zero-valued
+  scripture references from canonical lesson YAML
 
 #### 08_index_builder.py
 

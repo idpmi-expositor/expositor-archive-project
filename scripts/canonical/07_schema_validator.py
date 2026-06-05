@@ -38,6 +38,23 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SCHEMA = PROJECT_ROOT / "schemas" / "base" / "lesson_schema.yaml"
 DEFAULT_ARCHIVE = PROJECT_ROOT / "archive" / "lessons"
 
+PLACEHOLDER_VALUES = {
+    "TBD",
+    "pending",
+    "pending-human-review",
+    "pending-review",
+    "pending-source-file-verification",
+    "pending-version-capture",
+    "minimal-valid-placeholder",
+    "manual-placeholder",
+    "pending-source-hash",
+    "pending-block-id",
+}
+PLACEHOLDER_PREFIXES = (
+    "pending-",
+    "placeholder-",
+)
+
 
 class ValidationError(ValueError):
     """Raised when a lesson YAML file does not satisfy the archive contract."""
@@ -99,6 +116,40 @@ def require_non_empty(value: Any, label: str) -> None:
         raise ValidationError(f"{label} must not be empty")
     if isinstance(value, (list, dict)) and not value:
         raise ValidationError(f"{label} must not be empty")
+
+
+def is_placeholder_string(value: str) -> bool:
+    """Return true when a string is generated scaffolding, not archive truth."""
+
+    stripped = value.strip()
+    normalized = stripped.lower()
+    return stripped in PLACEHOLDER_VALUES or any(
+        normalized.startswith(prefix) for prefix in PLACEHOLDER_PREFIXES
+    )
+
+
+def validate_no_placeholders(value: Any, label: str) -> None:
+    """Reject generated draft markers from canonical lesson YAML.
+
+    Draft YAML may contain explicit placeholders, but canonical files under
+    ``archive/lessons`` must only contain reviewed archival values. This check
+    walks the full document so indexes cannot be built from official-looking
+    scaffold data.
+    """
+
+    if isinstance(value, str):
+        if is_placeholder_string(value):
+            raise ValidationError(f"{label} contains placeholder value {value!r}")
+        return
+
+    if isinstance(value, list):
+        for index, item in enumerate(value):
+            validate_no_placeholders(item, f"{label}[{index}]")
+        return
+
+    if isinstance(value, dict):
+        for key, item in value.items():
+            validate_no_placeholders(item, f"{label}.{key}" if label else str(key))
 
 
 def validate_root_fields(lesson: dict[str, Any], schema: dict[str, Any]) -> None:
@@ -203,6 +254,15 @@ def validate_biblical_reading(lesson: dict[str, Any], schema: dict[str, Any]) ->
                 f"canonical_references[{index}].{field}",
             )
 
+        for numeric_field in ("chapter", "verse_start", "verse_end"):
+            numeric_value = reference.get(numeric_field)
+            if not isinstance(numeric_value, int) or numeric_value <= 0:
+                raise ValidationError(
+                    "lesson_sections.biblical_reading."
+                    f"canonical_references[{index}].{numeric_field} "
+                    "must be a positive integer"
+                )
+
 
 def validate_lesson(path: Path, schema: dict[str, Any]) -> list[str]:
     """Validate one lesson file and return a list of error messages."""
@@ -213,6 +273,7 @@ def validate_lesson(path: Path, schema: dict[str, Any]) -> list[str]:
         validate_nested_fields(lesson, schema)
         validate_lesson_sections(lesson, schema)
         validate_biblical_reading(lesson, schema)
+        validate_no_placeholders(lesson, "lesson")
     except ValidationError as exc:
         return [str(exc)]
     return []

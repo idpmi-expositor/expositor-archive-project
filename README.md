@@ -35,7 +35,8 @@ ocr/processing_logs/           Per-PDF extraction audit logs.
 normalized/                    Minimally cleaned text for structure detection.
 structured/document_structure/ DocumentStructure JSON marker reports.
 metadata/lessons/              Intermediate lesson segment metadata.
-archive/lessons/               Canonical one-lesson-per-file YAML archive.
+archive/drafts/                Generated draft lesson YAML awaiting review.
+archive/lessons/               Reviewed canonical one-lesson-per-file YAML archive.
 schemas/base/                  Validation contracts for canonical YAML.
 indexes/                       Generated search/reference indexes.
 scripts/                       Deterministic pipeline scripts.
@@ -103,20 +104,21 @@ current pipeline state is:
 - `03_minimal_text_normalizer.py` preserves structure while reflowing plain prose.
 - `04_document_structure_detector.py` detects page markers, section labels,
   lesson headers, and dynamically detected `Contenido` rows.
-- `05_lesson_segmenter.py` writes lesson segment metadata with validation status,
-  warnings, and errors.
-- `06_yaml_generator.py` writes minimal schema-shaped YAML from segment metadata
-  while preserving placeholders when source evidence is still missing.
+- `05_lesson_segmenter.py` writes lesson segment metadata with page/line spans,
+  validation status, warnings, and errors.
+- `06_yaml_generator.py` writes draft lesson YAML under `archive/drafts` while
+  preserving placeholders when source evidence is still missing.
 - `07_schema_validator.py` validates canonical lesson YAML.
 - `08_index_builder.py` validates lessons before writing indexes.
 
-Canonical validation and index building are active for lesson YAML files that
-follow the schema in
-[`schemas/base/lesson_schema.yaml`](schemas/base/lesson_schema.yaml).
+Canonical validation and index building are active only for reviewed lesson
+YAML files under `archive/lessons`. Generated scaffold YAML belongs under
+`archive/drafts` until placeholders are replaced and human review is complete.
 
 The index builder validates lesson YAML before writing index files. If a lesson
 does not satisfy the required root fields, nested metadata fields, lesson
-sections, or biblical reading replacement policy, index generation stops.
+sections, biblical reading replacement policy, or placeholder-free canonical
+policy, index generation stops.
 
 For source publications with a `Contenido` section, the structuring layer now
 scans normalized text for `CONTENIDO`, `INDICE`, or `ÍNDICE` labels and selects

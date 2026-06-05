@@ -1,8 +1,9 @@
 # Lesson YAML Contract
 
-Each canonical YAML file represents exactly one lesson. A lesson may preserve
-additional source sections, but it must contain at least these normalized
-sections:
+Each canonical YAML file represents exactly one reviewed lesson. Generated
+scaffold YAML belongs under `archive/drafts` until placeholders are replaced
+and human review is complete. A lesson may preserve additional source sections,
+but canonical YAML must contain at least these normalized sections:
 
 - `lesson_header`
 - `title`
@@ -33,6 +34,10 @@ Validation is intentionally a canonical-layer gate. Earlier artifacts may be
 partial or intermediate, but lesson YAML under `archive/lessons` must satisfy
 this contract before indexes are generated.
 
+Canonical lesson YAML must not contain generated placeholders such as `TBD`,
+`pending-*`, `minimal-valid-placeholder`, or zero-valued scripture references.
+Those values are allowed only in draft YAML under `archive/drafts`.
+
 ## Indexing
 
 The index builder reads canonical lesson YAML and writes:
@@ -48,6 +53,9 @@ python scripts/canonical/08_index_builder.py
 
 The indexes preserve the same rule as canonical YAML: references are indexed,
 but Bible passage text is not stored.
+
+Indexes are generated only from `archive/lessons`. Draft YAML is intentionally
+excluded so incomplete scaffold data cannot become searchable archive metadata.
 
 ## Contenido Validation Source
 
@@ -160,6 +168,8 @@ source_trace:
   source_pdf: source_assets/original_pdfs/source-publication.pdf
   page_start: 1
   page_end: 4
+  line_start: 100
+  line_end: 240
   extraction_block: pending-block-id
 semantic_metadata:
   doctrinal_categories: []

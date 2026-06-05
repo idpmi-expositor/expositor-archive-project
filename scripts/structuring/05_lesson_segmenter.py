@@ -52,6 +52,9 @@ class LessonSegment:
     lesson_number: int
     start_line: int
     marker: str
+    end_line: int | None = None
+    page_start: int | None = None
+    page_end: int | None = None
     expected_title: str | None = None
     expected_page_start: int | None = None
     lesson_date: str | None = None
@@ -61,6 +64,84 @@ def load_structure(path: Path) -> dict[str, Any]:
     """Read one DocumentStructure JSON file."""
 
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def resolve_project_path(value: str) -> Path:
+    """Resolve a repository-relative path stored in generated JSON."""
+
+    path = Path(value)
+    if path.is_absolute():
+        return path
+    return PROJECT_ROOT / path
+
+
+def source_line_count(structure: dict[str, Any]) -> int | None:
+    """Return the normalized source text line count when the file exists."""
+
+    source_text = structure.get("source_text")
+    if not isinstance(source_text, str) or not source_text:
+        return None
+
+    source_path = resolve_project_path(source_text)
+    if not source_path.exists():
+        return None
+
+    return len(source_path.read_text(encoding="utf-8").splitlines())
+
+
+def page_marker_lines(structure: dict[str, Any]) -> dict[int, int]:
+    """Map PDF page numbers to normalized text marker line numbers."""
+
+    page_lines: dict[int, int] = {}
+    for marker in structure.get("markers", []):
+        if marker.get("marker_type") != "page_marker":
+            continue
+
+        text = str(marker.get("text", ""))
+        match = re.search(r"PDF_PAGE\s+(\d+)", text)
+        if match:
+            page_lines[int(match.group(1))] = int(marker["line_number"])
+
+    return page_lines
+
+
+def line_for_page(page_lines: dict[int, int], page_number: int | None) -> int:
+    """Return the source line for a known page marker, or 0 if unavailable."""
+
+    if page_number is None:
+        return 0
+    return page_lines.get(page_number, 0)
+
+
+def content_page_end(
+    index: int,
+    content_entries: list[dict[str, Any]],
+    total_pages: int | None,
+) -> int | None:
+    """Use the next Contenido page start to estimate the current page end."""
+
+    current_start = int(content_entries[index].get("page_start") or 0)
+    if index + 1 < len(content_entries):
+        next_start = int(content_entries[index + 1].get("page_start") or current_start)
+        return max(current_start, next_start - 1)
+    return total_pages
+
+
+def end_line_for_page_range(
+    page_lines: dict[int, int],
+    page_end: int | None,
+    total_lines: int | None,
+) -> int | None:
+    """Find the line before the next page marker after a lesson page range."""
+
+    if page_end is None:
+        return total_lines
+
+    next_page_line = page_lines.get(page_end + 1)
+    if next_page_line is not None:
+        return max(0, next_page_line - 1)
+
+    return total_lines
 
 
 def extract_lesson_segments(structure: dict[str, Any]) -> list[LessonSegment]:
@@ -73,19 +154,34 @@ def extract_lesson_segments(structure: dict[str, Any]) -> list[LessonSegment]:
 
     content_entries = structure.get("content_index", [])
     if content_entries:
+        page_lines = page_marker_lines(structure)
+        total_lines = source_line_count(structure)
+        page_numbers = page_lines.keys()
+        total_pages = max(page_numbers) if page_numbers else None
         # The source table of contents is preferred because it carries the
         # expected title, date, and page start in addition to lesson number.
-        return [
-            LessonSegment(
-                lesson_number=int(entry["lesson_number"]),
-                start_line=0,
-                marker="Contenido",
-                expected_title=entry["title"],
-                expected_page_start=int(entry["page_start"]),
-                lesson_date=entry.get("lesson_date"),
+        segments: list[LessonSegment] = []
+        for index, entry in enumerate(content_entries):
+            page_start = int(entry["page_start"])
+            page_end = content_page_end(index, content_entries, total_pages)
+            segments.append(
+                LessonSegment(
+                    lesson_number=int(entry["lesson_number"]),
+                    start_line=line_for_page(page_lines, page_start),
+                    marker="Contenido",
+                    end_line=end_line_for_page_range(
+                        page_lines,
+                        page_end,
+                        total_lines,
+                    ),
+                    page_start=page_start,
+                    page_end=page_end,
+                    expected_title=entry["title"],
+                    expected_page_start=page_start,
+                    lesson_date=entry.get("lesson_date"),
+                )
             )
-            for entry in content_entries
-        ]
+        return segments
 
     segments: list[LessonSegment] = []
     for marker in structure.get("markers", []):
