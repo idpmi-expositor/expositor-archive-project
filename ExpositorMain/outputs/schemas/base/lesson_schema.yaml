@@ -1,0 +1,117 @@
+schema_version: "1.0.0"
+schema_name: BaseExpositorLessonSchema
+description: Canonical lesson-level schema contract for Expositor archive YAML.
+
+required_root_fields:
+  - schema_version
+  - lesson_id
+  - publication_id
+  - collection_type
+  - year
+  - cycle
+  - lesson_number
+  - title
+  - language
+  - page_range
+  - lesson_sections
+  - processing_audit
+  - source_integrity
+  - processing_status
+  - source_trace
+  - semantic_metadata
+
+required_lesson_sections:
+  lesson_header:
+    description: LECCION marker and stable lesson number.
+    required_fields:
+      - marker
+      - lesson_number
+  title:
+    description: Lesson title exactly as extracted from the source.
+    required_fields:
+      - text
+  biblical_reading:
+    description: Reference-only biblical reading prepared for downstream api.bible replacement.
+    required_fields:
+      - reference_display
+      - canonical_references
+      - replacement_policy
+  lesson_outline:
+    description: Structured bosquejo de la leccion.
+    required_fields:
+      - items
+  teacher_notes:
+    description: Notas para el Maestro, including guiding questions or notes.
+    required_fields:
+      - items
+  summary_application:
+    description: Resumen y aplicacion practica.
+    required_fields:
+      - items
+
+required_nested_fields:
+  page_range:
+    - start
+    - end
+  processing_audit:
+    - intake_date
+    - ocr_engine
+    - ocr_engine_version
+    - extraction_method
+    - extraction_confidence
+    - manual_review_required
+    - reviewed_by
+    - review_status
+  source_integrity:
+    - original_filename
+    - sha256
+    - imported_at
+    - source_scan_quality
+  processing_status:
+    - intake_completed
+    - ocr_completed
+    - metadata_extracted
+    - semantic_indexed
+    - human_review_completed
+    - yaml_generated
+    - validated
+  source_trace:
+    - source_pdf
+    - page_start
+    - page_end
+    - extraction_block
+  semantic_metadata:
+    - doctrinal_categories
+    - theological_themes
+    - educational_level
+    - intended_audience
+
+biblical_reading_policy:
+  source_text_in_canonical_yaml: false
+  replacement_provider: api.bible
+  replacement_strategy: replace_by_canonical_reference
+  required_replacement_policy_fields:
+    - provider
+    - strategy
+    - source_text_included
+  canonical_reference_required_fields:
+    - testament
+    - book_standardized
+    - chapter
+    - verse_start
+    - verse_end
+
+index_requirements:
+  lessons_index:
+    - lesson_id
+    - publication_id
+    - collection_type
+    - year
+    - cycle
+    - lesson_number
+    - title
+    - biblical_reading.reference_display
+  scripture_index:
+    - lesson_id
+    - biblical_reading.reference_display
+    - biblical_reading.canonical_references

@@ -1,0 +1,1345 @@
+{
+  "source_pdf": "source_assets\\original_pdfs\\expositor-guia-maestro-volumen-45.pdf",
+  "raw_text": "ocr\\raw_txt\\expositor-guia-maestro-volumen-45.txt",
+  "page_count": 223,
+  "pages": [
+    {
+      "pdf_page": 1,
+      "character_count": 0,
+      "word_count": 0,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 2,
+      "character_count": 411,
+      "word_count": 55,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 3,
+      "character_count": 3767,
+      "word_count": 579,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 4,
+      "character_count": 4329,
+      "word_count": 714,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 5,
+      "character_count": 3300,
+      "word_count": 828,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 6,
+      "character_count": 3019,
+      "word_count": 488,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 7,
+      "character_count": 1950,
+      "word_count": 354,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 8,
+      "character_count": 1994,
+      "word_count": 356,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 9,
+      "character_count": 3481,
+      "word_count": 613,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 10,
+      "character_count": 2934,
+      "word_count": 486,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 11,
+      "character_count": 3338,
+      "word_count": 566,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 12,
+      "character_count": 2633,
+      "word_count": 419,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 13,
+      "character_count": 3173,
+      "word_count": 552,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 14,
+      "character_count": 1891,
+      "word_count": 311,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 15,
+      "character_count": 2193,
+      "word_count": 367,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 16,
+      "character_count": 2467,
+      "word_count": 396,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 17,
+      "character_count": 3206,
+      "word_count": 518,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 18,
+      "character_count": 2911,
+      "word_count": 458,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 19,
+      "character_count": 3014,
+      "word_count": 498,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 20,
+      "character_count": 3147,
+      "word_count": 518,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 21,
+      "character_count": 2589,
+      "word_count": 431,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 22,
+      "character_count": 2317,
+      "word_count": 356,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 23,
+      "character_count": 2115,
+      "word_count": 378,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 24,
+      "character_count": 2260,
+      "word_count": 352,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 25,
+      "character_count": 3277,
+      "word_count": 530,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 26,
+      "character_count": 2154,
+      "word_count": 349,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 27,
+      "character_count": 3392,
+      "word_count": 524,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 28,
+      "character_count": 3097,
+      "word_count": 473,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 29,
+      "character_count": 2510,
+      "word_count": 422,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 30,
+      "character_count": 2610,
+      "word_count": 407,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 31,
+      "character_count": 2298,
+      "word_count": 386,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 32,
+      "character_count": 2504,
+      "word_count": 419,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 33,
+      "character_count": 3383,
+      "word_count": 545,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 34,
+      "character_count": 3063,
+      "word_count": 508,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 35,
+      "character_count": 3384,
+      "word_count": 522,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 36,
+      "character_count": 3138,
+      "word_count": 478,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 37,
+      "character_count": 2692,
+      "word_count": 421,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 38,
+      "character_count": 2371,
+      "word_count": 370,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 39,
+      "character_count": 2321,
+      "word_count": 391,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 40,
+      "character_count": 2609,
+      "word_count": 411,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 41,
+      "character_count": 3223,
+      "word_count": 529,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 42,
+      "character_count": 3050,
+      "word_count": 493,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 43,
+      "character_count": 3348,
+      "word_count": 504,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 44,
+      "character_count": 2102,
+      "word_count": 326,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 45,
+      "character_count": 3461,
+      "word_count": 577,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 46,
+      "character_count": 2422,
+      "word_count": 378,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 47,
+      "character_count": 2321,
+      "word_count": 373,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 48,
+      "character_count": 2466,
+      "word_count": 381,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 49,
+      "character_count": 3395,
+      "word_count": 510,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 50,
+      "character_count": 2762,
+      "word_count": 429,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 51,
+      "character_count": 3358,
+      "word_count": 518,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 52,
+      "character_count": 2520,
+      "word_count": 389,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 53,
+      "character_count": 3329,
+      "word_count": 504,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 54,
+      "character_count": 2263,
+      "word_count": 335,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 55,
+      "character_count": 2012,
+      "word_count": 338,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 56,
+      "character_count": 2461,
+      "word_count": 371,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 57,
+      "character_count": 3209,
+      "word_count": 522,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 58,
+      "character_count": 3001,
+      "word_count": 471,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 59,
+      "character_count": 3343,
+      "word_count": 531,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 60,
+      "character_count": 2898,
+      "word_count": 443,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 61,
+      "character_count": 3184,
+      "word_count": 518,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 62,
+      "character_count": 2163,
+      "word_count": 356,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 63,
+      "character_count": 2086,
+      "word_count": 374,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 64,
+      "character_count": 2298,
+      "word_count": 340,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 65,
+      "character_count": 3326,
+      "word_count": 548,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 66,
+      "character_count": 2690,
+      "word_count": 420,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 67,
+      "character_count": 3427,
+      "word_count": 587,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 68,
+      "character_count": 3175,
+      "word_count": 504,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 69,
+      "character_count": 2434,
+      "word_count": 408,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 70,
+      "character_count": 2234,
+      "word_count": 344,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 71,
+      "character_count": 1859,
+      "word_count": 313,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 72,
+      "character_count": 2785,
+      "word_count": 446,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 73,
+      "character_count": 3251,
+      "word_count": 547,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 74,
+      "character_count": 2640,
+      "word_count": 446,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 75,
+      "character_count": 3208,
+      "word_count": 515,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 76,
+      "character_count": 3307,
+      "word_count": 552,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 77,
+      "character_count": 2962,
+      "word_count": 503,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 78,
+      "character_count": 2011,
+      "word_count": 309,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 79,
+      "character_count": 1855,
+      "word_count": 319,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 80,
+      "character_count": 2376,
+      "word_count": 376,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 81,
+      "character_count": 3356,
+      "word_count": 553,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 82,
+      "character_count": 3438,
+      "word_count": 553,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 83,
+      "character_count": 2912,
+      "word_count": 475,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 84,
+      "character_count": 3458,
+      "word_count": 582,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 85,
+      "character_count": 2950,
+      "word_count": 496,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 86,
+      "character_count": 2009,
+      "word_count": 305,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 87,
+      "character_count": 1734,
+      "word_count": 299,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 88,
+      "character_count": 1748,
+      "word_count": 286,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 89,
+      "character_count": 3159,
+      "word_count": 498,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 90,
+      "character_count": 2769,
+      "word_count": 475,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 91,
+      "character_count": 4031,
+      "word_count": 668,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 92,
+      "character_count": 3416,
+      "word_count": 590,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 93,
+      "character_count": 3015,
+      "word_count": 510,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 94,
+      "character_count": 2200,
+      "word_count": 344,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 95,
+      "character_count": 1779,
+      "word_count": 293,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 96,
+      "character_count": 1951,
+      "word_count": 310,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 97,
+      "character_count": 3475,
+      "word_count": 570,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 98,
+      "character_count": 3374,
+      "word_count": 543,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 99,
+      "character_count": 3440,
+      "word_count": 552,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 100,
+      "character_count": 3383,
+      "word_count": 574,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 101,
+      "character_count": 2945,
+      "word_count": 486,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 102,
+      "character_count": 2175,
+      "word_count": 337,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 103,
+      "character_count": 1751,
+      "word_count": 292,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 104,
+      "character_count": 2068,
+      "word_count": 334,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 105,
+      "character_count": 3370,
+      "word_count": 545,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 106,
+      "character_count": 3410,
+      "word_count": 552,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 107,
+      "character_count": 3380,
+      "word_count": 550,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 108,
+      "character_count": 3441,
+      "word_count": 574,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 109,
+      "character_count": 3162,
+      "word_count": 517,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 110,
+      "character_count": 1982,
+      "word_count": 297,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 111,
+      "character_count": 3306,
+      "word_count": 527,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 112,
+      "character_count": 2295,
+      "word_count": 387,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 113,
+      "character_count": 2005,
+      "word_count": 334,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 114,
+      "character_count": 3310,
+      "word_count": 561,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 115,
+      "character_count": 3054,
+      "word_count": 500,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 116,
+      "character_count": 3401,
+      "word_count": 560,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 117,
+      "character_count": 3188,
+      "word_count": 528,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 118,
+      "character_count": 2260,
+      "word_count": 375,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 119,
+      "character_count": 2247,
+      "word_count": 358,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 120,
+      "character_count": 1896,
+      "word_count": 328,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 121,
+      "character_count": 2140,
+      "word_count": 360,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 122,
+      "character_count": 3441,
+      "word_count": 573,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 123,
+      "character_count": 3092,
+      "word_count": 505,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 124,
+      "character_count": 2923,
+      "word_count": 484,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 125,
+      "character_count": 2916,
+      "word_count": 471,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 126,
+      "character_count": 2157,
+      "word_count": 358,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 127,
+      "character_count": 2506,
+      "word_count": 401,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 128,
+      "character_count": 2131,
+      "word_count": 390,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 129,
+      "character_count": 2056,
+      "word_count": 341,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 130,
+      "character_count": 3326,
+      "word_count": 527,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 131,
+      "character_count": 2422,
+      "word_count": 408,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 132,
+      "character_count": 3313,
+      "word_count": 556,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 133,
+      "character_count": 2635,
+      "word_count": 430,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 134,
+      "character_count": 3361,
+      "word_count": 557,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 135,
+      "character_count": 2816,
+      "word_count": 457,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 136,
+      "character_count": 2056,
+      "word_count": 373,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 137,
+      "character_count": 2064,
+      "word_count": 350,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 138,
+      "character_count": 3305,
+      "word_count": 558,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 139,
+      "character_count": 3027,
+      "word_count": 498,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 140,
+      "character_count": 3385,
+      "word_count": 565,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 141,
+      "character_count": 3061,
+      "word_count": 507,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 142,
+      "character_count": 1634,
+      "word_count": 280,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 143,
+      "character_count": 2220,
+      "word_count": 350,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 144,
+      "character_count": 1927,
+      "word_count": 330,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 145,
+      "character_count": 2168,
+      "word_count": 357,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 146,
+      "character_count": 3241,
+      "word_count": 548,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 147,
+      "character_count": 3211,
+      "word_count": 502,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 148,
+      "character_count": 3419,
+      "word_count": 558,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 149,
+      "character_count": 3258,
+      "word_count": 550,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 150,
+      "character_count": 2938,
+      "word_count": 506,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 151,
+      "character_count": 2234,
+      "word_count": 353,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 152,
+      "character_count": 1890,
+      "word_count": 337,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 153,
+      "character_count": 1932,
+      "word_count": 324,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 154,
+      "character_count": 3163,
+      "word_count": 528,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 155,
+      "character_count": 2531,
+      "word_count": 408,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 156,
+      "character_count": 3320,
+      "word_count": 528,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 157,
+      "character_count": 2431,
+      "word_count": 404,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 158,
+      "character_count": 3378,
+      "word_count": 571,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 159,
+      "character_count": 2495,
+      "word_count": 397,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 160,
+      "character_count": 1898,
+      "word_count": 332,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 161,
+      "character_count": 2011,
+      "word_count": 332,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 162,
+      "character_count": 3379,
+      "word_count": 568,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 163,
+      "character_count": 2655,
+      "word_count": 439,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 164,
+      "character_count": 3132,
+      "word_count": 516,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 165,
+      "character_count": 3087,
+      "word_count": 519,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 166,
+      "character_count": 2647,
+      "word_count": 462,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 167,
+      "character_count": 1989,
+      "word_count": 314,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 168,
+      "character_count": 2263,
+      "word_count": 389,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 169,
+      "character_count": 2165,
+      "word_count": 358,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 170,
+      "character_count": 3530,
+      "word_count": 578,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 171,
+      "character_count": 2259,
+      "word_count": 353,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 172,
+      "character_count": 3300,
+      "word_count": 559,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 173,
+      "character_count": 1797,
+      "word_count": 297,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 174,
+      "character_count": 3180,
+      "word_count": 516,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 175,
+      "character_count": 2642,
+      "word_count": 422,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 176,
+      "character_count": 1792,
+      "word_count": 308,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 177,
+      "character_count": 1953,
+      "word_count": 302,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 178,
+      "character_count": 3300,
+      "word_count": 570,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 179,
+      "character_count": 3377,
+      "word_count": 579,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 180,
+      "character_count": 3333,
+      "word_count": 557,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 181,
+      "character_count": 3253,
+      "word_count": 547,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 182,
+      "character_count": 2847,
+      "word_count": 502,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 183,
+      "character_count": 2264,
+      "word_count": 363,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 184,
+      "character_count": 1737,
+      "word_count": 291,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 185,
+      "character_count": 1890,
+      "word_count": 318,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 186,
+      "character_count": 3286,
+      "word_count": 548,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 187,
+      "character_count": 2562,
+      "word_count": 490,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 188,
+      "character_count": 3266,
+      "word_count": 562,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 189,
+      "character_count": 2908,
+      "word_count": 485,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 190,
+      "character_count": 2780,
+      "word_count": 445,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 191,
+      "character_count": 1958,
+      "word_count": 305,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 192,
+      "character_count": 1721,
+      "word_count": 297,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 193,
+      "character_count": 1605,
+      "word_count": 268,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 194,
+      "character_count": 2947,
+      "word_count": 488,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 195,
+      "character_count": 2588,
+      "word_count": 434,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 196,
+      "character_count": 3137,
+      "word_count": 536,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 197,
+      "character_count": 3120,
+      "word_count": 550,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 198,
+      "character_count": 3057,
+      "word_count": 544,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 199,
+      "character_count": 2682,
+      "word_count": 434,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 200,
+      "character_count": 1603,
+      "word_count": 287,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 201,
+      "character_count": 1731,
+      "word_count": 294,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 202,
+      "character_count": 3147,
+      "word_count": 539,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 203,
+      "character_count": 3141,
+      "word_count": 575,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 204,
+      "character_count": 3858,
+      "word_count": 690,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 205,
+      "character_count": 3468,
+      "word_count": 583,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 206,
+      "character_count": 3439,
+      "word_count": 618,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 207,
+      "character_count": 1941,
+      "word_count": 319,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 208,
+      "character_count": 1954,
+      "word_count": 327,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 209,
+      "character_count": 1783,
+      "word_count": 297,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 210,
+      "character_count": 3459,
+      "word_count": 586,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 211,
+      "character_count": 3504,
+      "word_count": 609,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 212,
+      "character_count": 1939,
+      "word_count": 328,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 213,
+      "character_count": 2771,
+      "word_count": 480,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 214,
+      "character_count": 1840,
+      "word_count": 318,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 215,
+      "character_count": 2031,
+      "word_count": 309,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 216,
+      "character_count": 776,
+      "word_count": 99,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 217,
+      "character_count": 748,
+      "word_count": 113,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 218,
+      "character_count": 1360,
+      "word_count": 216,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 219,
+      "character_count": 1294,
+      "word_count": 207,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 220,
+      "character_count": 1418,
+      "word_count": 236,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 221,
+      "character_count": 1244,
+      "word_count": 188,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 222,
+      "character_count": 1424,
+      "word_count": 222,
+      "extraction_method": "pymupdf_text"
+    },
+    {
+      "pdf_page": 223,
+      "character_count": 82,
+      "word_count": 9,
+      "extraction_method": "pymupdf_text"
+    }
+  ]
+}
