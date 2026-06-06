@@ -2347,6 +2347,20 @@
       "text": "===== PDF_PAGE 223 ====="
     }
   ],
+  "content_index_detection": {
+    "detection_method": "dynamic_contenido_label",
+    "selected_pdf_page": 5,
+    "candidate_pdf_pages": [
+      5
+    ],
+    "attempted_pages": [
+      {
+        "pdf_page": 5,
+        "entry_count": 26
+      }
+    ],
+    "warning": null
+  },
   "content_index": [
     {
       "lesson_number": 1,

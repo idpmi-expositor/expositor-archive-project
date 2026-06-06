@@ -5,7 +5,7 @@
   "ocr_fallback_enabled": true,
   "ocr_language": "spa+eng",
   "tesseract_cmd": "external:tesseract.exe",
-  "tessdata_dir": "external:tessdata",
+  "tessdata_dir": null,
   "extraction_summary": {
     "weak_direct_text_pages": [
       1,
@@ -37,7 +37,7 @@
       "extraction_method": "quality_gate_blocked",
       "ocr_attempted": true,
       "ocr_applied": false,
-      "ocr_confidence": 64.92647058823529,
+      "ocr_confidence": 58.88235294117647,
       "ocr_unavailable_reason": null,
       "quality_gate": {
         "status": "NEEDS_HUMAN_REVIEW",
@@ -57,8 +57,8 @@
       "ocr_issues": [
         "low_ocr_confidence"
       ],
-      "ocr_confidence_score": 45,
-      "ocr_valid_char_ratio": 0.9348,
+      "ocr_confidence_score": 39,
+      "ocr_valid_char_ratio": 0.9372,
       "ocr_long_line_ratio": 0.0,
       "ocr_malformed_scripture_count": 0,
       "pdf_page": 1,
@@ -6979,8 +6979,8 @@
       "quality_confidence_score": 90
     },
     {
-      "character_count": 91,
-      "word_count": 11,
+      "character_count": 94,
+      "word_count": 10,
       "direct_text_character_count": 82,
       "direct_text_word_count": 9,
       "direct_text_is_weak": true,
@@ -6992,26 +6992,26 @@
       "extraction_method": "tesseract_ocr_fallback",
       "ocr_attempted": true,
       "ocr_applied": true,
-      "ocr_confidence": 86.5,
+      "ocr_confidence": 77.0,
       "ocr_unavailable_reason": null,
       "quality_gate": {
         "status": "WARNING",
-        "word_count": 11,
+        "word_count": 10,
         "issues": [
           "low_word_count"
         ],
-        "confidence_score": 66,
-        "valid_char_ratio": 0.9778,
+        "confidence_score": 57,
+        "valid_char_ratio": 0.9355,
         "long_line_ratio": 0.0,
         "malformed_scripture_count": 0
       },
       "ocr_status": "WARNING",
-      "ocr_word_count": 11,
+      "ocr_word_count": 10,
       "ocr_issues": [
         "low_word_count"
       ],
-      "ocr_confidence_score": 66,
-      "ocr_valid_char_ratio": 0.9778,
+      "ocr_confidence_score": 57,
+      "ocr_valid_char_ratio": 0.9355,
       "ocr_long_line_ratio": 0.0,
       "ocr_malformed_scripture_count": 0,
       "pdf_page": 223,
@@ -7019,7 +7019,7 @@
       "quality_issues": [
         "low_word_count"
       ],
-      "quality_confidence_score": 66
+      "quality_confidence_score": 57
     }
   ]
 }

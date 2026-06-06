@@ -10,3 +10,6 @@ env/
 # Local processing outputs that should be committed intentionally only.
 *.tmp
 *.log
+
+# Local rclone credentials.
+rclone/
