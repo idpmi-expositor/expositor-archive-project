@@ -205,7 +205,7 @@ def main() -> int:
     if not lesson_files:
         print(f"No canonical lesson YAML files found under {args.archive}")
         print("Index generation stopped because there is no canonical data.")
-        return 1
+        return 0
 
     # Index files are public-looking outputs, so validation is the guardrail
     # that keeps incomplete lesson YAML from becoming searchable metadata.

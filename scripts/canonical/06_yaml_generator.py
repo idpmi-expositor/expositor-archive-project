@@ -53,6 +53,7 @@ DEFAULT_LANGUAGE = "es"
 
 def lesson_output_path(
     draft_dir: Path,
+    publication_id: str,
     year: int,
     cycle: str,
     lesson_number: int,
@@ -60,11 +61,11 @@ def lesson_output_path(
     """Build the standard draft path for one lesson YAML file.
 
     Example:
-        archive/drafts/2026/C1/LES-2026-C1-001.yaml
+        archive/drafts/expositor-guia-maestro-volumen-45/2026/C1/LES-2026-C1-001.yaml
     """
 
     filename = f"LES-{year}-{cycle}-{lesson_number:03d}.yaml"
-    return draft_dir / str(year) / cycle / filename
+    return draft_dir / publication_id / str(year) / cycle / filename
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -281,6 +282,7 @@ def main() -> int:
     # generated scaffolding from human-reviewed canonical truth.
     imported_at = datetime.now(UTC).replace(microsecond=0).isoformat()
     written_files: list[Path] = []
+    output_paths_seen: set[Path] = set()
 
     for segment_file in segment_files:
         metadata = load_json(segment_file)
@@ -304,10 +306,14 @@ def main() -> int:
             )
             output_path = lesson_output_path(
                 args.draft_dir,
+                lesson["publication_id"],
                 lesson["year"],
                 lesson["cycle"],
                 lesson["lesson_number"],
             )
+            if output_path in output_paths_seen:
+                raise ValueError(f"Duplicate draft output path generated: {output_path}")
+            output_paths_seen.add(output_path)
             write_yaml(output_path, lesson)
             written_files.append(output_path)
 

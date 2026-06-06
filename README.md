@@ -90,6 +90,9 @@ python -m pip install -r requirements.txt
 Run these from the repository root.
 
 ```text
+python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
+python scripts/ingestion/00_rename_source_pdfs.py
+python scripts/ingestion/00_rename_source_pdfs.py --apply
 python scripts/ingestion/01_pdf_discovery.py
 python scripts/ingestion/02_pdf_to_raw_text.py
 python scripts/structuring/03_minimal_text_normalizer.py
@@ -103,6 +106,11 @@ python scripts/canonical/08_index_builder.py
 Each script reads from the previous layer and writes to the next layer. The
 current pipeline state is:
 
+- `00_validate_source_pdf_sync.py` compares local source PDF filenames and sizes
+  against a Google Drive folder through `rclone`.
+- `00_rename_source_pdfs.py` inspects source PDF filenames, metadata, and first
+  pages to propose stable reference names. It is dry-run by default and only
+  renames files with `--apply`.
 - `01_pdf_discovery.py` discovers immutable source PDFs.
 - `02_pdf_to_raw_text.py` extracts embedded PDF text, applies optional Tesseract
   OCR fallback on weak or empty text-layer pages, preserves page markers, and
@@ -112,8 +120,9 @@ current pipeline state is:
   lesson headers, and dynamically detected `Contenido` rows.
 - `05_lesson_segmenter.py` writes lesson segment metadata with page/line spans,
   validation status, warnings, and errors.
-- `06_yaml_generator.py` writes draft lesson YAML under `archive/drafts` while
-  preserving placeholders when source evidence is still missing.
+- `06_yaml_generator.py` writes draft lesson YAML under
+  `archive/drafts/<publication_id>/` while preserving placeholders when source
+  evidence is still missing.
 - `07_schema_validator.py` validates canonical lesson YAML.
 - `08_index_builder.py` validates lessons before writing indexes.
 

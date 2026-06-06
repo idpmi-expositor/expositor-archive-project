@@ -2,1344 +2,2915 @@
   "source_pdf": "source_assets\\original_pdfs\\expositor-guia-maestro-volumen-45.pdf",
   "raw_text": "ocr\\raw_txt\\expositor-guia-maestro-volumen-45.txt",
   "page_count": 223,
+  "ocr_fallback_enabled": true,
+  "ocr_language": "spa+eng",
+  "extraction_summary": {
+    "weak_direct_text_pages": [
+      1
+    ],
+    "ocr_fallback_pages": [],
+    "ocr_fallback_page_count": 0,
+    "manual_review_required": true
+  },
   "pages": [
     {
-      "pdf_page": 1,
       "character_count": 0,
       "word_count": 0,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 0,
+      "direct_text_word_count": 0,
+      "direct_text_is_weak": true,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": true,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": "missing_tesseract_executable",
+      "pdf_page": 1
     },
     {
-      "pdf_page": 2,
       "character_count": 411,
       "word_count": 55,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 411,
+      "direct_text_word_count": 55,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 2
     },
     {
-      "pdf_page": 3,
       "character_count": 3767,
       "word_count": 579,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3767,
+      "direct_text_word_count": 579,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 3
     },
     {
-      "pdf_page": 4,
       "character_count": 4329,
       "word_count": 714,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 4329,
+      "direct_text_word_count": 714,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 4
     },
     {
-      "pdf_page": 5,
       "character_count": 3300,
       "word_count": 828,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3300,
+      "direct_text_word_count": 828,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 5
     },
     {
-      "pdf_page": 6,
       "character_count": 3019,
       "word_count": 488,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3019,
+      "direct_text_word_count": 488,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 6
     },
     {
-      "pdf_page": 7,
       "character_count": 1950,
       "word_count": 354,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1950,
+      "direct_text_word_count": 354,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 7
     },
     {
-      "pdf_page": 8,
       "character_count": 1994,
       "word_count": 356,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1994,
+      "direct_text_word_count": 356,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 8
     },
     {
-      "pdf_page": 9,
       "character_count": 3481,
       "word_count": 613,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3481,
+      "direct_text_word_count": 613,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 9
     },
     {
-      "pdf_page": 10,
       "character_count": 2934,
       "word_count": 486,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2934,
+      "direct_text_word_count": 486,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 10
     },
     {
-      "pdf_page": 11,
       "character_count": 3338,
       "word_count": 566,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3338,
+      "direct_text_word_count": 566,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 11
     },
     {
-      "pdf_page": 12,
       "character_count": 2633,
       "word_count": 419,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2633,
+      "direct_text_word_count": 419,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 12
     },
     {
-      "pdf_page": 13,
       "character_count": 3173,
       "word_count": 552,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3173,
+      "direct_text_word_count": 552,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 13
     },
     {
-      "pdf_page": 14,
       "character_count": 1891,
       "word_count": 311,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1891,
+      "direct_text_word_count": 311,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 14
     },
     {
-      "pdf_page": 15,
       "character_count": 2193,
       "word_count": 367,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2193,
+      "direct_text_word_count": 367,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 15
     },
     {
-      "pdf_page": 16,
       "character_count": 2467,
       "word_count": 396,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2467,
+      "direct_text_word_count": 396,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 16
     },
     {
-      "pdf_page": 17,
       "character_count": 3206,
       "word_count": 518,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3206,
+      "direct_text_word_count": 518,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 17
     },
     {
-      "pdf_page": 18,
       "character_count": 2911,
       "word_count": 458,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2911,
+      "direct_text_word_count": 458,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 18
     },
     {
-      "pdf_page": 19,
       "character_count": 3014,
       "word_count": 498,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3014,
+      "direct_text_word_count": 498,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 19
     },
     {
-      "pdf_page": 20,
       "character_count": 3147,
       "word_count": 518,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3147,
+      "direct_text_word_count": 518,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 20
     },
     {
-      "pdf_page": 21,
       "character_count": 2589,
       "word_count": 431,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2589,
+      "direct_text_word_count": 431,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 21
     },
     {
-      "pdf_page": 22,
       "character_count": 2317,
       "word_count": 356,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2317,
+      "direct_text_word_count": 356,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 22
     },
     {
-      "pdf_page": 23,
       "character_count": 2115,
       "word_count": 378,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2115,
+      "direct_text_word_count": 378,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 23
     },
     {
-      "pdf_page": 24,
       "character_count": 2260,
       "word_count": 352,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2260,
+      "direct_text_word_count": 352,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 24
     },
     {
-      "pdf_page": 25,
       "character_count": 3277,
       "word_count": 530,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3277,
+      "direct_text_word_count": 530,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 25
     },
     {
-      "pdf_page": 26,
       "character_count": 2154,
       "word_count": 349,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2154,
+      "direct_text_word_count": 349,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 26
     },
     {
-      "pdf_page": 27,
       "character_count": 3392,
       "word_count": 524,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3392,
+      "direct_text_word_count": 524,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 27
     },
     {
-      "pdf_page": 28,
       "character_count": 3097,
       "word_count": 473,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3097,
+      "direct_text_word_count": 473,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 28
     },
     {
-      "pdf_page": 29,
       "character_count": 2510,
       "word_count": 422,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2510,
+      "direct_text_word_count": 422,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 29
     },
     {
-      "pdf_page": 30,
       "character_count": 2610,
       "word_count": 407,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2610,
+      "direct_text_word_count": 407,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 30
     },
     {
-      "pdf_page": 31,
       "character_count": 2298,
       "word_count": 386,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2298,
+      "direct_text_word_count": 386,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 31
     },
     {
-      "pdf_page": 32,
       "character_count": 2504,
       "word_count": 419,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2504,
+      "direct_text_word_count": 419,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 32
     },
     {
-      "pdf_page": 33,
       "character_count": 3383,
       "word_count": 545,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3383,
+      "direct_text_word_count": 545,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 33
     },
     {
-      "pdf_page": 34,
       "character_count": 3063,
       "word_count": 508,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3063,
+      "direct_text_word_count": 508,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 34
     },
     {
-      "pdf_page": 35,
       "character_count": 3384,
       "word_count": 522,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3384,
+      "direct_text_word_count": 522,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 35
     },
     {
-      "pdf_page": 36,
       "character_count": 3138,
       "word_count": 478,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3138,
+      "direct_text_word_count": 478,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 36
     },
     {
-      "pdf_page": 37,
       "character_count": 2692,
       "word_count": 421,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2692,
+      "direct_text_word_count": 421,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 37
     },
     {
-      "pdf_page": 38,
       "character_count": 2371,
       "word_count": 370,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2371,
+      "direct_text_word_count": 370,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 38
     },
     {
-      "pdf_page": 39,
       "character_count": 2321,
       "word_count": 391,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2321,
+      "direct_text_word_count": 391,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 39
     },
     {
-      "pdf_page": 40,
       "character_count": 2609,
       "word_count": 411,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2609,
+      "direct_text_word_count": 411,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 40
     },
     {
-      "pdf_page": 41,
       "character_count": 3223,
       "word_count": 529,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3223,
+      "direct_text_word_count": 529,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 41
     },
     {
-      "pdf_page": 42,
       "character_count": 3050,
       "word_count": 493,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3050,
+      "direct_text_word_count": 493,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 42
     },
     {
-      "pdf_page": 43,
       "character_count": 3348,
       "word_count": 504,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3348,
+      "direct_text_word_count": 504,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 43
     },
     {
-      "pdf_page": 44,
       "character_count": 2102,
       "word_count": 326,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2102,
+      "direct_text_word_count": 326,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 44
     },
     {
-      "pdf_page": 45,
       "character_count": 3461,
       "word_count": 577,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3461,
+      "direct_text_word_count": 577,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 45
     },
     {
-      "pdf_page": 46,
       "character_count": 2422,
       "word_count": 378,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2422,
+      "direct_text_word_count": 378,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 46
     },
     {
-      "pdf_page": 47,
       "character_count": 2321,
       "word_count": 373,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2321,
+      "direct_text_word_count": 373,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 47
     },
     {
-      "pdf_page": 48,
       "character_count": 2466,
       "word_count": 381,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2466,
+      "direct_text_word_count": 381,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 48
     },
     {
-      "pdf_page": 49,
       "character_count": 3395,
       "word_count": 510,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3395,
+      "direct_text_word_count": 510,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 49
     },
     {
-      "pdf_page": 50,
       "character_count": 2762,
       "word_count": 429,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2762,
+      "direct_text_word_count": 429,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 50
     },
     {
-      "pdf_page": 51,
       "character_count": 3358,
       "word_count": 518,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3358,
+      "direct_text_word_count": 518,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 51
     },
     {
-      "pdf_page": 52,
       "character_count": 2520,
       "word_count": 389,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2520,
+      "direct_text_word_count": 389,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 52
     },
     {
-      "pdf_page": 53,
       "character_count": 3329,
       "word_count": 504,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3329,
+      "direct_text_word_count": 504,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 53
     },
     {
-      "pdf_page": 54,
       "character_count": 2263,
       "word_count": 335,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2263,
+      "direct_text_word_count": 335,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 54
     },
     {
-      "pdf_page": 55,
       "character_count": 2012,
       "word_count": 338,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2012,
+      "direct_text_word_count": 338,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 55
     },
     {
-      "pdf_page": 56,
       "character_count": 2461,
       "word_count": 371,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2461,
+      "direct_text_word_count": 371,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 56
     },
     {
-      "pdf_page": 57,
       "character_count": 3209,
       "word_count": 522,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3209,
+      "direct_text_word_count": 522,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 57
     },
     {
-      "pdf_page": 58,
       "character_count": 3001,
       "word_count": 471,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3001,
+      "direct_text_word_count": 471,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 58
     },
     {
-      "pdf_page": 59,
       "character_count": 3343,
       "word_count": 531,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3343,
+      "direct_text_word_count": 531,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 59
     },
     {
-      "pdf_page": 60,
       "character_count": 2898,
       "word_count": 443,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2898,
+      "direct_text_word_count": 443,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 60
     },
     {
-      "pdf_page": 61,
       "character_count": 3184,
       "word_count": 518,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3184,
+      "direct_text_word_count": 518,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 61
     },
     {
-      "pdf_page": 62,
       "character_count": 2163,
       "word_count": 356,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2163,
+      "direct_text_word_count": 356,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 62
     },
     {
-      "pdf_page": 63,
       "character_count": 2086,
       "word_count": 374,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2086,
+      "direct_text_word_count": 374,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 63
     },
     {
-      "pdf_page": 64,
       "character_count": 2298,
       "word_count": 340,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2298,
+      "direct_text_word_count": 340,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 64
     },
     {
-      "pdf_page": 65,
       "character_count": 3326,
       "word_count": 548,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3326,
+      "direct_text_word_count": 548,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 65
     },
     {
-      "pdf_page": 66,
       "character_count": 2690,
       "word_count": 420,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2690,
+      "direct_text_word_count": 420,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 66
     },
     {
-      "pdf_page": 67,
       "character_count": 3427,
       "word_count": 587,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3427,
+      "direct_text_word_count": 587,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 67
     },
     {
-      "pdf_page": 68,
       "character_count": 3175,
       "word_count": 504,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3175,
+      "direct_text_word_count": 504,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 68
     },
     {
-      "pdf_page": 69,
       "character_count": 2434,
       "word_count": 408,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2434,
+      "direct_text_word_count": 408,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 69
     },
     {
-      "pdf_page": 70,
       "character_count": 2234,
       "word_count": 344,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2234,
+      "direct_text_word_count": 344,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 70
     },
     {
-      "pdf_page": 71,
       "character_count": 1859,
       "word_count": 313,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1859,
+      "direct_text_word_count": 313,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 71
     },
     {
-      "pdf_page": 72,
       "character_count": 2785,
       "word_count": 446,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2785,
+      "direct_text_word_count": 446,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 72
     },
     {
-      "pdf_page": 73,
       "character_count": 3251,
       "word_count": 547,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3251,
+      "direct_text_word_count": 547,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 73
     },
     {
-      "pdf_page": 74,
       "character_count": 2640,
       "word_count": 446,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2640,
+      "direct_text_word_count": 446,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 74
     },
     {
-      "pdf_page": 75,
       "character_count": 3208,
       "word_count": 515,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3208,
+      "direct_text_word_count": 515,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 75
     },
     {
-      "pdf_page": 76,
       "character_count": 3307,
       "word_count": 552,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3307,
+      "direct_text_word_count": 552,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 76
     },
     {
-      "pdf_page": 77,
       "character_count": 2962,
       "word_count": 503,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2962,
+      "direct_text_word_count": 503,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 77
     },
     {
-      "pdf_page": 78,
       "character_count": 2011,
       "word_count": 309,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2011,
+      "direct_text_word_count": 309,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 78
     },
     {
-      "pdf_page": 79,
       "character_count": 1855,
       "word_count": 319,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1855,
+      "direct_text_word_count": 319,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 79
     },
     {
-      "pdf_page": 80,
       "character_count": 2376,
       "word_count": 376,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2376,
+      "direct_text_word_count": 376,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 80
     },
     {
-      "pdf_page": 81,
       "character_count": 3356,
       "word_count": 553,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3356,
+      "direct_text_word_count": 553,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 81
     },
     {
-      "pdf_page": 82,
       "character_count": 3438,
       "word_count": 553,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3438,
+      "direct_text_word_count": 553,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 82
     },
     {
-      "pdf_page": 83,
       "character_count": 2912,
       "word_count": 475,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2912,
+      "direct_text_word_count": 475,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 83
     },
     {
-      "pdf_page": 84,
       "character_count": 3458,
       "word_count": 582,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3458,
+      "direct_text_word_count": 582,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 84
     },
     {
-      "pdf_page": 85,
       "character_count": 2950,
       "word_count": 496,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2950,
+      "direct_text_word_count": 496,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 85
     },
     {
-      "pdf_page": 86,
       "character_count": 2009,
       "word_count": 305,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2009,
+      "direct_text_word_count": 305,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 86
     },
     {
-      "pdf_page": 87,
       "character_count": 1734,
       "word_count": 299,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1734,
+      "direct_text_word_count": 299,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 87
     },
     {
-      "pdf_page": 88,
       "character_count": 1748,
       "word_count": 286,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1748,
+      "direct_text_word_count": 286,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 88
     },
     {
-      "pdf_page": 89,
       "character_count": 3159,
       "word_count": 498,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3159,
+      "direct_text_word_count": 498,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 89
     },
     {
-      "pdf_page": 90,
       "character_count": 2769,
       "word_count": 475,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2769,
+      "direct_text_word_count": 475,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 90
     },
     {
-      "pdf_page": 91,
       "character_count": 4031,
       "word_count": 668,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 4031,
+      "direct_text_word_count": 668,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 91
     },
     {
-      "pdf_page": 92,
       "character_count": 3416,
       "word_count": 590,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3416,
+      "direct_text_word_count": 590,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 92
     },
     {
-      "pdf_page": 93,
       "character_count": 3015,
       "word_count": 510,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3015,
+      "direct_text_word_count": 510,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 93
     },
     {
-      "pdf_page": 94,
       "character_count": 2200,
       "word_count": 344,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2200,
+      "direct_text_word_count": 344,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 94
     },
     {
-      "pdf_page": 95,
       "character_count": 1779,
       "word_count": 293,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1779,
+      "direct_text_word_count": 293,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 95
     },
     {
-      "pdf_page": 96,
       "character_count": 1951,
       "word_count": 310,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1951,
+      "direct_text_word_count": 310,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 96
     },
     {
-      "pdf_page": 97,
       "character_count": 3475,
       "word_count": 570,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3475,
+      "direct_text_word_count": 570,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 97
     },
     {
-      "pdf_page": 98,
       "character_count": 3374,
       "word_count": 543,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3374,
+      "direct_text_word_count": 543,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 98
     },
     {
-      "pdf_page": 99,
       "character_count": 3440,
       "word_count": 552,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3440,
+      "direct_text_word_count": 552,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 99
     },
     {
-      "pdf_page": 100,
       "character_count": 3383,
       "word_count": 574,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3383,
+      "direct_text_word_count": 574,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 100
     },
     {
-      "pdf_page": 101,
       "character_count": 2945,
       "word_count": 486,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2945,
+      "direct_text_word_count": 486,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 101
     },
     {
-      "pdf_page": 102,
       "character_count": 2175,
       "word_count": 337,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2175,
+      "direct_text_word_count": 337,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 102
     },
     {
-      "pdf_page": 103,
       "character_count": 1751,
       "word_count": 292,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1751,
+      "direct_text_word_count": 292,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 103
     },
     {
-      "pdf_page": 104,
       "character_count": 2068,
       "word_count": 334,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2068,
+      "direct_text_word_count": 334,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 104
     },
     {
-      "pdf_page": 105,
       "character_count": 3370,
       "word_count": 545,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3370,
+      "direct_text_word_count": 545,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 105
     },
     {
-      "pdf_page": 106,
       "character_count": 3410,
       "word_count": 552,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3410,
+      "direct_text_word_count": 552,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 106
     },
     {
-      "pdf_page": 107,
       "character_count": 3380,
       "word_count": 550,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3380,
+      "direct_text_word_count": 550,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 107
     },
     {
-      "pdf_page": 108,
       "character_count": 3441,
       "word_count": 574,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3441,
+      "direct_text_word_count": 574,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 108
     },
     {
-      "pdf_page": 109,
       "character_count": 3162,
       "word_count": 517,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3162,
+      "direct_text_word_count": 517,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 109
     },
     {
-      "pdf_page": 110,
       "character_count": 1982,
       "word_count": 297,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1982,
+      "direct_text_word_count": 297,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 110
     },
     {
-      "pdf_page": 111,
       "character_count": 3306,
       "word_count": 527,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3306,
+      "direct_text_word_count": 527,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 111
     },
     {
-      "pdf_page": 112,
       "character_count": 2295,
       "word_count": 387,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2295,
+      "direct_text_word_count": 387,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 112
     },
     {
-      "pdf_page": 113,
       "character_count": 2005,
       "word_count": 334,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2005,
+      "direct_text_word_count": 334,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 113
     },
     {
-      "pdf_page": 114,
       "character_count": 3310,
       "word_count": 561,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3310,
+      "direct_text_word_count": 561,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 114
     },
     {
-      "pdf_page": 115,
       "character_count": 3054,
       "word_count": 500,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3054,
+      "direct_text_word_count": 500,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 115
     },
     {
-      "pdf_page": 116,
       "character_count": 3401,
       "word_count": 560,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3401,
+      "direct_text_word_count": 560,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 116
     },
     {
-      "pdf_page": 117,
       "character_count": 3188,
       "word_count": 528,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3188,
+      "direct_text_word_count": 528,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 117
     },
     {
-      "pdf_page": 118,
       "character_count": 2260,
       "word_count": 375,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2260,
+      "direct_text_word_count": 375,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 118
     },
     {
-      "pdf_page": 119,
       "character_count": 2247,
       "word_count": 358,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2247,
+      "direct_text_word_count": 358,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 119
     },
     {
-      "pdf_page": 120,
       "character_count": 1896,
       "word_count": 328,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1896,
+      "direct_text_word_count": 328,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 120
     },
     {
-      "pdf_page": 121,
       "character_count": 2140,
       "word_count": 360,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2140,
+      "direct_text_word_count": 360,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 121
     },
     {
-      "pdf_page": 122,
       "character_count": 3441,
       "word_count": 573,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3441,
+      "direct_text_word_count": 573,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 122
     },
     {
-      "pdf_page": 123,
       "character_count": 3092,
       "word_count": 505,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3092,
+      "direct_text_word_count": 505,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 123
     },
     {
-      "pdf_page": 124,
       "character_count": 2923,
       "word_count": 484,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2923,
+      "direct_text_word_count": 484,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 124
     },
     {
-      "pdf_page": 125,
       "character_count": 2916,
       "word_count": 471,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2916,
+      "direct_text_word_count": 471,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 125
     },
     {
-      "pdf_page": 126,
       "character_count": 2157,
       "word_count": 358,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2157,
+      "direct_text_word_count": 358,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 126
     },
     {
-      "pdf_page": 127,
       "character_count": 2506,
       "word_count": 401,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2506,
+      "direct_text_word_count": 401,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 127
     },
     {
-      "pdf_page": 128,
       "character_count": 2131,
       "word_count": 390,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2131,
+      "direct_text_word_count": 390,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 128
     },
     {
-      "pdf_page": 129,
       "character_count": 2056,
       "word_count": 341,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2056,
+      "direct_text_word_count": 341,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 129
     },
     {
-      "pdf_page": 130,
       "character_count": 3326,
       "word_count": 527,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3326,
+      "direct_text_word_count": 527,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 130
     },
     {
-      "pdf_page": 131,
       "character_count": 2422,
       "word_count": 408,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2422,
+      "direct_text_word_count": 408,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 131
     },
     {
-      "pdf_page": 132,
       "character_count": 3313,
       "word_count": 556,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3313,
+      "direct_text_word_count": 556,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 132
     },
     {
-      "pdf_page": 133,
       "character_count": 2635,
       "word_count": 430,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2635,
+      "direct_text_word_count": 430,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 133
     },
     {
-      "pdf_page": 134,
       "character_count": 3361,
       "word_count": 557,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3361,
+      "direct_text_word_count": 557,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 134
     },
     {
-      "pdf_page": 135,
       "character_count": 2816,
       "word_count": 457,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2816,
+      "direct_text_word_count": 457,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 135
     },
     {
-      "pdf_page": 136,
       "character_count": 2056,
       "word_count": 373,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2056,
+      "direct_text_word_count": 373,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 136
     },
     {
-      "pdf_page": 137,
       "character_count": 2064,
       "word_count": 350,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2064,
+      "direct_text_word_count": 350,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 137
     },
     {
-      "pdf_page": 138,
       "character_count": 3305,
       "word_count": 558,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3305,
+      "direct_text_word_count": 558,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 138
     },
     {
-      "pdf_page": 139,
       "character_count": 3027,
       "word_count": 498,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3027,
+      "direct_text_word_count": 498,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 139
     },
     {
-      "pdf_page": 140,
       "character_count": 3385,
       "word_count": 565,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3385,
+      "direct_text_word_count": 565,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 140
     },
     {
-      "pdf_page": 141,
       "character_count": 3061,
       "word_count": 507,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3061,
+      "direct_text_word_count": 507,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 141
     },
     {
-      "pdf_page": 142,
       "character_count": 1634,
       "word_count": 280,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1634,
+      "direct_text_word_count": 280,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 142
     },
     {
-      "pdf_page": 143,
       "character_count": 2220,
       "word_count": 350,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2220,
+      "direct_text_word_count": 350,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 143
     },
     {
-      "pdf_page": 144,
       "character_count": 1927,
       "word_count": 330,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1927,
+      "direct_text_word_count": 330,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 144
     },
     {
-      "pdf_page": 145,
       "character_count": 2168,
       "word_count": 357,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2168,
+      "direct_text_word_count": 357,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 145
     },
     {
-      "pdf_page": 146,
       "character_count": 3241,
       "word_count": 548,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3241,
+      "direct_text_word_count": 548,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 146
     },
     {
-      "pdf_page": 147,
       "character_count": 3211,
       "word_count": 502,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3211,
+      "direct_text_word_count": 502,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 147
     },
     {
-      "pdf_page": 148,
       "character_count": 3419,
       "word_count": 558,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3419,
+      "direct_text_word_count": 558,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 148
     },
     {
-      "pdf_page": 149,
       "character_count": 3258,
       "word_count": 550,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3258,
+      "direct_text_word_count": 550,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 149
     },
     {
-      "pdf_page": 150,
       "character_count": 2938,
       "word_count": 506,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2938,
+      "direct_text_word_count": 506,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 150
     },
     {
-      "pdf_page": 151,
       "character_count": 2234,
       "word_count": 353,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2234,
+      "direct_text_word_count": 353,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 151
     },
     {
-      "pdf_page": 152,
       "character_count": 1890,
       "word_count": 337,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1890,
+      "direct_text_word_count": 337,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 152
     },
     {
-      "pdf_page": 153,
       "character_count": 1932,
       "word_count": 324,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1932,
+      "direct_text_word_count": 324,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 153
     },
     {
-      "pdf_page": 154,
       "character_count": 3163,
       "word_count": 528,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3163,
+      "direct_text_word_count": 528,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 154
     },
     {
-      "pdf_page": 155,
       "character_count": 2531,
       "word_count": 408,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2531,
+      "direct_text_word_count": 408,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 155
     },
     {
-      "pdf_page": 156,
       "character_count": 3320,
       "word_count": 528,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3320,
+      "direct_text_word_count": 528,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 156
     },
     {
-      "pdf_page": 157,
       "character_count": 2431,
       "word_count": 404,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2431,
+      "direct_text_word_count": 404,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 157
     },
     {
-      "pdf_page": 158,
       "character_count": 3378,
       "word_count": 571,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3378,
+      "direct_text_word_count": 571,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 158
     },
     {
-      "pdf_page": 159,
       "character_count": 2495,
       "word_count": 397,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2495,
+      "direct_text_word_count": 397,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 159
     },
     {
-      "pdf_page": 160,
       "character_count": 1898,
       "word_count": 332,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1898,
+      "direct_text_word_count": 332,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 160
     },
     {
-      "pdf_page": 161,
       "character_count": 2011,
       "word_count": 332,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2011,
+      "direct_text_word_count": 332,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 161
     },
     {
-      "pdf_page": 162,
       "character_count": 3379,
       "word_count": 568,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3379,
+      "direct_text_word_count": 568,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 162
     },
     {
-      "pdf_page": 163,
       "character_count": 2655,
       "word_count": 439,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2655,
+      "direct_text_word_count": 439,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 163
     },
     {
-      "pdf_page": 164,
       "character_count": 3132,
       "word_count": 516,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3132,
+      "direct_text_word_count": 516,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 164
     },
     {
-      "pdf_page": 165,
       "character_count": 3087,
       "word_count": 519,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3087,
+      "direct_text_word_count": 519,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 165
     },
     {
-      "pdf_page": 166,
       "character_count": 2647,
       "word_count": 462,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2647,
+      "direct_text_word_count": 462,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 166
     },
     {
-      "pdf_page": 167,
       "character_count": 1989,
       "word_count": 314,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1989,
+      "direct_text_word_count": 314,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 167
     },
     {
-      "pdf_page": 168,
       "character_count": 2263,
       "word_count": 389,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2263,
+      "direct_text_word_count": 389,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 168
     },
     {
-      "pdf_page": 169,
       "character_count": 2165,
       "word_count": 358,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2165,
+      "direct_text_word_count": 358,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 169
     },
     {
-      "pdf_page": 170,
       "character_count": 3530,
       "word_count": 578,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3530,
+      "direct_text_word_count": 578,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 170
     },
     {
-      "pdf_page": 171,
       "character_count": 2259,
       "word_count": 353,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2259,
+      "direct_text_word_count": 353,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 171
     },
     {
-      "pdf_page": 172,
       "character_count": 3300,
       "word_count": 559,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3300,
+      "direct_text_word_count": 559,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 172
     },
     {
-      "pdf_page": 173,
       "character_count": 1797,
       "word_count": 297,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1797,
+      "direct_text_word_count": 297,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 173
     },
     {
-      "pdf_page": 174,
       "character_count": 3180,
       "word_count": 516,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3180,
+      "direct_text_word_count": 516,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 174
     },
     {
-      "pdf_page": 175,
       "character_count": 2642,
       "word_count": 422,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2642,
+      "direct_text_word_count": 422,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 175
     },
     {
-      "pdf_page": 176,
       "character_count": 1792,
       "word_count": 308,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1792,
+      "direct_text_word_count": 308,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 176
     },
     {
-      "pdf_page": 177,
       "character_count": 1953,
       "word_count": 302,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1953,
+      "direct_text_word_count": 302,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 177
     },
     {
-      "pdf_page": 178,
       "character_count": 3300,
       "word_count": 570,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3300,
+      "direct_text_word_count": 570,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 178
     },
     {
-      "pdf_page": 179,
       "character_count": 3377,
       "word_count": 579,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3377,
+      "direct_text_word_count": 579,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 179
     },
     {
-      "pdf_page": 180,
       "character_count": 3333,
       "word_count": 557,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3333,
+      "direct_text_word_count": 557,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 180
     },
     {
-      "pdf_page": 181,
       "character_count": 3253,
       "word_count": 547,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3253,
+      "direct_text_word_count": 547,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 181
     },
     {
-      "pdf_page": 182,
       "character_count": 2847,
       "word_count": 502,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2847,
+      "direct_text_word_count": 502,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 182
     },
     {
-      "pdf_page": 183,
       "character_count": 2264,
       "word_count": 363,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2264,
+      "direct_text_word_count": 363,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 183
     },
     {
-      "pdf_page": 184,
       "character_count": 1737,
       "word_count": 291,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1737,
+      "direct_text_word_count": 291,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 184
     },
     {
-      "pdf_page": 185,
       "character_count": 1890,
       "word_count": 318,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1890,
+      "direct_text_word_count": 318,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 185
     },
     {
-      "pdf_page": 186,
       "character_count": 3286,
       "word_count": 548,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3286,
+      "direct_text_word_count": 548,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 186
     },
     {
-      "pdf_page": 187,
       "character_count": 2562,
       "word_count": 490,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2562,
+      "direct_text_word_count": 490,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 187
     },
     {
-      "pdf_page": 188,
       "character_count": 3266,
       "word_count": 562,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3266,
+      "direct_text_word_count": 562,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 188
     },
     {
-      "pdf_page": 189,
       "character_count": 2908,
       "word_count": 485,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2908,
+      "direct_text_word_count": 485,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 189
     },
     {
-      "pdf_page": 190,
       "character_count": 2780,
       "word_count": 445,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2780,
+      "direct_text_word_count": 445,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 190
     },
     {
-      "pdf_page": 191,
       "character_count": 1958,
       "word_count": 305,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1958,
+      "direct_text_word_count": 305,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 191
     },
     {
-      "pdf_page": 192,
       "character_count": 1721,
       "word_count": 297,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1721,
+      "direct_text_word_count": 297,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 192
     },
     {
-      "pdf_page": 193,
       "character_count": 1605,
       "word_count": 268,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1605,
+      "direct_text_word_count": 268,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 193
     },
     {
-      "pdf_page": 194,
       "character_count": 2947,
       "word_count": 488,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2947,
+      "direct_text_word_count": 488,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 194
     },
     {
-      "pdf_page": 195,
       "character_count": 2588,
       "word_count": 434,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2588,
+      "direct_text_word_count": 434,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 195
     },
     {
-      "pdf_page": 196,
       "character_count": 3137,
       "word_count": 536,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3137,
+      "direct_text_word_count": 536,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 196
     },
     {
-      "pdf_page": 197,
       "character_count": 3120,
       "word_count": 550,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3120,
+      "direct_text_word_count": 550,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 197
     },
     {
-      "pdf_page": 198,
       "character_count": 3057,
       "word_count": 544,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3057,
+      "direct_text_word_count": 544,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 198
     },
     {
-      "pdf_page": 199,
       "character_count": 2682,
       "word_count": 434,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2682,
+      "direct_text_word_count": 434,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 199
     },
     {
-      "pdf_page": 200,
       "character_count": 1603,
       "word_count": 287,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1603,
+      "direct_text_word_count": 287,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 200
     },
     {
-      "pdf_page": 201,
       "character_count": 1731,
       "word_count": 294,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1731,
+      "direct_text_word_count": 294,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 201
     },
     {
-      "pdf_page": 202,
       "character_count": 3147,
       "word_count": 539,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3147,
+      "direct_text_word_count": 539,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 202
     },
     {
-      "pdf_page": 203,
       "character_count": 3141,
       "word_count": 575,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3141,
+      "direct_text_word_count": 575,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 203
     },
     {
-      "pdf_page": 204,
       "character_count": 3858,
       "word_count": 690,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3858,
+      "direct_text_word_count": 690,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 204
     },
     {
-      "pdf_page": 205,
       "character_count": 3468,
       "word_count": 583,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3468,
+      "direct_text_word_count": 583,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 205
     },
     {
-      "pdf_page": 206,
       "character_count": 3439,
       "word_count": 618,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3439,
+      "direct_text_word_count": 618,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 206
     },
     {
-      "pdf_page": 207,
       "character_count": 1941,
       "word_count": 319,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1941,
+      "direct_text_word_count": 319,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 207
     },
     {
-      "pdf_page": 208,
       "character_count": 1954,
       "word_count": 327,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1954,
+      "direct_text_word_count": 327,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 208
     },
     {
-      "pdf_page": 209,
       "character_count": 1783,
       "word_count": 297,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1783,
+      "direct_text_word_count": 297,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 209
     },
     {
-      "pdf_page": 210,
       "character_count": 3459,
       "word_count": 586,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3459,
+      "direct_text_word_count": 586,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 210
     },
     {
-      "pdf_page": 211,
       "character_count": 3504,
       "word_count": 609,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 3504,
+      "direct_text_word_count": 609,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 211
     },
     {
-      "pdf_page": 212,
       "character_count": 1939,
       "word_count": 328,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1939,
+      "direct_text_word_count": 328,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 212
     },
     {
-      "pdf_page": 213,
       "character_count": 2771,
       "word_count": 480,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2771,
+      "direct_text_word_count": 480,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 213
     },
     {
-      "pdf_page": 214,
       "character_count": 1840,
       "word_count": 318,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1840,
+      "direct_text_word_count": 318,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 214
     },
     {
-      "pdf_page": 215,
       "character_count": 2031,
       "word_count": 309,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 2031,
+      "direct_text_word_count": 309,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 215
     },
     {
-      "pdf_page": 216,
       "character_count": 776,
       "word_count": 99,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 776,
+      "direct_text_word_count": 99,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 216
     },
     {
-      "pdf_page": 217,
       "character_count": 748,
       "word_count": 113,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 748,
+      "direct_text_word_count": 113,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 217
     },
     {
-      "pdf_page": 218,
       "character_count": 1360,
       "word_count": 216,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1360,
+      "direct_text_word_count": 216,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 218
     },
     {
-      "pdf_page": 219,
       "character_count": 1294,
       "word_count": 207,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1294,
+      "direct_text_word_count": 207,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 219
     },
     {
-      "pdf_page": 220,
       "character_count": 1418,
       "word_count": 236,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1418,
+      "direct_text_word_count": 236,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 220
     },
     {
-      "pdf_page": 221,
       "character_count": 1244,
       "word_count": 188,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1244,
+      "direct_text_word_count": 188,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 221
     },
     {
-      "pdf_page": 222,
       "character_count": 1424,
       "word_count": 222,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 1424,
+      "direct_text_word_count": 222,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 222
     },
     {
-      "pdf_page": 223,
       "character_count": 82,
       "word_count": 9,
-      "extraction_method": "pymupdf_text"
+      "direct_text_character_count": 82,
+      "direct_text_word_count": 9,
+      "direct_text_is_weak": false,
+      "extraction_method": "pymupdf_text",
+      "ocr_attempted": false,
+      "ocr_applied": false,
+      "ocr_confidence": null,
+      "ocr_unavailable_reason": null,
+      "pdf_page": 223
     }
   ]
 }

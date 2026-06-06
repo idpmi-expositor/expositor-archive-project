@@ -1,0 +1,77 @@
+---
+schema_version: 1.0.0
+lesson_id: LES-2024-C1-023
+publication_id: expositor-guia-maestro-volumen-45
+collection_type: Expositor Maestro
+year: 2024
+cycle: C1
+lesson_number: 23
+title: La humanidad es culpable
+language: es
+page_range:
+  start: 183
+  end: 190
+lesson_sections:
+  lesson_header:
+    marker: Contenido
+    lesson_number: 23
+    lesson_date: 04/ago/24
+  title:
+    text: La humanidad es culpable
+  biblical_reading:
+    reference_display: TBD
+    canonical_references:
+    - testament: TBD
+      book_standardized: TBD
+      chapter: 0
+      verse_start: 0
+      verse_end: 0
+    replacement_policy:
+      provider: api.bible
+      strategy: replace_by_canonical_reference
+      source_text_included: false
+  lesson_outline:
+    items:
+    - TBD
+  teacher_notes:
+    items:
+    - TBD
+  summary_application:
+    items:
+    - TBD
+processing_audit:
+  intake_date: '2026-06-06T00:42:57+00:00'
+  ocr_engine: PyMuPDF
+  ocr_engine_version: pending-version-capture
+  extraction_method: pdf_text_extraction
+  extraction_confidence: minimal-valid-placeholder
+  manual_review_required: true
+  reviewed_by: pending-human-review
+  review_status: pending
+source_integrity:
+  original_filename: expositor-guia-maestro-volumen-45.pdf
+  sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
+  imported_at: '2026-06-06T00:42:57+00:00'
+  source_scan_quality: pending-human-review
+processing_status:
+  intake_completed: true
+  ocr_completed: true
+  metadata_extracted: true
+  semantic_indexed: false
+  human_review_completed: false
+  yaml_generated: true
+  validated: false
+source_trace:
+  source_pdf: source_assets/original_pdfs/expositor-guia-maestro-volumen-45.pdf
+  page_start: 183
+  page_end: 190
+  line_start: 2966
+  line_end: 3134
+  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+semantic_metadata:
+  doctrinal_categories:
+  - TBD
+  theological_themes:
+  - TBD
+  educational_level: adult
+  intended_audience: Expositor Maestro
