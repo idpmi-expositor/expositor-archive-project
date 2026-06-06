@@ -18,6 +18,17 @@ Future dedicated quality summaries should be written under:
 ocr/quality_reports/
 ```
 
+## Implemented Quality Gate
+
+`scripts/ingestion/02_pdf_to_raw_text.py` evaluates every page before raw text
+is accepted by downstream stages. PyMuPDF remains the primary extractor.
+Tesseract OCR is attempted only when the embedded text result is marked
+`NEEDS_OCR`.
+
+Fallback OCR text is accepted only when the second quality evaluation returns
+`PASS` or `WARNING`. Pages that remain unsafe after OCR are marked
+`NEEDS_HUMAN_REVIEW` and do not contribute OCR text as trusted lesson content.
+
 ## Page Status Values
 
 Use these status values when reporting page-level quality:
