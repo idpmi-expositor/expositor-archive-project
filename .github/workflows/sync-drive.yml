@@ -53,7 +53,7 @@ jobs:
 
       - name: Sync Drive folder into repository
         env:
-          DRIVE_SOURCE: ${{ env.DRIVE_REMOTE }},root_folder_id=${{ env.DRIVE_FOLDER_ID }}:
+          DRIVE_SOURCE: "${{ env.DRIVE_REMOTE }},root_folder_id=${{ env.DRIVE_FOLDER_ID }}:"
         run: |
           mkdir -p "$DESTINATION_DIR"
           if [ "${{ inputs.dry_run }}" = "true" ]; then
