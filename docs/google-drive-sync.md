@@ -8,6 +8,33 @@ Drive folder ID:
 18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n
 ```
 
+## Local source PDF validation folder
+
+The source-PDF pipeline can also validate `source_assets/original_pdfs` against
+a Drive folder through local `rclone`. This is separate from the full
+`ExpositorMain` GitHub Actions sync above.
+
+Current source PDF folder ID:
+
+```text
+1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7
+```
+
+Validate local PDF filenames and sizes with:
+
+```bash
+python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7
+```
+
+If the validator reports a mismatch, sync the missing PDF files locally, run
+the rename utility, and validate again before generating downstream artifacts:
+
+```bash
+python scripts/ingestion/00_rename_source_pdfs.py
+python scripts/ingestion/00_rename_source_pdfs.py --apply
+python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7
+```
+
 ## Security rule
 
 Do not put the Google account username or password in GitHub, workflow YAML, issue comments, commit messages, or logs. Use the password only to sign in during the local rclone authorization flow.

@@ -20,11 +20,16 @@ workflow, see [PROCESS.md](PROCESS.md).
 ## Adding A Source PDF
 
 1. Add immutable source PDFs under `source_assets/original_pdfs`.
-2. Keep original filenames stable unless there is a clear archival reason to
-   rename them.
-3. Run the ingestion and structuring pipeline from the repository root:
+2. Run the rename utility in dry-run mode, then apply the stable archive names
+   when the proposed names are correct.
+3. If the source files also live in Google Drive, validate local/remote sync by
+   filename and size before generating downstream artifacts.
+4. Run the ingestion and structuring pipeline from the repository root:
 
 ```text
+python scripts/ingestion/00_rename_source_pdfs.py
+python scripts/ingestion/00_rename_source_pdfs.py --apply
+python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
 python scripts/ingestion/01_pdf_discovery.py
 python scripts/ingestion/02_pdf_to_raw_text.py
 python scripts/structuring/03_minimal_text_normalizer.py
@@ -32,7 +37,7 @@ python scripts/structuring/04_document_structure_detector.py
 python scripts/structuring/05_lesson_segmenter.py
 ```
 
-4. Review generated raw text, processing logs, normalized text, structure JSON,
+5. Review generated raw text, processing logs, normalized text, structure JSON,
    and lesson segment metadata before generating draft YAML.
 
 ## Generated Drafts
@@ -43,9 +48,9 @@ Run draft generation only after the structuring artifacts are reviewed:
 python scripts/canonical/06_yaml_generator.py
 ```
 
-Generated YAML belongs under `archive/drafts`. Draft files may contain explicit
-placeholders while source evidence is still missing. Draft files must not be
-indexed and must not be treated as canonical records.
+Generated YAML belongs under `archive/drafts/<publication_id>/`. Draft files
+may contain explicit placeholders while source evidence is still missing. Draft
+files must not be indexed and must not be treated as canonical records.
 
 ## Canonical YAML
 

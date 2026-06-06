@@ -8,7 +8,7 @@ review, placeholder removal, validation, and index regeneration.
 Draft YAML:
 
 ```text
-archive/drafts/**/*.yaml
+archive/drafts/<publication_id>/**/*.yaml
 ```
 
 Reviewed canonical YAML:
@@ -35,7 +35,8 @@ Do not build official indexes from `archive/drafts`.
 6. Confirm all required canonical sections contain real reviewed content.
 7. Confirm source traceability points back to source pages and lines or
    extraction blocks.
-8. Move the file from `archive/drafts` to `archive/lessons`.
+8. Move the file from `archive/drafts/<publication_id>/...` to
+   `archive/lessons/...`.
 9. Run canonical validation:
 
 ```text

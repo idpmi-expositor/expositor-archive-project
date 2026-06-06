@@ -7,6 +7,8 @@ from the repository root unless a document says otherwise.
 
 - Python 3.11 or newer is recommended.
 - Git is required for normal repository work.
+- `rclone` is required when validating local source PDFs against the Google
+  Drive source folder.
 - Tesseract OCR is optional but recommended for scanned or weak text-layer
   pages.
 
@@ -63,6 +65,9 @@ draft YAML is production-ready.
 Run the pipeline in order:
 
 ```text
+python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
+python scripts/ingestion/00_rename_source_pdfs.py
+python scripts/ingestion/00_rename_source_pdfs.py --apply
 python scripts/ingestion/01_pdf_discovery.py
 python scripts/ingestion/02_pdf_to_raw_text.py
 python scripts/structuring/03_minimal_text_normalizer.py
@@ -75,4 +80,7 @@ python scripts/canonical/08_index_builder.py
 
 The current scripts are intentionally separate so maintainers can inspect each
 layer. For the review and promotion process, see [PROCESS.md](PROCESS.md).
+
+If no reviewed canonical lesson YAML exists yet, `08_index_builder.py` reports
+that there is no canonical data and exits cleanly without writing indexes.
 

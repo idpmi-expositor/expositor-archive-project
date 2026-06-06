@@ -521,6 +521,37 @@ to follow:
 
 ### Ingestion
 
+#### 00_validate_source_pdf_sync.py
+
+Responsibilities:
+
+- compare local source PDF filenames and sizes against a Google Drive source
+  folder
+- fail before extraction when local and remote sources do not match
+- remain read-only
+
+Current implementation status:
+
+- lists local PDFs under `source_assets/original_pdfs`
+- lists remote PDFs through `rclone lsjson`
+- reports missing local files, missing remote files, and size mismatches
+- exits cleanly only when the local and remote source sets match
+
+#### 00_rename_source_pdfs.py
+
+Responsibilities:
+
+- inspect source PDF filenames, metadata, and first pages
+- propose stable archive filenames before downstream artifacts are generated
+- apply safe renames only when explicitly requested
+
+Current implementation status:
+
+- performs a dry run by default
+- detects Expositor maestro volume references
+- applies stable names such as `expositor-guia-maestro-volumen-46.pdf`
+- refuses to overwrite an existing target file
+
 #### 01_pdf_discovery.py
 
 Responsibilities:
@@ -620,8 +651,9 @@ Responsibilities:
 
 Current implementation status:
 
-- writes generated draft YAML under `archive/drafts`
-- defines the standard lesson output path pattern
+- writes generated draft YAML under `archive/drafts/<publication_id>/`
+- defines the standard lesson output path pattern per publication
+- prevents draft path collisions across multiple source publications
 - uses explicit placeholders to separate generated scaffolding from
   human-reviewed canonical truth
 - requires placeholder-free validation before files are promoted into
@@ -663,6 +695,8 @@ Current implementation status:
 - generates `scripture_index.yaml`
 - validates every lesson YAML before writing index files
 - keeps indexes reference-only and excludes Bible passage text
+- exits cleanly without writing indexes when there are no reviewed canonical
+  lesson files yet
 
 ## 24. Required Indexes
 

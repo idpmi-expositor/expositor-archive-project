@@ -14,6 +14,9 @@ PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> DRAFT YAML -> REVIEWED CANONICAL
 Run commands from the repository root:
 
 ```text
+python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
+python scripts/ingestion/00_rename_source_pdfs.py
+python scripts/ingestion/00_rename_source_pdfs.py --apply
 python scripts/ingestion/01_pdf_discovery.py
 python scripts/ingestion/02_pdf_to_raw_text.py
 python scripts/structuring/03_minimal_text_normalizer.py
@@ -28,12 +31,14 @@ python scripts/canonical/08_index_builder.py
 
 | Step | Expected output |
 | --- | --- |
+| Source sync validation | pass/fail comparison of local PDF names and sizes against Google Drive |
+| Source PDF rename | stable archive filenames such as `expositor-guia-maestro-volumen-46.pdf` |
 | PDF discovery | source discovery report and intake log readiness |
 | Raw text extraction | `ocr/raw_txt/*.txt` and `ocr/processing_logs/*.json` |
 | Normalization | `normalized/*.txt` |
 | Structure detection | `structured/document_structure/*.json` |
 | Lesson segmentation | `metadata/lessons/*.json` |
-| Draft generation | `archive/drafts/**/*.yaml` |
+| Draft generation | `archive/drafts/<publication_id>/**/*.yaml` |
 | Canonical validation | pass/fail result for `archive/lessons/**/*.yaml` |
 | Index building | `indexes/lessons_index.yaml` and `indexes/scripture_index.yaml` |
 
@@ -41,27 +46,32 @@ python scripts/canonical/08_index_builder.py
 
 Do not skip gates. Each layer depends on the previous layer being explainable.
 
-1. Source PDF gate: the PDF exists under `source_assets/original_pdfs` and is
-   the intended source file.
-2. OCR quality gate: extraction logs and raw text meet
+1. Source sync gate: local PDFs under `source_assets/original_pdfs` match the
+   configured Google Drive source folder by filename and file size.
+2. Source PDF naming gate: PDFs use stable archive filenames before downstream
+   artifacts are generated.
+3. OCR quality gate: extraction logs and raw text meet
    [docs/ocr-quality-policy.md](docs/ocr-quality-policy.md).
-3. Structure gate: page markers, lesson headers, section labels, and
+4. Structure gate: page markers, lesson headers, section labels, and
    `Contenido` entries are detected correctly.
-4. Segment gate: lesson numbers, titles, page spans, and validation summaries
+5. Segment gate: lesson numbers, titles, page spans, and validation summaries
    are explainable from source evidence.
-5. Draft gate: generated YAML stays under `archive/drafts` and is not indexed.
-6. Human review gate: the checklist in
+6. Draft gate: generated YAML stays under `archive/drafts/<publication_id>/`
+   and is not indexed.
+7. Human review gate: the checklist in
    [docs/human-review-checklist.md](docs/human-review-checklist.md) is complete.
-7. Promotion gate: the workflow in
+8. Promotion gate: the workflow in
    [docs/draft-to-canonical-promotion.md](docs/draft-to-canonical-promotion.md)
    is complete.
-8. Canonical gate: `python scripts/canonical/07_schema_validator.py` passes.
-9. Index gate: indexes are regenerated only from reviewed canonical YAML.
+9. Canonical gate: `python scripts/canonical/07_schema_validator.py` passes.
+10. Index gate: indexes are regenerated only from reviewed canonical YAML.
 
 ## Failure Modes
 
 - Missing or weak raw text: inspect OCR logs and rerun with OCR fallback if
   tooling is available.
+- Local/Drive source mismatch: sync the missing PDF files, rerun
+  `00_rename_source_pdfs.py --apply`, then rerun source sync validation.
 - Malformed scripture references: do not promote until references are
   normalized into positive chapter and verse integers.
 - Merged section labels: fix section extraction or manual canonical content
@@ -69,7 +79,7 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
 - Placeholder values in canonical YAML: validation must fail; keep the file in
   `archive/drafts`.
 - No canonical lessons: index generation must stop without writing official
-  indexes.
+  indexes and exit cleanly.
 
 ## Draft Promotion Rules
 

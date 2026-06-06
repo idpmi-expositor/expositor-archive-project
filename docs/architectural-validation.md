@@ -51,8 +51,12 @@ No lesson YAML files found under archive/lessons
 ```
 
 ```text
-python scripts/canonical/07_schema_validator.py archive/drafts
+python scripts/canonical/07_schema_validator.py
 ```
+
+Draft YAML under `archive/drafts/<publication_id>/` may still contain explicit
+review placeholders. It should not be validated as canonical until a reviewed
+file is promoted into `archive/lessons`.
 
 Result:
 
@@ -149,14 +153,15 @@ or out-of-order processing steps.
 Add a single orchestration command such as:
 
 ```text
-python scripts/run_pipeline.py --pdf expositor-guia-maestro-volumen-45.pdf
+python scripts/run_pipeline.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
 ```
 
-The orchestrator should run each layer in order, stop on failed validation, and
-emit a single pipeline report.
+The orchestrator should run source sync validation, source PDF rename checks,
+each processing layer in order, and canonical validation/indexing. It should
+stop on failed validation and emit a single pipeline report.
 
-Continue using `archive/drafts` for generated output and reserve
-`archive/lessons` for reviewed, placeholder-free canonical YAML only.
+Continue using `archive/drafts/<publication_id>/` for generated output and
+reserve `archive/lessons` for reviewed, placeholder-free canonical YAML only.
 
 Add CI checks that verify:
 

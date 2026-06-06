@@ -17,7 +17,7 @@ source_assets/original_pdfs/expositor-guia-maestro-volumen-45.pdf
   -> normalized/expositor-guia-maestro-volumen-45.txt
   -> structured/document_structure/expositor-guia-maestro-volumen-45.json
   -> metadata/lessons/expositor-guia-maestro-volumen-45.json
-  -> archive/drafts/YYYY/CYCLE/LES-YYYY-CYCLE-###.yaml
+  -> archive/drafts/expositor-guia-maestro-volumen-45/YYYY/CYCLE/LES-YYYY-CYCLE-###.yaml
   -> archive/lessons/YYYY/CYCLE/LES-YYYY-CYCLE-###.yaml
   -> indexes/lessons_index.yaml
   -> indexes/scripture_index.yaml
@@ -32,12 +32,14 @@ and the file is promoted into `archive/lessons`.
 
 | Layer | Script | Reads | Writes | Trace responsibility |
 | --- | --- | --- | --- | --- |
+| Pre-ingestion | `00_validate_source_pdf_sync.py` | local source PDFs and Google Drive folder listing | validation result | Confirms local/remote source filenames and sizes match before processing. |
+| Pre-ingestion | `00_rename_source_pdfs.py` | source PDF names, metadata, and first pages | stable source PDF filenames when `--apply` is used | Normalizes source filenames before downstream artifact names are derived. |
 | Ingestion | `01_pdf_discovery.py` | `source_assets/original_pdfs/*.pdf` | console report, intake log directory | Establishes the immutable source set. |
 | Ingestion | `02_pdf_to_raw_text.py` | source PDFs | `ocr/raw_txt/*.txt`, `ocr/processing_logs/*.json` | Preserves page boundaries with `PDF_PAGE` markers and records extraction counts. |
 | Structuring | `03_minimal_text_normalizer.py` | `ocr/raw_txt/*.txt` | `normalized/*.txt` | Keeps page and section markers visible while making prose stable for detection. |
 | Structuring | `04_document_structure_detector.py` | `normalized/*.txt` | `structured/document_structure/*.json` | Records marker type, line number, source text path, and `Contenido` expectations. |
 | Structuring | `05_lesson_segmenter.py` | structure JSON | `metadata/lessons/*.json` | Converts source markers into lesson segment records with page/line spans and validation summaries. |
-| Canonical | `06_yaml_generator.py` | segment JSON | `archive/drafts/**/*.yaml` | Serializes draft lesson YAML with explicit review placeholders. |
+| Canonical | `06_yaml_generator.py` | segment JSON | `archive/drafts/<publication_id>/**/*.yaml` | Serializes draft lesson YAML with explicit review placeholders and prevents cross-publication filename collisions. |
 | Canonical | `07_schema_validator.py` | lesson YAML and schema | validation result | Blocks malformed or placeholder-bearing canonical records. |
 | Canonical | `08_index_builder.py` | validated canonical lesson YAML | `indexes/*.yaml` | Builds reference-only indexes after validation passes. |
 
@@ -45,18 +47,21 @@ and the file is promoted into `archive/lessons`.
 
 Start with the source PDF and move forward one layer at a time:
 
-1. Confirm the PDF exists under `source_assets/original_pdfs`.
-2. Confirm raw text exists and includes `===== PDF_PAGE N =====` markers.
-3. Confirm the processing log records the same page count expected from the PDF.
-4. Confirm normalized text still includes lesson headers, section labels, page
+1. Confirm local source PDFs match the Google Drive source folder when a Drive
+   source is configured.
+2. Confirm source PDFs have stable archive filenames before extraction.
+3. Confirm the PDF exists under `source_assets/original_pdfs`.
+4. Confirm raw text exists and includes `===== PDF_PAGE N =====` markers.
+5. Confirm the processing log records the same page count expected from the PDF.
+6. Confirm normalized text still includes lesson headers, section labels, page
    markers, and Bible-reference-only lines.
-5. Confirm structure JSON has `markers` and, when available, `content_index`
+7. Confirm structure JSON has `markers` and, when available, `content_index`
    entries from the publication's `Contenido` page.
-6. Confirm segment metadata includes expected lesson numbers, titles, dates, and
+8. Confirm segment metadata includes expected lesson numbers, titles, dates, and
    validation summaries.
-7. Confirm generated draft YAML is stored under `archive/drafts`, not
-   `archive/lessons`.
-8. Before promotion, confirm each lesson YAML preserves `source_trace`,
+9. Confirm generated draft YAML is stored under
+   `archive/drafts/<publication_id>/`, not `archive/lessons`.
+10. Before promotion, confirm each lesson YAML preserves `source_trace`,
    including page and line spans, `source_integrity`, `processing_audit`, and
    reference-only biblical reading metadata with no `TBD`, `pending-*`, or zero
    scripture placeholder values.
