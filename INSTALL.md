@@ -5,7 +5,7 @@ from the repository root unless a document says otherwise.
 
 ## Requirements
 
-- Python 3.11 or newer is recommended.
+- Python 3.11 or newer is required.
 - Git is required for normal repository work.
 - `rclone` is required when validating local source PDFs against the Google
   Drive source folder.
@@ -18,6 +18,12 @@ Install Python dependencies:
 python -m pip install -r requirements.txt
 ```
 
+The Python dependency file currently includes:
+
+- `PyYAML` for canonical YAML validation and index writing
+- `PyMuPDF` for embedded PDF text extraction
+- `Pillow` and `pytesseract` for optional OCR fallback
+
 ## Optional OCR Tooling
 
 `scripts/ingestion/02_pdf_to_raw_text.py` uses embedded PDF text extraction
@@ -28,8 +34,9 @@ if these are available:
 - `pytesseract`
 - the `tesseract` executable on the system path
 
-If OCR tooling is unavailable, the script still writes extraction artifacts and
-quality logs, but weak pages must be reviewed manually.
+If OCR tooling is unavailable, the script still writes direct extraction
+artifacts and quality logs. Weak or empty text-layer pages are recorded with
+the OCR unavailable reason and must be reviewed before canonical promotion.
 
 OCR fallback can be disabled:
 
@@ -38,6 +45,12 @@ python scripts/ingestion/02_pdf_to_raw_text.py --no-ocr-fallback
 ```
 
 ## Verify The Setup
+
+Confirm source discovery works:
+
+```text
+python scripts/ingestion/01_pdf_discovery.py
+```
 
 Run tests:
 

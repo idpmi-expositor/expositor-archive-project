@@ -9,6 +9,23 @@ The required flow is:
 PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> DRAFT YAML -> REVIEWED CANONICAL YAML -> INDEXES
 ```
 
+The canonical architecture remains:
+
+```text
+PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
+```
+
+Draft YAML is an intermediate review artifact, not canonical truth.
+
+## Operating Principles
+
+- Processing must be deterministic and rerunnable from file-based artifacts.
+- Every output must remain traceable to the previous layer.
+- Human review is required before any draft lesson becomes canonical YAML.
+- Canonical YAML under `archive/lessons` is the source of truth.
+- UI, publishing, rendering, and AI translation systems are outside this
+  repository.
+
 ## Pipeline Order
 
 Run commands from the repository root:
@@ -68,16 +85,23 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
 
 ## Failure Modes
 
-- Missing or weak raw text: inspect OCR logs and rerun with OCR fallback if
-  tooling is available.
+- Missing or weak raw text: inspect OCR logs. OCR fallback is attempted by
+  `02_pdf_to_raw_text.py` when it is enabled and Tesseract tooling is
+  available. If fallback is unavailable or insufficient, the affected pages
+  require human review.
 - Local/Drive source mismatch: sync the missing PDF files, rerun
   `00_rename_source_pdfs.py --apply`, then rerun source sync validation.
+- Duplicate or conflicting lesson signals: inspect
+  `structured/document_structure/*.json` and `metadata/lessons/*.json` before
+  generating or promoting YAML.
 - Malformed scripture references: do not promote until references are
   normalized into positive chapter and verse integers.
 - Merged section labels: fix section extraction or manual canonical content
   before promotion.
 - Placeholder values in canonical YAML: validation must fail; keep the file in
   `archive/drafts`.
+- Canonical validation failure: `07_schema_validator.py` reports failing files
+  and validation errors; indexes must not be generated from those files.
 - No canonical lessons: index generation must stop without writing official
   indexes and exit cleanly.
 

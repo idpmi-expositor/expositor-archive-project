@@ -30,7 +30,7 @@ The architecture must support:
 - recurring publication cycles
 - future OCR reprocessing
 - semantic indexing
-- AI-assisted downstream processing
+- deterministic downstream consumption of canonical YAML
 - Git-based archival maintenance
 
 ## 2. Strict Scope Boundaries
@@ -582,7 +582,8 @@ Current implementation status:
 - extracts raw text with PyMuPDF
 - preserves page boundaries with deterministic `PDF_PAGE` markers
 - writes a JSON extraction log with page counts and word counts
-- leaves OCR fallback pending for scanned PDFs without embedded text
+- attempts Tesseract OCR fallback for weak or empty text-layer pages when
+  `Pillow`, `pytesseract`, and the `tesseract` executable are available
 
 ### Structuring
 
@@ -700,14 +701,14 @@ Current implementation status:
 
 ## 24. Required Indexes
 
-The system must generate:
+The current implemented index builder generates:
 
 - lessons_index.yaml
 - scripture_index.yaml
+
+Additional future YAML indexes may include:
+
 - topics_index.yaml
-
-Additional indexes may include:
-
 - doctrinal indexes
 - publication indexes
 - semantic theme indexes
@@ -788,8 +789,7 @@ The repository must remain stable across:
 - schema migrations
 - OCR engine upgrades
 - semantic indexing improvements
-- future downstream systems
-- AI-assisted theological analysis
+- future downstream systems that consume canonical YAML
 
 ## 28. Final Architectural Constraint
 
@@ -813,6 +813,6 @@ The final system is:
 - schema-driven
 - lesson-centric
 - semantically normalized
-- AI-compatible
+- deterministic downstream-compatible
 - Git-scalable
 - operationally maintainable for decades
