@@ -386,8 +386,10 @@ risk for downstream section extraction.
 
 ### Root Cause
 
-The current ingestion script uses embedded PDF text extraction through PyMuPDF.
-OCR fallback is documented as pending.
+The current ingestion script uses embedded PDF text extraction through PyMuPDF
+and supports Tesseract OCR fallback for pages whose embedded text is empty or
+insufficient. Fallback OCR is still gated by deterministic quality checks before
+it can become trusted downstream text.
 
 The normalizer reflows text deterministically, but page layout artifacts can
 still be merged into prose when the extracted text does not preserve clean
@@ -417,17 +419,18 @@ Each report should flag:
 - merged section labels
 - probable header/footer contamination
 
-Add OCR fallback for scanned or low-text pages. The fallback should activate
-only when embedded text extraction quality is insufficient.
+Keep OCR fallback limited to scanned, empty, or low-quality text-layer pages.
+Fallback OCR should remain acceptable only when its quality evaluation returns
+PASS or WARNING.
 
 Add page-level quality status values:
 
 ```text
-pass
-warning
-fail
-needs_ocr
-needs_human_review
+PASS
+WARNING
+FAIL
+NEEDS_OCR
+NEEDS_HUMAN_REVIEW
 ```
 
 ### Confidence Level
@@ -593,14 +596,14 @@ Exit criteria:
 
 ### Stage 5: OCR Quality Gate
 
-Status: Pending.
+Status: In progress.
 
 Tasks:
 
 - Add OCR quality reports.
 - Flag zero-text and low-text pages.
 - Detect malformed references and layout artifacts.
-- Add OCR fallback for scanned or low-quality pages.
+- Keep OCR fallback gated for scanned, empty, or low-quality pages.
 
 Exit criteria:
 
@@ -636,4 +639,3 @@ Exit criteria:
 
 - One command can run the pipeline safely.
 - CI blocks invalid canonical records and stale indexes.
-

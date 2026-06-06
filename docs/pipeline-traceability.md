@@ -81,8 +81,8 @@ Start with the source PDF and move forward one layer at a time:
 
 ## Common Mismatch Points
 
-- A scanned PDF may have low or empty extracted text because OCR fallback is not
-  implemented yet.
+- A scanned PDF may still have low or empty trusted text when OCR fallback is
+  unavailable or when fallback OCR returns `NEEDS_HUMAN_REVIEW`.
 - A missing `Contenido` page means segmentation falls back to explicit
   `LECCION X` markers.
 - If normalized text accidentally merges a section label into paragraph prose,

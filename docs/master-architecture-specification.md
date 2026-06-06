@@ -478,7 +478,7 @@ expositor-archive-project/
 +-- indexes/
 |   +-- lessons_index.yaml
 |   +-- scripture_index.yaml
-|   +-- topics_index.yaml
+|   +-- topics_index.yaml        future target, not currently generated
 |
 +-- scripts/
 |   +-- ingestion/

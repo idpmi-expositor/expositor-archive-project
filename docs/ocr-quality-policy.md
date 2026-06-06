@@ -33,11 +33,12 @@ Fallback OCR text is accepted only when the second quality evaluation returns
 
 Use these status values when reporting page-level quality:
 
-- `pass`: extracted text is complete enough for downstream structuring
-- `warning`: extraction is usable but needs reviewer attention
-- `fail`: extraction is not usable for canonical promotion
-- `needs_ocr`: embedded text is absent or too weak and OCR fallback is needed
-- `needs_human_review`: automated checks cannot determine quality safely
+- `PASS`: extracted text is complete enough for downstream structuring
+- `WARNING`: extraction is usable but needs reviewer attention
+- `FAIL`: reserved for future non-OCR fatal errors; the current gate does not
+  return this state
+- `NEEDS_OCR`: embedded text is absent or too weak and OCR fallback is needed
+- `NEEDS_HUMAN_REVIEW`: automated checks cannot determine quality safely
 
 ## Blocking Conditions
 
@@ -79,4 +80,3 @@ For each source PDF:
 OCR quality is production-ready only when every canonical lesson can be traced
 to readable source text or manually reviewed source evidence. Automated
 extraction alone is not enough when logs contain blocking conditions.
-
