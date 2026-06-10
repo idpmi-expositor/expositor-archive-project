@@ -6,7 +6,7 @@ Iglesia de Dios Pentecostal M.I. into reviewed canonical lesson YAML.
 This repository is limited to archival ETL:
 
 ```text
-PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
 One reviewed lesson equals one canonical YAML file. Canonical YAML under
@@ -34,7 +34,8 @@ lesson YAML files were found under `archive/lessons`. That is acceptable for an
 empty canonical archive and does not validate draft YAML.
 
 For full setup, including system dependencies, see [INSTALL.md](INSTALL.md).
-For the complete operating sequence and review gates, see [PROCESS.md](PROCESS.md).
+For the complete operating sequence and review gates, see [PROCESS.md](PROCESS.md)
+and [docs/pipeline.md](docs/pipeline.md).
 
 ## Scope
 
@@ -70,18 +71,24 @@ archival truth inside this repository.
 ```text
 source_assets/original_pdfs/*.pdf
   |
-  |  scripts/ingestion/
+  |  scripts/ingestion/02_pdf_to_raw_text.py
   v
 ocr/raw_txt/*.txt
 ocr/processing_logs/*.json
   |
-  |  scripts/structuring/
+  |  scripts/structuring/03_minimal_text_normalizer.py
   v
 normalized/*.txt
+  |
+  |  scripts/structuring/04_document_structure_detector.py
+  v
 structured/document_structure/*.json
+  |
+  |  scripts/structuring/05_lesson_segmenter.py
+  v
 metadata/lessons/*.json
   |
-  |  scripts/canonical/
+  |  scripts/canonical/06_yaml_generator.py
   v
 archive/drafts/<publication_id>/**/*.yaml
   |
@@ -95,10 +102,10 @@ indexes/lessons_index.yaml
 indexes/scripture_index.yaml
 ```
 
-The core canonical transformation remains:
+The core canonical transformation is intentionally staged:
 
 ```text
-PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
 Draft YAML is generated scaffold data. It is not canonical and must not be
@@ -115,6 +122,8 @@ review and schema validation pass.
   repository paths so maintainers can inspect, diff, rerun, and recover.
 - Human review requirements: generated drafts and OCR-derived text are not
   archival truth until a reviewer resolves placeholders and quality issues.
+- Author wording preservation: normalization and structuring must preserve source
+  wording and must not rewrite theological content.
 - Canonical YAML as source of truth: downstream systems consume reviewed lesson
   YAML and indexes; they do not replace the archive's canonical records.
 
@@ -122,13 +131,13 @@ review and schema validation pass.
 
 ```text
 source_assets/original_pdfs/   Immutable input PDFs.
-ocr/raw_txt/                   Extracted text with PDF_PAGE markers.
+ocr/raw_txt/                   Raw extracted text with PDF_PAGE markers; never overwritten in place.
 ocr/processing_logs/           Per-PDF extraction audit logs.
-normalized/                    Minimally cleaned text for structure detection.
+normalized/                    First-class normalized text stage for structure detection.
 structured/document_structure/ DocumentStructure JSON marker reports.
 metadata/lessons/              Intermediate lesson segment metadata.
-archive/drafts/                Generated draft lesson YAML awaiting review.
-archive/lessons/               Reviewed canonical one-lesson-per-file YAML.
+archive/drafts/                Generated draft lesson YAML awaiting human review; non-canonical.
+archive/lessons/               Reviewed canonical one-lesson-per-file YAML only after human review.
 schemas/base/                  Validation contracts for canonical YAML.
 indexes/                       Generated reference indexes.
 scripts/                       Deterministic pipeline scripts.
@@ -167,8 +176,10 @@ tests/                         Unit tests for pipeline behavior.
 - Extracts embedded PDF text with PyMuPDF.
 - Preserves page boundaries with deterministic `PDF_PAGE` markers.
 - Attempts Tesseract OCR fallback only for weak or empty direct text pages when
-  OCR tooling is available.
-- Writes raw text and per-page extraction logs.
+  OCR tooling is available. Most Expositor PDFs have embedded text after page 1,
+  so OCR remains a fallback, not the primary path.
+- Writes raw text and per-page extraction logs without overwriting existing raw
+  text artifacts.
 - Does not infer headings, lesson boundaries, sections, or canonical fields.
 
 ### Structuring
@@ -177,7 +188,8 @@ tests/                         Unit tests for pipeline behavior.
 
 - Normalizes line endings, Unicode, whitespace, and selected OCR hyphen breaks.
 - Reflows hard-wrapped prose while preserving structural lines.
-- Does not rewrite meaning or perform semantic interpretation.
+- Does not rewrite author wording, theological content, meaning, or perform
+  semantic interpretation.
 
 `scripts/structuring/04_document_structure_detector.py`
 
@@ -196,7 +208,8 @@ tests/                         Unit tests for pipeline behavior.
 
 `scripts/canonical/06_yaml_generator.py`
 
-- Converts lesson segment metadata into draft lesson YAML.
+- Converts lesson segment metadata into draft lesson YAML; it does not read raw
+  text directly.
 - Writes only under `archive/drafts/<publication_id>/`.
 - Preserves explicit placeholders when source evidence or review data is
   missing.
@@ -212,7 +225,7 @@ tests/                         Unit tests for pipeline behavior.
 
 - Validates canonical lessons before writing indexes.
 - Writes `indexes/lessons_index.yaml` and `indexes/scripture_index.yaml`.
-- Excludes draft YAML and Bible passage text.
+- Excludes draft YAML, legacy output trees, and Bible passage text.
 
 ## Current Pipeline Commands
 
@@ -267,6 +280,14 @@ weak-page review signals.
 Generated drafts are expected to be incomplete. Validation and indexes apply to
 reviewed canonical YAML under `archive/lessons`, not to draft scaffold files.
 
+## Legacy Generated Trees
+
+`ExpositorMain/outputs` is a synced/generated legacy output tree. It may contain
+copies of raw text, normalized text, drafts, indexes, schemas, and even lesson
+YAML, but it is not canonical. Do not use it as the source of truth and do not
+promote or index files from that tree. The canonical archive path remains
+`archive/lessons` after human review.
+
 ## Canonical YAML Contract
 
 Canonical YAML must validate the lesson section contract documented in
@@ -289,6 +310,7 @@ Use these documents before moving any generated draft into `archive/lessons`:
 ## Architecture References
 
 - [docs/master-architecture-specification.md](docs/master-architecture-specification.md)
+- [docs/pipeline.md](docs/pipeline.md)
 - [docs/pipeline-traceability.md](docs/pipeline-traceability.md)
 - [docs/lesson-yaml-contract.md](docs/lesson-yaml-contract.md)
 - [docs/google-drive-sync.md](docs/google-drive-sync.md)

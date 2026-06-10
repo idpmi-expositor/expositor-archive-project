@@ -3,21 +3,24 @@
 This is the first script in the structuring layer.
 
 Pipeline position:
-    PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
-                ^
-                This script cleans raw text before structure detection.
+    PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION
+                               ^
+                               This script writes the normalized text stage.
 
 What "minimal" means:
-    The script may normalize Unicode form, line endings, repeated spaces, and
-    obvious OCR hyphen breaks. It may also reflow hard-wrapped PDF prose lines
+    The script reads raw text and writes a separate normalized artifact. It may
+    normalize Unicode form, line endings, repeated spaces, and obvious OCR
+    hyphen breaks. It may also reflow hard-wrapped PDF prose lines
     into paragraphs when deterministic structural rules say the lines are plain
-    paragraph text. It must not rewrite meaning, summarize content, or decide
-    what a paragraph means by interpretation.
+    paragraph text. It must preserve `PDF_PAGE` markers and author wording. It must not rewrite
+    meaning, summarize theological content, or decide what a paragraph means by
+    interpretation.
 
 Beginner note:
-    Text normalization is intentionally conservative. The goal is not to make
-    the text beautiful; the goal is to make the next deterministic script see a
-    stable, predictable input.
+    Text normalization is intentionally conservative and first-class. The goal
+    is not to make the text beautiful; the goal is to make the next
+    deterministic script see a stable, predictable input while raw text remains
+    unchanged.
 """
 
 from __future__ import annotations
@@ -220,7 +223,7 @@ def main() -> int:
     """Command-line entry point for text normalization."""
 
     parser = argparse.ArgumentParser(
-        description="Apply minimal deterministic cleanup to raw OCR text."
+        description="Create normalized text from raw extraction without rewriting source wording."
     )
     parser.add_argument(
         "--input-dir",

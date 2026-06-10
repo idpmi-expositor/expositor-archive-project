@@ -6,13 +6,14 @@ YAML.
 The required flow is:
 
 ```text
-PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> DRAFT YAML -> REVIEWED CANONICAL YAML -> INDEXES
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML -> INDEXES
 ```
 
-The canonical architecture remains:
+The canonical architecture is staged so no script generates YAML directly from
+raw text:
 
 ```text
-PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
 Draft YAML is an intermediate review artifact, not canonical truth.
@@ -21,6 +22,8 @@ Draft YAML is an intermediate review artifact, not canonical truth.
 
 - Processing must be deterministic and rerunnable from file-based artifacts.
 - Every output must remain traceable to the previous layer.
+- Raw extracted text is preserved as-is and is not overwritten by normalization.
+- Normalization preserves author wording and does not rewrite theological content.
 - Human review is required before any draft lesson becomes canonical YAML.
 - Canonical YAML under `archive/lessons` is the source of truth.
 - UI, publishing, rendering, and AI translation systems are outside this
@@ -51,11 +54,11 @@ python scripts/canonical/08_index_builder.py
 | Source sync validation | pass/fail comparison of local PDF names and sizes against Google Drive |
 | Source PDF rename | stable archive filenames such as `expositor-guia-maestro-volumen-46.pdf` |
 | PDF discovery | source discovery report and intake log readiness |
-| Raw text extraction | `ocr/raw_txt/*.txt` and `ocr/processing_logs/*.json` |
-| Normalization | `normalized/*.txt` |
-| Structure detection | `structured/document_structure/*.json` |
-| Lesson segmentation | `metadata/lessons/*.json` |
-| Draft generation | `archive/drafts/<publication_id>/**/*.yaml` |
+| Raw text extraction | `ocr/raw_txt/*.txt` and `ocr/processing_logs/*.json`; existing raw text is not overwritten |
+| Normalization | `normalized/*.txt`; first-class input to structure detection |
+| Structure detection | `structured/document_structure/*.json`; reads normalized text |
+| Lesson segmentation | `metadata/lessons/*.json`; reads structure JSON |
+| Draft generation | `archive/drafts/<publication_id>/**/*.yaml`; reads segment metadata, not raw text |
 | Canonical validation | pass/fail result for `archive/lessons/**/*.yaml` |
 | Index building | `indexes/lessons_index.yaml` and `indexes/scripture_index.yaml` |
 
@@ -68,20 +71,23 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
 2. Source PDF naming gate: PDFs use stable archive filenames before downstream
    artifacts are generated.
 3. OCR quality gate: extraction logs and raw text meet
-   [docs/ocr-quality-policy.md](docs/ocr-quality-policy.md).
-4. Structure gate: page markers, lesson headers, section labels, and
+   [docs/ocr-quality-policy.md](docs/ocr-quality-policy.md). OCR is fallback
+   only for weak or empty embedded text pages.
+4. Normalization gate: `normalized/*.txt` preserves `PDF_PAGE` markers, author
+   wording, and theological content while making whitespace stable.
+5. Structure gate: page markers, lesson headers, section labels, and
    `Contenido` entries are detected correctly.
-5. Segment gate: lesson numbers, titles, page spans, and validation summaries
+6. Segment gate: lesson numbers, titles, page spans, and validation summaries
    are explainable from source evidence.
-6. Draft gate: generated YAML stays under `archive/drafts/<publication_id>/`
+7. Draft gate: generated YAML stays under `archive/drafts/<publication_id>/`
    and is not indexed.
-7. Human review gate: the checklist in
+8. Human review gate: the checklist in
    [docs/human-review-checklist.md](docs/human-review-checklist.md) is complete.
-8. Promotion gate: the workflow in
+9. Promotion gate: the workflow in
    [docs/draft-to-canonical-promotion.md](docs/draft-to-canonical-promotion.md)
    is complete.
-9. Canonical gate: `python scripts/canonical/07_schema_validator.py` passes.
-10. Index gate: indexes are regenerated only from reviewed canonical YAML.
+10. Canonical gate: `python scripts/canonical/07_schema_validator.py` passes.
+11. Index gate: indexes are regenerated only from reviewed canonical YAML.
 
 ## Failure Modes
 
@@ -91,6 +97,8 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
   require human review.
 - Local/Drive source mismatch: sync the missing PDF files, rerun
   `00_rename_source_pdfs.py --apply`, then rerun source sync validation.
+- Duplicate generated trees under `ExpositorMain/outputs`: treat that path as
+  legacy/non-canonical. Review and promote only from the root pipeline paths.
 - Duplicate or conflicting lesson signals: inspect
   `structured/document_structure/*.json` and `metadata/lessons/*.json` before
   generating or promoting YAML.

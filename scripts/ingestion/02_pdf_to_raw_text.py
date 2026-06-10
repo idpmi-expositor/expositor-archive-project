@@ -3,17 +3,20 @@
 This is the second script in the ingestion layer.
 
 Pipeline position:
-    PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
+    PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION
           ^
-          This script creates raw text artifacts.
+          This script creates raw text artifacts only.
 
 Important archive rule:
-    Raw text is temporary and non-canonical. It exists only so later scripts can
-    detect structure in a repeatable way.
+    Raw text is non-canonical extraction evidence. It is never rewritten by this
+    script after creation; normalization writes a separate artifact under
+    normalized/.
 
 Implementation notes:
     - Direct PDF text extraction uses PyMuPDF first.
     - OCR fallback is used only for pages with weak or empty extracted text.
+      Most Expositor PDFs have embedded text after page 1, so OCR is fallback
+      only, not the primary path.
     - Page boundaries are preserved because later traceability depends on
       knowing where each extracted block came from.
     - The original PDF is never modified.
@@ -377,6 +380,12 @@ def extract_pdf_file(
 
     output_path = expected_raw_text_path(pdf_path, output_dir)
     log_path = expected_log_path(pdf_path, log_dir)
+    if output_path.exists():
+        raise FileExistsError(
+            f"Refusing to overwrite existing raw text artifact: {output_path}. "
+            "Move it aside or choose a new --output-dir before rerunning extraction."
+        )
+
     raw_text, page_logs = extract_pdf_text(
         pdf_path,
         use_ocr_fallback=use_ocr_fallback,
@@ -416,7 +425,7 @@ def main() -> int:
     """Command-line entry point for raw text extraction."""
 
     parser = argparse.ArgumentParser(
-        description="Extract raw text from source PDFs while preserving pages."
+        description="Extract raw text from source PDFs while preserving pages; existing raw text is not overwritten."
     )
     parser.add_argument(
         "--source-dir",

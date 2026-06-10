@@ -58,7 +58,7 @@ The Archive Project exists exclusively to transform source publications into can
 Canonical processing flow:
 
 ```text
-PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
 ## 4. Canonical Unit of Truth
@@ -81,7 +81,10 @@ Lesson-level YAML metadata is the permanent canonical representation.
 
 ## 5. Architectural Layers
 
-The system must use a strict three-layer deterministic pipeline.
+The system must use a strict staged deterministic pipeline. The implementation
+is grouped into three script layers, but normalization, structure detection,
+lesson segmentation, draft YAML, and human review remain distinct pipeline
+stages.
 
 ### Layer 1: Ingestion
 
@@ -91,8 +94,10 @@ Responsibilities:
 - validate source files
 - preserve immutable source assets
 - extract raw text
-- preserve page boundaries
+- preserve page boundaries with `PDF_PAGE` markers
 - maintain intake logs
+- use OCR only as fallback for weak or empty embedded text pages
+- preserve existing raw text artifacts rather than overwriting them
 
 Rules:
 
@@ -107,9 +112,9 @@ INGESTION performs:
 
 Responsibilities:
 
-- minimal text normalization
-- deterministic structure detection
-- lesson boundary segmentation
+- minimal text normalization as a first-class stage
+- deterministic structure detection from normalized text
+- lesson boundary segmentation after structure detection
 - structural metadata mapping
 - intermediate model creation
 
@@ -182,13 +187,15 @@ OCR MUST NOT:
 - classify sections
 - interpret structure
 
-TXT output is temporary and non-canonical.
-
-TXT exists only as an intermediary OCR artifact.
+Raw TXT output is non-canonical but must remain preserved as extraction
+evidence. Normalized TXT is a separate first-class artifact used by structure
+detection. Neither stage may rewrite author wording or theological content.
 
 ## 8. Required Intermediate Model
 
-A mandatory intermediate structured representation must exist between OCR text and canonical YAML.
+Mandatory intermediate stages must exist between raw OCR/direct-extraction text
+and canonical YAML: normalized text, DocumentStructure JSON, lesson segment
+metadata, draft YAML, and human review.
 
 Required model:
 
@@ -200,9 +207,10 @@ Purpose:
 
 The intermediate model isolates:
 
-- OCR concerns
+- raw extraction concerns
+- normalization concerns
 - structural detection
-- semantic organization
+- lesson segmentation
 - canonical serialization
 
 This separation prevents:
@@ -573,9 +581,10 @@ Current implementation status:
 Responsibilities:
 
 - direct extraction via PyMuPDF
-- OCR fallback via Tesseract
+- OCR fallback via Tesseract only for weak or empty text-layer pages
 - preserve page boundaries
 - generate raw text artifacts
+- refuse to overwrite existing raw text artifacts
 
 Current implementation status:
 
@@ -591,9 +600,12 @@ Current implementation status:
 
 Responsibilities:
 
+- first-class normalized text stage between raw extraction and structure detection
 - unicode normalization
 - whitespace cleanup
 - broken hyphen correction
+- page marker preservation
+- author wording preservation
 - minimal deterministic cleanup only
 
 Current implementation status:
@@ -646,9 +658,10 @@ Current implementation status:
 
 Responsibilities:
 
-- convert structured models into canonical YAML
-- apply schema normalization
-- serialize lesson metadata
+- convert lesson segment metadata into draft YAML
+- apply schema normalization scaffolding
+- serialize lesson metadata for human review
+- never generate YAML directly from raw text
 
 Current implementation status:
 
@@ -698,6 +711,13 @@ Current implementation status:
 - keeps indexes reference-only and excludes Bible passage text
 - exits cleanly without writing indexes when there are no reviewed canonical
   lesson files yet
+
+## 23.1 Legacy Generated Output Trees
+
+`ExpositorMain/outputs` is a duplicate generated tree from the Drive sync/import
+layout. It is explicitly non-canonical and legacy. It may be retained for audit
+or comparison, but canonical review and indexing must use the root pipeline
+paths. `archive/lessons` is canonical only after human review and validation.
 
 ## 24. Required Indexes
 
