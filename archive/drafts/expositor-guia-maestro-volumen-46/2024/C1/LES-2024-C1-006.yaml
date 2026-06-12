@@ -19,23 +19,44 @@ lesson_sections:
   title:
     text: La reacción de un prestamista frente a sus dos deudores
   biblical_reading:
-    reference_display: TBD
+    reference_display: Mateo 18:23-33
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Matthew
+      chapter: 18
+      verse_start: 23
+      verse_end: 33
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Leyes existentes en la antigüedad hacia los deudores que no podían pagar
+      la deuda
+    - (Deuteronomio 15:1-6; 2 Reyes 4:1-7)
+    - A. La esclavitud por deudas que el deudor no podía pagar
+    - (2 R 4:1-2)
+    - B. Jehová estableció leyes sobre la manera de la remisión de
+    - la deuda en Israel (Dt 15:1-6)
+    - II. La misericordia del rey ante del deudor que no
+    - puede pagar la deuda (Mateo 18:23-27)
+    - A. Evento que sucedió cuando el rey pidió que el deudor le
+    - pagara (Mt 18:23-25)
+    - B. La remisión de la deuda ante la súplica del deudor
+    - (Mt 18:26-27)
+    - III. El castigo aplicado al siervo malvado por la falta
+    - de perdón hacia su consiervo (Mateo 18:28-33)
+    - A. La injusticia del que fue perdonado y no sabe perdonar
+    - (Mt 18-28-30)
+    - B. El castigo pronunciado hacia el opresor que se niega a
+    - perdonar (Mt 18:31-33)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Qué relación tiene la parábola
+    - narrada por Jesús con el perdón y la misericordia?
+    - ¿Cuántas veces se debe perdonar a
   summary_application:
     items:
     - TBD
@@ -44,10 +65,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +89,25 @@ source_trace:
   line_start: 791
   line_end: 931
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 803
+      line_end: 803
+      page_start: 46
+      page_end: 46
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 833
+      line_end: 836
+      page_start: 47
+      page_end: 47
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 812
+      line_end: 831
+      page_start: 47
+      page_end: 47
 semantic_metadata:
   doctrinal_categories:
   - TBD

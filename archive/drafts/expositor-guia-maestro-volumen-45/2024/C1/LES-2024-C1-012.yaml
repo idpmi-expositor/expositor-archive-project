@@ -19,23 +19,37 @@ lesson_sections:
   title:
     text: Timoteo y Epafrodito, ejemplos de servicio
   biblical_reading:
-    reference_display: TBD
+    reference_display: Filipenses 2:12-20
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Philippians
+      chapter: 2
+      verse_start: 12
+      verse_end: 20
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Imperativos del apóstol Pablo
+    - (Filipenses 2:12-18)
+    - A. Ocuparse de la salvación con temor y temblor
+    - (Flp 2:12-13)
+    - B. Ser irreprensibles, sencillos y sin tacha (Flp 2:14-18)
+    - II. Otros dos grandes modelos de servicio cristiano
+    - (Filipenses 2:19-30)
+    - A. Timoteo, fiel imitador de Pablo (Flp 2:19-24)
+    - B. Epafrodito, mensajero y de la iglesia de Filipos
+    - (Flp 2:25-30)
+    - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. ¿Qué significa el «ocuparse de la salvación con
+    - temor y temblor»?
+    - 2. ¿Cómo ha entendido la teología moderna las
+    - frases «el querer como el hacer»?
+    - 3. Dé las razones por las que Pablo usa a Timoteo y
   summary_application:
     items:
     - TBD
@@ -44,10 +58,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +82,25 @@ source_trace:
   line_start: 1556
   line_end: 1682
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1597
+      line_end: 1597
+      page_start: 95
+      page_end: 95
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1619
+      line_end: 1624
+      page_start: 96
+      page_end: 96
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1607
+      line_end: 1618
+      page_start: 96
+      page_end: 96
 semantic_metadata:
   doctrinal_categories:
   - TBD

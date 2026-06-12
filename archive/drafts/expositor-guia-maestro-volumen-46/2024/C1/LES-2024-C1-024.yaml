@@ -19,23 +19,38 @@ lesson_sections:
   title:
     text: Jesús contra el reino de las tinieblas
   biblical_reading:
-    reference_display: TBD
+    reference_display: Mateo 12:22-31
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Matthew
+      chapter: 12
+      verse_start: 22
+      verse_end: 31
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Presentación y sanidad de un endemoniado (Mateo 12:22-30 y Lucas 11:14-23)
+    - A. Reacciones y controversias de la multitud
+    - (Mateo 12:22-23 y Lucas 11:14-16)
+    - B. Respuestas de Jesús a las controversias
+    - (Mateo 11:24-30 y Lucas 11:17-23)
+    - II. Advertencias de Jesús (Mateo 12:31-37 y
+    - Lucas 11:24-28)
+    - A. Contra toda palabra ociosa y blasfemias
+    - (Mateo 12:31-37 y Lucas 11:24-26)
+    - B. Bienaventurados los que guardan la Palabra
+    - (Lucas 11:27-28)
+    - 'III. Resumen y aplicación práctica:'
   teacher_notes:
     items:
-    - TBD
+    - 1. Repase las distintas narrativas de
+    - posesión demoníaca en los evangelios sinópticos.
+    - 2. Enfatice en las imágenes de la victoria del
+    - reino de Dios contra el reino de las tinieblas.
+    - 3. Destaque el texto de Daniel 10 como parte
   summary_application:
     items:
     - TBD
@@ -44,10 +59,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +83,25 @@ source_trace:
   line_start: 3142
   line_end: 3262
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 3149
+      line_end: 3149
+      page_start: 189
+      page_end: 189
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 3174
+      line_end: 3179
+      page_start: 190
+      page_end: 190
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 3160
+      line_end: 3172
+      page_start: 190
+      page_end: 190
 semantic_metadata:
   doctrinal_categories:
   - TBD

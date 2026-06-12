@@ -19,7 +19,7 @@ lesson_sections:
   title:
     text: El duelo y estrategia de Tamar para lograr el cumplimiento del levirato
   biblical_reading:
-    reference_display: TBD
+    reference_display: 'Génesis 38: 11, 14-19'
     canonical_references:
     - testament: TBD
       book_standardized: TBD
@@ -32,10 +32,29 @@ lesson_sections:
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. La situación de la mujer viuda sin hijos en la
+    - época patriarcal (Éxodo 22:24; Lamentaciones. 5:3; Isaías 4:1; 54:1-4)
+    - A. No hay persona más desgraciada que la viuda de la antigüedad (Ex 22:24; Lam.
+      5:3)
+    - B. Bajo el patriarcado se veía a la mujer viuda sin hijos
+    - como una vergüenza (Is 4:1; 54:1-4)
+    - II. El duelo de Tamar como mujer viuda sin hijos
+    - (Génesis 38:6-11)
+    - A. Judá dio en casamiento a su hijo primogénito con una
+    - mujer cananea (Gn 38:6-7)
+    - B. Un matrimonio de levirato invalidado (Gn 38:8-11)
+    - III. Estrategia de Tamar para obligar a Judá a cumplir con la ley del levirato
+      (Génesis 38:13-27)
+    - A. Tamar conocía que según la ley del levirato ésta podía
+    - efectuarse con el padre del difunto (Gn 38:13-19)
+    - B. La estrategia utilizada por Tamar la emancipó del
+    - estigma de la viudez y tubo mellizos (Gn 38:24-27)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Cuál era la situación de la
+    - mujer viuda sin hijos en la época patriarcal?
+    - ¿Por qué se pensó que la persona
   summary_application:
     items:
     - TBD
@@ -44,10 +63,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +87,25 @@ source_trace:
   line_start: 2076
   line_end: 2204
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2113
+      line_end: 2113
+      page_start: 128
+      page_end: 128
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2140
+      line_end: 2143
+      page_start: 129
+      page_end: 129
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2122
+      line_end: 2138
+      page_start: 129
+      page_end: 129
 semantic_metadata:
   doctrinal_categories:
   - TBD

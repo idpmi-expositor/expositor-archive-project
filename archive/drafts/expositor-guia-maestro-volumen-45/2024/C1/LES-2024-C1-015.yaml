@@ -19,23 +19,57 @@ lesson_sections:
   title:
     text: El duelo causado a un padre mediante engaño en una familia disfuncional
   biblical_reading:
-    reference_display: TBD
+    reference_display: Génesis 37:23-24, 26, 28, 31-35
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: old
+      book_standardized: Genesis
+      chapter: 37
+      verse_start: 23
+      verse_end: 24
+    - testament: old
+      book_standardized: Genesis
+      chapter: 37
+      verse_start: 26
+      verse_end: 26
+    - testament: old
+      book_standardized: Genesis
+      chapter: 37
+      verse_start: 28
+      verse_end: 28
+    - testament: old
+      book_standardized: Genesis
+      chapter: 37
+      verse_start: 31
+      verse_end: 35
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. El matrimonio endogámico de Jacob mediante
+    - 'poliginia sororal (Génesis 28:1-5; 29: 22-30)'
+    - A. Isaac bendijo a Jacob y lo envío a buscar esposa entre las
+    - hijas de Labán (Gn 28:1-5)
+    - B. Jacob inicia una familia mediante poliginia sororal
+    - (Gn 29:22-30)
+    - II. Lea y Raquel le dieron hijos a Jacob
+    - (Génesis 29:31-35; 30:22-24)
+    - A. Raquel resultó ser estéril, pero Lea le dio varios hijos a
+    - Jacob (Gn 29:31-35)
+    - B. Dios bendijo a Raquel y concibió a su hijo José
+    - (Gn 30:22-24)
+    - III. Los hijos de Lea aborrecen a José y lo venden
+    - como esclavo (Génesis 37:4,18-35)
+    - A. La envidia y el odio provocaron la venta de José como
+    - esclavo (Gn 37:4,18-27)
+    - B. Jacob recibió la túnica de José ensangrentada e hizo
+    - duelo por su hijo (Gn 37:31-35)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Qué entendemos por matrimonio endogámico?
+    - ¿Cómo se afecta la familia al imponerse mediante engaño la poliginia
   summary_application:
     items:
     - TBD
@@ -44,10 +78,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +102,25 @@ source_trace:
   line_start: 1939
   line_end: 2075
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1975
+      line_end: 1975
+      page_start: 120
+      page_end: 120
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2011
+      line_end: 2013
+      page_start: 121
+      page_end: 121
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1990
+      line_end: 2009
+      page_start: 121
+      page_end: 121
 semantic_metadata:
   doctrinal_categories:
   - TBD

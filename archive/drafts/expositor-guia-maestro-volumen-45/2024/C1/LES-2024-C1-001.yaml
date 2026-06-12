@@ -19,23 +19,61 @@ lesson_sections:
   title:
     text: La fe que transforma la conducta y pensamientos del creyente
   biblical_reading:
-    reference_display: TBD
+    reference_display: Santiago 2:14-24
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: James
+      chapter: 2
+      verse_start: 14
+      verse_end: 24
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Justificados pues por la fe en Cristo
+    - (Romanos 3:28; 5:1-5)
+    - A. Justificados por la fe sin las obras de la Ley (Ro 3:28)
+    - B. Estamos completos en Cristo (Ro 5:1-5)
+    - II. Una fe carente de significado (Santiago 2:14-20)
+    - A. Cuando la fe no tiene misericordia (Stg 2:14-15)
+    - B. La fe que es muerta en sí misma (Stg 2:16-20)
+    - III. Las obras y la justificación por la fe en Cristo
+    - (Santiago 2:21-24)
+    - A. La justificación de Abraham ante Dios (Stg 2:21-22)
+    - B. Cuando las obras son reflejo de la fe en Dios (Stg 2:23-24)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿De qué aprovechará si alguno dice que
+    - tiene fe, pero no tiene obras?
+    - ¿Puede la fe sin obras justificar al creyente?
+    - mandamientos y en los seis restantes, identificó el deber del humano con los
+      demás seres humanos. No obstante, el ser humano no pudo cumplir con las exigencias
+      internas y externas de la ley. En la religiosidad judía, los intérpretes de
+      la Ley enfatizaron más el ceremonial externo expresado en las obras y restaron
+      importancia a la obligación moral que regulaba la fe y la obediencia a la Palabra
+      de Dios. Cuando las obras son realizadas para obedecer a los hombres y se enajenan
+      de la obediencia a Dios, el ser humano no puede ser liberado de la esclavitud
+      al pecado. Por tanto, Dios hizo provisión para la redención del humano por medio
+      de un Salvador (Mt 5:17-48; Ro 7:5, 7-12). A través de los profetas, Dios anunció
+      la llegada del Salvador, por medio del cual la persona que en Él creyere, sería
+      salva. Por tanto, la salvación no se obtiene por divina para el creyente que
+      crea en las promesas de Dios y abrace a Cristo como su Salvador. Jesucristo
+      fue el único que pudo cumplir con las exigencias de la ley divina (Gl 4:4, 5;
+      Ro 5:1821). Por su obediencia, Jesucristo alcanzó la justificación y redención
+      de los pecadores arrepentidos que depositaron su fe en Él. Gracias a la obra
+      realizada por Cristo, el pueblo de Dios ya no está sometido al sistema religioso
+      judío, sino, que tanto judíos como gentiles que aceptan la obra redentora provista
+      por Dios por la fe en el Salvador, son justificados sin las obras de la Ley
+      (Ro 3:28). Cristo cumplió con las demandas internas y externas de la Ley, y
+      es el mediador de un nuevo pacto entre Dios y la humanidad. Por tanto, la justificación
+      ante Dios no se logra por el mérito humano, ni por las obras de la ley, sino
+      por la fe en Jesucristo.
+    - I. Justificados pues por la fe en Cristo
+    - (Romanos 3:28; 5:1-5
+    - A. Justificados por la fe sin las obras de la Ley
   summary_application:
     items:
     - TBD
@@ -44,10 +82,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +106,25 @@ source_trace:
   line_start: 90
   line_end: 196
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 106
+      line_end: 106
+      page_start: 7
+      page_end: 7
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 136
+      line_end: 147
+      page_start: 8
+      page_end: 9
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 123
+      line_end: 135
+      page_start: 8
+      page_end: 8
 semantic_metadata:
   doctrinal_categories:
   - TBD

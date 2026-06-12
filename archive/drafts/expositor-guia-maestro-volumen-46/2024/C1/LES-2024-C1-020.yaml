@@ -19,23 +19,35 @@ lesson_sections:
   title:
     text: El poder sobrenatural de Jesús
   biblical_reading:
-    reference_display: TBD
+    reference_display: Marcos 6:46-51
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Mark
+      chapter: 6
+      verse_start: 46
+      verse_end: 51
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Jesús, los discípulos, las multitudes y la
+    - oración – Marcos 6:45-47
+    - A. Jesús despide a sus discípulos y a las multitudes –
+    - Marcos 6:45
+    - B. Jesús se aparta para orar – Marcos 6:46-47
+    - II. Jesús manifiesta su poder ante la
+    - necesidad de sus discípulos – Marcos 6:4852
+    - A. Jesús acude ante la fatiga de sus discípulos –
+    - Marcos 6:48-49a
+    - B. Jesús manifiesta su poder frente a la adversidad –
+    - Marcos 6:49b-52
+    - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. Comience la clase con una oración.
+    - 2. Explique de manera breve el
   summary_application:
     items:
     - TBD
@@ -44,10 +56,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +80,25 @@ source_trace:
   line_start: 2654
   line_end: 2799
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 2661
+      line_end: 2661
+      page_start: 159
+      page_end: 159
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 2686
+      line_end: 2688
+      page_start: 160
+      page_end: 160
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 2672
+      line_end: 2684
+      page_start: 160
+      page_end: 160
 semantic_metadata:
   doctrinal_categories:
   - TBD

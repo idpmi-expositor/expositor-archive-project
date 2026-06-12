@@ -19,23 +19,42 @@ lesson_sections:
   title:
     text: El simbolismo de la parábola de las dos águilas y la vid
   biblical_reading:
-    reference_display: TBD
+    reference_display: Ezequiel 17:1-10
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: old
+      book_standardized: Ezekiel
+      chapter: 17
+      verse_start: 1
+      verse_end: 10
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Parábola de Jehová sobre la gran águila que vino al
+    - Líbano (Ezequiel 17:1-4)
+    - A. Simbolismo de la gran águila que vino al Líbano
+    - (Ez 17:1-3)
+    - B. La conquista de Jerusalén y el cautiverio babilónico
+    - (Ez 17:4)
+    - II. La plantación de la simiente de la tierra y el pacto con
+    - la segunda gran águila (Ezequiel 17:5-10)
+    - A. Nabucodonosor planta la simiente de la tierra (Ez 17:5-6)
+    - B. El Señor arrancará las raíces de la vid y se secará del todo
+    - (Ez 17:7-10)
+    - III. Mensaje de esperanza sobre la llegada del Mesías
+    - (Ezequiel 17:22-24; Salmo 2:6)
+    - A. Identificando un tallo tierno que será plantado sobre el
+    - monte alto y sublime (Ez 17:22)
+    - B. La transformación del tallo tierno en árbol frondoso que
+    - dará fruto (Ez 17:23-24; Sal 2:6)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Por qué Jehová habló por
+    - parábolas a Su pueblo?
+    - ¿Cuál es el simbolismo de la gran
   summary_application:
     items:
     - TBD
@@ -44,10 +63,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +87,25 @@ source_trace:
   line_start: 375
   line_end: 506
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 386
+      line_end: 386
+      page_start: 22
+      page_end: 22
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 413
+      line_end: 416
+      page_start: 23
+      page_end: 23
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 393
+      line_end: 411
+      page_start: 23
+      page_end: 23
 semantic_metadata:
   doctrinal_categories:
   - TBD

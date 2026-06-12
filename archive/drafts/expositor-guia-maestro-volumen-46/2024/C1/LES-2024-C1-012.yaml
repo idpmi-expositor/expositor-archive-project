@@ -19,23 +19,43 @@ lesson_sections:
   title:
     text: Contratando obreros en horarios diferentes con igual salario
   biblical_reading:
-    reference_display: TBD
+    reference_display: Mateo 20:1-11
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Matthew
+      chapter: 20
+      verse_start: 1
+      verse_end: 11
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. El reino de los cielos y su semejanza con las decisiones
+    - de un padre de familia (Mateo 20:1-4)
+    - A. La forma en que un padre de familia salió a contratar
+    - obreros para su viña (Mt 20:1-2)
+    - B. La contratación de otros obreros cerca de la hora tercera
+    - del día (Mt 20:3-4)
+    - II. Formas en que el dueño de la viña continúo
+    - contratando obreros para su viña (Mt 20:5-7)
+    - A. Durante la hora sexta y novena el dueño de la viña contrató a otros obreros
+      (Mt 20:5)
+    - B. La contratación de otros obreros que estaban desocupados porque nadie los
+      había contratado (Mt 20:6-7)
+    - III. La forma en que el padre de familia compensó a los
+    - obreros que había contratado (Mateo 20:8-16)
+    - A. Al llegar la noche el mayordomo pagó a los obreros
+    - comenzando por los postreros (Mt 20:8-9)
+    - B. Reacción de los primeros cuando le pagaron un denario
+    - y la respuesta del dueño de la viña (Mt 20:10-16)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Cómo Jesús contrastó el trato
+    - de Dios con el ser humano en el reino de los cielos con el mundo?
+    - ¿Considera usted que la salvación
   summary_application:
     items:
     - TBD
@@ -44,10 +64,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +88,25 @@ source_trace:
   line_start: 1641
   line_end: 1781
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1652
+      line_end: 1652
+      page_start: 94
+      page_end: 94
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1679
+      line_end: 1682
+      page_start: 95
+      page_end: 95
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1660
+      line_end: 1677
+      page_start: 95
+      page_end: 95
 semantic_metadata:
   doctrinal_categories:
   - TBD

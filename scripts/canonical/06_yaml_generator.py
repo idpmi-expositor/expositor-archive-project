@@ -30,6 +30,7 @@ import argparse
 import hashlib
 import json
 import os
+import sys
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -45,12 +46,18 @@ except ImportError as exc:  # pragma: no cover - environment guard
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SEGMENT_DIR = PROJECT_ROOT / "metadata" / "lessons"
+DEFAULT_SECTION_DIR = PROJECT_ROOT / "metadata" / "lesson_sections"
 DEFAULT_DRAFT_DIR = PROJECT_ROOT / "archive" / "drafts"
 DEFAULT_SCHEMA_VERSION = "1.0.0"
 DEFAULT_COLLECTION_TYPE = "Expositor Maestro"
 DEFAULT_CYCLE = "C1"
 DEFAULT_LANGUAGE = "es"
 DEFAULT_IMPORTED_AT = "1970-01-01T00:00:00+00:00"
+
+if str(Path(__file__).resolve().parent) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from scripture_reference_parser import parse_scripture_references  # noqa: E402
 
 
 def lesson_output_path(
@@ -78,6 +85,56 @@ def load_json(path: Path) -> dict[str, Any]:
     if not isinstance(data, dict):
         raise ValueError(f"{path}: root document must be a JSON object")
     return data
+
+
+def load_section_metadata(section_dir: Path, publication_id: str) -> dict[int, dict[str, Any]]:
+    """Load automated section extraction for one publication when available."""
+
+    section_file = section_dir / f"{publication_id}.json"
+    if not section_file.exists():
+        return {}
+
+    data = load_json(section_file)
+    sections_by_lesson: dict[int, dict[str, Any]] = {}
+    lessons = data.get("lessons", [])
+    if not isinstance(lessons, list):
+        return sections_by_lesson
+
+    for lesson in lessons:
+        if not isinstance(lesson, dict):
+            continue
+        lesson_number = lesson.get("lesson_number")
+        sections = lesson.get("sections", {})
+        if lesson_number is None or not isinstance(sections, dict):
+            continue
+        sections_by_lesson[int(lesson_number)] = sections
+    return sections_by_lesson
+
+
+def placeholder_reference() -> list[dict[str, Any]]:
+    return [
+        {
+            "testament": "TBD",
+            "book_standardized": "TBD",
+            "chapter": 0,
+            "verse_start": 0,
+            "verse_end": 0,
+        }
+    ]
+
+
+def extracted_items(
+    extracted_sections: dict[str, Any],
+    section_name: str,
+) -> list[str]:
+    section = extracted_sections.get(section_name)
+    if not isinstance(section, dict):
+        return ["TBD"]
+    items = section.get("items")
+    if not isinstance(items, list):
+        return ["TBD"]
+    clean_items = [str(item).strip() for item in items if str(item).strip()]
+    return clean_items or ["TBD"]
 
 
 def write_yaml(path: Path, data: dict[str, Any]) -> None:
@@ -175,6 +232,7 @@ def build_minimal_lesson(
     segments: list[dict[str, Any]],
     schema_version: str,
     imported_at: str,
+    extracted_sections: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Create the smallest schema-valid lesson record from segment metadata."""
 
@@ -188,8 +246,28 @@ def build_minimal_lesson(
     page_end = int(segment.get("page_end") or page_end_for(segment_index, segments))
     title = str(segment.get("expected_title") or f"Lesson {lesson_number}")
     lesson_date = str(segment.get("lesson_date") or "TBD")
+    extracted_sections = extracted_sections or {}
+    biblical_reading = extracted_sections.get("biblical_reading")
+    reference_display = "TBD"
+    canonical_references = placeholder_reference()
+    if isinstance(biblical_reading, dict):
+        extracted_reference = str(biblical_reading.get("reference_display") or "").strip()
+        if extracted_reference:
+            reference_display = extracted_reference
+            parsed_references = biblical_reading.get("canonical_references")
+            if isinstance(parsed_references, list) and parsed_references:
+                canonical_references = parsed_references
+            else:
+                canonical_references = parse_scripture_references(extracted_reference) or placeholder_reference()
 
-    return {
+    automated_sections_used = bool(extracted_sections)
+    extraction_confidence = (
+        "automated-unreviewed"
+        if automated_sections_used
+        else "minimal-valid-placeholder"
+    )
+
+    lesson = {
         "schema_version": schema_version,
         "lesson_id": lesson_id,
         "publication_id": publication_id,
@@ -213,16 +291,8 @@ def build_minimal_lesson(
                 "text": title,
             },
             "biblical_reading": {
-                "reference_display": "TBD",
-                "canonical_references": [
-                    {
-                        "testament": "TBD",
-                        "book_standardized": "TBD",
-                        "chapter": 0,
-                        "verse_start": 0,
-                        "verse_end": 0,
-                    }
-                ],
+                "reference_display": reference_display,
+                "canonical_references": canonical_references,
                 "replacement_policy": {
                     "provider": "api.bible",
                     "strategy": "replace_by_canonical_reference",
@@ -230,13 +300,13 @@ def build_minimal_lesson(
                 },
             },
             "lesson_outline": {
-                "items": ["TBD"],
+                "items": extracted_items(extracted_sections, "lesson_outline"),
             },
             "teacher_notes": {
-                "items": ["TBD"],
+                "items": extracted_items(extracted_sections, "teacher_notes"),
             },
             "summary_application": {
-                "items": ["TBD"],
+                "items": extracted_items(extracted_sections, "summary_application"),
             },
         },
         "processing_audit": {
@@ -244,10 +314,10 @@ def build_minimal_lesson(
             "ocr_engine": "PyMuPDF",
             "ocr_engine_version": "pending-version-capture",
             "extraction_method": "pdf_text_extraction",
-            "extraction_confidence": "minimal-valid-placeholder",
+            "extraction_confidence": extraction_confidence,
             "manual_review_required": True,
             "reviewed_by": "pending-human-review",
-            "review_status": "pending",
+            "review_status": "automated_unreviewed" if automated_sections_used else "pending",
         },
         "source_integrity": {
             "original_filename": source_pdf.name,
@@ -280,6 +350,16 @@ def build_minimal_lesson(
         },
     }
 
+    section_trace = {
+        name: section["source_trace"]
+        for name, section in extracted_sections.items()
+        if isinstance(section, dict) and isinstance(section.get("source_trace"), dict)
+    }
+    if section_trace:
+        lesson["source_trace"]["section_traces"] = section_trace
+
+    return lesson
+
 
 def main() -> int:
     """Command-line entry point for minimal draft YAML generation."""
@@ -298,6 +378,12 @@ def main() -> int:
         default=DEFAULT_DRAFT_DIR,
         type=Path,
         help="Folder where draft lesson YAML files will be written.",
+    )
+    parser.add_argument(
+        "--section-dir",
+        default=DEFAULT_SECTION_DIR,
+        type=Path,
+        help="Folder containing automated lesson section metadata.",
     )
     parser.add_argument(
         "--schema-version",
@@ -340,6 +426,7 @@ def main() -> int:
         if not isinstance(segments, list):
             raise ValueError(f"{segment_file}: segments must be a list")
         source_structure = str(metadata.get("source_structure") or "")
+        sections_by_lesson = load_section_metadata(args.section_dir, segment_file.stem)
 
         for index, segment in enumerate(segments):
             if not isinstance(segment, dict):
@@ -370,6 +457,7 @@ def main() -> int:
                 segments=segments,
                 schema_version=args.schema_version,
                 imported_at=imported_at,
+                extracted_sections=sections_by_lesson.get(lesson_number, {}),
             )
             write_yaml(output_path, lesson)
             written_files.append(output_path)

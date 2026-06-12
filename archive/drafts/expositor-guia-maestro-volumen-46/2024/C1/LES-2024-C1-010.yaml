@@ -19,23 +19,44 @@ lesson_sections:
   title:
     text: La conducta del mayordomo infiel
   biblical_reading:
-    reference_display: TBD
+    reference_display: Lucas 16:1-8, 11-12
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Luke
+      chapter: 16
+      verse_start: 1
+      verse_end: 8
+    - testament: new
+      book_standardized: Luke
+      chapter: 16
+      verse_start: 11
+      verse_end: 12
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. La responsabilidad de un mayordomo administrando los bienes ajenos (Lucas
+      16:1-2)
+    - A. La infidelidad del mayordomo (Lc 16:1)
+    - B. El mayordomo es llamado a rendir cuentas de su
+    - administración (Lc 16:2)
+    - II. La astucia del mayordomo infiel (Lucas 16:3-7)
+    - A. La preocupación del mayordomo por su futuro
+    - (Lc 16:3-4)
+    - B. La decisión corrupta del mayordomo para obtener
+    - ventaja con los deudores (Lc 16:5-7)
+    - III. Los hijos de este siglo son más sagaces que los
+    - hijos de luz (Lucas 16:8, 11-12)
+    - A. El amo reconoció la sagacidad del mayordomo
+    - infiel (Lc 16:8)
+    - B. Resultados de la sagacidad de una mala administración (Lc 16:11-12)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Qué entendemos por el ejercicio de la mayordomía responsable?
+    - ¿Cómo debe conducirse la persona a
   summary_application:
     items:
     - TBD
@@ -44,10 +65,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +89,25 @@ source_trace:
   line_start: 1348
   line_end: 1489
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1361
+      line_end: 1361
+      page_start: 78
+      page_end: 78
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1390
+      line_end: 1392
+      page_start: 79
+      page_end: 79
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1373
+      line_end: 1388
+      page_start: 79
+      page_end: 79
 semantic_metadata:
   doctrinal_categories:
   - TBD

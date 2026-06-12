@@ -19,7 +19,7 @@ lesson_sections:
   title:
     text: La vida cristiana incluye libertad y disciplina
   biblical_reading:
-    reference_display: TBD
+    reference_display: 1 Crónica 21:1, 7-13
     canonical_references:
     - testament: TBD
       book_standardized: TBD
@@ -32,10 +32,29 @@ lesson_sections:
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. La fe que transforma la vida del ser humano
+    - (Hechos 9:1-19)
+    - A. Sirviendo a Dios desde una perspectiva equivocada
+    - (Hch 9:1-2)
+    - B. Revelación del Cristo resucitado y el llamado a ejercer el
+    - apostolado (Hch 9:3-19)
+    - II. El testimonio de una vida transformada
+    - (Hechos 9:19-22;1 Corintios 9:1-18)
+    - A. Pablo predicando que Jesús era el Cristo (Hch 9:19-22)
+    - B. Pablo defendiendo los derechos de su apostolado
+    - (1 Co 9:1-18)
+    - III. Enfoque y modelo del apostolado de Pablo
+    - (1 Corintios 9:19-27)
+    - A. En Cristo siendo libre de todos, labora como siervo de
+    - todos (1 Co 9:19-23)
+    - B. El propósito y disciplina a semejanza del atleta en el
+    - estadio (1 Co 9:24-27)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Por qué es lamentable cuando la persona cree
+    - que sirve a Dios lo hace equivocadamente?
+    - ¿Cuál fue la experiencia de Saulo de Tarso que le
   summary_application:
     items:
     - TBD
@@ -44,10 +63,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +87,25 @@ source_trace:
   line_start: 336
   line_end: 469
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 375
+      line_end: 375
+      page_start: 23
+      page_end: 23
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 401
+      line_end: 404
+      page_start: 24
+      page_end: 24
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 382
+      line_end: 400
+      page_start: 24
+      page_end: 24
 semantic_metadata:
   doctrinal_categories:
   - TBD

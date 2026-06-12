@@ -19,23 +19,46 @@ lesson_sections:
   title:
     text: El sembrador que salió a volear la semilla en un gran terreno
   biblical_reading:
-    reference_display: TBD
+    reference_display: Lucas 8:5-9, 11-15
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Luke
+      chapter: 8
+      verse_start: 5
+      verse_end: 9
+    - testament: new
+      book_standardized: Luke
+      chapter: 8
+      verse_start: 11
+      verse_end: 15
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Importancia de la tierra desde el principio de
+    - la creación (Génesis 2:5; Deuteronomio 11:9; Isaías5:1-7; Juan 1:1)
+    - A. Dios estableció la agricultura como un oficio digno
+    - (Gn 2:5; Dt 11:9; Jn 1:1)
+    - B. En Palestina Dios habilitó la tierra para la agricultura
+    - hebrea (Is 5:1-7)
+    - II. La agricultura influyó grandemente en la fe y en las
+    - leyes de Israel (Salmo 65:9-13; Isaías28:23-25; Lucas 8:5-8)
+    - A. El cuidado de Dios por la naturaleza se refleja en la
+    - cosecha (Sal 65:9-13; Lc 8:5-8)
+    - B. Dios estableció leyes para hacer que la tierra fuera
+    - productiva (Is 28:23-25)
+    - III. Los diferentes tipos de terreno representan a
+    - diferentes audiencias (Lucas 8:4-15)
+    - A. El voleo es utilizado para esparcir la semilla sobre los
+    - surcos (Lc 8:4-7)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Por qué debemos reconocer
+    - a la agricultura como un oficio digno?
+    - ¿Qué importancia posee conocer la
   summary_application:
     items:
     - TBD
@@ -44,10 +67,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +91,25 @@ source_trace:
   line_start: 1071
   line_end: 1207
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1084
+      line_end: 1084
+      page_start: 62
+      page_end: 62
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1111
+      line_end: 1114
+      page_start: 63
+      page_end: 63
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1092
+      line_end: 1109
+      page_start: 63
+      page_end: 63
 semantic_metadata:
   doctrinal_categories:
   - TBD

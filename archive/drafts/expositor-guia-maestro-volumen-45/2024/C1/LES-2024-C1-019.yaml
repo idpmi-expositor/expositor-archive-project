@@ -19,23 +19,42 @@ lesson_sections:
   title:
     text: El duelo por la muerte del caudillo y libertador de Israel
   biblical_reading:
-    reference_display: TBD
+    reference_display: Deuteronomio 34:4-11
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: old
+      book_standardized: Deuteronomy
+      chapter: 34
+      verse_start: 4
+      verse_end: 11
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. La vida de Moisés como príncipe de Egipto y su
+    - exilio a Madián (Éxodo 2:1-25)
+    - A. Dios preservó la vida de Moisés y fue adoptado por la hija
+    - de Faraón (Ex 2:5-10)
+    - B. Moisés fue desterrado de Egipto y huyó a Madián
+    - (Ex 2:11-12, 15-21)
+    - II. Moisés es llamado por Dios a liderar sobre el
+    - pueblo hebreo (Éxodo 12:30-36; 16; 17:8-13; 32)
+    - A. Dios fundó a Israel como nación por medio de Moisés
+    - (Ex 12:30-36; 17:8-13)
+    - B. Retos y desafíos enfrentados por Moisés como juez y
+    - legislador de Israel (Nm 12, 16, 32)
+    - III. El traspaso del liderazgo de Moisés a Josué y su
+    - 'muerte (Deut. 31: 1-8; 32:48-52; 34:1-12)'
+    - A. Dios prepara nuevos líderes para Israel (Dt 31:1-8)
+    - B. Muerte de Moisés en el monte Nebo
+    - (Dt 32:48-52; 34:1-12)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Qué podemos aprender
+    - sobre la forma en que Dios va preparando a un líder desde su nacimiento?
+    - ¿Por qué fue necesario que Moisés
   summary_application:
     items:
     - TBD
@@ -44,10 +63,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +87,25 @@ source_trace:
   line_start: 2460
   line_end: 2588
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2497
+      line_end: 2497
+      page_start: 152
+      page_end: 152
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2528
+      line_end: 2531
+      page_start: 153
+      page_end: 153
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2508
+      line_end: 2526
+      page_start: 153
+      page_end: 153
 semantic_metadata:
   doctrinal_categories:
   - TBD

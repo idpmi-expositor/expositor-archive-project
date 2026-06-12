@@ -19,23 +19,33 @@ lesson_sections:
   title:
     text: La voz del cielo
   biblical_reading:
-    reference_display: TBD
+    reference_display: Marcos 1:4-11
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Mark
+      chapter: 1
+      verse_start: 4
+      verse_end: 11
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Juan, Jesús y el bautismo - (Juan 1:19-34)
+    - A. El testimonio de Juan el Bautista - (Juan 1:19-28)
+    - B. Jesús, el Cordero de Dios - (Juan 1:29-34)
+    - II. El bautismo de Jesús - (Mateo 3:13-17;
+    - Marcos 1:4-11; Lucas 3:21-22)
+    - A. Juan en el Jordán - (Marcos 1:4-8)
+    - B. La confirmación divina - (Marcos 1:9-11)
+    - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. Comience la clase con una oración.
+    - 2. Pregunte a la clase la definición de
+    - bautismo en agua.
+    - 3. Lea y discuta brevemente la afirmación
   summary_application:
     items:
     - TBD
@@ -44,10 +54,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +78,25 @@ source_trace:
   line_start: 2146
   line_end: 2260
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 2153
+      line_end: 2153
+      page_start: 127
+      page_end: 127
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 2174
+      line_end: 2178
+      page_start: 128
+      page_end: 128
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 2164
+      line_end: 2172
+      page_start: 128
+      page_end: 128
 semantic_metadata:
   doctrinal_categories:
   - TBD

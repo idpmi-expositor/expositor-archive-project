@@ -19,7 +19,7 @@ lesson_sections:
   title:
     text: La humanidad es culpable
   biblical_reading:
-    reference_display: TBD
+    reference_display: 1Romanos 1:18-25
     canonical_references:
     - testament: TBD
       book_standardized: TBD
@@ -32,10 +32,27 @@ lesson_sections:
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. La revelación divina (Romanos 1:18-21)
+    - A. La ira de Dios se revela (Romanos 1:18-19)
+    - B. Dios y su creación (Romanos 1:20-21)
+    - II. La sabiduría de la humanidad
+    - (Romanos 1:22-25)
+    - A. La sabiduría humana (Romanos 1:22-23)
+    - B. La deshonra de la humanidad (Romanos 1:24-25)
+    - III. Condición y destino de la humanidad sin
+    - Dios (Romanos 1:26-32)
+    - A. Extravío de la humanidad (Romanos 1:26-27)
+    - B. Las obras malas de la humanidad
+    - (Romanos 1:28-32)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. Comience la clase con una
+    - oración.
+    - 2. Traiga a la clase una nota
+    - noticiosa reciente y léala al grupo, pida reacciones.
+    - 3. Lea y discuta la afirmación
+    - fundamental brevemente.
   summary_application:
     items:
     - TBD
@@ -44,10 +61,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +85,25 @@ source_trace:
   line_start: 2966
   line_end: 3134
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 3000
+      line_end: 3000
+      page_start: 184
+      page_end: 184
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 3031
+      line_end: 3037
+      page_start: 185
+      page_end: 185
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 3016
+      line_end: 3029
+      page_start: 185
+      page_end: 185
 semantic_metadata:
   doctrinal_categories:
   - TBD

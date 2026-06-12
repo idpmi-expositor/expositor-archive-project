@@ -19,23 +19,38 @@ lesson_sections:
   title:
     text: Fidelidad y justicia divina
   biblical_reading:
-    reference_display: TBD
+    reference_display: Romanos 3:21-28
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Romans
+      chapter: 3
+      verse_start: 21
+      verse_end: 28
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Nadie es justificado por las obras de la ley
+    - (Romanos 3:1-20)
+    - A. No hay justo, ni siquiera uno (Romanos 3:1-18)
+    - B. Justicia, ley y pecado (Romanos 3:19-20)
+    - II. La justificación es por medio de Jesucristo
+    - (Romanos 3:21-26)
+    - A. Justicia por medio de la fe (Romanos 3:21-23)
+    - B. Justificación gratuita (Romanos 3:24-26)
+    - III. Justificados por fe, sin obras (Romanos 3:17-31)
+    - A. Fe sin obras de la ley (Romanos 3:17-28)
+    - B. Dios es uno (Romanos 3:29-31)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. Comience la clase con una
+    - oración.
+    - 2. Pregunte a la clase la diferencia
+    - entre salvación por fe y salvación por obras.
+    - 3. Lea y discuta la afirmación
   summary_application:
     items:
     - TBD
@@ -44,10 +59,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +83,25 @@ source_trace:
   line_start: 3264
   line_end: 3404
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 3299
+      line_end: 3299
+      page_start: 200
+      page_end: 200
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 3327
+      line_end: 3332
+      page_start: 201
+      page_end: 201
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 3313
+      line_end: 3325
+      page_start: 201
+      page_end: 201
 semantic_metadata:
   doctrinal_categories:
   - TBD

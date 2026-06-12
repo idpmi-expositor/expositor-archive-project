@@ -19,23 +19,58 @@ lesson_sections:
   title:
     text: ¿Quiénes deben de pagar los impuestos?
   biblical_reading:
-    reference_display: TBD
+    reference_display: Éxodo 30:14-15; Mateo 17:24-27; 22:17, 19-21
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: old
+      book_standardized: Exodus
+      chapter: 30
+      verse_start: 14
+      verse_end: 15
+    - testament: new
+      book_standardized: Matthew
+      chapter: 17
+      verse_start: 24
+      verse_end: 27
+    - testament: new
+      book_standardized: Matthew
+      chapter: 22
+      verse_start: 17
+      verse_end: 17
+    - testament: new
+      book_standardized: Matthew
+      chapter: 22
+      verse_start: 19
+      verse_end: 21
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Los gobiernos censan a los súbditos para
+    - subsidiar las operaciones de sus instituciones (Éxodo 30:11-16; Números 1:1-19)
+    - 'A. En Israel el impuesto era igual para todos: ricos y pobres'
+    - (Ex 30:11-16)
+    - B. El propósito de celebrar el segundo censo del pueblo de
+    - Israel (Nm 1:1-19)
+    - II. El cobro de los impuestos bajo el sistema
+    - monárquico en Israel (1 Reyes 4:7-19; 2 Reyes 7:1-4; 17:1-6)
+    - A. El cobro de contribuciones para sostener al gobierno
+    - monárquico (1 R 4:7-19)
+    - B. Censos, vasallaje y tributos a naciones extranjeras
+    - (2 S 24:1-9; 2 R 7:1-4; 17:1-6)
+    - III. Censos y contribuciones durante el Imperio
+    - Romano (Mateo 17:24-27; 22:17-21; Lucas 2:1-2)
+    - A. El primer censo realizado bajo el Imperio Romano
+    - (Lucas 2:1-2)
+    - B. ¿Quiénes deben pagar las contribuciones? Respuesta de
+    - Jesús (Mt 17:24-27; 22:17-21)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Por qué es necesario que los
+    - gobiernos celebren censos poblacionales?
+    - ¿Cómo los censos contribuyen
   summary_application:
     items:
     - TBD
@@ -44,10 +79,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +103,25 @@ source_trace:
   line_start: 891
   line_end: 1037
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 939
+      line_end: 939
+      page_start: 55
+      page_end: 55
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 969
+      line_end: 972
+      page_start: 56
+      page_end: 56
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 948
+      line_end: 967
+      page_start: 56
+      page_end: 56
 semantic_metadata:
   doctrinal_categories:
   - TBD

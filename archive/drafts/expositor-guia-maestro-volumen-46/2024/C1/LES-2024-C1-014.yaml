@@ -19,23 +19,35 @@ lesson_sections:
   title:
     text: La enseñanza de los milagros
   biblical_reading:
-    reference_display: TBD
+    reference_display: Lucas 4:14-21
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Luke
+      chapter: 4
+      verse_start: 14
+      verse_end: 21
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Jesús, el ungido de Dios - (Lucas 4:14-21)
+    - A. Un culto muy especial - (Lucas 4:14-17)
+    - B. Los milagros del ungido - (Lucas 4:18-21)
+    - II. La enseñanza de los milagros de Jesús -
+    - (Lucas 1:37; Marcos 11:22-24)
+    - A. La enseñanza general de los milagros de Jesús -
+    - (Lucas 1:37; Marcos 11:22-24)
+    - B. Jesús en cada milagro - (Mateo 9:18-26; Juan
+    - 11:32-44; Lucas 8:26-39)
+    - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. Comience la clase con una oración.
+    - 2. Pregunte a la clase la definición de
+    - milagro.
+    - 3. Lea y discuta la afirmación fundamental
   summary_application:
     items:
     - TBD
@@ -44,10 +56,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-46.pdf
   sha256: 6622d8b2479c51647e1aeb65928841d27790a3c6f59fc0e85538358e115e4f7a
@@ -68,6 +80,25 @@ source_trace:
   line_start: 1913
   line_end: 2022
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1920
+      line_end: 1920
+      page_start: 111
+      page_end: 111
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1942
+      line_end: 1946
+      page_start: 112
+      page_end: 112
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      line_start: 1930
+      line_end: 1940
+      page_start: 112
+      page_end: 112
 semantic_metadata:
   doctrinal_categories:
   - TBD

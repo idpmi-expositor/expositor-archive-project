@@ -19,23 +19,113 @@ lesson_sections:
   title:
     text: El Evangelio es Poder de Dios
   biblical_reading:
-    reference_display: TBD
+    reference_display: Romanos 1:1-7, 16-17
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: Romans
+      chapter: 1
+      verse_start: 1
+      verse_end: 7
+    - testament: new
+      book_standardized: Romans
+      chapter: 1
+      verse_start: 16
+      verse_end: 17
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Saludos e introducción de Pablo a los Romanos
+    - (Romanos 1:1-7)
+    - A. Saludos (Romanos 1:1, 7)
+    - B. El evangelio que predica Pablo (Romanos 1:2-6)
+    - II. El deseo de Pablo (Romanos 1:8-15)
+    - A. Deseo acompañado de gratitud y oración
+    - (Romanos 1:8-12)
+    - B. Deseo acompañado de perseverancia (Romanos1:13-15)
+    - III. El propósito del Evangelio (Romanos 1:16-17)
+    - A. Poder de Dios a todo el que cree (Romanos 1:16)
+    - B. El Evangelio por fe (Romanos 1:17)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. Pida los alumnos que expliquen lo
+    - que entienden por la frase “siervo de Jesucristo”.
+    - 2. Pregunte ¿Qué significa la expresión
+    - “el justo vivirá por la fe”?
+    - '178 Maestro Corinto entre muchas otras. La iglesia de Roma pudo haber sido
+      fundada por alguien anónimo que luego del evento de Hechos 2 (Pentecostés) regresara
+      a la ciudad capital del imperio y allí proclamara la fe cristiana logrando un
+      buen grupo de conversos tanto judíos como gentiles. Un dato interesante es la
+      idea del catolicismo romano de que la iglesia romana fue fundada por Pedro,
+      sin embargo, Pablo no le menciona en el extenso listado de hermanos de Roma
+      del capítulo 16 y alguien tan importante no podía ser obviado en dicha lista
+      de saludos. Pablo llama a los romanos “amados de Dios” y “llamados a ser santos”
+      es decir que ya eran de Dios, convertidos, Dios los amó, los ama y los amará
+      siempre. El llamado a la santidad indica que esta no es instantánea como lo
+      es la salvación, sino progresiva y se nos invita o llama a seguir siendo (cada
+      vez más) santos. Es muy probable que Pablo escribiera esta carta desde Corinto
+      según se puede notar en Romanos 16:23 con la mención de Gayo su hospedador.
+      Gayo es mencionado por primera vez en Hechos 19:29 con el gentilicio de macedonio
+      lo que lo ubica cerca de Corinto y se menciona también en 1 Corintios 1:14 como
+      uno de los bautizados por Pablo en esa ciudad. La fecha más apropiada para la
+      carta a los romanos es entre los años 56-58 DC durante el tercer viaje misionero
+      del apóstol Pablo. Pablo culmina el versículo siete con su acostumbrada bendición:
+      “gracia y paz...” La gracia y la paz de Jesucristo, la paz de Dios es necesaria
+      para seguir viviendo en un mundo de competencia y sin pizca de paz.'
+    - B. El evangelio que predica Pablo
+    - '(Romanos 1:2-6) El evangelio de Dios había sido prometido por los profetas
+      en las santas Escrituras. Los profetas escribieron en el Antiguo Testamento
+      acerca de Jesucristo, el Hijo de Dios del linaje de David, el Mesías y esas
+      son las escrituras a las que se refiere el apóstol aquí. Este Mesías fue “declarado
+      Hijo de Dios” por su milagrosa resurrección de entre los muertos. Este detalle
+      del sufrimiento, muerte y resurrección había sido obviado o espiritualizado
+      por los rabinos judíos. Solo los apóstoles y discípulos de Jesús reconocieron
+      por revelación divina el misterio obviado por la religión de los tiempos de
+      Jesús. El evangelio es universal como lo expresa el versículo cinco y entre
+      esas naciones están los romanos que son “llamados a ser de Jesucristo” es decir
+      a vivir como Jesucristo enseñó. Ser de Jesucristo implica servirle, rendirse
+      a él y aceptar su señorío, es cumplir lo dicho en Gálatas 2:20 “...ya no vivo
+      yo, mas vive Cristo en mí...” Hoy nosotros también somos llamados a ser de Jesucristo
+      sin importar de donde seamos o donde estemos. Aplicación de Maestro - Parte
+      I El Evangelio de la Santidad El apóstol Pedro hace, mediante el pasaje que
+      acabamos de considerar, un llamado a una vida santa, a una vida separada para
+      Dios, una vida que desecha las cosas del mundo y de la carne y en cambio anhela
+      profundamente la Palabra de Dios que a su vez nos brinda el consejo divino para
+      ser santos como Dios es santo. La Palabra de Dios nos ofrece un llamado a la
+      santidad al que debemos obedecer. 1 Pedro 1:13-16 dice: “Por tanto, ceñid los
+      lomos de vuestro entendimiento, sed sobrios, y esperad por completo en la gracia
+      que se os traerá cuando Jesucristo'
+    - A. Deseo acompañado de gratitud y oración
+    - '(Romanos 1:8-12) En ninguna otra carta de Pablo se puede observar una introducción
+      tan extensa y detallada como esta. Pablo establece o indica ciertas cosas en
+      este pasaje: (1) agradecimiento a Dios por la fe en Cristo que demuestran los
+      romanos (2) indica que ha mantenido una oración intercesora a favor de ellos
+      por largo tiempo. Este es un detalle muy hermoso y digno de resaltar y sobre
+      todo de emular. Hoy en día sigue haciendo falta verdaderos intercesores de oración
+      por otros lejos o cercanos a nosotros. Los siervos de Dios siempre deben orar
+      por aquellos por los que ministran, pero también por aquellos por los que han
+      de ser ministrados en un futuro próximo. (3) Pablo expresa su deseo de ir a
+      Roma y pide a Dios que ese viaje sea uno próspero es decir sin contratiempos
+      y que sea uno edificante tanto para la iglesia de Roma como para el mismo apóstol.
+      La planificación de nuestras actividades ministeriales o personales tienen que
+      incluir la oración en búsqueda de la dirección del Señor. (4) El deseo de visitar
+      Roma tenía el propósito de poder comunicar “algún don espiritual”. La frase
+      “algún don” es una referencia al evangelio de Cristo que Pablo predicaba o comunicaba.
+      Se puede observar mucha humildad en estas palabras pues siendo Pablo el mayor
+      exponente de la doctrina cristiana al momento que se escribe la carta muy bien
+      pudo haber dicho “quiero ir a vosotros para que oigan de mis propios labios
+      lo que de otros han oído... “o algo semejante”. No, ese no era Pablo, el maestro
+      tiene que ser humilde y en esa humildad comunicar el más grande mensaje a la
+      humanidad, el Evangelio de Cristo.'
+    - II. El deseo de Pablo (Romanos 1:8-15)
+    - Lección 22
+    - Notas del Maestro - Parte II
+    - 1. Describa brevemente ¿Cómo puede un
+    - cristiano avergonzarse del evangelio?
+    - 2. Explique la frase “Porque no me
   summary_application:
     items:
     - TBD
@@ -44,10 +134,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +158,25 @@ source_trace:
   line_start: 2847
   line_end: 2965
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2878
+      line_end: 2878
+      page_start: 176
+      page_end: 176
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2920
+      line_end: 2942
+      page_start: 178
+      page_end: 180
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2889
+      line_end: 2901
+      page_start: 177
+      page_end: 177
 semantic_metadata:
   doctrinal_categories:
   - TBD

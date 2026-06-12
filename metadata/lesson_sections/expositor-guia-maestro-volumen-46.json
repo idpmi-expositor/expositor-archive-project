@@ -1,0 +1,1794 @@
+{
+  "source_segments": "metadata\\lessons\\expositor-guia-maestro-volumen-46.json",
+  "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+  "lessons": [
+    {
+      "lesson_number": 1,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Isaías 5:1-7; Jeremías 2:21",
+          "canonical_references": [
+            {
+              "testament": "old",
+              "book_standardized": "Isaiah",
+              "chapter": 5,
+              "verse_start": 1,
+              "verse_end": 7
+            },
+            {
+              "testament": "old",
+              "book_standardized": "Jeremiah",
+              "chapter": 2,
+              "verse_start": 21,
+              "verse_end": 21
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 98,
+            "line_end": 98,
+            "page_start": 6,
+            "page_end": 6
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Qué importancia brinda el",
+            "Viñador a preparar el terreno para sembrar las vides?",
+            "¿Por qué el profeta Isaías utilizó la figura"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 108,
+            "line_end": 111,
+            "page_start": 7,
+            "page_end": 7
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. El canto de amor del Amado por Su viña (Isaías 5:1-2a)",
+            "A. Las expectativas del Viñador al ubicar el viñedo en una",
+            "ladera (Is 5:1)",
+            "B. Métodos utilizados para edificar una viña con vides escogidas (Is 5:2 a)",
+            "II. Frustraciones del Viñador por el fruto producido",
+            "por la viña infiel (Isaías 5:2b-6)",
+            "A. La viña no produjo los frutos deseados, solo dio uvas",
+            "silvestres (Is 5:2 b-4)",
+            "B. Decisiones tomadas por el Viñador con relación a su viña",
+            "infiel (Is 5:5-6)",
+            "III. Conducta de Israel y Judá delante de Jehová a",
+            "semejanza de la viña infiel (Isaías 5:7; Jeremías 2:21)",
+            "A. Jehová identifica a la viña infiel con Israel y Judá (Is 5:7)",
+            "B. Surge la pregunta: ¿cómo siendo una vid escogida se",
+            "volvió sarmiento de vid extraña? (Jer 2:21)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 121,
+            "line_end": 137,
+            "page_start": 7,
+            "page_end": 7
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 2,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Isaías 28:23-29; Amós 1:2-3",
+          "canonical_references": [
+            {
+              "testament": "old",
+              "book_standardized": "Isaiah",
+              "chapter": 28,
+              "verse_start": 23,
+              "verse_end": 29
+            },
+            {
+              "testament": "old",
+              "book_standardized": "Amos",
+              "chapter": 1,
+              "verse_start": 2,
+              "verse_end": 3
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 245,
+            "line_end": 245,
+            "page_start": 14,
+            "page_end": 14
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Por qué el profeta Isaías utilizó",
+            "lenguaje parabólico para transmitir el mensaje de Jehová?",
+            "¿Qué enseñanzas se pueden obtener"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 275,
+            "line_end": 278,
+            "page_start": 15,
+            "page_end": 15
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Un buen sembrador reconoce cómo preparar el",
+            "terreno para la siembra (Isaías 28:23-25)",
+            "A. Un buen sembrador escucha al especialista sobre el",
+            "trabajo a realizar (Is 28:23-24)",
+            "B. El arte de preparar el terreno para sembrar la diversidad",
+            "de granos (Is 28:25)",
+            "II. Cuando Dios es el que educa cómo proceder en",
+            "medio de la diversidad (Isaías 28:26-28)",
+            "A. Dios es el que enseña lo recto (Is 28:26)",
+            "B. Instrucciones para cuidar a cada cual según su naturaleza",
+            "(Is 28:27-28)",
+            "III. El justo juicio de Jehová al evaluar el fruto de la",
+            "siembra (Isaías 28:29; Amós 1:1-2)",
+            "A. Jehová hace maravilloso el consejo y engrandece la",
+            "sabiduría (Is 28:29)",
+            "B. Jehová juzgará desde Sion sobre Jerusalén y Damasco",
+            "(Am 1:1-2)",
+            "IV. Resumen y aplicación práctica:"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 255,
+            "line_end": 273,
+            "page_start": 15,
+            "page_end": 15
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 3,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Ezequiel 17:1-10",
+          "canonical_references": [
+            {
+              "testament": "old",
+              "book_standardized": "Ezekiel",
+              "chapter": 17,
+              "verse_start": 1,
+              "verse_end": 10
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 386,
+            "line_end": 386,
+            "page_start": 22,
+            "page_end": 22
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Por qué Jehová habló por",
+            "parábolas a Su pueblo?",
+            "¿Cuál es el simbolismo de la gran"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 413,
+            "line_end": 416,
+            "page_start": 23,
+            "page_end": 23
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Parábola de Jehová sobre la gran águila que vino al",
+            "Líbano (Ezequiel 17:1-4)",
+            "A. Simbolismo de la gran águila que vino al Líbano",
+            "(Ez 17:1-3)",
+            "B. La conquista de Jerusalén y el cautiverio babilónico",
+            "(Ez 17:4)",
+            "II. La plantación de la simiente de la tierra y el pacto con",
+            "la segunda gran águila (Ezequiel 17:5-10)",
+            "A. Nabucodonosor planta la simiente de la tierra (Ez 17:5-6)",
+            "B. El Señor arrancará las raíces de la vid y se secará del todo",
+            "(Ez 17:7-10)",
+            "III. Mensaje de esperanza sobre la llegada del Mesías",
+            "(Ezequiel 17:22-24; Salmo 2:6)",
+            "A. Identificando un tallo tierno que será plantado sobre el",
+            "monte alto y sublime (Ez 17:22)",
+            "B. La transformación del tallo tierno en árbol frondoso que",
+            "dará fruto (Ez 17:23-24; Sal 2:6)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 393,
+            "line_end": 411,
+            "page_start": 23,
+            "page_end": 23
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 4,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Tito 1:1-9; Romanos 1:8",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Titus",
+              "chapter": 1,
+              "verse_start": 1,
+              "verse_end": 9
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Romans",
+              "chapter": 1,
+              "verse_start": 8,
+              "verse_end": 8
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 517,
+            "line_end": 517,
+            "page_start": 30,
+            "page_end": 30
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Cómo se puede",
+            "contextualizar la parábola de Eclesiastés 9:13-18 con la vida actual?",
+            "¿Cómo la conducta del hombre"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 547,
+            "line_end": 550,
+            "page_start": 31,
+            "page_end": 31
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. La sabiduría no siempre se aprecia",
+            "(Eclesiastés 9:11-12)",
+            "A. La confianza en la suerte y el azar no garantizan el éxito",
+            "en la vida (Ec 9:11)",
+            "B. El ser humano desconoce su tiempo (Ec 9:12)",
+            "II. Situaciones que amenazan la vida en una",
+            "pequeña ciudad (Eclesiastés 9:13-14)",
+            "A. La ausencia de recursos humanos capacitados para",
+            "defender la ciudad (Ec 9:13)",
+            "B. Fuerzas agresoras que amenazan a la ciudad tratan de",
+            "poseerla (Ec 9:14)",
+            "III. La sabiduría del hombre pobre en contraste con",
+            "la del hombre necio (Eclesiastés 9:15-18)",
+            "A. La sabiduría del hombre ignorado vence a las fuerzas",
+            "invasoras (Ec 9:15)",
+            "B. Mejor es la sabiduría que la fuerza o las armas de guerra",
+            "(Ec 9:16-18)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 527,
+            "line_end": 545,
+            "page_start": 31,
+            "page_end": 31
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 5,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Ezequiel 23:1-7; 14-16",
+          "canonical_references": [
+            {
+              "testament": "old",
+              "book_standardized": "Ezekiel",
+              "chapter": 23,
+              "verse_start": 1,
+              "verse_end": 7
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 662,
+            "line_end": 662,
+            "page_start": 38,
+            "page_end": 38
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Por qué dos hermanas son",
+            "juzgadas como rameras?",
+            "¿Por qué Ahola y Aholiba adoptaron las prácticas idolátricas de sus"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 689,
+            "line_end": 692,
+            "page_start": 39,
+            "page_end": 39
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Las dos hermanas rameras: Ahola y Aholiba",
+            "(Ezequiel 23:1-4)",
+            "A. Ahola y Aholiba eran hijas de una misma madre",
+            "(Ez 23:1-2)",
+            "B. Las dos hermanas fornicaron en Egipto (Ez 23:3-4)",
+            "II. Ahola y Aholiba se prostituyeron en Canaán",
+            "(Ezequiel 23:5-13)",
+            "A. Ahola fornicó con Asiria y construyó su propio centro de",
+            "culto en Samaria (Ez 23:5-7)",
+            "B. Aholiba enloqueció de lujuría y superó a Ahola en sus",
+            "fornicaciones (Ez 23:11-13)",
+            "III. El juicio de Ahola y Aholiba por haber pecado",
+            "contra Jehová (Ezequiel 23:36-49)",
+            "A. Ambas hermanas fueron halladas culpables de los",
+            "mismos pecados (Ez 23:36-44)",
+            "B. Hombres justos juzgarán a las hermanas y aplicarán la",
+            "merecida destrucción (Ez 23:45-49)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 669,
+            "line_end": 687,
+            "page_start": 39,
+            "page_end": 39
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 6,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Mateo 18:23-33",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 18,
+              "verse_start": 23,
+              "verse_end": 33
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 803,
+            "line_end": 803,
+            "page_start": 46,
+            "page_end": 46
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Qué relación tiene la parábola",
+            "narrada por Jesús con el perdón y la misericordia?",
+            "¿Cuántas veces se debe perdonar a"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 833,
+            "line_end": 836,
+            "page_start": 47,
+            "page_end": 47
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Leyes existentes en la antigüedad hacia los deudores que no podían pagar la deuda",
+            "(Deuteronomio 15:1-6; 2 Reyes 4:1-7)",
+            "A. La esclavitud por deudas que el deudor no podía pagar",
+            "(2 R 4:1-2)",
+            "B. Jehová estableció leyes sobre la manera de la remisión de",
+            "la deuda en Israel (Dt 15:1-6)",
+            "II. La misericordia del rey ante del deudor que no",
+            "puede pagar la deuda (Mateo 18:23-27)",
+            "A. Evento que sucedió cuando el rey pidió que el deudor le",
+            "pagara (Mt 18:23-25)",
+            "B. La remisión de la deuda ante la súplica del deudor",
+            "(Mt 18:26-27)",
+            "III. El castigo aplicado al siervo malvado por la falta",
+            "de perdón hacia su consiervo (Mateo 18:28-33)",
+            "A. La injusticia del que fue perdonado y no sabe perdonar",
+            "(Mt 18-28-30)",
+            "B. El castigo pronunciado hacia el opresor que se niega a",
+            "perdonar (Mt 18:31-33)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 812,
+            "line_end": 831,
+            "page_start": 47,
+            "page_end": 47
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 7,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Lucas 15:1-7; Juan 10:11-12, 14-15",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 15,
+              "verse_start": 1,
+              "verse_end": 7
+            },
+            {
+              "testament": "new",
+              "book_standardized": "John",
+              "chapter": 10,
+              "verse_start": 11,
+              "verse_end": 12
+            },
+            {
+              "testament": "new",
+              "book_standardized": "John",
+              "chapter": 10,
+              "verse_start": 14,
+              "verse_end": 15
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 945,
+            "line_end": 945,
+            "page_start": 54,
+            "page_end": 54
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Qué contraste existía entre el",
+            "ministerio realizado por Jesús y el de los líderes religiosos judíos?",
+            "¿Por qué los fariseos y los escribas"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 971,
+            "line_end": 974,
+            "page_start": 55,
+            "page_end": 55
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Las críticas realizadas por los fariseos y los escribas contra Jesús (Lucas 15:1-2)",
+            "A. Actitud de los fariseos y los escribas cuando se acercaban",
+            "para oír a Jesús (Lc 15:1)",
+            "B. Murmuraciones contra el ministerio realizado por Jesús",
+            "entre los pecadores (Lc 15:2)",
+            "II. La celebración realizada por el buen pastor",
+            "cuando rescata a la oveja perdida (Lucas 15:3-6)",
+            "A. El esfuerzo que realiza el pastor buscando a la oveja",
+            "extraviada (Lc 15 15:3-4)",
+            "B. Cuando el pastor encuentra a la oveja la carga sobre su",
+            "hombro y celebra el rescate (Lc 15:5-6)",
+            "III. Hay celebración en el cielo por un pecador que",
+            "se arrepiente (Lucas 15:7; Juan10:11-12, 14-15)",
+            "A. Contrastes entre la conducta del buen pastor y la del asalariado que cuida a las ovejas (Lc 15:7; Jn 10:11-12)",
+            "B. El pastor conoce a sus ovejas, su vida da por ellas; ellas",
+            "conocen a su pastor y lo siguen (Jn 10:14-15)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 952,
+            "line_end": 969,
+            "page_start": 55,
+            "page_end": 55
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 8,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Lucas 8:5-9, 11-15",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 8,
+              "verse_start": 5,
+              "verse_end": 9
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 8,
+              "verse_start": 11,
+              "verse_end": 15
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1084,
+            "line_end": 1084,
+            "page_start": 62,
+            "page_end": 62
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Por qué debemos reconocer",
+            "a la agricultura como un oficio digno?",
+            "¿Qué importancia posee conocer la"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1111,
+            "line_end": 1114,
+            "page_start": 63,
+            "page_end": 63
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Importancia de la tierra desde el principio de",
+            "la creación (Génesis 2:5; Deuteronomio 11:9; Isaías5:1-7; Juan 1:1)",
+            "A. Dios estableció la agricultura como un oficio digno",
+            "(Gn 2:5; Dt 11:9; Jn 1:1)",
+            "B. En Palestina Dios habilitó la tierra para la agricultura",
+            "hebrea (Is 5:1-7)",
+            "II. La agricultura influyó grandemente en la fe y en las",
+            "leyes de Israel (Salmo 65:9-13; Isaías28:23-25; Lucas 8:5-8)",
+            "A. El cuidado de Dios por la naturaleza se refleja en la",
+            "cosecha (Sal 65:9-13; Lc 8:5-8)",
+            "B. Dios estableció leyes para hacer que la tierra fuera",
+            "productiva (Is 28:23-25)",
+            "III. Los diferentes tipos de terreno representan a",
+            "diferentes audiencias (Lucas 8:4-15)",
+            "A. El voleo es utilizado para esparcir la semilla sobre los",
+            "surcos (Lc 8:4-7)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1092,
+            "line_end": 1109,
+            "page_start": 63,
+            "page_end": 63
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 9,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10",
+          "canonical_references": [
+            {
+              "testament": "old",
+              "book_standardized": "Genesis",
+              "chapter": 24,
+              "verse_start": 53,
+              "verse_end": 53
+            },
+            {
+              "testament": "old",
+              "book_standardized": "Genesis",
+              "chapter": 24,
+              "verse_start": 58,
+              "verse_end": 58
+            },
+            {
+              "testament": "old",
+              "book_standardized": "Genesis",
+              "chapter": 29,
+              "verse_start": 18,
+              "verse_end": 19
+            },
+            {
+              "testament": "old",
+              "book_standardized": "Genesis",
+              "chapter": 29,
+              "verse_start": 21,
+              "verse_end": 21
+            },
+            {
+              "testament": "old",
+              "book_standardized": "Genesis",
+              "chapter": 29,
+              "verse_start": 23,
+              "verse_end": 23
+            },
+            {
+              "testament": "old",
+              "book_standardized": "Genesis",
+              "chapter": 29,
+              "verse_start": 26,
+              "verse_end": 27
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 15,
+              "verse_start": 3,
+              "verse_end": 3
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 15,
+              "verse_start": 8,
+              "verse_end": 10
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1220,
+            "line_end": 1220,
+            "page_start": 70,
+            "page_end": 70
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Cuál era el significado de la",
+            "dote en el contrato matrimonial en el AT?",
+            "¿Qué aprendemos sobre la dote"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1250,
+            "line_end": 1253,
+            "page_start": 71,
+            "page_end": 71
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Significado de la dote para el compromiso matrimonial",
+            "en el AT (Génesis 24:53, 58; 29:18-19, 21, 23, 26-27)",
+            "A. La dote recibida por Rebeca y su familia para casarse con",
+            "Isaac (Gn 24:53, 58)",
+            "B. La dote que pagó Jacob a Labán por sus hijas: Lea y",
+            "Raquel (Gn 29:18, 21, 23, 26-27)",
+            "II. Parábola de la mujer que perdió una dracma en el NT",
+            "(Lucas 15:3,8)",
+            "A. ¿Qué significado tenía la dracma en la vida de la mujer?",
+            "(Lc 15:3, 8 a)",
+            "B. La insistencia de la mujer por hallar la dracma perdida",
+            "(Lc 15:8 b)",
+            "III. El gozo de la mujer al hallar la dracma perdida",
+            "(Lucas 15:9-10)",
+            "A. El valor de las diez dracmas como las arras del",
+            "compromiso matrimonial de la mujer (Lc 15:9)",
+            "B. Contrastes entre el gozo de la mujer y el gozo en el cielo",
+            "por un pecador que se arrepiente (Lc 15:10)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1229,
+            "line_end": 1248,
+            "page_start": 71,
+            "page_end": 71
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 10,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Lucas 16:1-8, 11-12",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 16,
+              "verse_start": 1,
+              "verse_end": 8
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 16,
+              "verse_start": 11,
+              "verse_end": 12
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1361,
+            "line_end": 1361,
+            "page_start": 78,
+            "page_end": 78
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Qué entendemos por el ejercicio de la mayordomía responsable?",
+            "¿Cómo debe conducirse la persona a"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1390,
+            "line_end": 1392,
+            "page_start": 79,
+            "page_end": 79
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. La responsabilidad de un mayordomo administrando los bienes ajenos (Lucas 16:1-2)",
+            "A. La infidelidad del mayordomo (Lc 16:1)",
+            "B. El mayordomo es llamado a rendir cuentas de su",
+            "administración (Lc 16:2)",
+            "II. La astucia del mayordomo infiel (Lucas 16:3-7)",
+            "A. La preocupación del mayordomo por su futuro",
+            "(Lc 16:3-4)",
+            "B. La decisión corrupta del mayordomo para obtener",
+            "ventaja con los deudores (Lc 16:5-7)",
+            "III. Los hijos de este siglo son más sagaces que los",
+            "hijos de luz (Lucas 16:8, 11-12)",
+            "A. El amo reconoció la sagacidad del mayordomo",
+            "infiel (Lc 16:8)",
+            "B. Resultados de la sagacidad de una mala administración (Lc 16:11-12)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1373,
+            "line_end": 1388,
+            "page_start": 79,
+            "page_end": 79
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 11,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Mateo 13:9-11, 24-30",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 13,
+              "verse_start": 9,
+              "verse_end": 11
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 13,
+              "verse_start": 24,
+              "verse_end": 30
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1502,
+            "line_end": 1502,
+            "page_start": 86,
+            "page_end": 86
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Por qué Jesús utilizaba en",
+            "ciertas ocasiones lenguaje parabólico?",
+            "¿Qué relación guardaban las parábolas con los públicos y las enseñanzas dadas por Jesús?"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1536,
+            "line_end": 1539,
+            "page_start": 87,
+            "page_end": 87
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Por qué Jesús utilizaba el lenguaje parabólico para",
+            "transmitir sus enseñanzas (Mateo 13:9-11)",
+            "A. Los discípulos preguntaron a Jesús por qué utilizaba",
+            "lenguaje parabólico (Mt 13:9-10)",
+            "B. Jesús explicó a los discípulos que ellos debían conocer",
+            "los misterios del reino de Dios (Mt 13:11)",
+            "II. Comparación del reino de los cielos con el hombre que",
+            "sembró buena semilla en un Campo (Mateo 13:24-27)",
+            "A. La semejanza del reino de los cielos con el hombre que",
+            "sembró buena semilla en un campo (Mt 13:24)",
+            "B. El enemigo invadió el campo y le sembró semilla de",
+            "cizaña (Mt 13:25-27)",
+            "III. Razones por las cuales el dueño del campo dio",
+            "instrucciones de dejar crecer la cizaña con el trigo (Mateo 13:28-30)",
+            "A. Los siervos deseaban arrancar la cizaña, pero el amo les",
+            "dijo que la dejaran crecer (Mt 13:28)",
+            "B. La sabiduría del dueño del campo para esperar hasta la",
+            "siega para cosechar la cizaña y el trigo (Mt 13:29-30)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1515,
+            "line_end": 1534,
+            "page_start": 87,
+            "page_end": 87
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 12,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Mateo 20:1-11",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 20,
+              "verse_start": 1,
+              "verse_end": 11
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1652,
+            "line_end": 1652,
+            "page_start": 94,
+            "page_end": 94
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Cómo Jesús contrastó el trato",
+            "de Dios con el ser humano en el reino de los cielos con el mundo?",
+            "¿Considera usted que la salvación"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1679,
+            "line_end": 1682,
+            "page_start": 95,
+            "page_end": 95
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. El reino de los cielos y su semejanza con las decisiones",
+            "de un padre de familia (Mateo 20:1-4)",
+            "A. La forma en que un padre de familia salió a contratar",
+            "obreros para su viña (Mt 20:1-2)",
+            "B. La contratación de otros obreros cerca de la hora tercera",
+            "del día (Mt 20:3-4)",
+            "II. Formas en que el dueño de la viña continúo",
+            "contratando obreros para su viña (Mt 20:5-7)",
+            "A. Durante la hora sexta y novena el dueño de la viña contrató a otros obreros (Mt 20:5)",
+            "B. La contratación de otros obreros que estaban desocupados porque nadie los había contratado (Mt 20:6-7)",
+            "III. La forma en que el padre de familia compensó a los",
+            "obreros que había contratado (Mateo 20:8-16)",
+            "A. Al llegar la noche el mayordomo pagó a los obreros",
+            "comenzando por los postreros (Mt 20:8-9)",
+            "B. Reacción de los primeros cuando le pagaron un denario",
+            "y la respuesta del dueño de la viña (Mt 20:10-16)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1660,
+            "line_end": 1677,
+            "page_start": 95,
+            "page_end": 95
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 13,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Mateo 13:34-35; 47-48, 50-54, 58",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 13,
+              "verse_start": 34,
+              "verse_end": 35
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1792,
+            "line_end": 1792,
+            "page_start": 102,
+            "page_end": 102
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "¿Por qué Jesús mencionó las",
+            "cosas escondidas desde la fundación del mundo?",
+            "¿Qué respuesta dio Jesús a"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1818,
+            "line_end": 1821,
+            "page_start": 103,
+            "page_end": 103
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Jesús declara en parábolas las cosas escondidas",
+            "desde la fundación del mundo (Mateo 13:34-35)",
+            "A. Jesús no hablaba a las multitudes sin parábolas",
+            "(Mt 13:34)",
+            "B. Jesús cumplió lo dicho por el profeta sobre el uso de las",
+            "parábolas (Mt 13:35)",
+            "II. Comparación del reino de los cielos con una red",
+            "del pescador (Mateo 13:47-51)",
+            "A. Cuando la red del pescador es echada en la mar y",
+            "recoge toda clase de peces (Mt 13:47)",
+            "B. Comparación en la selección entre los peces buenos y",
+            "los malos con los justos e injustos (Mt 13:48-51)",
+            "III. Semejanza del reino de los cielos con las actividades que realiza un padre de familia",
+            "(Mateo 13:52-58)",
+            "A. Cuando el padre es docto saca de su tesoro cosas nuevas y",
+            "viejas (Mt 13:52-53)",
+            "B. Una vez terminadas sus palabras Jesús fue de allí",
+            "(Mt 13:54-58)",
+            "IV. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1797,
+            "line_end": 1816,
+            "page_start": 103,
+            "page_end": 103
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 14,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Lucas 4:14-21",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 4,
+              "verse_start": 14,
+              "verse_end": 21
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1920,
+            "line_end": 1920,
+            "page_start": 111,
+            "page_end": 111
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase la definición de",
+            "milagro.",
+            "3. Lea y discuta la afirmación fundamental"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1942,
+            "line_end": 1946,
+            "page_start": 112,
+            "page_end": 112
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Jesús, el ungido de Dios - (Lucas 4:14-21)",
+            "A. Un culto muy especial - (Lucas 4:14-17)",
+            "B. Los milagros del ungido - (Lucas 4:18-21)",
+            "II. La enseñanza de los milagros de Jesús -",
+            "(Lucas 1:37; Marcos 11:22-24)",
+            "A. La enseñanza general de los milagros de Jesús -",
+            "(Lucas 1:37; Marcos 11:22-24)",
+            "B. Jesús en cada milagro - (Mateo 9:18-26; Juan",
+            "11:32-44; Lucas 8:26-39)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 1930,
+            "line_end": 1940,
+            "page_start": 112,
+            "page_end": 112
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 15,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Mateo 4:1-11",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 4,
+              "verse_start": 1,
+              "verse_end": 11
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2030,
+            "line_end": 2030,
+            "page_start": 119,
+            "page_end": 119
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase la definición de",
+            "tentación.",
+            "3. Lea y discuta la afirmación fundamental"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2056,
+            "line_end": 2060,
+            "page_start": 120,
+            "page_end": 120
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. La Biblia y la tentación - (Génesis 3:1-6;",
+            "Santiago 1:12-15)",
+            "A. La tentación original - (Génesis 3:1-6)",
+            "B. El proceso de la tentación - (Santiago 1:12-15)",
+            "II. La tentación de Jesús - (Mateo 4:1-11)",
+            "A. ¡Convierte las piedras en pan! - (Mateo 4:1-4)",
+            "B. ¡Arrójate al vacío! - (Mateo 4:5-7)",
+            "C. ¡Adórame! – (Mateo 4:8-11)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2045,
+            "line_end": 2054,
+            "page_start": 120,
+            "page_end": 120
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 16,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Marcos 1:4-11",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Mark",
+              "chapter": 1,
+              "verse_start": 4,
+              "verse_end": 11
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2153,
+            "line_end": 2153,
+            "page_start": 127,
+            "page_end": 127
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase la definición de",
+            "bautismo en agua.",
+            "3. Lea y discuta brevemente la afirmación"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2174,
+            "line_end": 2178,
+            "page_start": 128,
+            "page_end": 128
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Juan, Jesús y el bautismo - (Juan 1:19-34)",
+            "A. El testimonio de Juan el Bautista - (Juan 1:19-28)",
+            "B. Jesús, el Cordero de Dios - (Juan 1:29-34)",
+            "II. El bautismo de Jesús - (Mateo 3:13-17;",
+            "Marcos 1:4-11; Lucas 3:21-22)",
+            "A. Juan en el Jordán - (Marcos 1:4-8)",
+            "B. La confirmación divina - (Marcos 1:9-11)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2164,
+            "line_end": 2172,
+            "page_start": 128,
+            "page_end": 128
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 17,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Juan 1:47-51",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "John",
+              "chapter": 1,
+              "verse_start": 47,
+              "verse_end": 51
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2268,
+            "line_end": 2268,
+            "page_start": 135,
+            "page_end": 135
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase la definición",
+            "omnisciencia.",
+            "3. Lea y discuta brevemente la afirmación"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2295,
+            "line_end": 2299,
+            "page_start": 136,
+            "page_end": 136
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Jesús escoge sus discípulos - (Juan 1:35-42)",
+            "A. Cambio de maestro - (Juan 1:35-39)",
+            "B. Los primeros discípulos - (Juan 1:40-42)",
+            "II. El encuentro de Jesús con Felipe y Natanael",
+            "- (Juan 1:43-51)",
+            "A. Reacción de Felipe y Natanael - (Juan 1:43-46)",
+            "B. La revelación divina - (Juan 1:47-51)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2285,
+            "line_end": 2293,
+            "page_start": 136,
+            "page_end": 136
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 18,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Lucas 4:16-22",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 4,
+              "verse_start": 16,
+              "verse_end": 22
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2391,
+            "line_end": 2391,
+            "page_start": 143,
+            "page_end": 143
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase la definición de",
+            "misión.",
+            "3. Lea y discuta brevemente la afirmación"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2416,
+            "line_end": 2420,
+            "page_start": 144,
+            "page_end": 144
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. La misión de Jesús como Mesías - (Lucas",
+            "4:16-19)",
+            "A. Jesús en la sinagoga de Nazaret - (Lucas 4:16-17)",
+            "B. Una misión extraordinaria - (Lucas 4:18-19)",
+            "II. Revelación mesiánica en Nazaret -",
+            "(Lucas 4:20-30)",
+            "A. Se cumple la escritura en Jesús - (Lucas 4:20-27)",
+            "B. Una demostración de la divinidad de Jesús -",
+            "(Lucas 4:28-30)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2402,
+            "line_end": 2412,
+            "page_start": 144,
+            "page_end": 144
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 19,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Juan 18:1-11",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "John",
+              "chapter": 18,
+              "verse_start": 1,
+              "verse_end": 11
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2518,
+            "line_end": 2518,
+            "page_start": 151,
+            "page_end": 151
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase lo que",
+            "entienden por el término “nombre”.",
+            "3. Lea y discuta brevemente la afirmación"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2542,
+            "line_end": 2546,
+            "page_start": 152,
+            "page_end": 152
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. La demostración del poder de su nombre -",
+            "(Juan 18:1-11)",
+            "A. Jesús, el eterno Yo Soy - (Juan 18:1-6)",
+            "B. Milagro en su arresto - (Juan 18:7-11)",
+            "II. El nombre de Jesús -",
+            "(Hechos 4:12; Filipenses 2:9-11)",
+            "A. No hay otro nombre - (Hechos 4:12)",
+            "B. Toda rodilla se doblará - (Filipenses 2:9-11)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2531,
+            "line_end": 2540,
+            "page_start": 152,
+            "page_end": 152
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 20,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Marcos 6:46-51",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Mark",
+              "chapter": 6,
+              "verse_start": 46,
+              "verse_end": 51
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2661,
+            "line_end": 2661,
+            "page_start": 159,
+            "page_end": 159
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Comience la clase con una oración.",
+            "2. Explique de manera breve el"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2686,
+            "line_end": 2688,
+            "page_start": 160,
+            "page_end": 160
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Jesús, los discípulos, las multitudes y la",
+            "oración – Marcos 6:45-47",
+            "A. Jesús despide a sus discípulos y a las multitudes –",
+            "Marcos 6:45",
+            "B. Jesús se aparta para orar – Marcos 6:46-47",
+            "II. Jesús manifiesta su poder ante la",
+            "necesidad de sus discípulos – Marcos 6:4852",
+            "A. Jesús acude ante la fatiga de sus discípulos –",
+            "Marcos 6:48-49a",
+            "B. Jesús manifiesta su poder frente a la adversidad –",
+            "Marcos 6:49b-52",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2672,
+            "line_end": 2684,
+            "page_start": 160,
+            "page_end": 160
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 21,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Marcos 1:21-28",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Mark",
+              "chapter": 1,
+              "verse_start": 21,
+              "verse_end": 28
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2897,
+            "line_end": 2897,
+            "page_start": 173,
+            "page_end": 173
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. 2. 3.",
+            "presenta a las poblaciones gentiles colindantes con el mar de Galilea y esto con el propósito de mostrar la continuidad del ministerio de Jesús en tierra de gentiles, donde tiempo después queda constancia de comunidades cristianas en la zona (Hch 21:3-4; 27:3). Este relato recuerda al del hombre paralítico que fue traído por sus amigos. Aquí se nos menciona que el hombre era sordo y tartamudo, o sea que tenía dificultad para hablar, esto fue posiblemente porque nació con la capacidad de hablar, pero al no oír le dificultaba el poder expresarse. En ese momento Jesús se aísla de la multitud que le rodea. Es probable que el maestro quisiera menguar el aspecto llamativo del milagro de sanidad y se desentienda el propósito más amplio de su ministerio: la predicación del reino de Dios. Tras entrar en contacto con el enfermo, Jesús mira al cielo en señal de dependencia divina y suspira, término que proviene del griego (stenádzo). Este acto del Señor puede verse como uno en el cual se identifica con el dolor humano. Jesús comprende nuestra situación, por eso es nuestro sumo sacerdote el cual se compadece de nosotros, (Hebreos 8).",
+            "B. Jesús lo hace todo bien – Marcos 7:35-37",
+            "El hombre recibe la sanidad y esta se describe: “fueron abiertos sus oídos y se desató la ligadura de su lengua”. Pero el maestro ordenó inmediatamente a que no dijesen nada. No obstante, cuánto más lo ordenaba, más lo hacían. Así que no solo la ligadura de la lengua del tartamudo fue liberada, sino la de las multitudes al ser testigos de aquel milagro. El autor del evangelio utiliza el termino griego (juperperisós), se traduce como asombro desmedido,",
+            "Lección 21",
+            "II. Jesús sana a un sordo y tartamudo –",
+            "Marcos 7:31-37",
+            "A. Traen un sordo y tartamudo a Jesús –",
+            "Marcos 7:31-34",
+            "Tras Jesús abandonar la región de Tiro no presenta un trayecto directo hasta Galilea, parece un deambular impreciso en zigzag. Algunos interpretan que es muestra de desconocimiento geográfico del autor bíblico. Sin embargo, es posible aducir una razón teológica más que geográfica. La zona descrita aquí Notas del Maestro - Parte II",
+            "1. Describa brevemente la región de",
+            "Tiro y Sidón y la región de Decápolis.",
+            "2. Pregunte ¿Por qué Jesús utilizó"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2822,
+            "line_end": 2840,
+            "page_start": 168,
+            "page_end": 169
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Jesús se establece como autoridad –",
+            "(Marcos 1:21-26)",
+            "A. La autoridad de los escribas y Jesús –",
+            "(Marcos 1:21-22)",
+            "B. El endemoniado de la sinagoga –",
+            "(Marcos 1:23-26)",
+            "II. La expulsión de demonios causa conmoción",
+            "– (Marcos 1:27-28)",
+            "A. El mundo cuestiona la autoridad de Jesús sobre",
+            "los demonios – (Marcos 1:27)",
+            "B. La fama de los jóvenes exorcistas y Jesús –",
+            "(Marcos 1:28)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2912,
+            "line_end": 2925,
+            "page_start": 174,
+            "page_end": 174
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 22,
+      "sections": {
+        "teacher_notes": {
+          "items": [
+            "1. «se admiraban»: Literalmente esto significa",
+            "“llamar la atención”. El estilo y el contenido de las enseñanzas de Jesús eran radicalmente distintos al de los rabinos, quienes se citaban unos a otros como autoridades; pero él hablaba con la autoridad de Dios (Mateo 5:17–48).",
+            "2. «un hombre con un espíritu inmundo»:",
+            "Es un caso de posesión demoníaca (v. 34). Observe que este hombre estaba en el culto, manteniendo la apariencia. El Nuevo Testamento distingue entre las enfermedades físicas y la posesión demoníaca, aunque a veces ambas tenían los mismos síntomas. En estos casos, el demonio controlaba a la persona, quien había perdido su propia voluntad.",
+            "176 Maestro las autoridades, pero que Jesús habló con autoridad. Los escribas enseñaban utilizando la autoridad de las Sagradas Escrituras, pero Jesús educaba como la autoridad. Para sorpresa de los judíos, Jesús se presentaba al mismo nivel de autoridad que los Rollos Sagrados; no iba cambiar lo escrito, sino a cumplir lo dicho por Moisés, salmos y profetas (Lucas 24:44). Ante esta realidad, los escribas tenían dos opciones, aceptar a Jesús como autoridad o perseguirlo, convertirse en copistas del evangelio o enmudecer. El creyente tiene la responsabilidad de someterse a la autoridad de Dios. La Iglesia tiene que someterse a Cristo, como él obedeció al Padre; esto es doblegar nuestra voluntad. Es imposible proclamar la autoridad de Cristo sobre nuestras vidas siendo desobedientes, contumaces, avaros, pendencieros, hipócritas, entre otros. Tampoco podemos acercarnos a Dios con la actitud de los escribas que, siendo copistas de la ley, se hicieron dueños de la interpretación, e incapaces de apreciar los milagros de Dios. El mensajero nunca será dueño del mensaje.",
+            "B. El endemoniado de la sinagoga –",
+            "(Marcos 1:23-26) La autoridad de Jesús no hace énfasis a su fogosidad al hablar, ni mucho menos al timbre de su voz. Esto se refiere a la capacidad de imponerse como máxima potestad entre los demás. La autoridad de Jesús sería confrontada tanto por los escribas como por los espíritus inmundos. Nuestro Señor estableció su centro de operaciones en Capernaum, posiblemente en la casa de Pedro y Andrés o en sus proximidades (Marcos 1:29). Cuando se visita la Tierra Santa hoy, se pueden ver las ruinas de la sinagoga de Capernaum, pero no es la misma en la que Jesús adoró. La gente se reunía para los cultos en el sábado, así como los lunes y los jueves. Siendo un judío fiel, Jesús honraba el sábado asistiendo a la sinagoga; y cuando enseñaba la Palabra, la gente se quedaba atónita por su autoridad. No tenemos mucha información sobre el hombre endemoniado en la sinagoga, ni tampoco a cuántos cultos habría asistido sin revelar que estaba endemoniado, ni mucho menos si él conocía de su condición, solamente podemos asumir lo que el texto nos explica; este hombre era parte de los que asistían a la sinagoga. Fue la presencia del Hijo Dios que expuso al demonio, y Jesús no únicamente lo sacó, sino que también reveló la falta de autoridad de los escribas. Por algún tiempo tenían entre ellos una potestad diabólica y ninguno se había percatado, ni mucho menos el demonio temía la autoridad de los escribas. El demonio sabía exactamente quién era Jesús (Hechos 19:13-17) y que no tenía nada en común con él. El uso de pronombres plurales de parte del demonio muestra lo íntimamente que estaba identificado con el hombre por medio de quien hablaba. El demonio identificó claramente la humanidad de Jesús (“Jesús nazareno”) así como su deidad (“el Santo de Dios”). También confesó gran temor de que Jesús podía juzgarlo y enviarlo al abismo. Hoy hay gente muy parecida a este endemoniado: asistiendo a una reunión religiosa, capaces de decir quién es Jesús, e incluso temblando por miedo al juicio; ¡y sin embargo perdidos!",
+            "A. El mundo cuestiona la autoridad de Jesús",
+            "sobre los demonios – (Marcos 1:27) “¡Cállate!” quiere decir literalmente “¡Ponte bozal!” ¿Por qué Jesús no dejó hablar al demonio? Pareciera lógico que Jesús dejara hablar al demonio para dar a conocer su autoridad a los escribas, que estos se amedrentaran al pensar que Jesús era conocido como el Santo de Dios por espíritus inmundos, pero el Salvador no quería, ni necesitaba la ayuda de Satanás y sus ejércitos para decir a la gente quien era él. El demonio no hablaba mentiras, en cambio Jesús le puso bozal. Los discípulos aprendieron del Maestro, Pedro no dejó a Simón continuar su trama de engaño (Hechos 8:14-24) y Pablo después de tres días ordenó callar a la mujer con espíritu de adivinación (Hechos 16:16-24). Jesús usaría la misma expresión (“¡Ponte bozal!”) al calmar la tempestad (Marcos 4:39). Es indudable la autoridad de Jesús sobre la naturaleza y los demonios. La tempestad no tiene nada que comunicar, su continuo sonido produce miedo, por esto Jesús le pone un bozal. Los demonios no tienen nada que comunicar, su continuo sonido produce confusión. La única voz que debemos de escuchar es la de Jesús (Juan 10:27). El demonio trató un último ataque de convulsiones, pero luego tuvo que someterse a la autoridad del Siervo de Dios y salir del hombre. La gente en la sinagoga quedó asombrada y temerosa. Se dio cuenta de que algo nuevo había aparecido en la escena, una nueva doctrina y un nuevo poder. Las multitudes fueron asombradas exactamente como el pueblo de Israel (Santiago 2:19). ¿Cómo esto puede suceder? Este pasaje bíblico nos revela que el conocimiento no liberta, sino el sometimiento a la autoridad de Cristo. Ahora bien, es imposible someterse a alguien que no conocemos, por esto dependemos del estudio bíblico para añadir entendimiento a la razón, pero la virtud de obediencia proviene de un carácter que se rinde ante la autoridad suprema de Dios. La obediencia y el sometimiento son las virtudes que caracterizan a un corazón contrito, humillado y apartado del mal, y por consiguiente imposible de ser tocado por el maligno (1 Juan 5:18).",
+            "II. La expulsión de demonios causa conmoción – (Marcos 1:27-28)",
+            "Lección 22",
+            "Aplicación de Maestro - Parte I",
+            "1. ¿Quién le había dado autoridad a Cristo?",
+            "2. ¿Pueden haber endemoniados en el",
+            "templo? Notas del Maestro - Parte II",
+            "1. «¿Qué es esto? ¡Una enseñanza nueva,"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 2945,
+            "line_end": 2968,
+            "page_start": 175,
+            "page_end": 177
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 23,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Lucas 6:1-2, 5-10; 14:1-3",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 6,
+              "verse_start": 1,
+              "verse_end": 2
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 6,
+              "verse_start": 5,
+              "verse_end": 10
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 14,
+              "verse_start": 1,
+              "verse_end": 3
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3033,
+            "line_end": 3033,
+            "page_start": 181,
+            "page_end": 181
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Estudie los pasajes de las",
+            "controversias sobre el sábado en los evangelios sinópticos.",
+            "2. Enfatice en la importancia que los fariseos",
+            "daban a su tradición oral.",
+            "3. Repase los textos en Levítico 23 y 25 que"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3061,
+            "line_end": 3066,
+            "page_start": 182,
+            "page_end": 182
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Jesús y el sábado (Lucas 6:1-5)",
+            "A. Controversia planteada por los fariseos (Lucas",
+            "6:1-2)",
+            "B. Respuesta de Jesús a la controversia (Lucas 6:3-5)",
+            "II. Sanidades de Jesús en sábado",
+            "(Lucas 6:6-11 y 14:1-6)",
+            "A. En una sinagoga (Lucas 6:6-11)",
+            "B. En la mesa de un principal de los fariseos (Lucas",
+            "14:1-6)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3049,
+            "line_end": 3059,
+            "page_start": 182,
+            "page_end": 182
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 24,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Mateo 12:22-31",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 12,
+              "verse_start": 22,
+              "verse_end": 31
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3149,
+            "line_end": 3149,
+            "page_start": 189,
+            "page_end": 189
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Repase las distintas narrativas de",
+            "posesión demoníaca en los evangelios sinópticos.",
+            "2. Enfatice en las imágenes de la victoria del",
+            "reino de Dios contra el reino de las tinieblas.",
+            "3. Destaque el texto de Daniel 10 como parte"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3174,
+            "line_end": 3179,
+            "page_start": 190,
+            "page_end": 190
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. Presentación y sanidad de un endemoniado (Mateo 12:22-30 y Lucas 11:14-23)",
+            "A. Reacciones y controversias de la multitud",
+            "(Mateo 12:22-23 y Lucas 11:14-16)",
+            "B. Respuestas de Jesús a las controversias",
+            "(Mateo 11:24-30 y Lucas 11:17-23)",
+            "II. Advertencias de Jesús (Mateo 12:31-37 y",
+            "Lucas 11:24-28)",
+            "A. Contra toda palabra ociosa y blasfemias",
+            "(Mateo 12:31-37 y Lucas 11:24-26)",
+            "B. Bienaventurados los que guardan la Palabra",
+            "(Lucas 11:27-28)",
+            "III. Resumen y aplicación práctica:"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3160,
+            "line_end": 3172,
+            "page_start": 190,
+            "page_end": 190
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 25,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Mateo 14:34-36; Lucas 6:17-19",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "Matthew",
+              "chapter": 14,
+              "verse_start": 34,
+              "verse_end": 36
+            },
+            {
+              "testament": "new",
+              "book_standardized": "Luke",
+              "chapter": 6,
+              "verse_start": 17,
+              "verse_end": 19
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3276,
+            "line_end": 3276,
+            "page_start": 197,
+            "page_end": 197
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Jesús decía: “He venido para traer vida"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3300,
+            "line_end": 3301,
+            "page_start": 198,
+            "page_end": 198
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. El contraste entre la enfermedad y Jesús –",
+            "(Mateo 14:34-36)",
+            "A. La enfermedad es la normativa en el caos",
+            "B. Jesús tiene autoridad sobre la enfermedad",
+            "II. Una multitud que clama por sanidad divina",
+            "– (Lucas 6:17-19)",
+            "A. Jesús sana para crear una respuesta del enfermo",
+            "B. Entrelazamiento confuso entre la medicina y Jesús",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3289,
+            "line_end": 3298,
+            "page_start": 198,
+            "page_end": 198
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    },
+    {
+      "lesson_number": 26,
+      "sections": {
+        "biblical_reading": {
+          "reference_display": "Juan 20:1-9, 30-31",
+          "canonical_references": [
+            {
+              "testament": "new",
+              "book_standardized": "John",
+              "chapter": 20,
+              "verse_start": 1,
+              "verse_end": 9
+            },
+            {
+              "testament": "new",
+              "book_standardized": "John",
+              "chapter": 20,
+              "verse_start": 30,
+              "verse_end": 31
+            }
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3403,
+            "line_end": 3403,
+            "page_start": 205,
+            "page_end": 205
+          }
+        },
+        "teacher_notes": {
+          "items": [
+            "1. Estudie los pasajes sobre las",
+            "apariciones de Cristo en los cuatro evangelios.",
+            "2. Enfatice en la importancia del testimonio",
+            "oral sobre la resurrección de Cristo.",
+            "3. Mencione las señales del evangelio de Juan"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3428,
+            "line_end": 3433,
+            "page_start": 206,
+            "page_end": 206
+          }
+        },
+        "lesson_outline": {
+          "items": [
+            "I. El testimonio de la tumba vacía",
+            "(Juan 20:1-18)",
+            "A. A Juan y Pedro mediante los lienzos y el sudario",
+            "(Juan 20:1-10)",
+            "B. Jesús se le aparece a María Magdalena",
+            "(Juan 20:11-18)",
+            "II. Las apariciones de Jesús resucitado en",
+            "Jerusalén (Juan 20:19-31)",
+            "A. A los discípulos sin Tomás (Juan 20:19-23)",
+            "B. A los discípulos estando presente Tomás",
+            "(Juan 20:24-29)",
+            "C. Propósito y conclusión del evangelio de Juan",
+            "(Juan 20:30-31)",
+            "III. Resumen y aplicación práctica"
+          ],
+          "source_trace": {
+            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "line_start": 3412,
+            "line_end": 3426,
+            "page_start": 206,
+            "page_end": 206
+          }
+        }
+      },
+      "automation_status": "automated_unreviewed"
+    }
+  ]
+}

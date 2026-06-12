@@ -19,23 +19,66 @@ lesson_sections:
   title:
     text: El duelo, luto y llanto ante la muerte de Lázaro
   biblical_reading:
-    reference_display: TBD
+    reference_display: Juan 11:17, 19-20, 30-37, 40-41
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: new
+      book_standardized: John
+      chapter: 11
+      verse_start: 17
+      verse_end: 17
+    - testament: new
+      book_standardized: John
+      chapter: 11
+      verse_start: 19
+      verse_end: 20
+    - testament: new
+      book_standardized: John
+      chapter: 11
+      verse_start: 30
+      verse_end: 37
+    - testament: new
+      book_standardized: John
+      chapter: 11
+      verse_start: 40
+      verse_end: 41
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Actitud de Jesús ante la enfermedad y gravedad
+    - de Lázaro (Juan 11:3-22)
+    - A. Jesús fue notificado de la enfermedad y gravedad de su
+    - amigo Lázaro (Jn 11:3-14)
+    - B. Actitud de Tomás cuando Jesús declaró que Lázaro estaba
+    - muerto (Jn11:15-17)
+    - II. La conmoción en Betania por la muerte de
+    - Lázaro (Juan 11:18-37)
+    - A. La muerte de Lázaro provocó desconsolación en su
+    - familia y amigos (Jn11:19-33)
+    - B. Actitud de Jesús por la muerte de Lázaro y el sufrimiento
+    - durante el duelo (Jn 11:34-37)
+    - III. Jesús derrota a la muerte reviviendo a Lázaro
+    - (Juan 11:38-44)
+    - 'A. Jesús frente a la tumba de Lázaro dio la orden: Quitad la'
+    - piedra (Jn 11:38-40)
+    - 'B. Cuando la piedra fue removida Jesús oró y a gran voz dijo:'
+    - Lázaro ven fuera (Jn 11:41-44)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - 1. 2. 3.
+    - 'Tema de la Unidad: El Duelo'
+    - 'Objetivos: Después de estudiar esta lección el alumno:'
+    - 1. Reconocerá cómo la presencia de
+    - Jesucristo puede transformar el duelo en victoria.
+    - 2. Comprenderá que Jesús puede
+    - acompañar a la persona en medio de su sufrimiento y darle consuelo.
+    - 3. Valorará la presencia de Jesús
+    - combatiendo a la muerte y dando vida.
+    - LECCIÓN El duelo, luto y llanto ante la muerte de Lázaro Juan 11:1, 19-20, 30-37,
+      40-44
   summary_application:
     items:
     - TBD
@@ -44,10 +87,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +111,25 @@ source_trace:
   line_start: 2715
   line_end: 2846
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2753
+      line_end: 2753
+      page_start: 168
+      page_end: 168
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2738
+      line_end: 2752
+      page_start: 167
+      page_end: 168
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 2764
+      line_end: 2783
+      page_start: 169
+      page_end: 169
 semantic_metadata:
   doctrinal_categories:
   - TBD

@@ -19,23 +19,47 @@ lesson_sections:
   title:
     text: Abraham y su experiencia de duelo al morir su esposa Sara
   biblical_reading:
-    reference_display: TBD
+    reference_display: Génesis 23:1-6, 14-18
     canonical_references:
-    - testament: TBD
-      book_standardized: TBD
-      chapter: 0
-      verse_start: 0
-      verse_end: 0
+    - testament: old
+      book_standardized: Genesis
+      chapter: 23
+      verse_start: 1
+      verse_end: 6
+    - testament: old
+      book_standardized: Genesis
+      chapter: 23
+      verse_start: 14
+      verse_end: 18
     replacement_policy:
       provider: api.bible
       strategy: replace_by_canonical_reference
       source_text_included: false
   lesson_outline:
     items:
-    - TBD
+    - I. Situación de Abraham como extranjero viviendo
+    - en Hebrón (Génesis 23:2-4)
+    - A. Abraham y Sara eran extranjeros residentes en Hebrón
+    - (Gn 23:1-2 a)
+    - B. El duelo de Abraham por la muerte de Sara
+    - '(Gn 23: 2 b-4a)'
+    - II. Solicitud de Abraham a los heteos en medio de
+    - 'su duelo (Génesis 23: 4 b-11)'
+    - A. Abraham solicitó la concesión de una tierra para
+    - enterrar a su muerta (Gn 23:4b-7-9)
+    - B. Respuesta de Efrón a Abraham (Gn 23:10-11)
+    - III. Abraham desea ofrecer honras fúnebres a su
+    - esposa comprando una tierra en Hebrón (Génesis 23:12-20)
+    - A. Abraham insistió en adquirir Macpela pagando el justo
+    - precio (Gn 23:12-13)
+    - B. Efrón cobró a Abraham 400 siclos de plata para el
+    - sepulcro de Sara (Gn 23:14-20)
+    - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - TBD
+    - ¿Cómo actuó Saraí frente al
+    - llamado de Dios a Abram?
+    - ¿Cuáles fueron los mayores desafíos enfrentados por Saraí en su
   summary_application:
     items:
     - TBD
@@ -44,10 +68,10 @@ processing_audit:
   ocr_engine: PyMuPDF
   ocr_engine_version: pending-version-capture
   extraction_method: pdf_text_extraction
-  extraction_confidence: minimal-valid-placeholder
+  extraction_confidence: automated-unreviewed
   manual_review_required: true
   reviewed_by: pending-human-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: expositor-guia-maestro-volumen-45.pdf
   sha256: 40ab0be15cca1b8da3c6d51579262c1e7a46a39c2d2e560f0693ad2be28a0404
@@ -68,6 +92,25 @@ source_trace:
   line_start: 1833
   line_end: 1938
   extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  section_traces:
+    biblical_reading:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1849
+      line_end: 1849
+      page_start: 112
+      page_end: 112
+    teacher_notes:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1879
+      line_end: 1882
+      page_start: 113
+      page_end: 113
+    lesson_outline:
+      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      line_start: 1859
+      line_end: 1877
+      page_start: 113
+      page_end: 113
 semantic_metadata:
   doctrinal_categories:
   - TBD
