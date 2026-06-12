@@ -1,4 +1,8 @@
-"""Run the staged archive pipeline in order."""
+"""Run the staged archive pipeline in order.
+
+The runner can regenerate automated-unreviewed drafts for architecture work.
+It does not promote drafts into `archive/lessons` or complete human review.
+"""
 
 from __future__ import annotations
 
@@ -30,7 +34,11 @@ def main() -> int:
     parser.add_argument(
         "--build-indexes",
         action="store_true",
-        help="Attempt canonical validation and index generation after drafts are built.",
+        help=(
+            "Attempt canonical validation and index generation after drafts are "
+            "built. This only succeeds when reviewed files already exist under "
+            "archive/lessons."
+        ),
     )
     args = parser.parse_args()
 

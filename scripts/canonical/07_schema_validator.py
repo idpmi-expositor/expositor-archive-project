@@ -49,6 +49,8 @@ PLACEHOLDER_VALUES = {
     "manual-placeholder",
     "pending-source-hash",
     "pending-block-id",
+    "automated_unreviewed",
+    "automated-unreviewed",
 }
 PLACEHOLDER_PREFIXES = (
     "pending-",
@@ -129,12 +131,13 @@ def is_placeholder_string(value: str) -> bool:
 
 
 def validate_no_placeholders(value: Any, label: str) -> None:
-    """Reject generated draft markers from canonical lesson YAML.
+    """Reject generated draft and automated-unreviewed markers.
 
     Draft YAML may contain explicit placeholders, but canonical files under
-    ``archive/lessons`` must only contain reviewed archival values. This check
-    walks the full document so indexes cannot be built from official-looking
-    scaffold data.
+    ``archive/lessons`` must only contain reviewed archival values. Automated
+    extraction can improve drafts, but it is still not human review. This
+    check walks the full document so indexes cannot be built from
+    official-looking scaffold or automated-unreviewed data.
     """
 
     if isinstance(value, str):

@@ -1,4 +1,9 @@
-"""Extract deterministic lesson sections from normalized text spans."""
+"""Extract automated-unreviewed lesson sections from normalized text spans.
+
+This stage improves draft YAML by finding source-backed section content and
+scripture references. It does not complete human review and must not write
+canonical YAML.
+"""
 
 from __future__ import annotations
 

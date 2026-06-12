@@ -37,6 +37,9 @@ this contract before indexes are generated.
 Canonical lesson YAML must not contain generated placeholders such as `TBD`,
 `pending-*`, `minimal-valid-placeholder`, or zero-valued scripture references.
 Those values are allowed only in draft YAML under `archive/drafts`.
+Automated-unreviewed values may also appear in draft YAML, but canonical YAML
+must use a reviewed `processing_audit.review_status` value and must not keep
+`processing_status.human_review_completed: false`.
 
 ## Indexing
 
@@ -60,7 +63,7 @@ excluded so incomplete scaffold data cannot become searchable archive metadata.
 ## Contenido Validation Source
 
 For Expositor source PDFs that include a `Contenido` section, the structuring
-layer reads PDF page 5 and extracts lesson expectations:
+layer detects the contents page dynamically and extracts lesson expectations:
 
 ```yaml
 content_index:
@@ -68,7 +71,7 @@ content_index:
     title: La fe que transforma la conducta y pensamientos del creyente
     page_start: 6
     lesson_date: 03/mar/24
-    source_pdf_page: 5
+    source_pdf_page: 4
 ```
 
 Future canonical YAML generation should compare each lesson against this source
@@ -150,7 +153,7 @@ processing_audit:
   extraction_confidence: 1.0
   manual_review_required: true
   reviewed_by: pending-review
-  review_status: pending
+  review_status: automated_unreviewed
 source_integrity:
   original_filename: source-publication.pdf
   sha256: pending-source-hash
@@ -171,6 +174,13 @@ source_trace:
   line_start: 100
   line_end: 240
   extraction_block: pending-block-id
+  section_traces:
+    biblical_reading:
+      source_text: normalized/source-publication.txt
+      line_start: 120
+      line_end: 120
+      page_start: 1
+      page_end: 1
 semantic_metadata:
   doctrinal_categories: []
   theological_themes: []

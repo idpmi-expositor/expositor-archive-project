@@ -3,6 +3,9 @@
 Generated YAML starts as draft data. A lesson becomes canonical only after human
 review, placeholder removal, validation, and index regeneration.
 
+Automated-unreviewed drafts may already contain extracted section content and
+parsed scripture references. They still require the same promotion workflow.
+
 ## Source And Destination
 
 Draft YAML:
@@ -29,27 +32,32 @@ Do not build official indexes from `archive/drafts`.
    - `normalized`
    - `structured/document_structure`
    - `metadata/lessons`
+   - `metadata/lesson_sections`
+   - `ocr/quality_reports`
 3. Complete [human-review-checklist.md](human-review-checklist.md).
 4. Replace every placeholder with reviewed source-backed values.
 5. Normalize biblical reading metadata.
 6. Confirm all required canonical sections contain real reviewed content.
 7. Confirm source traceability points back to source pages and lines or
    extraction blocks.
-8. Move the file from `archive/drafts/<publication_id>/...` to
+8. Set `processing_audit.review_status` to a reviewed value,
+   `processing_audit.manual_review_required` to `false`, and
+   `processing_status.human_review_completed` to `true`.
+9. Move the file from `archive/drafts/<publication_id>/...` to
    `archive/lessons/...`.
-9. Run canonical validation:
+10. Run canonical validation:
 
 ```text
 python scripts/canonical/07_schema_validator.py
 ```
 
-10. If validation passes, rebuild indexes:
+11. If validation passes, rebuild indexes:
 
 ```text
 python scripts/canonical/08_index_builder.py
 ```
 
-11. Review generated index diffs before committing.
+12. Review generated index diffs before committing.
 
 ## Promotion Blockers
 
@@ -60,6 +68,7 @@ Do not promote a draft when:
 - OCR quality is unresolved
 - lesson boundaries are uncertain
 - section extraction is incomplete
+- `processing_audit.review_status` is `automated_unreviewed`
 - scripture references are not normalized
 - Bible passage text is stored in canonical YAML
 - `processing_status.human_review_completed` is false

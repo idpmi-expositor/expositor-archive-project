@@ -1,4 +1,8 @@
-"""Parse Spanish scripture reference strings into canonical reference records."""
+"""Parse Spanish scripture strings into normalized reference records.
+
+The parser is deterministic and may be used for automated-unreviewed drafts.
+Human revision is still required before parsed references become canonical.
+"""
 
 from __future__ import annotations
 
@@ -113,7 +117,7 @@ def parse_verse_ranges(verses: str) -> list[tuple[int, int]]:
 
 
 def parse_scripture_references(reference_display: str) -> list[dict[str, Any]]:
-    """Return canonical reference dictionaries parsed from a display string."""
+    """Return normalized reference dictionaries parsed from a display string."""
 
     references: list[dict[str, Any]] = []
     current_book: tuple[str, str] | None = None

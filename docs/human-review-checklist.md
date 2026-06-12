@@ -3,6 +3,10 @@
 Use this checklist before any generated draft lesson YAML is promoted from
 `archive/drafts` to `archive/lessons`.
 
+Automated extraction can prefill draft fields, but an automated draft is still
+not reviewed. Check [human-revision-levels.md](human-revision-levels.md) before
+promotion.
+
 ## Reviewer Requirements
 
 A reviewer must have access to the source PDF and the generated pipeline
@@ -12,6 +16,8 @@ this repository.
 
 Record the reviewer in `processing_audit.reviewed_by` and mark
 `processing_audit.review_status` with a reviewed value before promotion.
+`automated_unreviewed`, `pending`, or any placeholder review status is not a
+reviewed value.
 
 ## Source And Traceability
 
@@ -26,6 +32,7 @@ Record the reviewer in `processing_audit.reviewed_by` and mark
 ## OCR And Extraction Quality
 
 - The processing log page count matches the PDF page count.
+- The `ocr/quality_reports` summary for the publication is checked.
 - No zero-text page affects the lesson content.
 - Low-word-count pages are explained.
 - OCR fallback pages, if any, are reviewed.
@@ -53,6 +60,8 @@ Record the reviewer in `processing_audit.reviewed_by` and mark
 - `lesson_outline.items` contains reviewed outline content.
 - `teacher_notes.items` contains reviewed teacher notes.
 - `summary_application.items` contains reviewed summary/application content.
+- Automated section traces in `source_trace.section_traces`, when present, have
+  been checked against the source.
 
 ## Biblical Reading Policy
 
@@ -79,6 +88,8 @@ Canonical YAML must not contain:
 - `chapter: 0`
 - `verse_start: 0`
 - `verse_end: 0`
+- `review_status: automated_unreviewed`
+- `human_review_completed: false`
 
 ## Final Reviewer Actions
 

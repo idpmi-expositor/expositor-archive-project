@@ -1,16 +1,18 @@
 # expositor-archive-project
 
 Deterministic archival pipeline for converting Expositor lesson PDFs from
-Iglesia de Dios Pentecostal M.I. into reviewed canonical lesson YAML.
+Iglesia de Dios Pentecostal M.I. into automated draft YAML and reviewed
+canonical lesson YAML.
 
 This repository is limited to archival ETL:
 
 ```text
-PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> SECTION EXTRACTION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
 One reviewed lesson equals one canonical YAML file. Canonical YAML under
 `archive/lessons` is the single source of truth for downstream systems.
+Automated drafts are useful review artifacts, but they are not canonical truth.
 
 ## Quick Start
 
@@ -19,7 +21,7 @@ Run commands from the repository root.
 ```text
 python -m pip install -r requirements.txt
 python scripts/ingestion/01_pdf_discovery.py
-python scripts/ingestion/02_pdf_to_raw_text.py
+python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
 ```
 
 Optional setup checks:
@@ -75,6 +77,7 @@ source_assets/original_pdfs/*.pdf
   v
 ocr/raw_txt/*.txt
 ocr/processing_logs/*.json
+ocr/quality_reports/*.json
   |
   |  scripts/structuring/03_minimal_text_normalizer.py
   v
@@ -87,6 +90,10 @@ structured/document_structure/*.json
   |  scripts/structuring/05_lesson_segmenter.py
   v
 metadata/lessons/*.json
+  |
+  |  scripts/structuring/06_section_extractor.py
+  v
+metadata/lesson_sections/*.json
   |
   |  scripts/canonical/06_yaml_generator.py
   v
@@ -105,12 +112,33 @@ indexes/scripture_index.yaml
 The core canonical transformation is intentionally staged:
 
 ```text
-PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> SECTION EXTRACTION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
 Draft YAML is generated scaffold data. It is not canonical and must not be
 indexed. Reviewed YAML under `archive/lessons` is canonical only after human
 review and schema validation pass.
+
+## Human Revision Levels
+
+In this repository, **human revision** means the operating docs and Python
+script configuration are plain enough for a normal maintainer to follow without
+Python knowledge. **Human review** means source-backed acceptance of a lesson
+for canonical use.
+
+The repository distinguishes three data review levels:
+
+- `generated_placeholder`: schema-shaped draft with unresolved placeholders.
+- `automated_unreviewed`: deterministic extraction has populated draft fields,
+  but a reviewer has not accepted the values.
+- `human_reviewed`: a reviewer has checked source evidence, OCR quality,
+  sections, references, and traceability.
+
+Manual review can be skipped while improving the pipeline, but only for draft
+work. Automated-unreviewed files must remain under `archive/drafts`, keep
+`manual_review_required: true`, keep `human_review_completed: false`, and stay
+out of official indexes. See
+[docs/human-revision-levels.md](docs/human-revision-levels.md).
 
 ## Design Principles
 
@@ -118,6 +146,9 @@ review and schema validation pass.
   avoid randomness, probabilistic classification, and hidden state.
 - Traceability: every generated artifact must remain explainable from the
   prior layer and ultimately from the source PDF.
+- Human revision: operating docs and script comments must explain commands,
+  inputs, outputs, warnings, and safe rerun behavior for maintainers without
+  Python knowledge.
 - File-based pipeline state: each stage writes concrete artifacts to stable
   repository paths so maintainers can inspect, diff, rerun, and recover.
 - Human review requirements: generated drafts and OCR-derived text are not
@@ -136,6 +167,7 @@ ocr/processing_logs/           Per-PDF extraction audit logs.
 normalized/                    First-class normalized text stage for structure detection.
 structured/document_structure/ DocumentStructure JSON marker reports.
 metadata/lessons/              Intermediate lesson segment metadata.
+metadata/lesson_sections/      Automated unreviewed section extraction metadata.
 archive/drafts/                Generated draft lesson YAML awaiting human review; non-canonical.
 archive/lessons/               Reviewed canonical one-lesson-per-file YAML only after human review.
 schemas/base/                  Validation contracts for canonical YAML.
@@ -182,6 +214,14 @@ tests/                         Unit tests for pipeline behavior.
   text artifacts.
 - Does not infer headings, lesson boundaries, sections, or canonical fields.
 
+`scripts/ingestion/03_quality_report.py`
+
+- Summarizes extraction logs into `ocr/quality_reports`.
+- Reports per-publication quality status such as `PASS`, `WARNING`, or
+  `BLOCKED`.
+- Supports plain-language maintainer review by making OCR risk visible before
+  promotion.
+
 ### Structuring
 
 `scripts/structuring/03_minimal_text_normalizer.py`
@@ -204,12 +244,22 @@ tests/                         Unit tests for pipeline behavior.
 - Falls back to repeated lesson markers when no usable `Contenido` map exists.
 - Writes page and line spans plus validation warnings and errors.
 
+`scripts/structuring/06_section_extractor.py`
+
+- Reads normalized text and lesson segment metadata.
+- Extracts automated unreviewed biblical reading, outline, teacher notes, and
+  summary/application sections.
+- Writes `metadata/lesson_sections/*.json` with section traces.
+- Does not mark extracted values as human-reviewed.
+
 ### Canonical
 
 `scripts/canonical/06_yaml_generator.py`
 
 - Converts lesson segment metadata into draft lesson YAML; it does not read raw
   text directly.
+- Uses `metadata/lesson_sections` when available to populate automated
+  unreviewed draft fields and parsed scripture references.
 - Writes only under `archive/drafts/<publication_id>/`.
 - Preserves explicit placeholders when source evidence or review data is
   missing.
@@ -237,13 +287,25 @@ python scripts/ingestion/00_rename_source_pdfs.py
 python scripts/ingestion/00_rename_source_pdfs.py --apply
 python scripts/ingestion/01_pdf_discovery.py
 python scripts/ingestion/02_pdf_to_raw_text.py
+python scripts/ingestion/03_quality_report.py
 python scripts/structuring/03_minimal_text_normalizer.py
 python scripts/structuring/04_document_structure_detector.py
 python scripts/structuring/05_lesson_segmenter.py
+python scripts/structuring/06_section_extractor.py
 python scripts/canonical/06_yaml_generator.py
 python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py
 ```
+
+When raw text already exists and you want to regenerate downstream artifacts,
+run:
+
+```text
+python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+```
+
+Generated YAML from this command remains draft/unreviewed until promoted
+separately.
 
 Skip the Google Drive validation command only when there is no configured Drive
 source to validate against.
@@ -274,6 +336,8 @@ weak-page review signals.
   or size mismatches and fails before extraction work should proceed.
 - Weak or empty text pages: `02_pdf_to_raw_text.py` records weak pages, attempts
   OCR fallback when available, and marks manual review as required.
+- Quality report blockers: `03_quality_report.py` may mark a publication
+  `BLOCKED`. Draft generation may continue, but canonical promotion must not.
 - OCR unavailable: extraction continues with direct text and records why OCR
   could not run; affected pages must be reviewed before canonical promotion.
 - Structuring mismatch: detector and segmenter artifacts record missing,
@@ -286,6 +350,8 @@ weak-page review signals.
 
 Generated drafts are expected to be incomplete. Validation and indexes apply to
 reviewed canonical YAML under `archive/lessons`, not to draft scaffold files.
+Automated-unreviewed drafts may contain more extracted data than placeholder
+drafts, but they still require human review before canonical use.
 
 ## Legacy Generated Trees
 
@@ -310,6 +376,7 @@ outside this repository.
 Use these documents before moving any generated draft into `archive/lessons`:
 
 - [docs/human-review-checklist.md](docs/human-review-checklist.md)
+- [docs/human-revision-levels.md](docs/human-revision-levels.md)
 - [docs/draft-to-canonical-promotion.md](docs/draft-to-canonical-promotion.md)
 - [docs/ocr-quality-policy.md](docs/ocr-quality-policy.md)
 - [docs/production-ready-canonical-yaml.md](docs/production-ready-canonical-yaml.md)

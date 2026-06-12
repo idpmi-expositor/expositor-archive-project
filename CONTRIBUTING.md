@@ -3,6 +3,9 @@
 This repository preserves Expositor publications as deterministic archival
 metadata. Contributions should keep the pipeline reproducible, traceable, and
 separate from downstream publishing or translation systems.
+They should also keep the project human-revision friendly: a maintainer should
+be able to run and configure scripts from the documented commands without
+knowing Python.
 
 ## Before You Start
 
@@ -35,18 +38,21 @@ python scripts/ingestion/02_pdf_to_raw_text.py
 python scripts/structuring/03_minimal_text_normalizer.py
 python scripts/structuring/04_document_structure_detector.py
 python scripts/structuring/05_lesson_segmenter.py
+python scripts/structuring/06_section_extractor.py
 ```
 
 Use `--rclone-config path/to/rclone.conf` with
 `00_validate_source_pdf_sync.py` when the `gdrive` remote is not configured in
 the default user rclone location.
 
-5. Review generated raw text, processing logs, normalized text, structure JSON,
-   and lesson segment metadata before generating draft YAML.
+5. Review generated raw text, processing logs, quality reports, normalized
+   text, structure JSON, lesson segment metadata, and lesson section metadata.
 
 ## Generated Drafts
 
-Run draft generation only after the structuring artifacts are reviewed:
+Run draft generation after structuring artifacts exist. Draft generation may use
+automated section extraction, but the output remains unreviewed unless a human
+explicitly completes the review checklist.
 
 ```text
 python scripts/canonical/06_yaml_generator.py
@@ -55,6 +61,11 @@ python scripts/canonical/06_yaml_generator.py
 Generated YAML belongs under `archive/drafts/<publication_id>/`. Draft files
 may contain explicit placeholders while source evidence is still missing. Draft
 files must not be indexed and must not be treated as canonical records.
+
+When automation has populated section content or scripture references, keep
+`processing_audit.review_status: automated_unreviewed`,
+`processing_audit.manual_review_required: true`, and
+`processing_status.human_review_completed: false` until review is complete.
 
 ## Canonical YAML
 
@@ -102,6 +113,8 @@ For pipeline or schema changes, include:
 - the reason for the change
 - affected scripts, schemas, and artifact paths
 - commands used for validation
+- whether the change affects plain-language script operation or canonical
+  human review
 - any remaining manual review risk
 
 For canonical YAML changes, include:

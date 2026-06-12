@@ -10,6 +10,8 @@ archive/lessons/**/*.yaml
 ```
 
 Generated scaffold YAML under `archive/drafts` is never production-ready.
+Automated-unreviewed draft YAML is also never production-ready until a reviewer
+accepts it and it is promoted.
 
 ## Required Validation Command
 
@@ -162,6 +164,8 @@ Canonical YAML must not contain generated placeholders, including:
 A lesson is production-ready only when all of these are true:
 
 - human review is complete
+- `processing_audit.review_status` is a reviewed value, not `pending` or
+  `automated_unreviewed`
 - OCR quality blockers are resolved
 - required fields and sections are populated
 - source traceability is preserved

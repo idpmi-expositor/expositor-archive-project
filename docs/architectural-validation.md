@@ -1,29 +1,32 @@
 # Architectural Validation
 
-Validation date: 2026-06-05
+Validation date: 2026-06-12
 
 Validated repository state:
 
 ```text
-commit: fc1867d Add canonical safety gates
+commit: 4618d50 Add automated draft extraction pipeline
 canonical_yaml: 0
-draft_yaml: 26
+draft_yaml: 52
 official_indexes: 0
+lesson_section_metadata: 2
+quality_reports: 2
 ```
 
 Current production-readiness verdict: **PARTIALLY**
 
 The repository is safer and architecturally improved after the canonical safety
-gate changes. Generated scaffold YAML is now stored under `archive/drafts`,
-reviewed canonical YAML belongs under `archive/lessons`, and canonical
-validation rejects placeholder values such as `TBD`, `pending-*`,
-`minimal-valid-placeholder`, and zero-valued scripture references. Index
-generation is also blocked when no reviewed canonical lesson YAML exists.
+gate and automated draft extraction changes. Generated draft YAML is stored
+under `archive/drafts`, reviewed canonical YAML belongs under
+`archive/lessons`, and canonical validation rejects placeholder values such as
+`TBD`, `pending-*`, `minimal-valid-placeholder`, and zero-valued scripture
+references. Index generation is also blocked when no reviewed canonical lesson
+YAML exists.
 
 The repository is not fully production-ready because there is no reviewed
-canonical YAML yet, no official retrieval index exists, OCR/layout quality
-issues remain, and real section extraction plus scripture normalization are
-still pending.
+canonical YAML yet, no official retrieval index exists, and OCR/layout quality
+issues remain. Section extraction and scripture normalization now exist for
+automated-unreviewed drafts, but they are not a substitute for human review.
 
 ## Evidence Summary
 
@@ -36,7 +39,7 @@ python -m unittest discover -s tests
 Result:
 
 ```text
-Ran 3 tests
+Ran 17 tests
 OK
 ```
 
@@ -61,8 +64,9 @@ file is promoted into `archive/lessons`.
 Result:
 
 ```text
-Draft YAML validation fails intentionally because all 26 draft lessons still
-contain placeholder scripture metadata such as chapter: 0.
+Draft YAML is not canonical validation input. Drafts may now contain automated
+unreviewed extracted sections and parsed scripture references, but they remain
+outside `archive/lessons` until human review is complete.
 ```
 
 ```text
@@ -80,8 +84,10 @@ Artifact counts:
 
 ```text
 canonical_yaml: 0
-draft_yaml: 26
+draft_yaml: 52
 official_indexes: 0
+lesson_section_metadata: 2
+quality_reports: 2
 ```
 
 Structure and OCR evidence:
@@ -115,15 +121,17 @@ Lectura Biblica: 1Romanos 1:18-25
 The repository has a clear deterministic pipeline architecture organized into
 three processing layers:
 
-- `scripts/ingestion`: source discovery and raw text extraction.
+- `scripts/ingestion`: source discovery, raw text extraction, and quality
+  reporting.
 - `scripts/structuring`: normalization, structure recognition, and lesson
-  segmentation.
-- `scripts/canonical`: draft YAML generation, canonical validation, and index
-  building.
+  segmentation, plus automated section extraction.
+- `scripts/canonical`: scripture reference parsing, draft YAML generation,
+  canonical validation, and index building.
 
 The repository now has an explicit draft/canonical boundary:
 
-- `archive/drafts`: generated scaffold YAML awaiting review.
+- `archive/drafts`: generated scaffold or automated-unreviewed YAML awaiting
+  review.
 - `archive/lessons`: reviewed canonical lesson YAML only.
 
 This separation is a significant architectural improvement because generated
@@ -139,27 +147,28 @@ metadata.
 The repository has no reviewed canonical YAML files. The canonical archive is
 therefore structurally prepared but not populated.
 
-The current generator still writes minimal draft YAML with placeholder section
-content. That is safe because the files live under `archive/drafts`, but those
-drafts cannot become production records until real section extraction and human
-review are complete.
+The generator now writes automated-unreviewed extracted sections and parsed
+references when metadata exists. That is safe because the files live under
+`archive/drafts`, but those drafts cannot become production records until human
+review is complete.
 
-The pipeline is still manually orchestrated through individual numbered
-scripts. This is readable for maintainers, but it increases the risk of missed
-or out-of-order processing steps.
+The pipeline now has `scripts/run_pipeline.py` for ordered downstream
+regeneration. Maintainers may still run numbered scripts individually when they
+need to inspect a layer.
 
 ### Recommendations
 
-Add a single orchestration command. This command does not exist yet; a future
-implementation could look like:
+Use the orchestration command for routine downstream regeneration:
 
 ```text
 python scripts/run_pipeline.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
 ```
 
-The orchestrator should run source sync validation, source PDF rename checks,
-each processing layer in order, and canonical validation/indexing. It should
-stop on failed validation and emit a single pipeline report.
+When raw extraction already exists, use:
+
+```text
+python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+```
 
 Continue using `archive/drafts/<publication_id>/` for generated output and
 reserve `archive/lessons` for reviewed, placeholder-free canonical YAML only.
@@ -244,14 +253,14 @@ page_end: 223
 
 ### Weaknesses
 
-`Contenido` detection is still hardcoded to PDF page 5 in
-`scripts/structuring/04_document_structure_detector.py`.
+`Contenido` detection is now dynamic in
+`scripts/structuring/04_document_structure_detector.py`, and the selected page
+is recorded in structure metadata. This closes the earlier hardcoded page-5
+risk for current source layouts.
 
-This assumption works for the current PDF but is fragile for future
-publications, other collections, alternate layouts, or front matter changes.
-
-The system currently recognizes section labels, but it does not yet extract
-complete section blocks into canonical YAML fields.
+The system now extracts automated-unreviewed section metadata into
+`metadata/lesson_sections`. This improves drafts, but it still needs human
+revision before canonical promotion.
 
 Repeated lesson headers are detected across the document. This is not currently
 breaking segmentation because `Contenido` is preferred, but richer logic will be
@@ -260,22 +269,14 @@ pages.
 
 ### Required Improvements
 
-Make `Contenido` detection dynamic:
-
-```text
-scan pages 1-10 for CONTENIDO / INDICE
-parse the detected contents page
-record the detected source page in structure JSON
-```
-
-Add real section extraction for:
+Continue improving automated section extraction for:
 
 - `Lectura Biblica`
 - `Bosquejo de la Leccion`
 - `Notas para el Maestro`
 - `Resumen y aplicacion practica`
 
-Carry source traceability for each extracted section:
+Carry and review source traceability for each extracted section:
 
 ```yaml
 source_trace:
@@ -549,13 +550,13 @@ Completed work:
 
 ### Stage 2: Dynamic Structure Detection
 
-Status: Required next.
+Status: Completed for current source layouts.
 
 Tasks:
 
-- Replace hardcoded `Contenido` page 5 with dynamic contents-page detection.
-- Record detected `Contenido` page in structure JSON.
-- Add tests for documents where `Contenido` is not on page 5.
+- Dynamic contents-page detection is implemented.
+- Detected `Contenido` page is recorded in structure JSON.
+- Additional regression tests for shifted front matter remain useful.
 
 Exit criteria:
 
@@ -565,19 +566,20 @@ Exit criteria:
 
 ### Stage 3: Section Extraction
 
-Status: Pending.
+Status: In progress.
 
 Tasks:
 
-- Extract real section blocks from normalized text.
-- Populate draft YAML with real biblical reading, outline, teacher notes, and
-  summary/application content.
+- Extract automated-unreviewed section blocks from normalized text.
+- Populate draft YAML with biblical reading, outline, teacher notes, and
+  summary/application content when deterministic labels are found.
 - Preserve page and line spans for each section.
 
 Exit criteria:
 
-- Draft YAML no longer uses `TBD` for core lesson sections.
-- Section extraction can be traced to normalized source line ranges.
+- Draft YAML reduces `TBD` usage for core lesson sections.
+- Extracted sections can be traced to normalized source line ranges.
+- Human revision is still required before canonical promotion.
 
 ### Stage 4: Scripture Normalization
 

@@ -1,4 +1,8 @@
-"""Build readable OCR/extraction quality reports from processing logs."""
+"""Build readable OCR/extraction quality reports from processing logs.
+
+Reports support maintainer review decisions. A blocked report may still allow
+draft regeneration, but it must block canonical promotion until reviewed.
+"""
 
 from __future__ import annotations
 

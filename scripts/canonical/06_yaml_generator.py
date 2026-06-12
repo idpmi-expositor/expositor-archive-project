@@ -3,20 +3,22 @@
 This is the first script in the canonical output layer.
 
 Pipeline position:
-    PDF -> RAW TEXT -> STRUCTURED DOCUMENT MODEL -> CANONICAL YAML
-                                                          ^
-                                                          This script writes draft YAML.
+    PDF -> RAW TEXT -> STRUCTURE -> SEGMENTS -> SECTIONS -> DRAFT YAML
+                                                            ^
+                                                            This script writes drafts.
 
 What this script will eventually do:
     1. Read lesson segment metadata from the structuring layer.
-    2. Convert each lesson into the canonical YAML shape.
-    3. Store one draft YAML file per lesson under ``archive/drafts``.
-    4. Preserve biblical readings as references only, never as Bible text.
+    2. Read automated section metadata when it exists.
+    3. Convert each lesson into the canonical YAML shape as a draft.
+    4. Store one draft YAML file per lesson under ``archive/drafts``.
+    5. Preserve biblical readings as references only, never as Bible text.
 
 Why this matters:
     The archive's permanent unit is one reviewed lesson YAML file. Generated
     draft YAML is intentionally separated from canonical lesson YAML so
-    scaffolding cannot be indexed as archival truth.
+    scaffolding and automated-unreviewed values cannot be indexed as archival
+    truth.
 
 Beginner note:
     YAML is a human-readable data format. It works well for this project because
@@ -88,7 +90,7 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def load_section_metadata(section_dir: Path, publication_id: str) -> dict[int, dict[str, Any]]:
-    """Load automated section extraction for one publication when available."""
+    """Load automated-unreviewed section extraction for one publication."""
 
     section_file = section_dir / f"{publication_id}.json"
     if not section_file.exists():
@@ -362,7 +364,7 @@ def build_minimal_lesson(
 
 
 def main() -> int:
-    """Command-line entry point for minimal draft YAML generation."""
+    """Command-line entry point for automated draft YAML generation."""
 
     parser = argparse.ArgumentParser(
         description="Generate draft lesson YAML from structured metadata."
@@ -406,9 +408,9 @@ def main() -> int:
         print(f"No lesson segment metadata found under {args.input_dir}")
         return 0
 
-    # This generator writes minimal schema-shaped draft YAML from segment
-    # metadata. Placeholder values are explicit so reviewers can distinguish
-    # generated scaffolding from human-reviewed canonical truth.
+    # This generator writes schema-shaped draft YAML from deterministic metadata.
+    # Extracted values are still automated_unreviewed, so reviewers can
+    # distinguish them from human-reviewed canonical truth.
     default_imported_at = (
         args.imported_at
         or (

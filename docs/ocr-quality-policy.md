@@ -12,11 +12,17 @@ Extraction logs are written under:
 ocr/processing_logs/
 ```
 
-Future dedicated quality summaries should be written under:
+Dedicated quality summaries are written under:
 
 ```text
 ocr/quality_reports/
 ```
+
+`scripts/ingestion/03_quality_report.py` writes these summaries from processing
+logs. A `BLOCKED` report does not prevent draft regeneration, but it must block
+canonical promotion until human review resolves the affected pages. The report
+format is part of human revision: it should be understandable without reading
+Python code.
 
 ## Implemented Quality Gate
 

@@ -6,17 +6,24 @@ YAML.
 The required flow is:
 
 ```text
-PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML -> INDEXES
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> SECTION EXTRACTION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML -> INDEXES
 ```
 
 The canonical architecture is staged so no script generates YAML directly from
 raw text:
 
 ```text
-PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> SECTION EXTRACTION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
-Draft YAML is an intermediate review artifact, not canonical truth.
+Draft YAML is an intermediate review artifact, not canonical truth. Human
+review may be skipped for pipeline improvement work only when generated files
+remain at the `automated_unreviewed` level under `archive/drafts`.
+
+Human revision means the process must remain followable by a maintainer without
+Python knowledge: each command should make clear what it reads, what it writes,
+whether it can overwrite anything, and what warnings require attention. See
+[docs/human-revision-levels.md](docs/human-revision-levels.md).
 
 ## Operating Principles
 
@@ -39,12 +46,21 @@ python scripts/ingestion/00_rename_source_pdfs.py
 python scripts/ingestion/00_rename_source_pdfs.py --apply
 python scripts/ingestion/01_pdf_discovery.py
 python scripts/ingestion/02_pdf_to_raw_text.py
+python scripts/ingestion/03_quality_report.py
 python scripts/structuring/03_minimal_text_normalizer.py
 python scripts/structuring/04_document_structure_detector.py
 python scripts/structuring/05_lesson_segmenter.py
+python scripts/structuring/06_section_extractor.py
 python scripts/canonical/06_yaml_generator.py
 python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py
+```
+
+To regenerate downstream artifacts from existing raw text without rerunning PDF
+extraction:
+
+```text
+python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
 ```
 
 When the rclone remote is not configured in the default user location, pass the
@@ -62,10 +78,12 @@ python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config path/to/
 | Source PDF rename | stable archive filenames such as `expositor-guia-maestro-volumen-46.pdf` |
 | PDF discovery | source discovery report and intake log readiness |
 | Raw text extraction | `ocr/raw_txt/*.txt` and `ocr/processing_logs/*.json`; existing raw text is not overwritten |
+| OCR quality report | `ocr/quality_reports/*.json`; summarizes extraction risk for maintainer review |
 | Normalization | `normalized/*.txt`; first-class input to structure detection |
 | Structure detection | `structured/document_structure/*.json`; reads normalized text |
 | Lesson segmentation | `metadata/lessons/*.json`; reads structure JSON |
-| Draft generation | `archive/drafts/<publication_id>/**/*.yaml`; reads segment metadata, not raw text |
+| Section extraction | `metadata/lesson_sections/*.json`; automated unreviewed section and reference extraction |
+| Draft generation | `archive/drafts/<publication_id>/**/*.yaml`; reads segment and section metadata, not raw text |
 | Canonical validation | pass/fail result for `archive/lessons/**/*.yaml` |
 | Index building | `indexes/lessons_index.yaml` and `indexes/scripture_index.yaml` |
 
@@ -86,15 +104,17 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
    `Contenido` entries are detected correctly.
 6. Segment gate: lesson numbers, titles, page spans, and validation summaries
    are explainable from source evidence.
-7. Draft gate: generated YAML stays under `archive/drafts/<publication_id>/`
+7. Automated section gate: extracted sections and references are traceable and
+   marked unreviewed.
+8. Draft gate: generated YAML stays under `archive/drafts/<publication_id>/`
    and is not indexed.
-8. Human review gate: the checklist in
+9. Human review gate: the checklist in
    [docs/human-review-checklist.md](docs/human-review-checklist.md) is complete.
-9. Promotion gate: the workflow in
+10. Promotion gate: the workflow in
    [docs/draft-to-canonical-promotion.md](docs/draft-to-canonical-promotion.md)
    is complete.
-10. Canonical gate: `python scripts/canonical/07_schema_validator.py` passes.
-11. Index gate: indexes are regenerated only from reviewed canonical YAML.
+11. Canonical gate: `python scripts/canonical/07_schema_validator.py` passes.
+12. Index gate: indexes are regenerated only from reviewed canonical YAML.
 
 ## Failure Modes
 
@@ -113,6 +133,8 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
   normalized into positive chapter and verse integers.
 - Merged section labels: fix section extraction or manual canonical content
   before promotion.
+- Automated-unreviewed draft: do not promote until `review_status` is changed
+  through human review and `human_review_completed` is true.
 - Placeholder values in canonical YAML: validation must fail; keep the file in
   `archive/drafts`.
 - Canonical validation failure: `07_schema_validator.py` reports failing files

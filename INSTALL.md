@@ -58,6 +58,18 @@ Run tests:
 python -m unittest discover -s tests
 ```
 
+Regenerate downstream draft artifacts from existing raw text:
+
+```text
+python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+```
+
+This command may produce `automated_unreviewed` draft YAML. It is useful for
+pipeline development, but it does not complete human review.
+
+All commands are intended to be human-revision friendly: a maintainer should be
+able to run them as written without editing Python files.
+
 Run canonical validation:
 
 ```text
@@ -83,9 +95,11 @@ python scripts/ingestion/00_rename_source_pdfs.py
 python scripts/ingestion/00_rename_source_pdfs.py --apply
 python scripts/ingestion/01_pdf_discovery.py
 python scripts/ingestion/02_pdf_to_raw_text.py
+python scripts/ingestion/03_quality_report.py
 python scripts/structuring/03_minimal_text_normalizer.py
 python scripts/structuring/04_document_structure_detector.py
 python scripts/structuring/05_lesson_segmenter.py
+python scripts/structuring/06_section_extractor.py
 python scripts/canonical/06_yaml_generator.py
 python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py

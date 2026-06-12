@@ -140,6 +140,12 @@ class SchemaValidatorTest(unittest.TestCase):
 
         self.assert_validation_error_contains(lesson, "positive integer")
 
+    def test_rejects_automated_unreviewed_status(self) -> None:
+        lesson = deepcopy(valid_lesson())
+        lesson["processing_audit"]["review_status"] = "automated_unreviewed"
+
+        self.assert_validation_error_contains(lesson, "placeholder value")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -58,7 +58,7 @@ The Archive Project exists exclusively to transform source publications into can
 Canonical processing flow:
 
 ```text
-PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
+PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> SECTION EXTRACTION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
 
 ## 4. Canonical Unit of Truth
@@ -83,8 +83,8 @@ Lesson-level YAML metadata is the permanent canonical representation.
 
 The system must use a strict staged deterministic pipeline. The implementation
 is grouped into three script layers, but normalization, structure detection,
-lesson segmentation, draft YAML, and human review remain distinct pipeline
-stages.
+lesson segmentation, automated section extraction, draft YAML, and human review
+remain distinct pipeline stages.
 
 ### Layer 1: Ingestion
 
@@ -115,6 +115,7 @@ Responsibilities:
 - minimal text normalization as a first-class stage
 - deterministic structure detection from normalized text
 - lesson boundary segmentation after structure detection
+- automated unreviewed section extraction from normalized lesson spans
 - structural metadata mapping
 - intermediate model creation
 
@@ -195,7 +196,7 @@ detection. Neither stage may rewrite author wording or theological content.
 
 Mandatory intermediate stages must exist between raw OCR/direct-extraction text
 and canonical YAML: normalized text, DocumentStructure JSON, lesson segment
-metadata, draft YAML, and human review.
+metadata, lesson section metadata, draft YAML, and human review.
 
 Required model:
 
@@ -342,6 +343,7 @@ Current intermediate artifacts support this future YAML trace model by carrying:
 - marker line numbers in `DocumentStructure` JSON
 - `Contenido` expectations for lesson number, title, date, and page start
 - segmentation validation summaries under `metadata/lessons`
+- automated unreviewed section traces under `metadata/lesson_sections`
 
 ## 17. Scripture Normalization
 
@@ -454,6 +456,7 @@ expositor-archive-project/
 |   +-- raw_txt/
 |   +-- corrected_txt/
 |   +-- processing_logs/
+|   +-- quality_reports/
 |
 +-- normalized/
 |   +-- maestro/
@@ -475,6 +478,7 @@ expositor-archive-project/
 |
 +-- metadata/
 |   +-- lessons/
+|   +-- lesson_sections/
 |   +-- publications/
 |   +-- scripture_indexes/
 |   +-- semantic_indexes/
@@ -594,6 +598,22 @@ Current implementation status:
 - attempts Tesseract OCR fallback for weak or empty text-layer pages when
   `Pillow`, `pytesseract`, and the `tesseract` executable are available
 
+#### 03_quality_report.py
+
+Responsibilities:
+
+- summarize page-level extraction and OCR quality logs
+- flag zero-text, low-word-count, warning, and blocked pages
+- provide a plain-language quality aid before canonical promotion
+
+Current implementation status:
+
+- reads `ocr/processing_logs`
+- writes `ocr/quality_reports`
+- marks reports as `PASS`, `WARNING`, or `BLOCKED`
+- does not prevent draft regeneration, but blockers must prevent canonical
+  promotion until reviewed
+
 ### Structuring
 
 #### 03_minimal_text_normalizer.py
@@ -631,7 +651,7 @@ Current implementation status:
 - detects explicit lesson headers
 - detects known section labels
 - detects PDF page markers
-- extracts `Contenido` entries from PDF page 5 when available
+- detects `Contenido` dynamically by page labels and table-like rows
 - writes JSON marker reports under `structured/document_structure`
 
 #### 05_lesson_segmenter.py
@@ -652,6 +672,24 @@ Current implementation status:
 - validates expected lesson numbers against observed lesson headers
 - writes intermediate lesson segment metadata
 
+#### 06_section_extractor.py
+
+Responsibilities:
+
+- read normalized text plus lesson segment spans
+- extract source-backed lesson sections for draft generation
+- parse biblical reading references without storing Bible passage text
+- preserve source traces for extracted sections
+- keep extracted values at the `automated_unreviewed` revision level
+
+Current implementation status:
+
+- writes `metadata/lesson_sections`
+- extracts biblical reading, lesson outline, teacher notes, and
+  summary/application when deterministic labels are present
+- stores parsed scripture references using canonical reference fields
+- does not mark any value as human-reviewed
+
 ### Canonical
 
 #### 06_yaml_generator.py
@@ -670,6 +708,8 @@ Current implementation status:
 - prevents draft path collisions across multiple source publications
 - uses explicit placeholders to separate generated scaffolding from
   human-reviewed canonical truth
+- consumes `metadata/lesson_sections` when available and writes extracted values
+  as automated unreviewed draft data
 - requires placeholder-free validation before files are promoted into
   `archive/lessons`
 
