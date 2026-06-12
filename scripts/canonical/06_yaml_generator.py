@@ -29,6 +29,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -49,6 +50,7 @@ DEFAULT_SCHEMA_VERSION = "1.0.0"
 DEFAULT_COLLECTION_TYPE = "Expositor Maestro"
 DEFAULT_CYCLE = "C1"
 DEFAULT_LANGUAGE = "es"
+DEFAULT_IMPORTED_AT = "1970-01-01T00:00:00+00:00"
 
 
 def lesson_output_path(
@@ -90,6 +92,38 @@ def write_yaml(path: Path, data: dict[str, Any]) -> None:
             sort_keys=False,
             explicit_start=True,
         )
+
+
+def imported_at_from_epoch(epoch_text: str) -> str:
+    """Convert SOURCE_DATE_EPOCH-style seconds into an ISO timestamp."""
+
+    return datetime.fromtimestamp(int(epoch_text), UTC).replace(microsecond=0).isoformat()
+
+
+def existing_imported_at(path: Path) -> str | None:
+    """Preserve existing generated audit timestamps to avoid no-op churn."""
+
+    if not path.exists():
+        return None
+
+    with path.open("r", encoding="utf-8") as handle:
+        existing = yaml.safe_load(handle) or {}
+    if not isinstance(existing, dict):
+        return None
+
+    source_integrity = existing.get("source_integrity")
+    if isinstance(source_integrity, dict):
+        imported_at = source_integrity.get("imported_at")
+        if isinstance(imported_at, str) and imported_at:
+            return imported_at
+
+    processing_audit = existing.get("processing_audit")
+    if isinstance(processing_audit, dict):
+        intake_date = processing_audit.get("intake_date")
+        if isinstance(intake_date, str) and intake_date:
+            return intake_date
+
+    return None
 
 
 def sha256_file(path: Path) -> str:
@@ -270,6 +304,15 @@ def main() -> int:
         default=DEFAULT_SCHEMA_VERSION,
         help="Schema version to write into generated YAML.",
     )
+    parser.add_argument(
+        "--imported-at",
+        help=(
+            "ISO timestamp for newly generated draft audit fields. Existing "
+            "draft files keep their prior imported_at value unless this is set. "
+            "When omitted for a new file, SOURCE_DATE_EPOCH is honored, then a "
+            "stable placeholder timestamp is used."
+        ),
+    )
     args = parser.parse_args()
 
     segment_files = sorted(args.input_dir.rglob("*.json")) if args.input_dir.exists() else []
@@ -280,7 +323,14 @@ def main() -> int:
     # This generator writes minimal schema-shaped draft YAML from segment
     # metadata. Placeholder values are explicit so reviewers can distinguish
     # generated scaffolding from human-reviewed canonical truth.
-    imported_at = datetime.now(UTC).replace(microsecond=0).isoformat()
+    default_imported_at = (
+        args.imported_at
+        or (
+            imported_at_from_epoch(os.environ["SOURCE_DATE_EPOCH"])
+            if "SOURCE_DATE_EPOCH" in os.environ
+            else DEFAULT_IMPORTED_AT
+        )
+    )
     written_files: list[Path] = []
     output_paths_seen: set[Path] = set()
 
@@ -295,6 +345,23 @@ def main() -> int:
             if not isinstance(segment, dict):
                 raise ValueError(f"{segment_file}: segment {index} must be an object")
 
+            lesson_number = int(segment["lesson_number"])
+            year = infer_year(segments)
+            output_path = lesson_output_path(
+                args.draft_dir,
+                segment_file.stem,
+                year,
+                DEFAULT_CYCLE,
+                lesson_number,
+            )
+            if output_path in output_paths_seen:
+                raise ValueError(f"Duplicate draft output path generated: {output_path}")
+            output_paths_seen.add(output_path)
+            imported_at = (
+                args.imported_at
+                or existing_imported_at(output_path)
+                or default_imported_at
+            )
             lesson = build_minimal_lesson(
                 segment=segment,
                 segment_file=segment_file,
@@ -304,16 +371,6 @@ def main() -> int:
                 schema_version=args.schema_version,
                 imported_at=imported_at,
             )
-            output_path = lesson_output_path(
-                args.draft_dir,
-                lesson["publication_id"],
-                lesson["year"],
-                lesson["cycle"],
-                lesson["lesson_number"],
-            )
-            if output_path in output_paths_seen:
-                raise ValueError(f"Duplicate draft output path generated: {output_path}")
-            output_paths_seen.add(output_path)
             write_yaml(output_path, lesson)
             written_files.append(output_path)
 

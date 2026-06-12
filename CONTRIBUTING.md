@@ -37,6 +37,10 @@ python scripts/structuring/04_document_structure_detector.py
 python scripts/structuring/05_lesson_segmenter.py
 ```
 
+Use `--rclone-config path/to/rclone.conf` with
+`00_validate_source_pdf_sync.py` when the `gdrive` remote is not configured in
+the default user rclone location.
+
 5. Review generated raw text, processing logs, normalized text, structure JSON,
    and lesson segment metadata before generating draft YAML.
 

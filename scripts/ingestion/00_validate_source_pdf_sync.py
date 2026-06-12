@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
@@ -41,7 +42,11 @@ def local_pdf_entries(source_dir: Path) -> dict[str, PdfEntry]:
     return entries
 
 
-def remote_pdf_entries(remote: str, drive_root_folder_id: str | None) -> dict[str, PdfEntry]:
+def remote_pdf_entries(
+    remote: str,
+    drive_root_folder_id: str | None,
+    rclone_config: Path | None = None,
+) -> dict[str, PdfEntry]:
     """Return Google Drive PDF entries through rclone, keyed by filename."""
 
     command = ["rclone", "lsjson"]
@@ -49,12 +54,17 @@ def remote_pdf_entries(remote: str, drive_root_folder_id: str | None) -> dict[st
         command.extend(["--drive-root-folder-id", drive_root_folder_id])
     command.append(remote)
 
+    environment = os.environ.copy()
+    if rclone_config is not None:
+        environment["RCLONE_CONFIG"] = str(rclone_config)
+
     try:
         completed = subprocess.run(
             command,
             check=True,
             capture_output=True,
             text=True,
+            env=environment,
         )
     except FileNotFoundError as exc:
         raise SystemExit("rclone is required for Drive sync validation.") from exc
@@ -136,10 +146,22 @@ def main() -> int:
         "--drive-root-folder-id",
         help="Google Drive folder ID used with the rclone Google Drive remote.",
     )
+    parser.add_argument(
+        "--rclone-config",
+        type=Path,
+        help=(
+            "Optional path to an rclone.conf file. When omitted, rclone uses "
+            "the normal RCLONE_CONFIG environment variable or user config path."
+        ),
+    )
     args = parser.parse_args()
 
     local_entries = local_pdf_entries(args.source_dir)
-    remote_entries = remote_pdf_entries(args.remote, args.drive_root_folder_id)
+    remote_entries = remote_pdf_entries(
+        args.remote,
+        args.drive_root_folder_id,
+        args.rclone_config,
+    )
     return validate_sync(local_entries, remote_entries)
 
 

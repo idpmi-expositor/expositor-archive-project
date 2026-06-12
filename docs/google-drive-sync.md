@@ -1,6 +1,16 @@
 # Google Drive sync setup
 
-This repository includes a manual GitHub Actions workflow at `.github/workflows/sync-drive.yml` that can sync the shared Google Drive folder `ExpositorMain` into `ExpositorMain/` in the repository.
+This repository has two Google Drive touchpoints:
+
+- `.github/workflows/sync-drive.yml` can sync the shared Drive folder
+  `ExpositorMain` into the repository path `ExpositorMain/`.
+- `scripts/ingestion/00_validate_source_pdf_sync.py` validates that local
+  source PDFs in `source_assets/original_pdfs` match a Drive source folder by
+  filename and size.
+
+The root pipeline paths are canonical for local processing. `ExpositorMain/`
+is synced evidence from Drive; `ExpositorMain/outputs` is legacy/generated and
+must not be treated as canonical archive data.
 
 Drive folder ID:
 
@@ -24,6 +34,13 @@ Validate local PDF filenames and sizes with:
 
 ```bash
 python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7
+```
+
+If the rclone config is not installed in the default user location, pass it
+explicitly:
+
+```bash
+python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config path/to/rclone.conf --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7
 ```
 
 If the validator reports a mismatch, sync the missing PDF files locally, run
@@ -58,7 +75,8 @@ gdrive
 
 4. Choose Google Drive as the storage provider.
 5. Use the default OAuth flow unless you have a dedicated Google Cloud OAuth client.
-6. Sign in as the owner of the `ExpositorMain` folder when the browser opens.
+6. Sign in as an account that can read the `ExpositorMain` folder and the
+   source PDF validation folder when the browser opens.
 7. Choose a Drive scope that can read file contents, such as full Drive access or read-only Drive access.
 8. Confirm the remote can see the folder by using the folder ID as the remote root:
 
@@ -97,6 +115,9 @@ The config should include a section like:
 type = drive
 token = {...}
 ```
+
+Do not commit real rclone tokens. The repository ignores the local `rclone/`
+folder so operators can keep private config copies there when needed.
 
 ## First run
 

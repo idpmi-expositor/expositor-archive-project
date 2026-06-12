@@ -47,6 +47,13 @@ python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py
 ```
 
+When the rclone remote is not configured in the default user location, pass the
+config file explicitly:
+
+```text
+python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config path/to/rclone.conf --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
+```
+
 ## Expected Outputs
 
 | Step | Expected output |
@@ -128,4 +135,3 @@ A draft may move from `archive/drafts` to `archive/lessons` only when:
 
 See [docs/production-ready-canonical-yaml.md](docs/production-ready-canonical-yaml.md)
 for the exact production-ready criteria.
-

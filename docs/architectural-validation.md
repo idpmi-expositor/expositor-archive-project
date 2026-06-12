@@ -150,7 +150,8 @@ or out-of-order processing steps.
 
 ### Recommendations
 
-Add a single orchestration command such as:
+Add a single orchestration command. This command does not exist yet; a future
+implementation could look like:
 
 ```text
 python scripts/run_pipeline.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID

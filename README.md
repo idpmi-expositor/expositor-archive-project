@@ -248,6 +248,13 @@ python scripts/canonical/08_index_builder.py
 Skip the Google Drive validation command only when there is no configured Drive
 source to validate against.
 
+When `gdrive` is not configured in the default rclone location, pass the config
+file explicitly:
+
+```text
+python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config path/to/rclone.conf --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
+```
+
 ## Dependency Summary
 
 - Python 3.11 or newer.

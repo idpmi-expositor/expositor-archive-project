@@ -91,6 +91,13 @@ python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py
 ```
 
+If `rclone listremotes` does not show `gdrive:`, either create the remote in
+the default rclone config location or pass a config file directly:
+
+```text
+python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config path/to/rclone.conf --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
+```
+
 The current scripts are intentionally separate so maintainers can inspect each
 layer. For the review and promotion process, see [PROCESS.md](PROCESS.md).
 
