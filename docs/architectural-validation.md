@@ -5,278 +5,246 @@ Validation date: 2026-06-12
 Validated repository state:
 
 ```text
-commit: 4618d50 Add automated draft extraction pipeline
-canonical_yaml: 0
+base_commit: b8b2a60 Clarify human revision and review workflow
+pipeline_audit: docs/pipeline-audit-2026-06-12.md
+source_pdfs: 2
+raw_txt: 2
+normalized_txt: 2
+document_structure_json: 2
+lesson_segment_json: 2
+lesson_section_json: 2
 draft_yaml: 52
+canonical_yaml: 0
 official_indexes: 0
-lesson_section_metadata: 2
 quality_reports: 2
 ```
 
-Current production-readiness verdict: **PARTIALLY**
+Current production-readiness verdict: **PARTIALLY READY FOR DEVELOPMENT, NOT
+READY FOR CANONICAL PRODUCTION USE**
 
-The repository is safer and architecturally improved after the canonical safety
-gate and automated draft extraction changes. Generated draft YAML is stored
-under `archive/drafts`, reviewed canonical YAML belongs under
-`archive/lessons`, and canonical validation rejects placeholder values such as
-`TBD`, `pending-*`, `minimal-valid-placeholder`, and zero-valued scripture
-references. Index generation is also blocked when no reviewed canonical lesson
-YAML exists.
+The repository now has a safer and more complete automated draft pipeline than
+the earlier architecture validation described. Google Drive source validation
+works, raw extraction artifacts exist, normalized text exists, document
+structure is detected, lesson segmentation works for both source volumes,
+automated section extraction exists, scripture reference parsing exists for
+draft generation, and the orchestration script can rebuild downstream outputs.
 
-The repository is not fully production-ready because there is no reviewed
-canonical YAML yet, no official retrieval index exists, and OCR/layout quality
-issues remain. Section extraction and scripture normalization now exist for
-automated-unreviewed drafts, but they are not a substitute for human review.
+The repository is still not ready for production retrieval or canonical archive
+use. There are no reviewed canonical lesson YAML files under `archive/lessons`,
+there are no official generated indexes, all 52 draft records remain
+automated-unreviewed, OCR/layout quality issues remain, and section coverage is
+incomplete enough that a human reviewer must still verify every promoted lesson.
+
+This document uses the project terminology consistently:
+
+- **Human revision** means the instructions, comments, and operational steps are
+  understandable to a normal maintainer without Python knowledge.
+- **Human review** means a person verifies extracted lesson content before a
+  draft can become canonical archive data.
 
 ## Evidence Summary
 
-Commands and observed results from the latest validation pass:
+Latest validation evidence:
+
+```text
+python scripts\run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+```
+
+Observed result:
+
+```text
+Pipeline completed through draft generation.
+```
 
 ```text
 python -m unittest discover -s tests
 ```
 
-Result:
+Observed result:
 
 ```text
-Ran 17 tests
+Ran 18 tests
 OK
 ```
 
 ```text
-python scripts/canonical/07_schema_validator.py
+python scripts\canonical\07_schema_validator.py
 ```
 
-Result:
+Observed result:
 
 ```text
 No lesson YAML files found under archive/lessons
 ```
 
 ```text
-python scripts/canonical/07_schema_validator.py
+python scripts\canonical\08_index_builder.py
 ```
 
-Draft YAML under `archive/drafts/<publication_id>/` may still contain explicit
-review placeholders. It should not be validated as canonical until a reviewed
-file is promoted into `archive/lessons`.
-
-Result:
-
-```text
-Draft YAML is not canonical validation input. Drafts may now contain automated
-unreviewed extracted sections and parsed scripture references, but they remain
-outside `archive/lessons` until human review is complete.
-```
-
-```text
-python scripts/canonical/08_index_builder.py
-```
-
-Result:
+Observed result:
 
 ```text
 No canonical lesson YAML files found under archive/lessons
 Index generation stopped because there is no canonical data.
 ```
 
-Artifact counts:
+Google Drive source validation evidence:
 
 ```text
-canonical_yaml: 0
-draft_yaml: 52
-official_indexes: 0
-lesson_section_metadata: 2
-quality_reports: 2
+source_assets/original_pdfs/expositor-guia-maestro-volumen-45.pdf
+source_assets/original_pdfs/expositor-guia-maestro-volumen-46.pdf
 ```
 
-Structure and OCR evidence:
+Both expected PDFs were present in the configured Google Drive source folder and
+matched the local source set used by the pipeline audit.
 
-```text
-pages: 223
-total_words: 97440
-zero_word_pages: [1]
-low_word_pages_lt20: [(1, 0), (223, 9)]
-markers: 469
-content_index: 26
-page_marker: 223
-section_label: 141
-lesson_header: 105
-segments: 26
-missing_observed_headers: []
-unexpected_observed_headers: []
-```
-
-Known OCR/layout artifacts:
-
-```text
-Lectura Biblica: 1Romanos 1:18-25
-/ / / fecha sugerida
-```
-
-## 1. Architectural Validation
+## 1. Architecture Validation
 
 ### Findings
 
 The repository has a clear deterministic pipeline architecture organized into
 three processing layers:
 
-- `scripts/ingestion`: source discovery, raw text extraction, and quality
+- `scripts/ingestion`: source discovery, raw text extraction, and OCR quality
   reporting.
-- `scripts/structuring`: normalization, structure recognition, and lesson
-  segmentation, plus automated section extraction.
+- `scripts/structuring`: normalization, document structure detection, lesson
+  segmentation, and automated section extraction.
 - `scripts/canonical`: scripture reference parsing, draft YAML generation,
   canonical validation, and index building.
 
-The repository now has an explicit draft/canonical boundary:
+The draft/canonical boundary is now explicit:
 
 - `archive/drafts`: generated scaffold or automated-unreviewed YAML awaiting
-  review.
+  human review.
 - `archive/lessons`: reviewed canonical lesson YAML only.
 
-This separation is a significant architectural improvement because generated
-placeholder data can no longer be treated as archival truth.
+This is the most important safety feature in the current architecture.
+Generated output can be inspected and improved without being treated as archival
+truth or indexed as production data.
 
-The validator now blocks placeholder-bearing canonical YAML, and the index
-builder refuses to generate official indexes when no reviewed canonical lessons
-exist. This prevents incomplete scaffold data from becoming searchable archive
-metadata.
+The repository also has a top-level orchestration script:
+
+```text
+scripts/run_pipeline.py
+```
+
+That script provides a safer routine path than manually running every numbered
+script. Individual numbered scripts remain useful for debugging a specific
+pipeline layer.
 
 ### Risks
 
-The repository has no reviewed canonical YAML files. The canonical archive is
-therefore structurally prepared but not populated.
+The canonical archive is structurally prepared but empty. Because
+`archive/lessons` has no reviewed lesson YAML, the system has no production
+retrieval surface.
 
-The generator now writes automated-unreviewed extracted sections and parsed
-references when metadata exists. That is safe because the files live under
-`archive/drafts`, but those drafts cannot become production records until human
-review is complete.
+The architecture still depends on human review before promotion. That is the
+correct policy, but the current draft quality means review effort remains
+substantial.
 
-The pipeline now has `scripts/run_pipeline.py` for ordered downstream
-regeneration. Maintainers may still run numbered scripts individually when they
-need to inspect a layer.
+There is no CI workflow yet to enforce the documented gates automatically on
+GitHub.
 
 ### Recommendations
 
-Use the orchestration command for routine downstream regeneration:
+Keep the current layered architecture and the draft/canonical boundary.
+
+Use the pipeline runner for routine regeneration:
 
 ```text
-python scripts/run_pipeline.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
+python scripts\run_pipeline.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
 ```
 
-When raw extraction already exists, use:
+When source PDFs and raw extraction already exist, use:
 
 ```text
-python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+python scripts\run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
 ```
 
-Continue using `archive/drafts/<publication_id>/` for generated output and
-reserve `archive/lessons` for reviewed, placeholder-free canonical YAML only.
-
-Add CI checks that verify:
-
-- Draft YAML is not indexed.
-- Canonical YAML contains no placeholders.
-- Indexes are generated only from reviewed canonical records.
-- Generated index files are deterministic.
+Add GitHub Actions checks that run tests, canonical validation, index
+generation safety checks, and a no-placeholders policy for canonical YAML.
 
 ### Confidence Level
 
 High.
 
-The architecture and current repository state are directly supported by code,
-tests, folder layout, validation commands, and generated artifacts.
+The architecture is supported by folder layout, executable scripts, tests,
+generated artifacts, and the latest audit report.
 
-## 2. Structure Validation
+## 2. Source Sync and Ingestion Validation
 
-### Repository Structure Findings
+### Findings
 
-The repository organization supports maintainability better than before because
-generated draft records and reviewed canonical records now have separate
-locations.
-
-Current high-level structure:
+The configured Google Drive source connection is usable for the current source
+set. The latest audit confirmed the expected two source PDFs:
 
 ```text
-source_assets/original_pdfs/
-ocr/raw_txt/
-ocr/processing_logs/
-normalized/
-structured/document_structure/
-metadata/lessons/
-archive/drafts/
-archive/lessons/
-schemas/base/
-indexes/
-scripts/
-docs/
-tests/
+expositor-guia-maestro-volumen-45.pdf
+expositor-guia-maestro-volumen-46.pdf
 ```
 
-The module grouping is understandable:
+Local source PDF naming is stable, and the rename dry-run reported both files
+as keep/no-change.
 
-- Ingestion scripts are grouped together.
-- Structuring scripts are grouped together.
-- Canonical scripts are grouped together.
-- Documentation lives under `docs`.
-- Tests now exist under `tests`.
+Raw text extraction exists for both source PDFs, with processing logs and
+quality reports present.
 
-### Document Structure Recognition Findings
+### Risks
 
-The new PDF is recognized at the lesson-count level:
+Drive validation is operational but should remain a first-class pipeline gate.
+If maintainers skip Drive validation during routine reruns, they should only do
+so when the local source PDFs were already verified.
 
-- 26 `Contenido` entries were extracted.
-- 26 lesson segments were generated.
-- No missing observed lesson headers were reported.
-- No unexpected observed lesson headers were reported.
-- Segment metadata now carries page and line spans.
+### Recommendations
 
-Example segment metadata:
+Document Drive validation as required before accepting a new source volume.
+Keep `--skip-drive-validation` only for repeat local rebuilds from already
+verified PDFs.
+
+### Confidence Level
+
+High.
+
+The source set was checked against the configured Drive folder during the
+latest audit.
+
+## 3. Structure and Segmentation Validation
+
+### Findings
+
+The pipeline recognizes both source volumes at the lesson-count level:
 
 ```text
-lesson_number: 1
-start_line: 90
-end_line: 196
-page_start: 6
-page_end: 13
+volume 45 segments: 26
+volume 46 segments: 26
 ```
 
-Final segment evidence:
+Both segment reports completed with warning status, not hard failure.
+
+Known warning:
 
 ```text
-lesson_number: 26
-start_line: 3405
-end_line: 3602
-page_start: 207
-page_end: 223
+DUPLICATE_OBSERVED_LESSON_HEADERS
 ```
 
-### Weaknesses
+This warning is expected for the current PDFs because repeated lesson headers
+can appear inside lesson pages. Segmentation still works because the system
+prefers `Contenido` entries and preserves page and line spans.
 
-`Contenido` detection is now dynamic in
-`scripts/structuring/04_document_structure_detector.py`, and the selected page
-is recorded in structure metadata. This closes the earlier hardcoded page-5
-risk for current source layouts.
+### Risks
 
-The system now extracts automated-unreviewed section metadata into
-`metadata/lesson_sections`. This improves drafts, but it still needs human
-revision before canonical promotion.
+Repeated headers are not currently breaking segmentation, but richer logic is
+still needed to separate primary lesson starts from repeated in-page headers.
 
-Repeated lesson headers are detected across the document. This is not currently
-breaking segmentation because `Contenido` is preferred, but richer logic will be
-needed to distinguish primary lesson starts from repeated headers inside lesson
-pages.
+If a future volume has a different contents layout, structure detection could
+need additional regression coverage.
 
-### Required Improvements
+### Recommendations
 
-Continue improving automated section extraction for:
+Add regression fixtures for shifted front matter and alternate contents-page
+layouts.
 
-- `Lectura Biblica`
-- `Bosquejo de la Leccion`
-- `Notas para el Maestro`
-- `Resumen y aplicacion practica`
-
-Carry and review source traceability for each extracted section:
+Keep source traceability fields on every segment:
 
 ```yaml
 source_trace:
@@ -290,247 +258,351 @@ source_trace:
 
 High.
 
-Structure detection evidence comes from the generated `DocumentStructure` JSON,
-lesson metadata JSON, and direct command output.
+Segment counts, status values, and warnings are generated by the current
+pipeline artifacts.
 
-## 3. Indexing Validation
+## 4. Automated Section Extraction Validation
 
 ### Findings
 
-Indexing is safer than before but not retrieval-ready.
-
-There are currently no official index YAML files:
+Automated section extraction is now implemented and produces metadata under:
 
 ```text
-official_indexes: 0
+metadata/lesson_sections/
 ```
 
-This is intentional and correct under the new policy. The index builder refuses
-to build indexes when no reviewed canonical YAML exists.
+Latest section coverage:
 
-Draft YAML is blocked by validation because it still contains placeholder
-scripture fields:
+```text
+volume 45 lessons: 26
+volume 45 biblical_reading: 26
+volume 45 lesson_outline: 26
+volume 45 teacher_notes: 26
+volume 45 summary_application: 0
 
-```yaml
-reference_display: TBD
-canonical_references:
-  - testament: TBD
-    book_standardized: TBD
-    chapter: 0
-    verse_start: 0
-    verse_end: 0
+volume 46 lessons: 26
+volume 46 biblical_reading: 25
+volume 46 lesson_outline: 25
+volume 46 teacher_notes: 26
+volume 46 summary_application: 0
 ```
+
+All 52 drafts remain marked as automated-unreviewed.
 
 ### Risks
 
-The repository currently has no production retrieval surface.
+Summary/application extraction is currently missing for every lesson. Volume 46
+lesson 22 is also missing biblical reading and lesson outline extraction.
 
-Semantic search, hierarchy-aware retrieval, scripture lookup, and citation
-traceability are not ready because reviewed canonical YAML does not exist.
-
-The current draft files contain titles and page ranges, but not enough real
-section content or normalized scripture metadata to support reliable retrieval.
+Because section coverage is incomplete, generated drafts are useful review
+inputs but are not canonical-ready.
 
 ### Recommendations
 
-Implement scripture extraction and normalization before regenerating official
-indexes.
+Improve section label detection for:
 
-The scripture parser should support references such as:
+- `Resumen y aplicacion practica`
+- variant accent/capitalization patterns
+- multi-line section labels
+- lessons where the biblical reading or outline appears near a page boundary
 
-```text
-Santiago 2:14-24
-I Corintios 3:10-19
-Exodo 30:14-15; Mateo 17:24-27; 22:17, 19-21
-Romanos 1:1-7, 16-17
-```
-
-Indexes should remain blocked until:
-
-- `reference_display` is real.
-- `canonical_references` are normalized.
-- Section metadata is extracted.
-- Human review is complete.
+Add an extraction completeness report that lists missing required sections per
+lesson and exits non-zero when canonical promotion is attempted with missing
+required content.
 
 ### Confidence Level
 
 High.
 
-The index builder behavior and absence of official index YAML files were
-verified directly.
+The section coverage numbers come from generated `metadata/lesson_sections`
+artifacts and draft generation output.
 
-## 4. OCR Validation
+## 5. OCR and Text Quality Validation
 
 ### Findings
 
-Text extraction successfully produced large raw and normalized text artifacts,
-but OCR/layout quality is not production-ready.
-
-Extraction evidence:
-
-```text
-pages: 223
-total_words: 97440
-zero_word_pages: [1]
-low_word_pages_lt20: [(1, 0), (223, 9)]
-```
-
-Known text issues include malformed references and layout contamination:
-
-```text
-Lectura Biblica: 1Romanos 1:18-25
-/ / / fecha sugerida
-```
-
-There are merged blocks where biblical text, memory verse text, suggested date
-text, and lesson prose appear in the same normalized paragraph. This creates
-risk for downstream section extraction.
-
-### Root Cause
-
-The current ingestion script uses embedded PDF text extraction through PyMuPDF
-and supports Tesseract OCR fallback for pages whose embedded text is empty or
-insufficient. Fallback OCR is still gated by deterministic quality checks before
-it can become trusted downstream text.
-
-The normalizer reflows text deterministically, but page layout artifacts can
-still be merged into prose when the extracted text does not preserve clean
-block boundaries.
-
-### Severity
-
-High for production canonical output.
-
-Medium for draft intake, because lesson-level discovery and metadata generation
-still work well enough to produce reviewable draft scaffolds.
-
-### Recommendations
-
-Add OCR quality reports under a path such as:
+Quality reports now exist under:
 
 ```text
 ocr/quality_reports/
 ```
 
-Each report should flag:
-
-- zero-text pages
-- very low word count pages
-- malformed scripture references
-- layout artifacts such as `/ / / fecha sugerida`
-- merged section labels
-- probable header/footer contamination
-
-Keep OCR fallback limited to scanned, empty, or low-quality text-layer pages.
-Fallback OCR should remain acceptable only when its quality evaluation returns
-PASS or WARNING.
-
-Add page-level quality status values:
+Latest quality status:
 
 ```text
-PASS
-WARNING
-FAIL
-NEEDS_OCR
-NEEDS_HUMAN_REVIEW
+volume 45 status: BLOCKED
+volume 46 status: WARNING
 ```
+
+Volume 45 has one zero-text page and one OCR fallback page. Volume 46 has no
+zero-text pages in the latest report, but still has low-word-count and repeated
+header/footer warnings.
+
+Common reported issues include:
+
+- low OCR confidence
+- low word count
+- malformed scripture references
+- repeated header/footer contamination
+- zero text
+
+Known text artifact:
+
+```text
+Lectura Biblica: 1Romanos 1:18-25
+```
+
+### Risks
+
+OCR/text quality is a production blocker for canonical promotion when the
+quality report status is `BLOCKED`.
+
+Repeated header/footer warnings are currently very noisy. The reports are
+useful, but maintainers need clearer prioritization so a normal reviewer can
+separate blocking issues from expected layout noise.
+
+### Recommendations
+
+Keep quality reports, but add a human-readable summary at the top of each
+report:
+
+- blocking pages
+- pages needing visual comparison
+- warning-only pages
+- extraction issues likely safe to ignore
+
+Tune repeated header/footer detection to reduce noise while preserving real
+layout warnings.
+
+Add a promotion gate that blocks canonical promotion when a source volume has
+quality status `BLOCKED`.
 
 ### Confidence Level
 
 Medium-High.
 
-The audit is based on extraction logs and normalized text artifacts, but not a
-full visual page-by-page comparison against rendered PDF pages.
+The quality report findings are direct pipeline artifacts, but a full visual
+page-by-page comparison against rendered PDFs has not been completed.
 
-## 5. Documentation Validation
+## 6. Canonical and Indexing Validation
 
 ### Findings
 
-Documentation is improved. The README, pipeline traceability document, and YAML
-contract now explain:
+Indexing is safe but not retrieval-ready.
 
-- draft vs canonical YAML
-- placeholder blocking
-- index blocking
-- source traceability expectations
-- reviewed canonical promotion requirement
-
-Current documentation files:
+There are no reviewed canonical lesson YAML files:
 
 ```text
-README.md
-docs/google-drive-sync.md
-docs/lesson-yaml-contract.md
-docs/master-architecture-specification.md
-docs/pipeline-traceability.md
-docs/architectural-validation.md
+canonical_yaml: 0
 ```
 
-### Documentation Gap Closure
+There are no official indexes:
 
-The documentation gaps identified during this validation pass are now covered by
-dedicated documents:
+```text
+official_indexes: 0
+```
 
-- `CONTRIBUTING.md`
-- `PROCESS.md`
-- `INSTALL.md`
-- `docs/human-review-checklist.md`
-- `docs/draft-to-canonical-promotion.md`
-- `docs/ocr-quality-policy.md`
-- `docs/production-ready-canonical-yaml.md`
+This is correct under the current policy. The index builder refuses to generate
+official indexes without reviewed canonical input.
 
-### Documentation Drift
-
-Some architecture documentation still describes target future directories and
-indexes such as:
-
-- `topics_index.yaml`
-- schema extensions
-- semantic indexes
-- corrected OCR text
-
-These are appropriate long-term targets, but maintainers should understand
-that they are not fully implemented.
+Draft YAML under `archive/drafts` can contain automated extraction values,
+review placeholders, and unreviewed text. Draft YAML is intentionally excluded
+from canonical validation and indexing.
 
 ### Risks
 
-If these documents drift from the validator or schema, maintainers may follow
-outdated review criteria. Treat `schemas/base/lesson_schema.yaml` and
-`scripts/canonical/07_schema_validator.py` as the executable source of truth for
-canonical YAML requirements.
+The repository currently has no production retrieval surface. Semantic search,
+hierarchy-aware retrieval, scripture lookup, and citation traceability cannot be
+considered production-ready until reviewed canonical YAML exists.
 
 ### Recommendations
 
-Keep `PROCESS.md`, `CONTRIBUTING.md`, `INSTALL.md`, and the focused policy docs
-aligned whenever the pipeline, schema, validator, or OCR behavior changes.
+Keep indexes blocked until:
+
+- reviewed YAML exists under `archive/lessons`
+- canonical YAML contains no placeholders
+- scripture references are normalized
+- source traceability is complete
+- OCR quality for the source volume is not blocked
+- human review is complete
+
+Add a small pilot promotion of one or two reviewed lessons after the extraction
+and OCR issues are triaged. Use that pilot to test canonical validation and
+index generation end to end.
 
 ### Confidence Level
 
 High.
 
-Documentation was reviewed directly and compared against current code and
-artifact behavior.
+The validator and index builder behavior were verified directly.
+
+## 7. Documentation and Human-Revision Validation
+
+### Findings
+
+Documentation has improved significantly. The repository now documents:
+
+- installation and setup
+- Google Drive source sync
+- pipeline operation
+- draft vs canonical boundaries
+- human review requirements
+- human revision levels for non-Python maintainers
+- OCR quality policy
+- draft-to-canonical promotion
+- production-ready YAML expectations
+
+Important documentation files include:
+
+```text
+README.md
+INSTALL.md
+PROCESS.md
+CONTRIBUTING.md
+docs/google-drive-sync.md
+docs/human-revision-levels.md
+docs/human-review-checklist.md
+docs/draft-to-canonical-promotion.md
+docs/lesson-yaml-contract.md
+docs/master-architecture-specification.md
+docs/ocr-quality-policy.md
+docs/pipeline-audit-2026-06-12.md
+docs/pipeline-traceability.md
+docs/production-ready-canonical-yaml.md
+```
+
+### Risks
+
+Documentation is close to human-revision-friendly, but the command-line
+workflow can still expose Python terms and script names without enough plain
+language context at the point of use.
+
+Documentation can drift from the executable source of truth. Treat these files
+as authoritative for behavior:
+
+```text
+schemas/base/lesson_schema.yaml
+scripts/canonical/07_schema_validator.py
+scripts/canonical/08_index_builder.py
+scripts/run_pipeline.py
+```
+
+### Recommendations
+
+Add one short "daily operator path" to the README or PROCESS document:
+
+1. confirm Drive source PDFs
+2. run the pipeline command
+3. read the audit and quality summaries
+4. review drafts
+5. promote only reviewed lessons
+6. run validation and index generation
+
+For every script intended for maintainers, keep the opening comments and CLI
+help understandable without Python knowledge.
+
+### Confidence Level
+
+High.
+
+The documentation set was reviewed against current scripts and artifacts.
+
+## 8. Test and CI Validation
+
+### Findings
+
+Local regression tests pass:
+
+```text
+Ran 18 tests
+OK
+```
+
+The tests cover important safety behavior such as placeholder blocking and
+pipeline components.
+
+### Risks
+
+There is no GitHub CI gate yet. A local passing test suite is useful, but it
+does not automatically protect the remote repository.
+
+Current coverage should be expanded for:
+
+- summary/application extraction
+- missing section reporting
+- OCR quality status handling
+- index determinism after canonical pilot promotion
+- Drive validation behavior, where feasible with mocked source metadata
+
+### Recommendations
+
+Add GitHub Actions with at least:
+
+```text
+python -m unittest discover -s tests
+python scripts\canonical\07_schema_validator.py
+python scripts\canonical\08_index_builder.py
+```
+
+The index builder command should be expected to stop cleanly when no canonical
+lessons exist, and to produce deterministic output when reviewed canonical
+fixtures are present.
+
+### Confidence Level
+
+High for local test status. Medium-High for CI readiness because CI has not yet
+been implemented.
 
 ## Final Validation Matrix
 
 | Validation Area | Status | Risk | Confidence |
 | --- | --- | --- | --- |
 | Architecture | Warning | Medium | High |
-| Structure | Warning | Medium | High |
-| Indexing | Fail | High | High |
-| OCR | Warning | High | Medium-High |
-| Documentation | Warning | Medium | High |
+| Google Drive Source Sync | Pass | Low | High |
+| Ingestion Artifacts | Warning | Medium | High |
+| Structure and Segmentation | Warning | Medium | High |
+| Automated Section Extraction | Warning | High | High |
+| OCR and Text Quality | Fail | High | Medium-High |
+| Canonical Review Readiness | Fail | High | High |
+| Indexing and Retrieval | Fail | High | High |
+| Documentation and Human Revision | Warning | Medium | High |
+| Tests | Warning | Medium | High |
+| CI and Remote Quality Gates | Fail | High | Medium-High |
+
+## Matrix Recommendation
+
+Yes. The validation matrix should include more items than the original five.
+The previous matrix grouped too much risk under broad labels, which made the
+repository look closer to production-ready than it is.
+
+Add and keep these matrix areas:
+
+- **Google Drive Source Sync**: verifies the repository is using the expected
+  source PDFs.
+- **Ingestion Artifacts**: confirms raw text, logs, normalized text, and quality
+  reports exist for every source.
+- **Automated Section Extraction**: tracks whether drafts contain enough real
+  lesson content to reduce human review effort.
+- **Canonical Review Readiness**: separates "drafts exist" from "reviewed
+  canonical records exist."
+- **Tests**: shows whether local regression protection is healthy.
+- **CI and Remote Quality Gates**: shows whether GitHub blocks unsafe changes.
+
+Also split **OCR** from **Structure**. Structure can be good while OCR remains a
+canonical blocker, and the current repository demonstrates exactly that.
 
 ## Final Verdict
 
 Answer: **PARTIALLY**
 
-The repository is partially production-ready after the canonical safety changes.
-It is safe enough to continue development because generated placeholder data is
-no longer treated as canonical or indexed. It is not ready for production
-retrieval or canonical archival use because there are no reviewed canonical
-lesson YAML files, no official indexes, unresolved OCR/layout issues, and no
-real section or scripture extraction yet.
+The repository is safe enough to continue development and structured pipeline
+improvement. It is not ready for canonical archive production, official
+retrieval indexes, or search-facing use.
+
+The key improvement since the earlier validation is that automated extraction
+now exists. The key blocker is that extraction is incomplete and unreviewed, OCR
+quality still blocks at least one source volume, and no lesson has been promoted
+to reviewed canonical YAML.
 
 ## Improvement Roadmap
 
@@ -552,93 +624,94 @@ Completed work:
 
 Status: Completed for current source layouts.
 
-Tasks:
+Completed work:
 
 - Dynamic contents-page detection is implemented.
 - Detected `Contenido` page is recorded in structure JSON.
-- Additional regression tests for shifted front matter remain useful.
+- Both current source volumes segment into 26 lessons.
 
-Exit criteria:
+Remaining work:
 
-- `Contenido` entries are detected from source markers, not fixed page
-  assumptions.
-- Segment metadata remains stable when front matter shifts.
+- Add regression tests for shifted front matter and alternate contents layouts.
 
 ### Stage 3: Section Extraction
 
 Status: In progress.
 
-Tasks:
+Completed work:
 
-- Extract automated-unreviewed section blocks from normalized text.
-- Populate draft YAML with biblical reading, outline, teacher notes, and
-  summary/application content when deterministic labels are found.
-- Preserve page and line spans for each section.
+- Automated-unreviewed section metadata is generated.
+- Biblical reading, outline, and teacher notes extraction works for most
+  lessons.
+- Source traceability is preserved for extracted sections.
 
-Exit criteria:
+Remaining work:
 
-- Draft YAML reduces `TBD` usage for core lesson sections.
-- Extracted sections can be traced to normalized source line ranges.
-- Human revision is still required before canonical promotion.
+- Improve `summary_application` extraction, currently 0 of 52 lessons.
+- Fix volume 46 lesson 22 missing biblical reading and outline extraction.
+- Produce a reviewer-friendly missing-section report.
 
 ### Stage 4: Scripture Normalization
 
-Status: Pending.
+Status: In progress.
 
-Tasks:
+Completed work:
 
-- Parse Spanish scripture references.
-- Normalize book names, chapter numbers, verse ranges, and multi-reference
-  strings.
-- Populate `canonical_references`.
+- Spanish scripture reference parsing exists.
+- Draft generation can populate parsed reference metadata when deterministic
+  extraction succeeds.
 
-Exit criteria:
+Remaining work:
 
-- Draft validation no longer fails on `chapter: 0`.
-- Scripture index can be generated from reviewed canonical YAML.
+- Expand coverage for malformed references and multi-reference strings.
+- Add clearer reporting for references that require human review.
+- Verify normalized references during pilot canonical promotion.
 
 ### Stage 5: OCR Quality Gate
 
 Status: In progress.
 
-Tasks:
+Completed work:
 
-- Add OCR quality reports.
-- Flag zero-text and low-text pages.
-- Detect malformed references and layout artifacts.
-- Keep OCR fallback gated for scanned, empty, or low-quality pages.
+- OCR quality reports exist.
+- Zero-text, low-word-count, malformed-reference, repeated-header/footer, and
+  OCR fallback conditions are reported.
 
-Exit criteria:
+Remaining work:
 
-- Each PDF has a quality report.
-- Low-quality extraction blocks cannot silently become canonical.
+- Resolve or explicitly waive volume 45 `BLOCKED` quality status.
+- Reduce repeated-header/footer noise.
+- Add reviewer-friendly quality summaries.
+- Block canonical promotion for `BLOCKED` source volumes.
 
 ### Stage 6: Promotion Workflow
 
-Status: Pending.
+Status: Documented, not yet exercised.
 
-Tasks:
+Completed work:
 
-- Add a human review checklist.
-- Define draft-to-canonical promotion criteria.
-- Document who can review, what must be checked, and what validation must pass.
+- Human review checklist exists.
+- Draft-to-canonical promotion criteria are documented.
+- Production-ready YAML expectations are documented.
 
-Exit criteria:
+Remaining work:
 
-- A draft lesson can be promoted into `archive/lessons` with clear evidence.
-- Official indexes can be generated from reviewed canonical YAML.
+- Promote a small reviewed pilot set into `archive/lessons`.
+- Run canonical validation on the pilot.
+- Generate official indexes from the pilot.
+- Document lessons learned from the first promotion.
 
 ### Stage 7: CI and Orchestration
 
-Status: Pending.
+Status: Partially complete.
 
-Tasks:
+Completed work:
 
-- Add a top-level pipeline runner.
-- Add CI checks for validation, placeholder blocking, and index determinism.
-- Add regression tests for the current PDF.
+- A top-level pipeline runner exists.
+- Local tests pass.
 
-Exit criteria:
+Remaining work:
 
-- One command can run the pipeline safely.
-- CI blocks invalid canonical records and stale indexes.
+- Add GitHub Actions CI.
+- Run tests, canonical validation, and index safety checks in CI.
+- Add deterministic index fixture tests once pilot canonical YAML exists.
