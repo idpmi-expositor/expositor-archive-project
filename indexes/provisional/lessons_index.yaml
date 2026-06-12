@@ -1,0 +1,579 @@
+---
+schema_version: 1.0.0
+index_scope: automated_unreviewed_draft
+lessons:
+- lesson_id: LES-2024-C1-001
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 1
+  title: La fe que transforma la conducta y pensamientos del creyente
+  biblical_reading:
+    reference_display: Santiago 2:14-24
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-002
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 2
+  title: ¿Por qué surgen problemas en algunas iglesias?
+  biblical_reading:
+    reference_display: I Corintios 3:10-19
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-003
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 3
+  title: La vida cristiana incluye libertad y disciplina
+  biblical_reading:
+    reference_display: 1 Crónica 21:1, 7-13
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-004
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 4
+  title: La buena reputación de la Iglesia se refleja en la vida del creyente
+  biblical_reading:
+    reference_display: Tito 1:1-9; Romanos 1:8
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-005
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 5
+  title: La manera recta de vivir en la Iglesia
+  biblical_reading:
+    reference_display: Tito 2:1-15
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-006
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 6
+  title: La manera recta de vivir en la sociedad
+  biblical_reading:
+    reference_display: Tito 3:1-11
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-007
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 7
+  title: ¿Quiénes deben de pagar los impuestos?
+  biblical_reading:
+    reference_display: Éxodo 30:14-15; Mateo 17:24-27; 22:17, 19-21
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-008
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 8
+  title: La esperanza para enfrentar los riesgos y oportunidades de la vida
+  biblical_reading:
+    reference_display: Eclesiastés 11:1-6, 8-10
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-009
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 9
+  title: Introducción y aspectos contextuales de la carta
+  biblical_reading:
+    reference_display: Hechos 15:36-40; 16:1, 9-10
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-010
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 10
+  title: ¡El vivir es Cristo, y el morir es ganancia!
+  biblical_reading:
+    reference_display: Filipenses 1:1-2, 12-15; 18-20
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-011
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 11
+  title: ¡Cristo, Mesías crucificado y exaltado!
+  biblical_reading:
+    reference_display: Filipenses 2:1-9
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-012
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 12
+  title: Timoteo y Epafrodito, ejemplos de servicio
+  biblical_reading:
+    reference_display: Filipenses 2:12-20
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-013
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 13
+  title: Los creyentes son ciudadanos del cielo
+  biblical_reading:
+    reference_display: Filipenses 3:1-8
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-014
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 14
+  title: Abraham y su experiencia de duelo al morir su esposa Sara
+  biblical_reading:
+    reference_display: Génesis 23:1-6, 14-18
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-015
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 15
+  title: El duelo causado a un padre mediante engaño en una familia disfuncional
+  biblical_reading:
+    reference_display: Génesis 37:23-24, 26, 28, 31-35
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-016
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 16
+  title: El duelo y estrategia de Tamar para lograr el cumplimiento del levirato
+  biblical_reading:
+    reference_display: 'Génesis 38: 11, 14-19'
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-017
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 17
+  title: El duelo y sepultura de Jacob efectuado por su hijo José
+  biblical_reading:
+    reference_display: Marcos 7:1-9
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-018
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 18
+  title: 'El duelo por la muerte del primer sacerdote de Israel: Aarón'
+  biblical_reading:
+    reference_display: Éxodo 28:2; Números 20:22-29
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-019
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 19
+  title: El duelo por la muerte del caudillo y libertador de Israel
+  biblical_reading:
+    reference_display: Deuteronomio 34:4-11
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-020
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 20
+  title: Suicidio, duelo y cremación de Saúl y sus hijos
+  biblical_reading:
+    reference_display: 1 Samuel 31:2-5, 8, 10-12
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-021
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 21
+  title: El duelo, luto y llanto ante la muerte de Lázaro
+  biblical_reading:
+    reference_display: Juan 11:17, 19-20, 30-37, 40-41
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-022
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 22
+  title: El Evangelio es Poder de Dios
+  biblical_reading:
+    reference_display: Romanos 1:1-7, 16-17
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-023
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 23
+  title: La humanidad es culpable
+  biblical_reading:
+    reference_display: 1Romanos 1:18-25
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-024
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 24
+  title: Dios es justo
+  biblical_reading:
+    reference_display: Romanos 2:1-3, 12-16
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-025
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 25
+  title: Fidelidad y justicia divina
+  biblical_reading:
+    reference_display: Romanos 3:21-28
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-026
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 26
+  title: La justificación, la prueba del amor de Dios
+  biblical_reading:
+    reference_display: Romanos 5:1-11
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-001
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 1
+  title: El fruto producido en la canción de la viña
+  biblical_reading:
+    reference_display: Isaías 5:1-7; Jeremías 2:21
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-002
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 2
+  title: Metodología utilizada por el Sembrador Sabio
+  biblical_reading:
+    reference_display: Isaías 28:23-29; Amós 1:2-3
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-003
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 3
+  title: El simbolismo de la parábola de las dos águilas y la vid
+  biblical_reading:
+    reference_display: Ezequiel 17:1-10
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-004
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 4
+  title: Mejor es la sabiduría que la fuerza
+  biblical_reading:
+    reference_display: Tito 1:1-9; Romanos 1:8
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-005
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 5
+  title: 'Dos hermanas rameras: Ahola y Aholiba'
+  biblical_reading:
+    reference_display: Ezequiel 23:1-7; 14-16
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-006
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 6
+  title: La reacción de un prestamista frente a sus dos deudores
+  biblical_reading:
+    reference_display: Mateo 18:23-33
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-007
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 7
+  title: Buscando a la oveja perdida
+  biblical_reading:
+    reference_display: Lucas 15:1-7; Juan 10:11-12, 14-15
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-008
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 8
+  title: El sembrador que salió a volear la semilla en un gran terreno
+  biblical_reading:
+    reference_display: Lucas 8:5-9, 11-15
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-009
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 9
+  title: Importancia de hallar a la moneda perdida
+  biblical_reading:
+    reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-010
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 10
+  title: La conducta del mayordomo infiel
+  biblical_reading:
+    reference_display: Lucas 16:1-8, 11-12
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-011
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 11
+  title: Invasión de la cizaña en un campo sembrado de semillas
+  biblical_reading:
+    reference_display: Mateo 13:9-11, 24-30
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-012
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 12
+  title: Contratando obreros en horarios diferentes con igual salario
+  biblical_reading:
+    reference_display: Mateo 20:1-11
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-013
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 13
+  title: El reino de los cielos y la red del pescador durante la pesca
+  biblical_reading:
+    reference_display: Mateo 13:34-35; 47-48, 50-54, 58
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-014
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 14
+  title: La enseñanza de los milagros
+  biblical_reading:
+    reference_display: Lucas 4:14-21
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-015
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 15
+  title: La tentación de Jesús
+  biblical_reading:
+    reference_display: Mateo 4:1-11
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-016
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 16
+  title: La voz del cielo
+  biblical_reading:
+    reference_display: Marcos 1:4-11
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-017
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 17
+  title: Un milagro de omnisciencia
+  biblical_reading:
+    reference_display: Juan 1:47-51
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-018
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 18
+  title: La extraordinaria misión de Jesús
+  biblical_reading:
+    reference_display: Lucas 4:16-22
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-019
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 19
+  title: El poder del nombre de Jesús
+  biblical_reading:
+    reference_display: Juan 18:1-11
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-020
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 20
+  title: El poder sobrenatural de Jesús
+  biblical_reading:
+    reference_display: Marcos 6:46-51
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-021
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 21
+  title: Los ciegos ven, el sordo oye
+  biblical_reading:
+    reference_display: Marcos 1:21-28
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-022
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 22
+  title: El poder de Jesús sobre los demonios
+  biblical_reading:
+    reference_display: TBD
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-023
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 23
+  title: Jesús, Señor del sábado
+  biblical_reading:
+    reference_display: Lucas 6:1-2, 5-10; 14:1-3
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-024
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 24
+  title: Jesús contra el reino de las tinieblas
+  biblical_reading:
+    reference_display: Mateo 12:22-31
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-025
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 25
+  title: Jesús sana
+  biblical_reading:
+    reference_display: Mateo 14:34-36; Lucas 6:17-19
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+- lesson_id: LES-2024-C1-026
+  publication_id: expositor-guia-maestro-volumen-46
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 26
+  title: El milagro de la Resurrección
+  biblical_reading:
+    reference_display: Juan 20:1-9, 30-31
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+source_archive: archive\drafts
+warning: This index was built from unreviewed draft YAML. Do not use it as canonical
+  archive truth.

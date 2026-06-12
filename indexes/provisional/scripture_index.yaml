@@ -1,0 +1,826 @@
+---
+schema_version: 1.0.0
+index_scope: automated_unreviewed_draft
+scripture_references:
+- lesson_id: LES-2024-C1-001
+  reference_display: Santiago 2:14-24
+  canonical_reference:
+    testament: new
+    book_standardized: James
+    chapter: 2
+    verse_start: 14
+    verse_end: 24
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-002
+  reference_display: I Corintios 3:10-19
+  canonical_reference:
+    testament: new
+    book_standardized: 1 Corinthians
+    chapter: 3
+    verse_start: 10
+    verse_end: 19
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-003
+  reference_display: 1 Crónica 21:1, 7-13
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-004
+  reference_display: Tito 1:1-9; Romanos 1:8
+  canonical_reference:
+    testament: new
+    book_standardized: Titus
+    chapter: 1
+    verse_start: 1
+    verse_end: 9
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-004
+  reference_display: Tito 1:1-9; Romanos 1:8
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 1
+    verse_start: 8
+    verse_end: 8
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-005
+  reference_display: Tito 2:1-15
+  canonical_reference:
+    testament: new
+    book_standardized: Titus
+    chapter: 2
+    verse_start: 1
+    verse_end: 15
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-006
+  reference_display: Tito 3:1-11
+  canonical_reference:
+    testament: new
+    book_standardized: Titus
+    chapter: 3
+    verse_start: 1
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: Éxodo 30:14-15; Mateo 17:24-27; 22:17, 19-21
+  canonical_reference:
+    testament: old
+    book_standardized: Exodus
+    chapter: 30
+    verse_start: 14
+    verse_end: 15
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: Éxodo 30:14-15; Mateo 17:24-27; 22:17, 19-21
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 17
+    verse_start: 24
+    verse_end: 27
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: Éxodo 30:14-15; Mateo 17:24-27; 22:17, 19-21
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 22
+    verse_start: 17
+    verse_end: 17
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: Éxodo 30:14-15; Mateo 17:24-27; 22:17, 19-21
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 22
+    verse_start: 19
+    verse_end: 21
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-008
+  reference_display: Eclesiastés 11:1-6, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Ecclesiastes
+    chapter: 11
+    verse_start: 1
+    verse_end: 6
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-008
+  reference_display: Eclesiastés 11:1-6, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Ecclesiastes
+    chapter: 11
+    verse_start: 8
+    verse_end: 10
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Hechos 15:36-40; 16:1, 9-10
+  canonical_reference:
+    testament: new
+    book_standardized: Acts
+    chapter: 15
+    verse_start: 36
+    verse_end: 40
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Hechos 15:36-40; 16:1, 9-10
+  canonical_reference:
+    testament: new
+    book_standardized: Acts
+    chapter: 16
+    verse_start: 1
+    verse_end: 1
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Hechos 15:36-40; 16:1, 9-10
+  canonical_reference:
+    testament: new
+    book_standardized: Acts
+    chapter: 16
+    verse_start: 9
+    verse_end: 10
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-010
+  reference_display: Filipenses 1:1-2, 12-15; 18-20
+  canonical_reference:
+    testament: new
+    book_standardized: Philippians
+    chapter: 1
+    verse_start: 1
+    verse_end: 2
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-010
+  reference_display: Filipenses 1:1-2, 12-15; 18-20
+  canonical_reference:
+    testament: new
+    book_standardized: Philippians
+    chapter: 1
+    verse_start: 12
+    verse_end: 15
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-011
+  reference_display: Filipenses 2:1-9
+  canonical_reference:
+    testament: new
+    book_standardized: Philippians
+    chapter: 2
+    verse_start: 1
+    verse_end: 9
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-012
+  reference_display: Filipenses 2:12-20
+  canonical_reference:
+    testament: new
+    book_standardized: Philippians
+    chapter: 2
+    verse_start: 12
+    verse_end: 20
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-013
+  reference_display: Filipenses 3:1-8
+  canonical_reference:
+    testament: new
+    book_standardized: Philippians
+    chapter: 3
+    verse_start: 1
+    verse_end: 8
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-014
+  reference_display: Génesis 23:1-6, 14-18
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 23
+    verse_start: 1
+    verse_end: 6
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-014
+  reference_display: Génesis 23:1-6, 14-18
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 23
+    verse_start: 14
+    verse_end: 18
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-015
+  reference_display: Génesis 37:23-24, 26, 28, 31-35
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 37
+    verse_start: 23
+    verse_end: 24
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-015
+  reference_display: Génesis 37:23-24, 26, 28, 31-35
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 37
+    verse_start: 26
+    verse_end: 26
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-015
+  reference_display: Génesis 37:23-24, 26, 28, 31-35
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 37
+    verse_start: 28
+    verse_end: 28
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-015
+  reference_display: Génesis 37:23-24, 26, 28, 31-35
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 37
+    verse_start: 31
+    verse_end: 35
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-016
+  reference_display: 'Génesis 38: 11, 14-19'
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-017
+  reference_display: Marcos 7:1-9
+  canonical_reference:
+    testament: new
+    book_standardized: Mark
+    chapter: 7
+    verse_start: 1
+    verse_end: 9
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-018
+  reference_display: Éxodo 28:2; Números 20:22-29
+  canonical_reference:
+    testament: old
+    book_standardized: Exodus
+    chapter: 28
+    verse_start: 2
+    verse_end: 2
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-018
+  reference_display: Éxodo 28:2; Números 20:22-29
+  canonical_reference:
+    testament: old
+    book_standardized: Numbers
+    chapter: 20
+    verse_start: 22
+    verse_end: 29
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-019
+  reference_display: Deuteronomio 34:4-11
+  canonical_reference:
+    testament: old
+    book_standardized: Deuteronomy
+    chapter: 34
+    verse_start: 4
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-020
+  reference_display: 1 Samuel 31:2-5, 8, 10-12
+  canonical_reference:
+    testament: old
+    book_standardized: 1 Samuel
+    chapter: 31
+    verse_start: 2
+    verse_end: 5
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-020
+  reference_display: 1 Samuel 31:2-5, 8, 10-12
+  canonical_reference:
+    testament: old
+    book_standardized: 1 Samuel
+    chapter: 31
+    verse_start: 8
+    verse_end: 8
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-020
+  reference_display: 1 Samuel 31:2-5, 8, 10-12
+  canonical_reference:
+    testament: old
+    book_standardized: 1 Samuel
+    chapter: 31
+    verse_start: 10
+    verse_end: 12
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-021
+  reference_display: Juan 11:17, 19-20, 30-37, 40-41
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 11
+    verse_start: 17
+    verse_end: 17
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-021
+  reference_display: Juan 11:17, 19-20, 30-37, 40-41
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 11
+    verse_start: 19
+    verse_end: 20
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-021
+  reference_display: Juan 11:17, 19-20, 30-37, 40-41
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 11
+    verse_start: 30
+    verse_end: 37
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-021
+  reference_display: Juan 11:17, 19-20, 30-37, 40-41
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 11
+    verse_start: 40
+    verse_end: 41
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-022
+  reference_display: Romanos 1:1-7, 16-17
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 1
+    verse_start: 1
+    verse_end: 7
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-022
+  reference_display: Romanos 1:1-7, 16-17
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 1
+    verse_start: 16
+    verse_end: 17
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-023
+  reference_display: 1Romanos 1:18-25
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-024
+  reference_display: Romanos 2:1-3, 12-16
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 2
+    verse_start: 1
+    verse_end: 3
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-024
+  reference_display: Romanos 2:1-3, 12-16
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 2
+    verse_start: 12
+    verse_end: 16
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-025
+  reference_display: Romanos 3:21-28
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 3
+    verse_start: 21
+    verse_end: 28
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-026
+  reference_display: Romanos 5:1-11
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 5
+    verse_start: 1
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-001
+  reference_display: Isaías 5:1-7; Jeremías 2:21
+  canonical_reference:
+    testament: old
+    book_standardized: Isaiah
+    chapter: 5
+    verse_start: 1
+    verse_end: 7
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-001
+  reference_display: Isaías 5:1-7; Jeremías 2:21
+  canonical_reference:
+    testament: old
+    book_standardized: Jeremiah
+    chapter: 2
+    verse_start: 21
+    verse_end: 21
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-002
+  reference_display: Isaías 28:23-29; Amós 1:2-3
+  canonical_reference:
+    testament: old
+    book_standardized: Isaiah
+    chapter: 28
+    verse_start: 23
+    verse_end: 29
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-002
+  reference_display: Isaías 28:23-29; Amós 1:2-3
+  canonical_reference:
+    testament: old
+    book_standardized: Amos
+    chapter: 1
+    verse_start: 2
+    verse_end: 3
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-003
+  reference_display: Ezequiel 17:1-10
+  canonical_reference:
+    testament: old
+    book_standardized: Ezekiel
+    chapter: 17
+    verse_start: 1
+    verse_end: 10
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-004
+  reference_display: Tito 1:1-9; Romanos 1:8
+  canonical_reference:
+    testament: new
+    book_standardized: Titus
+    chapter: 1
+    verse_start: 1
+    verse_end: 9
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-004
+  reference_display: Tito 1:1-9; Romanos 1:8
+  canonical_reference:
+    testament: new
+    book_standardized: Romans
+    chapter: 1
+    verse_start: 8
+    verse_end: 8
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-005
+  reference_display: Ezequiel 23:1-7; 14-16
+  canonical_reference:
+    testament: old
+    book_standardized: Ezekiel
+    chapter: 23
+    verse_start: 1
+    verse_end: 7
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-006
+  reference_display: Mateo 18:23-33
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 18
+    verse_start: 23
+    verse_end: 33
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: Lucas 15:1-7; Juan 10:11-12, 14-15
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 15
+    verse_start: 1
+    verse_end: 7
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: Lucas 15:1-7; Juan 10:11-12, 14-15
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 10
+    verse_start: 11
+    verse_end: 12
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-007
+  reference_display: Lucas 15:1-7; Juan 10:11-12, 14-15
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 10
+    verse_start: 14
+    verse_end: 15
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-008
+  reference_display: Lucas 8:5-9, 11-15
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 8
+    verse_start: 5
+    verse_end: 9
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-008
+  reference_display: Lucas 8:5-9, 11-15
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 8
+    verse_start: 11
+    verse_end: 15
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 24
+    verse_start: 53
+    verse_end: 53
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 24
+    verse_start: 58
+    verse_end: 58
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 29
+    verse_start: 18
+    verse_end: 19
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 29
+    verse_start: 21
+    verse_end: 21
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 29
+    verse_start: 23
+    verse_end: 23
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: old
+    book_standardized: Genesis
+    chapter: 29
+    verse_start: 26
+    verse_end: 27
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 15
+    verse_start: 3
+    verse_end: 3
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-009
+  reference_display: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 15
+    verse_start: 8
+    verse_end: 10
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-010
+  reference_display: Lucas 16:1-8, 11-12
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 16
+    verse_start: 1
+    verse_end: 8
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-010
+  reference_display: Lucas 16:1-8, 11-12
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 16
+    verse_start: 11
+    verse_end: 12
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-011
+  reference_display: Mateo 13:9-11, 24-30
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 13
+    verse_start: 9
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-011
+  reference_display: Mateo 13:9-11, 24-30
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 13
+    verse_start: 24
+    verse_end: 30
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-012
+  reference_display: Mateo 20:1-11
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 20
+    verse_start: 1
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-013
+  reference_display: Mateo 13:34-35; 47-48, 50-54, 58
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 13
+    verse_start: 34
+    verse_end: 35
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-014
+  reference_display: Lucas 4:14-21
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 4
+    verse_start: 14
+    verse_end: 21
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-015
+  reference_display: Mateo 4:1-11
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 4
+    verse_start: 1
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-016
+  reference_display: Marcos 1:4-11
+  canonical_reference:
+    testament: new
+    book_standardized: Mark
+    chapter: 1
+    verse_start: 4
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-017
+  reference_display: Juan 1:47-51
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 1
+    verse_start: 47
+    verse_end: 51
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-018
+  reference_display: Lucas 4:16-22
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 4
+    verse_start: 16
+    verse_end: 22
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-019
+  reference_display: Juan 18:1-11
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 18
+    verse_start: 1
+    verse_end: 11
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-020
+  reference_display: Marcos 6:46-51
+  canonical_reference:
+    testament: new
+    book_standardized: Mark
+    chapter: 6
+    verse_start: 46
+    verse_end: 51
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-021
+  reference_display: Marcos 1:21-28
+  canonical_reference:
+    testament: new
+    book_standardized: Mark
+    chapter: 1
+    verse_start: 21
+    verse_end: 28
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-022
+  reference_display: TBD
+  canonical_reference:
+    testament: TBD
+    book_standardized: TBD
+    chapter: 0
+    verse_start: 0
+    verse_end: 0
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-023
+  reference_display: Lucas 6:1-2, 5-10; 14:1-3
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 6
+    verse_start: 1
+    verse_end: 2
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-023
+  reference_display: Lucas 6:1-2, 5-10; 14:1-3
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 6
+    verse_start: 5
+    verse_end: 10
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-023
+  reference_display: Lucas 6:1-2, 5-10; 14:1-3
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 14
+    verse_start: 1
+    verse_end: 3
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-024
+  reference_display: Mateo 12:22-31
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 12
+    verse_start: 22
+    verse_end: 31
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-025
+  reference_display: Mateo 14:34-36; Lucas 6:17-19
+  canonical_reference:
+    testament: new
+    book_standardized: Matthew
+    chapter: 14
+    verse_start: 34
+    verse_end: 36
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-025
+  reference_display: Mateo 14:34-36; Lucas 6:17-19
+  canonical_reference:
+    testament: new
+    book_standardized: Luke
+    chapter: 6
+    verse_start: 17
+    verse_end: 19
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-026
+  reference_display: Juan 20:1-9, 30-31
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 20
+    verse_start: 1
+    verse_end: 9
+  replacement_provider: api.bible
+- lesson_id: LES-2024-C1-026
+  reference_display: Juan 20:1-9, 30-31
+  canonical_reference:
+    testament: new
+    book_standardized: John
+    chapter: 20
+    verse_start: 30
+    verse_end: 31
+  replacement_provider: api.bible
+source_archive: archive\drafts
+warning: This index was built from unreviewed draft YAML. Do not use it as canonical
+  archive truth.

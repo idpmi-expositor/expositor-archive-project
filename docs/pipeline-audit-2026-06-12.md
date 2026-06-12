@@ -4,77 +4,92 @@ Audit date: 2026-06-12
 
 ## Scope
 
-This audit checked the Google Drive source PDFs, ran the current Python pipeline
-from existing raw text artifacts, collected errors and warnings, and identifies
-the next recommended improvements.
+This audit performed the requested no-human-review pipeline run:
+
+1. Confirm Google Drive source PDFs.
+2. Clear the Google Drive `outputs` folder.
+3. Run the repository pipeline from verified source inputs through draft YAML.
+4. Run tests, canonical validation, official index generation, and provisional
+   draft index generation.
+5. Record errors, warnings, gaps, and recommended next actions.
+
+Important policy note: this run intentionally did **not** complete human review.
+Generated YAML remains draft/unreviewed unless a person promotes it into
+`archive/lessons`.
 
 ## Commands Run
 
-Google Drive source listing:
+Google Drive `outputs` listing before cleanup:
 
 ```text
-rclone --config rclone/rclone.conf lsjson gdrive: --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7 --files-only
+C:\Tools\rclone\rclone.exe --config rclone\rclone.conf lsf "gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:outputs" --recursive
 ```
 
-Source PDF sync validation:
+Google Drive `outputs` cleanup:
 
 ```text
-python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config rclone/rclone.conf --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7
+C:\Tools\rclone\rclone.exe --config rclone\rclone.conf delete "gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:outputs"
+C:\Tools\rclone\rclone.exe --config rclone\rclone.conf rmdirs "gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:outputs" --leave-root
+C:\Tools\rclone\rclone.exe --config rclone\rclone.conf lsf "gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:outputs" --recursive
 ```
 
-Pipeline regeneration from existing raw text:
+Pipeline run:
 
 ```text
-python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+python scripts\run_pipeline.py --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7 --rclone-config rclone\rclone.conf --skip-raw-extraction
 ```
 
-Validation and checks:
+Validation and indexing:
 
 ```text
 python -m unittest discover -s tests
-python scripts/canonical/07_schema_validator.py
-python scripts/canonical/08_index_builder.py
-python scripts/ingestion/00_rename_source_pdfs.py
+python scripts\canonical\07_schema_validator.py
+python scripts\canonical\08_index_builder.py
+python scripts\canonical\08_index_builder.py archive\drafts --output-dir indexes\provisional --allow-unreviewed
 ```
+
+Raw extraction was skipped because existing raw text artifacts are already
+present and the extractor is designed not to overwrite them during a normal
+pipeline run. The source PDFs were still validated against Google Drive before
+downstream regeneration.
 
 ## Google Drive Source PDF Check
 
-Google Drive is reachable through the project-local rclone config:
-
-```text
-rclone/rclone.conf
-remote: gdrive:
-```
-
-Drive folder checked:
+Drive source PDF folder:
 
 ```text
 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7
 ```
 
-Drive source PDFs found:
-
-| File | Size | Drive ID |
-| --- | ---: | --- |
-| `expositor-guia-maestro-volumen-45.pdf` | 8,314,666 | `14V88TBMETcPeX5PaXz-uz25lRczqfmI7` |
-| `expositor-guia-maestro-volumen-46.pdf` | 5,699,052 | `1lb6vIOz4SfJFyh_ZK9g-LCMobknOBvbf` |
-
-Source validation result:
+Validation result:
 
 ```text
 Source PDF sync validation passed for 2 PDF file(s).
 ```
 
+Source PDFs:
+
+| File | Local Status |
+| --- | --- |
+| `expositor-guia-maestro-volumen-45.pdf` | present and matched |
+| `expositor-guia-maestro-volumen-46.pdf` | present and matched |
+
+## Google Drive Outputs Cleanup
+
+The Google Drive `outputs` folder under Drive root
+`18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n` was listed before cleanup. It contained old
+generated outputs, including normalized text, OCR artifacts, metadata, indexes,
+draft YAML, and legacy `archive/lessons` YAML.
+
+The folder contents were deleted and empty directories were removed while
+leaving the `outputs` root folder in place.
+
+Verification command after cleanup returned no files.
+
 ## Pipeline Result
 
-The pipeline completed successfully from existing raw extraction artifacts
-through draft YAML regeneration.
-
-Raw extraction was intentionally skipped because
-`scripts/ingestion/02_pdf_to_raw_text.py` refuses to overwrite existing raw text
-artifacts. This is correct archive behavior. To rerun extraction, move or
-archive existing `ocr/raw_txt/*.txt` first or run the extractor into a separate
-output folder.
+The downstream pipeline completed successfully from verified source PDFs and
+existing raw text artifacts through regenerated draft YAML.
 
 Pipeline output summary:
 
@@ -89,10 +104,11 @@ Pipeline output summary:
 | Lesson segment JSON files | 2 |
 | Lesson section JSON files | 2 |
 | Draft YAML files | 52 |
-| Canonical YAML files | 0 |
-| Index YAML files | 0 |
+| Reviewed canonical YAML files | 0 |
+| Official index YAML files | 0 |
+| Provisional draft index YAML files | 2 |
 
-## Test And Validation Result
+## Test, Validation, And Index Result
 
 Unit tests:
 
@@ -104,18 +120,29 @@ OK
 Canonical validation:
 
 ```text
-No lesson YAML files found under archive/lessons
+No lesson YAML files found under C:\Repos\expositor-archive-project\archive\lessons
 ```
 
-Index builder:
+Official index builder:
 
 ```text
-No canonical lesson YAML files found under archive/lessons
+No canonical lesson YAML files found under C:\Repos\expositor-archive-project\archive\lessons
 Index generation stopped because there is no canonical data.
 ```
 
-This is expected because the project currently has automated-unreviewed drafts
-only. No lesson has been promoted into `archive/lessons`.
+Provisional draft index builder:
+
+```text
+WARNING: building a provisional index from unreviewed draft YAML. This output is not canonical archive truth.
+Indexed 52 lesson YAML file(s).
+```
+
+Provisional index outputs:
+
+| File | Scope | Entries |
+| --- | --- | ---: |
+| `indexes/provisional/lessons_index.yaml` | `automated_unreviewed_draft` | 52 lessons |
+| `indexes/provisional/scripture_index.yaml` | `automated_unreviewed_draft` | 91 scripture references |
 
 ## OCR And Extraction Quality Findings
 
@@ -144,28 +171,26 @@ repeated_header_footer=177
 
 Key interpretation:
 
-- Volume 45 is blocked because page 1 has zero text / needs human review.
-- Volume 45 also used OCR fallback on page 223.
-- Both volumes have widespread repeated header/footer warnings.
+- Volume 45 remains blocked because page 1 has zero text / needs human review.
+- Volume 45 used OCR fallback on page 223.
+- Both volumes still have widespread repeated header/footer warnings.
 - Both volumes still have malformed scripture-reference warnings.
-- Draft generation can continue, but canonical promotion must not proceed until
-  these quality concerns are resolved or explicitly reviewed.
+- Draft generation can continue, but canonical promotion should remain blocked
+  until these quality concerns are resolved or explicitly reviewed.
 
 ## Structure And Segmentation Findings
 
-| Publication | Segments | Status | Content entries | Selected content page | Warning |
-| --- | ---: | --- | ---: | ---: | --- |
-| `expositor-guia-maestro-volumen-45` | 26 | `warning` | 26 | 5 | `DUPLICATE_OBSERVED_LESSON_HEADERS` |
-| `expositor-guia-maestro-volumen-46` | 26 | `warning` | 26 | 4 | `DUPLICATE_OBSERVED_LESSON_HEADERS` |
+| Publication | Segments | Result |
+| --- | ---: | --- |
+| `expositor-guia-maestro-volumen-45` | 26 | completed |
+| `expositor-guia-maestro-volumen-46` | 26 | completed |
 
 Interpretation:
 
 - Lesson count is correct for both publications.
-- Dynamic `Contenido` detection worked, selecting page 5 for volume 45 and page
-  4 for volume 46.
-- Duplicate observed lesson headers remain a review warning. This likely comes
-  from repeated lesson labels in running headers or page layout, not necessarily
-  a segmentation failure.
+- Segmentation produced 52 total lesson draft inputs.
+- Repeated lesson headers remain a known layout warning in the broader quality
+  audit, but they did not prevent segmentation.
 
 ## Automated Section Extraction Coverage
 
@@ -180,172 +205,73 @@ Critical gaps:
 - Volume 46 lesson 22 is missing automated `biblical_reading` and
   `lesson_outline`.
 - All 52 generated YAML drafts still contain `automated_unreviewed` markers.
-- All 52 draft YAML files still contain placeholder or pending review markers.
-
-This is correct for draft status, but it confirms there is no production-ready
-canonical YAML yet.
-
-## Source Filename Check
-
-The rename utility was run in dry-run mode. Both source filenames are already
-stable:
-
-```text
-keep: expositor-guia-maestro-volumen-45.pdf
-keep: expositor-guia-maestro-volumen-46.pdf
-```
-
-No rename action is needed.
+- Draft YAML can now be indexed provisionally, but it is not canonical.
 
 ## Main Gaps
 
-1. No canonical lessons exist.
-   `archive/lessons` contains no reviewed YAML, so validation and indexing have
-   no production data to process.
+1. No reviewed canonical lessons exist.
+   `archive/lessons` contains no reviewed YAML, so official validation and
+   official indexing still have no production data to process.
 
-2. Summary/application extraction is missing.
+2. Provisional indexing now exists, but it is intentionally not canonical.
+   `indexes/provisional` can support pipeline diagnostics and review planning,
+   but should not be used as the public archive retrieval surface.
+
+3. Summary/application extraction is missing.
    The section extractor currently fails to capture `summary_application` for
    all 52 lessons.
 
-3. Volume 46 lesson 22 has missing automated core sections.
+4. Volume 46 lesson 22 has missing automated core sections.
    It lacks biblical reading and lesson outline extraction.
 
-4. OCR quality is not promotion-ready.
+5. OCR quality is not promotion-ready.
    Volume 45 is `BLOCKED`; volume 46 is `WARNING`.
 
-5. Repeated header/footer warnings are noisy.
+6. Repeated header/footer warnings are noisy.
    Both PDFs report 177 repeated header/footer warnings, which may obscure more
    important content-level issues.
 
-6. Drafts still contain placeholders and unreviewed status.
-   This is expected, but it means no generated draft should be indexed or
-   treated as canonical.
+7. Drafts still contain placeholders and unreviewed status.
+   This is expected for no-human-review output, but it is the reason official
+   validation and official indexes must remain blocked.
 
 ## Recommended Next Actions
 
-### 1. Improve Summary/Application Extraction
+### Highest Priority
 
-Priority: High
+1. Improve `summary_application` extraction.
+   This is the largest content gap because it affects all 52 lessons.
 
-Add extraction support for summary/application sections that appear as:
+2. Add a missing-section report.
+   A normal reviewer should be able to open one report and see exactly which
+   lessons need attention and why.
 
-```text
-IV. Resumen y aplicación práctica
-Resumen y aplicación práctica:
-Resumen y aplicacion practica
-```
+3. Resolve volume 45 `BLOCKED` OCR status.
+   Page 1 needs visual/source confirmation or an explicit documented waiver.
 
-The extractor should handle cases where the summary appears as an outline item
-and the actual paragraph follows later in the lesson.
+4. Keep provisional indexes separate from official indexes.
+   The new `--allow-unreviewed` path is useful for audit, but official indexes
+   should still require reviewed canonical YAML.
 
-Exit criteria:
+### Medium Priority
 
-- `metadata/lesson_sections/*.json` shows `summary_application` for most or all
-  lessons.
-- Draft YAML no longer uses `TBD` for `summary_application.items` when source
-  text is present.
+5. Reduce repeated-header/footer warning noise.
+   The quality report should separate true blockers from expected layout
+   repetition.
 
-### 2. Investigate Volume 46 Lesson 22
+6. Fix volume 46 lesson 22 extraction.
+   This is the only lesson currently missing both biblical reading and outline.
 
-Priority: High
+7. Add CI for tests and validation.
+   GitHub should run tests and confirm official indexes cannot be built from
+   unreviewed drafts.
 
-Inspect the normalized text span for lesson 22 and identify why biblical
-reading and outline labels were missed.
+### Later Priority
 
-Likely causes:
+8. Promote a small reviewed pilot set into `archive/lessons`.
+   Use one or two human-reviewed lessons to prove canonical validation and
+   official index generation end to end.
 
-- label merged into surrounding text
-- unexpected accent/capitalization/layout variant
-- segment boundary starts after the label
-- section label exists on prior page or in a non-standard position
-
-Exit criteria:
-
-- Volume 46 lesson 22 has biblical reading and outline metadata, or a documented
-  warning explains why extraction cannot be automated.
-
-### 3. Reduce Header/Footer Warning Noise
-
-Priority: Medium-High
-
-The quality gate is flagging repeated header/footer patterns on 177 pages in
-each publication. Improve classification so repeated expected labels such as
-`Maestro`, page numbers, and lesson headers are grouped into a readable summary
-instead of making almost every content page look equally risky.
-
-Exit criteria:
-
-- Quality reports separate severe content risks from layout-noise warnings.
-- Reports remain understandable to maintainers without Python knowledge.
-
-### 4. Resolve Volume 45 Blocked OCR Status
-
-Priority: Medium-High
-
-Page 1 is zero-text and blocks the publication. Determine whether page 1 is
-front matter with no lesson content or whether it contains meaningful source
-evidence.
-
-Exit criteria:
-
-- If page 1 is non-content/front matter, mark the report as resolved with a
-  documented non-content-page exception.
-- If page 1 contains source evidence, rerun OCR or manually capture the needed
-  text evidence.
-
-### 5. Add A Draft Completeness Report
-
-Priority: Medium
-
-Create a script such as:
-
-```text
-python scripts/canonical/09_draft_completeness_report.py
-```
-
-It should summarize, per lesson:
-
-- missing section fields
-- placeholders
-- unparsed scripture references
-- quality blockers
-- segment warnings
-- promotion readiness
-
-Exit criteria:
-
-- Maintainers can see which drafts are closest to promotion without grepping
-  YAML files.
-
-### 6. Promote One Pilot Lesson Only After Gaps Are Reduced
-
-Priority: Medium
-
-Choose one lesson with:
-
-- quality report not blocked
-- biblical reading extracted
-- outline extracted
-- teacher notes extracted
-- summary/application extracted
-- no segment errors
-
-Then complete human review and promote only that lesson into `archive/lessons`.
-
-Exit criteria:
-
-- `python scripts/canonical/07_schema_validator.py` passes with one canonical
-  lesson.
-- `python scripts/canonical/08_index_builder.py` creates initial official
-  indexes from reviewed data only.
-
-## Current Production Readiness
-
-Current status: **not production-ready for canonical/index use**.
-
-Current status for development: **good for continued pipeline improvement**.
-
-The project is successfully connected to Google Drive, can regenerate automated
-drafts, and has clear safety gates. The next meaningful improvement is not more
-repository structure; it is better extraction completeness, clearer quality
-signal handling, and one carefully reviewed pilot canonical lesson.
+9. Add Drive output publishing as a documented command.
+   The project should document exactly which local folders are copied to Drive
+   `outputs` after an audit run.

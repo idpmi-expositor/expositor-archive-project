@@ -5,7 +5,7 @@ Validation date: 2026-06-12
 Validated repository state:
 
 ```text
-base_commit: b8b2a60 Clarify human revision and review workflow
+base_commit: 1f9b59d Update architecture validation and pipeline audit
 pipeline_audit: docs/pipeline-audit-2026-06-12.md
 source_pdfs: 2
 raw_txt: 2
@@ -16,6 +16,7 @@ lesson_section_json: 2
 draft_yaml: 52
 canonical_yaml: 0
 official_indexes: 0
+provisional_draft_indexes: 2
 quality_reports: 2
 ```
 
@@ -34,6 +35,8 @@ use. There are no reviewed canonical lesson YAML files under `archive/lessons`,
 there are no official generated indexes, all 52 draft records remain
 automated-unreviewed, OCR/layout quality issues remain, and section coverage is
 incomplete enough that a human reviewer must still verify every promoted lesson.
+The repository can now build clearly labeled provisional indexes from drafts for
+audit and planning, but those indexes are not canonical archive truth.
 
 This document uses the project terminology consistently:
 
@@ -47,13 +50,20 @@ This document uses the project terminology consistently:
 Latest validation evidence:
 
 ```text
-python scripts\run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+python scripts\run_pipeline.py --drive-root-folder-id 1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7 --rclone-config rclone\rclone.conf --skip-raw-extraction
 ```
 
 Observed result:
 
 ```text
 Pipeline completed through draft generation.
+```
+
+Google Drive `outputs` cleanup was performed before the run:
+
+```text
+C:\Tools\rclone\rclone.exe --config rclone\rclone.conf delete "gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:outputs"
+C:\Tools\rclone\rclone.exe --config rclone\rclone.conf rmdirs "gdrive,root_folder_id=18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n:outputs" --leave-root
 ```
 
 ```text
@@ -86,6 +96,19 @@ Observed result:
 ```text
 No canonical lesson YAML files found under archive/lessons
 Index generation stopped because there is no canonical data.
+```
+
+Provisional draft indexing evidence:
+
+```text
+python scripts\canonical\08_index_builder.py archive\drafts --output-dir indexes\provisional --allow-unreviewed
+```
+
+Observed result:
+
+```text
+WARNING: building a provisional index from unreviewed draft YAML. This output is not canonical archive truth.
+Indexed 52 lesson YAML file(s).
 ```
 
 Google Drive source validation evidence:
@@ -132,6 +155,10 @@ That script provides a safer routine path than manually running every numbered
 script. Individual numbered scripts remain useful for debugging a specific
 pipeline layer.
 
+The index builder now has an explicit `--allow-unreviewed` mode for audit-only
+draft indexing. That mode writes warning-labeled indexes from `archive/drafts`
+without weakening the official canonical validation path.
+
 ### Risks
 
 The canonical archive is structurally prepared but empty. Because
@@ -161,8 +188,9 @@ When source PDFs and raw extraction already exist, use:
 python scripts\run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
 ```
 
-Add GitHub Actions checks that run tests, canonical validation, index
-generation safety checks, and a no-placeholders policy for canonical YAML.
+Add GitHub Actions checks that run tests, canonical validation, official index
+generation safety checks, provisional index generation, and a no-placeholders
+policy for canonical YAML.
 
 ### Confidence Level
 
@@ -388,7 +416,7 @@ page-by-page comparison against rendered PDFs has not been completed.
 
 ### Findings
 
-Indexing is safe but not retrieval-ready.
+Official indexing is safe but not retrieval-ready.
 
 There are no reviewed canonical lesson YAML files:
 
@@ -405,15 +433,40 @@ official_indexes: 0
 This is correct under the current policy. The index builder refuses to generate
 official indexes without reviewed canonical input.
 
+There are provisional draft indexes:
+
+```text
+indexes/provisional/lessons_index.yaml
+indexes/provisional/scripture_index.yaml
+```
+
+These indexes were generated with:
+
+```text
+python scripts\canonical\08_index_builder.py archive\drafts --output-dir indexes\provisional --allow-unreviewed
+```
+
+The provisional lesson index contains 52 draft lessons. The provisional
+scripture index contains 91 scripture-reference entries. Both files include:
+
+```yaml
+index_scope: automated_unreviewed_draft
+warning: This index was built from unreviewed draft YAML. Do not use it as canonical archive truth.
+```
+
 Draft YAML under `archive/drafts` can contain automated extraction values,
 review placeholders, and unreviewed text. Draft YAML is intentionally excluded
-from canonical validation and indexing.
+from official canonical validation and official indexing.
 
 ### Risks
 
 The repository currently has no production retrieval surface. Semantic search,
 hierarchy-aware retrieval, scripture lookup, and citation traceability cannot be
 considered production-ready until reviewed canonical YAML exists.
+
+Provisional indexes can help reviewers see what the automated pipeline produced,
+but they also contain unreviewed values and may include placeholders. They must
+not be published as official retrieval indexes.
 
 ### Recommendations
 
@@ -425,6 +478,9 @@ Keep indexes blocked until:
 - source traceability is complete
 - OCR quality for the source volume is not blocked
 - human review is complete
+
+Keep provisional indexes under `indexes/provisional` or another clearly labeled
+non-canonical path.
 
 Add a small pilot promotion of one or two reviewed lessons after the extraction
 and OCR issues are triaged. Use that pilot to test canonical validation and
@@ -564,7 +620,8 @@ been implemented.
 | Automated Section Extraction | Warning | High | High |
 | OCR and Text Quality | Fail | High | Medium-High |
 | Canonical Review Readiness | Fail | High | High |
-| Indexing and Retrieval | Fail | High | High |
+| Official Indexing and Retrieval | Fail | High | High |
+| Provisional Draft Indexing | Pass | High | High |
 | Documentation and Human Revision | Warning | Medium | High |
 | Tests | Warning | Medium | High |
 | CI and Remote Quality Gates | Fail | High | Medium-High |
@@ -585,6 +642,10 @@ Add and keep these matrix areas:
   lesson content to reduce human review effort.
 - **Canonical Review Readiness**: separates "drafts exist" from "reviewed
   canonical records exist."
+- **Official Indexing and Retrieval**: confirms production indexes remain
+  blocked until reviewed canonical records exist.
+- **Provisional Draft Indexing**: confirms no-human-review pipeline diagnostics
+  can be generated without weakening canonical safety gates.
 - **Tests**: shows whether local regression protection is healthy.
 - **CI and Remote Quality Gates**: shows whether GitHub blocks unsafe changes.
 
@@ -600,9 +661,9 @@ improvement. It is not ready for canonical archive production, official
 retrieval indexes, or search-facing use.
 
 The key improvement since the earlier validation is that automated extraction
-now exists. The key blocker is that extraction is incomplete and unreviewed, OCR
-quality still blocks at least one source volume, and no lesson has been promoted
-to reviewed canonical YAML.
+and provisional draft indexing now exist. The key blocker is that extraction is
+incomplete and unreviewed, OCR quality still blocks at least one source volume,
+and no lesson has been promoted to reviewed canonical YAML.
 
 ## Improvement Roadmap
 
@@ -617,6 +678,7 @@ Completed work:
 - Placeholder values are blocked by canonical validation.
 - Zero-valued scripture references are blocked.
 - Index generation refuses to run without canonical lesson YAML.
+- Provisional draft indexing is explicitly labeled as non-canonical.
 - Stale placeholder indexes were removed.
 - Focused validator tests were added.
 
@@ -709,9 +771,12 @@ Completed work:
 
 - A top-level pipeline runner exists.
 - Local tests pass.
+- Provisional draft indexes can be generated for no-human-review audit runs.
 
 Remaining work:
 
 - Add GitHub Actions CI.
 - Run tests, canonical validation, and index safety checks in CI.
+- Include provisional draft index generation in CI as a diagnostic artifact if
+  the project wants no-human-review pipeline visibility.
 - Add deterministic index fixture tests once pilot canonical YAML exists.

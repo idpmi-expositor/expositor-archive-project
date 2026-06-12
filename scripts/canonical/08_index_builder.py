@@ -120,7 +120,12 @@ def validate_lesson_files(lesson_files: list[Path], schema_path: Path) -> bool:
     return False
 
 
-def build_lessons_index(lessons: list[dict[str, Any]]) -> dict[str, Any]:
+def build_lessons_index(
+    lessons: list[dict[str, Any]],
+    *,
+    index_scope: str = "canonical_reviewed",
+    source_archive: str | None = None,
+) -> dict[str, Any]:
     """Build the high-level lesson index.
 
     This index answers questions such as:
@@ -148,10 +153,27 @@ def build_lessons_index(lessons: list[dict[str, Any]]) -> dict[str, Any]:
                 },
             }
         )
-    return {"schema_version": "1.0.0", "lessons": entries}
+    index: dict[str, Any] = {
+        "schema_version": "1.0.0",
+        "index_scope": index_scope,
+        "lessons": entries,
+    }
+    if source_archive:
+        index["source_archive"] = source_archive
+    if index_scope != "canonical_reviewed":
+        index["warning"] = (
+            "This index was built from unreviewed draft YAML. Do not use it as "
+            "canonical archive truth."
+        )
+    return index
 
 
-def build_scripture_index(lessons: list[dict[str, Any]]) -> dict[str, Any]:
+def build_scripture_index(
+    lessons: list[dict[str, Any]],
+    *,
+    index_scope: str = "canonical_reviewed",
+    source_archive: str | None = None,
+) -> dict[str, Any]:
     """Build the scripture reference index.
 
     This index is intentionally reference-centered. It stores normalized
@@ -171,7 +193,19 @@ def build_scripture_index(lessons: list[dict[str, Any]]) -> dict[str, Any]:
                     "replacement_provider": reading["replacement_policy"]["provider"],
                 }
             )
-    return {"schema_version": "1.0.0", "scripture_references": entries}
+    index: dict[str, Any] = {
+        "schema_version": "1.0.0",
+        "index_scope": index_scope,
+        "scripture_references": entries,
+    }
+    if source_archive:
+        index["source_archive"] = source_archive
+    if index_scope != "canonical_reviewed":
+        index["warning"] = (
+            "This index was built from unreviewed draft YAML. Do not use it as "
+            "canonical archive truth."
+        )
+    return index
 
 
 def main() -> int:
@@ -199,6 +233,14 @@ def main() -> int:
         type=Path,
         help="Schema contract used to validate lessons before indexing.",
     )
+    parser.add_argument(
+        "--allow-unreviewed",
+        action="store_true",
+        help=(
+            "Build a provisional index from unreviewed draft YAML without "
+            "canonical validation. Use only for audit and pipeline diagnostics."
+        ),
+    )
     args = parser.parse_args()
 
     lesson_files = iter_lesson_files(args.archive)
@@ -207,16 +249,40 @@ def main() -> int:
         print("Index generation stopped because there is no canonical data.")
         return 0
 
-    # Index files are public-looking outputs, so validation is the guardrail
-    # that keeps incomplete lesson YAML from becoming searchable metadata.
-    if not validate_lesson_files(lesson_files, args.schema):
-        print("Index generation stopped because lesson validation failed.")
-        return 1
+    index_scope = "canonical_reviewed"
+    if args.allow_unreviewed:
+        index_scope = "automated_unreviewed_draft"
+        print(
+            "WARNING: building a provisional index from unreviewed draft YAML. "
+            "This output is not canonical archive truth."
+        )
+    else:
+        # Index files are public-looking outputs, so validation is the
+        # guardrail that keeps incomplete lesson YAML from becoming searchable
+        # metadata.
+        if not validate_lesson_files(lesson_files, args.schema):
+            print("Index generation stopped because lesson validation failed.")
+            return 1
 
     lessons = [load_yaml(path) for path in lesson_files]
+    source_archive = args.archive.relative_to(PROJECT_ROOT).as_posix() if args.archive.is_relative_to(PROJECT_ROOT) else str(args.archive)
 
-    write_yaml(args.output_dir / "lessons_index.yaml", build_lessons_index(lessons))
-    write_yaml(args.output_dir / "scripture_index.yaml", build_scripture_index(lessons))
+    write_yaml(
+        args.output_dir / "lessons_index.yaml",
+        build_lessons_index(
+            lessons,
+            index_scope=index_scope,
+            source_archive=source_archive,
+        ),
+    )
+    write_yaml(
+        args.output_dir / "scripture_index.yaml",
+        build_scripture_index(
+            lessons,
+            index_scope=index_scope,
+            source_archive=source_archive,
+        ),
+    )
 
     print(f"Indexed {len(lessons)} lesson YAML file(s).")
     return 0
