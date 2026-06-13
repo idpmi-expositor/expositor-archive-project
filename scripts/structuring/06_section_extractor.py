@@ -133,8 +133,13 @@ def collect_block(
     # is on the same line, separated by a colon or just following the label.
     normalized_first = normalize_for_matching(first_line)
     is_summary_label = any(alias in normalized_first for alias in SECTION_ALIASES["summary_application"])
-    if (include_label_remainder and ":" in first_line) or is_summary_label:
-        remainder = first_line.split(":", 1)[1].strip()
+    if is_summary_label:
+        # For summary, content can follow the label on the same line.
+        parts = re.split(r"resumen y aplicaci[oó]n pr[aá]ctica:?", first_line, flags=re.IGNORECASE)
+        if len(parts) > 1 and parts[1].strip():
+            items.append(parts[1].strip())
+    elif include_label_remainder and ":" in first_line:
+        remainder = first_line.split(":", 1)[-1].strip()
         if remainder:
             items.append(remainder)
 
@@ -306,7 +311,7 @@ def extract_list_section(
     if section_name == "lesson_outline":
         items, block_end = collect_outline_block(lines, label_index, end)
     else:
-        items, block_end = collect_block(lines, label_index, end, include_label_remainder=False)
+        items, block_end = collect_block(lines, label_index, end, include_label_remainder=True)
         items = merge_wrapped_prose_items(items)
     if not items:
         return None
