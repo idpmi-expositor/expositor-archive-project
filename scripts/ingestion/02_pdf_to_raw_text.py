@@ -33,7 +33,10 @@ import json
 import os
 import shutil
 from pathlib import Path
-from typing import Any
+from typing import Any, TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from PIL.Image import Image
 
 try:
     import fitz
@@ -133,7 +136,7 @@ def ocr_available(tesseract_cmd: Path | None) -> tuple[bool, str | None]:
     return True, None
 
 
-def render_page_for_ocr(page: fitz.Page, dpi: int = 300) -> "Image.Image":
+def render_page_for_ocr(page: fitz.Page, dpi: int = 300) -> Image:
     """Render one PDF page into a PIL image for OCR fallback."""
 
     from PIL import Image
