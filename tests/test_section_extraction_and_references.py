@@ -78,7 +78,7 @@ class SectionExtractorTest(unittest.TestCase):
             root = Path(temp_root)
             normalized = root / "normalized.txt"
             structure = root / "structure.json"
-            segments = root / "segments.json"
+            segments = root / "expositor-guia-maestro-volumen-45.json"
             output = root / "sections.json"
 
             normalized.write_text(
