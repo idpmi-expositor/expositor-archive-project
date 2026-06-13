@@ -25,6 +25,25 @@ draft indexes. Official canonical validation and official index generation
 remain correctly blocked because no reviewed lessons exist under
 `archive/lessons`.
 
+Latest rerun timestamp:
+
+```text
+2026-06-12 17:31:06 -04:00
+```
+
+Latest rerun summary:
+
+```text
+Drive outputs cleared: yes
+Pipeline completed: yes
+Draft YAML generated: 52
+Tests passed: 18
+Official canonical YAML: 0
+Official indexes: 0
+Provisional indexes: 2
+Drive outputs republished: yes
+```
+
 ## Commands Run
 
 Google Drive `outputs` listing before cleanup:
