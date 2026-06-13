@@ -285,6 +285,8 @@ def validate_lesson(path: Path, schema: dict[str, Any]) -> list[str]:
 def iter_lesson_files(target: Path) -> list[Path]:
     """Return YAML files from either one file or a whole directory."""
 
+    if not target.exists():
+        raise FileNotFoundError(f"Input path does not exist: {target}")
     if target.is_file():
         return [target]
     return sorted(target.rglob("*.yaml"))
@@ -317,7 +319,11 @@ def main() -> int:
     args = parser.parse_args()
 
     schema = load_yaml(args.schema)
-    lesson_files = iter_lesson_files(args.target)
+    try:
+        lesson_files = iter_lesson_files(args.target)
+    except FileNotFoundError as exc:
+        print(str(exc), file=sys.stderr)
+        return 1
 
     if not lesson_files:
         print(f"No lesson YAML files found under {args.target}")
