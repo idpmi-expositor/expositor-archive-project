@@ -117,19 +117,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-```diff
---- a/c:\Repos\expositor-archive-project\README.md
-+++ b/c:\Repos\expositor-archive-project\README.md
-@@ -10,7 +10,7 @@
- ```text
- python -m pip install -r requirements.txt
- python scripts/ingestion/01_pdf_discovery.py
--python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
-+python scripts/run_pipeline.py --skip-tags pre-flight,ocr
- ```
- 
- Optional setup checks:
 @@ -118,13 +118,13 @@
  When raw text already exists and you want to regenerate downstream artifacts,
  run:
