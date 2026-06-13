@@ -39,9 +39,13 @@ jobs:
           coverage report -m --fail-under=80
           coverage html
 
-      - name: Run schema validator on empty archive (safety check)
+      - name: Run schema validator on canonical archive
         run: |
           python scripts/canonical/07_schema_validator.py
+
+      - name: Build official indexes (safety check)
+        run: |
+          python scripts/canonical/08_index_builder.py
 
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
