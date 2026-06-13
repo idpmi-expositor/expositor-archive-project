@@ -118,12 +118,6 @@ def main() -> int:
 if __name__ == "__main__":
     raise SystemExit(main())
 
-```
-
-### 2. Documentation Updates
-
-Next, I'll update your `README.md` to reflect the latest changes to the pipeline runner, which now uses tags for configuration. This makes the quick-start instructions more accurate for new users.
-
 ```diff
 --- a/c:\Repos\expositor-archive-project\README.md
 +++ b/c:\Repos\expositor-archive-project\README.md
