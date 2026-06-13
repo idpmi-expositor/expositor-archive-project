@@ -46,31 +46,9 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿De qué aprovechará si alguno dice que
-    - tiene fe, pero no tiene obras?
+    - ¿De qué aprovechará si alguno dice que tiene fe, pero no tiene obras?
     - ¿Puede la fe sin obras justificar al creyente?
-    - mandamientos y en los seis restantes, identificó el deber del humano con los
-      demás seres humanos. No obstante, el ser humano no pudo cumplir con las exigencias
-      internas y externas de la ley. En la religiosidad judía, los intérpretes de
-      la Ley enfatizaron más el ceremonial externo expresado en las obras y restaron
-      importancia a la obligación moral que regulaba la fe y la obediencia a la Palabra
-      de Dios. Cuando las obras son realizadas para obedecer a los hombres y se enajenan
-      de la obediencia a Dios, el ser humano no puede ser liberado de la esclavitud
-      al pecado. Por tanto, Dios hizo provisión para la redención del humano por medio
-      de un Salvador (Mt 5:17-48; Ro 7:5, 7-12). A través de los profetas, Dios anunció
-      la llegada del Salvador, por medio del cual la persona que en Él creyere, sería
-      salva. Por tanto, la salvación no se obtiene por divina para el creyente que
-      crea en las promesas de Dios y abrace a Cristo como su Salvador. Jesucristo
-      fue el único que pudo cumplir con las exigencias de la ley divina (Gl 4:4, 5;
-      Ro 5:1821). Por su obediencia, Jesucristo alcanzó la justificación y redención
-      de los pecadores arrepentidos que depositaron su fe en Él. Gracias a la obra
-      realizada por Cristo, el pueblo de Dios ya no está sometido al sistema religioso
-      judío, sino, que tanto judíos como gentiles que aceptan la obra redentora provista
-      por Dios por la fe en el Salvador, son justificados sin las obras de la Ley
-      (Ro 3:28). Cristo cumplió con las demandas internas y externas de la Ley, y
-      es el mediador de un nuevo pacto entre Dios y la humanidad. Por tanto, la justificación
-      ante Dios no se logra por el mérito humano, ni por las obras de la ley, sino
-      por la fe en Jesucristo.
+    - mandamientos y en los seis restantes, identificó el deber del humano con los demás seres humanos. No obstante, el ser humano no pudo cumplir con las exigencias internas y externas de la ley. En la religiosidad judía, los intérpretes de la Ley enfatizaron más el ceremonial externo expresado en las obras y restaron importancia a la obligación moral que regulaba la fe y la obediencia a la Palabra de Dios. Cuando las obras son realizadas para obedecer a los hombres y se enajenan de la obediencia a Dios, el ser humano no puede ser liberado de la esclavitud al pecado. Por tanto, Dios hizo provisión para la redención del humano por medio de un Salvador (Mt 5:17-48; Ro 7:5, 7-12). A través de los profetas, Dios anunció la llegada del Salvador, por medio del cual la persona que en Él creyere, sería salva. Por tanto, la salvación no se obtiene por divina para el creyente que crea en las promesas de Dios y abrace a Cristo como su Salvador. Jesucristo fue el único que pudo cumplir con las exigencias de la ley divina (Gl 4:4, 5; Ro 5:1821). Por su obediencia, Jesucristo alcanzó la justificación y redención de los pecadores arrepentidos que depositaron su fe en Él. Gracias a la obra realizada por Cristo, el pueblo de Dios ya no está sometido al sistema religioso judío, sino, que tanto judíos como gentiles que aceptan la obra redentora provista por Dios por la fe en el Salvador, son justificados sin las obras de la Ley (Ro 3:28). Cristo cumplió con las demandas internas y externas de la Ley, y es el mediador de un nuevo pacto entre Dios y la humanidad. Por tanto, la justificación ante Dios no se logra por el mérito humano, ni por las obras de la ley, sino por la fe en Jesucristo.
     - I. Justificados pues por la fe en Cristo
     - (Romanos 3:28; 5:1-5
     - A. Justificados por la fe sin las obras de la Ley
@@ -105,22 +83,22 @@ source_trace:
   page_end: 13
   line_start: 90
   line_end: 196
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 106
       line_end: 106
       page_start: 7
       page_end: 7
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 136
       line_end: 147
       page_start: 8
       page_end: 9
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 123
       line_end: 135
       page_start: 8

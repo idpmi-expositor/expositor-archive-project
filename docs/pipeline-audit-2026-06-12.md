@@ -37,7 +37,7 @@ Latest rerun summary:
 Drive outputs cleared: yes
 Pipeline completed: yes
 Draft YAML generated: 52
-Tests passed: 18
+Tests passed: 20
 Official canonical YAML: 0
 Official indexes: 0
 Provisional indexes: 2
@@ -149,7 +149,7 @@ Cycle interpretation:
 Unit tests:
 
 ```text
-Ran 18 tests
+Ran 20 tests
 OK
 ```
 
@@ -278,6 +278,33 @@ Critical gaps:
    This is expected for no-human-review output, but it is the reason official
    validation and official indexes must remain blocked.
 
+8. Lesson indexes previously were not detailed enough for translation or
+   HTML/CSS formatting.
+   This is now partially resolved: provisional `lessons_index.yaml` includes
+   extracted `lesson_outline`, `teacher_notes`, and `summary_application` items
+   with stable item identifiers. The remaining gap is item-level source trace
+   for each indexed item.
+
+9. Normalized outputs previously were not stored under the publication
+   classification folder.
+   This is now fixed for the root pipeline outputs. Maestro files are written as:
+
+```text
+normalized/maestro/expositor-guia-maestro-volumen-45.txt
+normalized/maestro/expositor-guia-maestro-volumen-46.txt
+```
+
+The classification-aware layout should continue to be used for future
+publication families:
+
+```text
+normalized/maestro/expositor-guia-maestro-volumen-45.txt
+normalized/maestro/expositor-guia-maestro-volumen-46.txt
+```
+
+The same classification pattern should later be used for `alumno`, `joven`,
+`nino`, `parvulo`, and other Expositor publication families.
+
 ## Recommended Next Actions
 
 ### Highest Priority
@@ -296,28 +323,232 @@ Critical gaps:
    The new `--allow-unreviewed` path is useful for audit, but official indexes
    should still require reviewed canonical YAML.
 
+5. Expand the lesson index to section-level detail.
+   This is needed before translation and later HTML/CSS formatting. The index
+   should expose each lesson section and each section item in a stable,
+   addressable way.
+
 ### Medium Priority
 
-5. Reduce repeated-header/footer warning noise.
+6. Store normalized outputs by Expositor classification.
+   Generated normalized files should be placed under classification folders
+   such as `normalized/maestro`, not directly under `normalized`.
+
+7. Reduce repeated-header/footer warning noise.
    The quality report should separate true blockers from expected layout
    repetition.
 
-6. Fix volume 46 lesson 22 extraction.
+8. Fix volume 46 lesson 22 extraction.
    This is the only lesson currently missing both biblical reading and outline.
 
-7. Add CI for tests and validation.
+9. Add CI for tests and validation.
    GitHub should run tests and confirm official indexes cannot be built from
    unreviewed drafts.
 
 ### Later Priority
 
-8. Promote a small reviewed pilot set into `archive/lessons`.
+10. Promote a small reviewed pilot set into `archive/lessons`.
    Use one or two human-reviewed lessons to prove canonical validation and
    official index generation end to end.
 
-9. Add Drive output publishing as a documented command.
+11. Add Drive output publishing as a documented command.
    The project should document exactly which local folders are copied to Drive
    `outputs` after an audit run.
+
+## Detailed Index And Output Layout Recommendation
+
+Implementation status: **partially implemented after the latest pipeline
+update**.
+
+Completed implementation:
+
+- `lessons_index.yaml` now includes `lesson_sections` detail.
+- `lesson_outline`, `teacher_notes`, and `summary_application` items now carry
+  stable `item_id`, `order`, `kind`, and `text` fields.
+- Provisional lesson indexes include `publication_classification: maestro`.
+- Normalized maestro text now writes under `normalized/maestro`.
+- Structure JSON, lesson metadata JSON, and lesson section JSON now preserve the
+  `maestro` classification folder.
+- Wrapped prose fragments in non-outline sections are now merged conservatively.
+  For example, `¿De qué aprovechará si alguno dice que` plus `tiene fe, pero no
+  tiene obras?` now becomes one `teacher_notes` item.
+
+Latest verification:
+
+```text
+index lessons: 52
+first indexed classification: maestro
+first lesson outline item_count: 12
+first outline item_id: LES-2024-C1-001-lesson-outline-001
+first outline item kind: roman_heading
+normalized root txt files: 0
+normalized/maestro txt files: 2
+structured/document_structure/maestro json files: 2
+metadata/lessons/maestro json files: 2
+metadata/lesson_sections/maestro json files: 2
+wrapped question in LES-2024-C1-001: merged into one item
+```
+
+Remaining implementation work:
+
+- Update the repeatable Drive publishing workflow so Google Drive `outputs`
+  can be organized as `outputs/maestro/...` instead of one shared root output
+  tree.
+- Clean or regenerate the tracked `ExpositorMain/outputs` mirror so it no
+  longer shows older root-level normalized paths.
+- Add item-level source trace per indexed item when extractor support is ready.
+
+### Finding: Provisional Lesson Index Now Includes Section-Level Items
+
+Previous provisional lesson index entries were shaped like this:
+
+```yaml
+- lesson_id: LES-2024-C1-001
+  publication_id: expositor-guia-maestro-volumen-45
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 1
+  title: La fe que transforma la conducta y pensamientos del creyente
+  biblical_reading:
+    reference_display: Santiago 2:14-24
+    replacement_provider: api.bible
+    replacement_strategy: replace_by_canonical_reference
+```
+
+That was enough for basic lesson lookup, but not enough for translation,
+comparison, or future HTML/CSS rendering. The current implementation now adds
+the next-level section detail described below.
+
+### Implemented Next-Level Index Shape
+
+The provisional `lessons_index.yaml` now includes section-level and item-level
+detail:
+
+```yaml
+- lesson_id: LES-2024-C1-001
+  publication_id: expositor-guia-maestro-volumen-45
+  publication_classification: maestro
+  collection_type: Expositor Maestro
+  year: 2024
+  cycle: C1
+  lesson_number: 1
+  title: La fe que transforma la conducta y pensamientos del creyente
+  lesson_sections:
+    lesson_outline:
+      item_count: 13
+      items:
+        - item_id: LES-2024-C1-001-outline-001
+          order: 1
+          kind: roman_heading
+          text: I. Justificados pues por la fe en Cristo
+        - item_id: LES-2024-C1-001-outline-002
+          order: 2
+          kind: scripture_reference
+          text: (Romanos 3:28; 5:1-5)
+        - item_id: LES-2024-C1-001-outline-003
+          order: 3
+          kind: letter_subpoint
+          text: A. Justificados por la fe sin las obras de la Ley (Ro 3:28)
+```
+
+Recommended item kinds:
+
+- `roman_heading` for `I.`, `II.`, `III.`, `IV.`
+- `letter_subpoint` for `A.`, `B.`, `C.`
+- `scripture_reference` for parenthesized Bible references
+- `question` for review or teacher-note questions
+- `paragraph` for ordinary prose
+- `placeholder` for unresolved draft values such as `TBD`
+
+This structure gives the future translation and formatting phase stable hooks:
+
+- translate one item at a time
+- preserve outline hierarchy
+- map Spanish source items to translated target items
+- render roman headings and letter subpoints with CSS classes
+- compare source and translated item counts
+- detect missing translation blocks
+
+### Recommended YAML Location Under Outputs
+
+For Drive publishing, YAML should be present under `outputs/archive/drafts` and
+later `outputs/archive/lessons`.
+
+Current Drive output expectation:
+
+```text
+outputs/archive/drafts/<publication_id>/<year>/<cycle>/<lesson>.yaml
+outputs/indexes/provisional/lessons_index.yaml
+outputs/indexes/provisional/scripture_index.yaml
+```
+
+Recommended future Drive output layout:
+
+```text
+outputs/maestro/archive/drafts/<publication_id>/<year>/<cycle>/<lesson>.yaml
+outputs/maestro/indexes/provisional/lessons_index.yaml
+outputs/maestro/normalized/<publication_id>.txt
+```
+
+Then repeat the same pattern for:
+
+```text
+outputs/alumno/
+outputs/joven/
+outputs/nino/
+outputs/parvulo/
+```
+
+This keeps each Expositor classification self-contained and ready for
+translation batches.
+
+### Implemented Local Normalized Layout
+
+Normalized generation was changed from:
+
+```text
+normalized/expositor-guia-maestro-volumen-45.txt
+```
+
+to:
+
+```text
+normalized/maestro/expositor-guia-maestro-volumen-45.txt
+```
+
+The downstream structuring scripts use recursive file discovery and preserve
+relative paths, so the classification folder now flows into:
+
+```text
+structured/document_structure/maestro/
+metadata/lessons/maestro/
+metadata/lesson_sections/maestro/
+```
+
+### Implementation Order
+
+1. Add a shared classification helper.
+   It should infer `maestro`, `alumno`, `joven`, `nino`, or `parvulo` from the
+   source filename and/or metadata.
+
+2. Update normalized text output paths.
+   Write new files under `normalized/<classification>/`.
+
+3. Update index builder detail.
+   Include `lesson_sections.lesson_outline.items`, `teacher_notes.items`, and
+   `summary_application.items` in `lessons_index.yaml`.
+
+4. Add item-level IDs and item kinds.
+   These IDs become the stable bridge for translation and HTML/CSS formatting.
+
+5. Add a migration cleanup step.
+   Remove stale root-level normalized files after the classified paths are
+   generated, otherwise recursive readers may process both old and new files.
+
+6. Regenerate the full no-human-review cycle.
+   Confirm provisional indexes include section-level items and Drive outputs use
+   classification folders.
 
 ## Next Steps Workflow To Fix Audit Gaps
 
@@ -485,7 +716,7 @@ Draft YAML generated: 52
 Official canonical YAML: 0
 Official indexes: 0
 Provisional indexes: 2
-Tests passed: 18
+Tests passed: 20
 Drive outputs republished: yes
 ```
 

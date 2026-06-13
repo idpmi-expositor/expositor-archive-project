@@ -73,12 +73,9 @@ lesson_sections:
     - 'Objetivos: Después de estudiar esta lección el alumno:'
     - 1. Reconocerá cómo la presencia de
     - Jesucristo puede transformar el duelo en victoria.
-    - 2. Comprenderá que Jesús puede
-    - acompañar a la persona en medio de su sufrimiento y darle consuelo.
-    - 3. Valorará la presencia de Jesús
-    - combatiendo a la muerte y dando vida.
-    - LECCIÓN El duelo, luto y llanto ante la muerte de Lázaro Juan 11:1, 19-20, 30-37,
-      40-44
+    - 2. Comprenderá que Jesús puede acompañar a la persona en medio de su sufrimiento y darle consuelo.
+    - 3. Valorará la presencia de Jesús combatiendo a la muerte y dando vida.
+    - LECCIÓN El duelo, luto y llanto ante la muerte de Lázaro Juan 11:1, 19-20, 30-37, 40-44
   summary_application:
     items:
     - TBD
@@ -110,22 +107,22 @@ source_trace:
   page_end: 174
   line_start: 2715
   line_end: 2846
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2753
       line_end: 2753
       page_start: 168
       page_end: 168
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2738
       line_end: 2752
       page_start: 167
       page_end: 168
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2764
       line_end: 2783
       page_start: 169

@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import importlib.util
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -38,6 +39,11 @@ DEFAULT_ARCHIVE = PROJECT_ROOT / "archive" / "lessons"
 DEFAULT_INDEX_DIR = PROJECT_ROOT / "indexes"
 DEFAULT_SCHEMA = PROJECT_ROOT / "schemas" / "base" / "lesson_schema.yaml"
 VALIDATOR_PATH = PROJECT_ROOT / "scripts" / "canonical" / "07_schema_validator.py"
+SCRIPTS_DIR = PROJECT_ROOT / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+
+from pipeline_classification import infer_publication_classification  # noqa: E402
 
 
 def load_validator_module() -> Any:
@@ -82,6 +88,7 @@ def write_yaml(path: Path, data: dict[str, Any]) -> None:
             allow_unicode=True,
             sort_keys=False,
             explicit_start=True,
+            width=4096,
         )
 
 
@@ -120,6 +127,69 @@ def validate_lesson_files(lesson_files: list[Path], schema_path: Path) -> bool:
     return False
 
 
+def section_item_kind(text: str) -> str:
+    """Classify a section item for later translation and HTML/CSS formatting."""
+
+    stripped = text.strip()
+    if not stripped or stripped.upper() == "TBD":
+        return "placeholder"
+    if re.match(r"^[IVXLCDM]+\.\s+", stripped, re.IGNORECASE):
+        return "roman_heading"
+    if re.match(r"^[A-Z]\.\s+", stripped):
+        return "letter_subpoint"
+    if stripped.startswith("(") and stripped.endswith(")"):
+        return "scripture_reference"
+    if stripped.startswith("¿") or stripped.endswith("?"):
+        return "question"
+    return "paragraph"
+
+
+def indexed_section_items(
+    lesson_id: str,
+    section_key: str,
+    raw_items: Any,
+) -> list[dict[str, Any]]:
+    """Build stable, item-level index entries for one lesson section."""
+
+    if not isinstance(raw_items, list):
+        return []
+
+    indexed_items: list[dict[str, Any]] = []
+    item_slug = section_key.replace("_", "-")
+    for index, item in enumerate(raw_items, start=1):
+        text = str(item).strip()
+        if not text:
+            continue
+        indexed_items.append(
+            {
+                "item_id": f"{lesson_id}-{item_slug}-{index:03d}",
+                "order": index,
+                "kind": section_item_kind(text),
+                "text": text,
+            }
+        )
+    return indexed_items
+
+
+def indexed_section(
+    lesson: dict[str, Any],
+    section_key: str,
+    source_trace: dict[str, Any],
+) -> dict[str, Any]:
+    """Return a section index block with item IDs, kinds, and source trace."""
+
+    section = lesson.get("lesson_sections", {}).get(section_key, {})
+    items = indexed_section_items(lesson["lesson_id"], section_key, section.get("items"))
+    result: dict[str, Any] = {
+        "item_count": len(items),
+        "items": items,
+    }
+    section_traces = source_trace.get("section_traces")
+    if isinstance(section_traces, dict) and isinstance(section_traces.get(section_key), dict):
+        result["source_trace"] = section_traces[section_key]
+    return result
+
+
 def build_lessons_index(
     lessons: list[dict[str, Any]],
     *,
@@ -137,10 +207,16 @@ def build_lessons_index(
     entries = []
     for lesson in lessons:
         reading = lesson["lesson_sections"]["biblical_reading"]
+        source_trace = lesson.get("source_trace", {})
+        if not isinstance(source_trace, dict):
+            source_trace = {}
         entries.append(
             {
                 "lesson_id": lesson["lesson_id"],
                 "publication_id": lesson["publication_id"],
+                "publication_classification": infer_publication_classification(
+                    lesson["publication_id"]
+                ),
                 "collection_type": lesson["collection_type"],
                 "year": lesson["year"],
                 "cycle": lesson["cycle"],
@@ -150,6 +226,17 @@ def build_lessons_index(
                     "reference_display": reading["reference_display"],
                     "replacement_provider": reading["replacement_policy"]["provider"],
                     "replacement_strategy": reading["replacement_policy"]["strategy"],
+                },
+                "lesson_sections": {
+                    "lesson_outline": indexed_section(
+                        lesson, "lesson_outline", source_trace
+                    ),
+                    "teacher_notes": indexed_section(
+                        lesson, "teacher_notes", source_trace
+                    ),
+                    "summary_application": indexed_section(
+                        lesson, "summary_application", source_trace
+                    ),
                 },
             }
         )

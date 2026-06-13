@@ -68,8 +68,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué es necesario que los
-    - gobiernos celebren censos poblacionales?
+    - ¿Por qué es necesario que los gobiernos celebren censos poblacionales?
     - ¿Cómo los censos contribuyen
   summary_application:
     items:
@@ -102,22 +101,22 @@ source_trace:
   page_end: 61
   line_start: 891
   line_end: 1037
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 939
       line_end: 939
       page_start: 55
       page_end: 55
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 969
       line_end: 972
       page_start: 56
       page_end: 56
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 948
       line_end: 967
       page_start: 56

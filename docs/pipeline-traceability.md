@@ -14,10 +14,10 @@ artifact chain is:
 source_assets/original_pdfs/expositor-guia-maestro-volumen-45.pdf
   -> ocr/raw_txt/expositor-guia-maestro-volumen-45.txt
   -> ocr/processing_logs/expositor-guia-maestro-volumen-45.json
-  -> normalized/expositor-guia-maestro-volumen-45.txt
-  -> structured/document_structure/expositor-guia-maestro-volumen-45.json
-  -> metadata/lessons/expositor-guia-maestro-volumen-45.json
-  -> metadata/lesson_sections/expositor-guia-maestro-volumen-45.json
+  -> normalized/maestro/expositor-guia-maestro-volumen-45.txt
+  -> structured/document_structure/maestro/expositor-guia-maestro-volumen-45.json
+  -> metadata/lessons/maestro/expositor-guia-maestro-volumen-45.json
+  -> metadata/lesson_sections/maestro/expositor-guia-maestro-volumen-45.json
   -> archive/drafts/expositor-guia-maestro-volumen-45/YYYY/CYCLE/LES-YYYY-CYCLE-###.yaml
   -> archive/lessons/YYYY/CYCLE/LES-YYYY-CYCLE-###.yaml
   -> indexes/lessons_index.yaml
@@ -25,7 +25,7 @@ source_assets/original_pdfs/expositor-guia-maestro-volumen-45.pdf
 ```
 
 Raw text is extracted first and is not overwritten by normalization. The
-normalizer writes separate `normalized/*.txt` artifacts that become the only text
+normalizer writes separate `normalized/<classification>/*.txt` artifacts that become the only text
 input to structure detection. `scripts/canonical/06_yaml_generator.py` writes
 draft YAML only. Draft YAML may contain explicit placeholders or automated
 unreviewed extracted content and must not be indexed. A lesson becomes
@@ -42,10 +42,10 @@ human-reviewed, source traceability is reviewed, and the file is promoted into
 | Ingestion | `01_pdf_discovery.py` | `source_assets/original_pdfs/*.pdf` | console report, intake log directory | Establishes the immutable source set. |
 | Ingestion | `02_pdf_to_raw_text.py` | source PDFs | `ocr/raw_txt/*.txt`, `ocr/processing_logs/*.json` | Preserves page boundaries with `PDF_PAGE` markers, records extraction counts, uses OCR only as fallback, and refuses to overwrite existing raw text. |
 | Ingestion | `03_quality_report.py` | processing logs | `ocr/quality_reports/*.json` | Summarizes OCR and extraction risk for maintainer review and promotion decisions. |
-| Structuring | `03_minimal_text_normalizer.py` | `ocr/raw_txt/*.txt` | `normalized/*.txt` | First-class stage that keeps page and section markers visible, preserves author wording, and makes prose stable for detection. |
-| Structuring | `04_document_structure_detector.py` | `normalized/*.txt` | `structured/document_structure/*.json` | Records marker type, line number, source text path, and `Contenido` expectations after normalization. |
-| Structuring | `05_lesson_segmenter.py` | structure JSON | `metadata/lessons/*.json` | Converts source markers into lesson segment records with page/line spans and validation summaries. |
-| Structuring | `06_section_extractor.py` | normalized text and segment JSON | `metadata/lesson_sections/*.json` | Extracts automated unreviewed sections, references, and source traces. |
+| Structuring | `03_minimal_text_normalizer.py` | `ocr/raw_txt/*.txt` | `normalized/<classification>/*.txt` | First-class stage that keeps page and section markers visible, preserves author wording, and makes prose stable for detection. |
+| Structuring | `04_document_structure_detector.py` | `normalized/<classification>/*.txt` | `structured/document_structure/<classification>/*.json` | Records marker type, line number, source text path, and `Contenido` expectations after normalization. |
+| Structuring | `05_lesson_segmenter.py` | structure JSON | `metadata/lessons/<classification>/*.json` | Converts source markers into lesson segment records with page/line spans and validation summaries. |
+| Structuring | `06_section_extractor.py` | normalized text and segment JSON | `metadata/lesson_sections/<classification>/*.json` | Extracts automated unreviewed sections, references, and source traces. |
 | Canonical | `06_yaml_generator.py` | segment and section JSON | `archive/drafts/<publication_id>/**/*.yaml` | Serializes draft lesson YAML from metadata, never directly from raw text, with explicit review placeholders or automated-unreviewed values. |
 | Canonical | `07_schema_validator.py` | lesson YAML and schema | validation result | Blocks malformed or placeholder-bearing canonical records. |
 | Canonical | `08_index_builder.py` | validated canonical lesson YAML | `indexes/*.yaml` | Builds reference-only indexes after validation passes. |
@@ -85,8 +85,8 @@ Start with the source PDF and move forward one layer at a time:
 - Sort inputs before processing so reruns remain stable.
 - Preserve relative paths when writing artifacts so parallel collections cannot
   overwrite one another.
-- Treat `metadata/lessons/*.json` as intermediate data, not canonical truth.
-- Treat `metadata/lesson_sections/*.json` as automated unreviewed extraction,
+- Treat `metadata/lessons/<classification>/*.json` as intermediate data, not canonical truth.
+- Treat `metadata/lesson_sections/<classification>/*.json` as automated unreviewed extraction,
   not canonical truth.
 - Treat `archive/drafts/**/*.yaml` as generated scaffold data, not canonical
   truth.

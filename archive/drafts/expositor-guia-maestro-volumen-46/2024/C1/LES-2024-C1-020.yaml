@@ -79,22 +79,22 @@ source_trace:
   page_end: 166
   line_start: 2654
   line_end: 2799
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2661
       line_end: 2661
       page_start: 159
       page_end: 159
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2686
       line_end: 2688
       page_start: 160
       page_end: 160
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2672
       line_end: 2684
       page_start: 160

@@ -822,5 +822,4 @@ scripture_references:
     verse_end: 31
   replacement_provider: api.bible
 source_archive: archive\drafts
-warning: This index was built from unreviewed draft YAML. Do not use it as canonical
-  archive truth.
+warning: This index was built from unreviewed draft YAML. Do not use it as canonical archive truth.

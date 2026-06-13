@@ -52,8 +52,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué dos hermanas son
-    - juzgadas como rameras?
+    - ¿Por qué dos hermanas son juzgadas como rameras?
     - ¿Por qué Ahola y Aholiba adoptaron las prácticas idolátricas de sus
   summary_application:
     items:
@@ -86,22 +85,22 @@ source_trace:
   page_end: 45
   line_start: 649
   line_end: 790
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 662
       line_end: 662
       page_start: 38
       page_end: 38
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 689
       line_end: 692
       page_start: 39
       page_end: 39
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 669
       line_end: 687
       page_start: 39

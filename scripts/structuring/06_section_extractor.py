@@ -45,6 +45,9 @@ STOP_LABELS = {
     "resumen y aplicacion practica",
 }
 REFERENCE_PREFIX_RE = re.compile(r"^Lectura B[ií]blica:\s*(?P<reference>.+)$", re.I)
+OUTLINE_MARKER_RE = re.compile(r"^(?:[IVXLCDM]+\.|[A-Z]\.)\s+", re.I)
+PARENTHESIZED_REFERENCE_RE = re.compile(r"^\(.+\)$")
+TERMINAL_PUNCTUATION = (".", "?", "!", ":", ";", ")", "]")
 
 
 def normalize_for_matching(value: str) -> str:
@@ -186,6 +189,50 @@ def collect_outline_block(lines: list[str], label_index: int, end: int) -> tuple
     return items, block_end
 
 
+def starts_with_lowercase_text(value: str) -> bool:
+    stripped = value.strip()
+    return bool(stripped) and stripped[0].islower()
+
+
+def is_structural_item(value: str) -> bool:
+    stripped = value.strip()
+    return bool(
+        OUTLINE_MARKER_RE.match(stripped)
+        or PARENTHESIZED_REFERENCE_RE.match(stripped)
+        or normalize_for_matching(stripped) in {"maestro", "alumno"}
+    )
+
+
+def merge_wrapped_prose_items(items: list[str]) -> list[str]:
+    """Join prose fragments split by PDF line wrapping.
+
+    The merge is intentionally conservative. It does not merge outline markers
+    or parenthesized references, but it does join cases such as:
+        ¿De qué aprovechará si alguno dice que
+        tiene fe, pero no tiene obras?
+    """
+
+    merged: list[str] = []
+    for item in items:
+        stripped = item.strip()
+        if not stripped:
+            continue
+
+        if (
+            merged
+            and not merged[-1].endswith(TERMINAL_PUNCTUATION)
+            and not is_structural_item(merged[-1])
+            and not is_structural_item(stripped)
+            and starts_with_lowercase_text(stripped)
+        ):
+            merged[-1] = f"{merged[-1]} {stripped}"
+            continue
+
+        merged.append(stripped)
+
+    return merged
+
+
 def page_for_line(lines: list[str], line_number: int) -> int | None:
     active_page: int | None = None
     for index, line in enumerate(lines[:line_number], start=1):
@@ -246,6 +293,7 @@ def extract_list_section(
         items, block_end = collect_outline_block(lines, label_index, end)
     else:
         items, block_end = collect_block(lines, label_index, end, include_label_remainder=False)
+        items = merge_wrapped_prose_items(items)
     if not items:
         return None
 

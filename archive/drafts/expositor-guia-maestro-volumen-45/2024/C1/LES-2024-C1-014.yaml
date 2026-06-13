@@ -57,8 +57,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Cómo actuó Saraí frente al
-    - llamado de Dios a Abram?
+    - ¿Cómo actuó Saraí frente al llamado de Dios a Abram?
     - ¿Cuáles fueron los mayores desafíos enfrentados por Saraí en su
   summary_application:
     items:
@@ -91,22 +90,22 @@ source_trace:
   page_end: 118
   line_start: 1833
   line_end: 1938
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1849
       line_end: 1849
       page_start: 112
       page_end: 112
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1879
       line_end: 1882
       page_start: 113
       page_end: 113
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1859
       line_end: 1877
       page_start: 113

@@ -32,8 +32,7 @@ lesson_sections:
       source_text_included: false
   lesson_outline:
     items:
-    - I. Leyes existentes en la antigüedad hacia los deudores que no podían pagar
-      la deuda
+    - I. Leyes existentes en la antigüedad hacia los deudores que no podían pagar la deuda
     - (Deuteronomio 15:1-6; 2 Reyes 4:1-7)
     - A. La esclavitud por deudas que el deudor no podía pagar
     - (2 R 4:1-2)
@@ -54,8 +53,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Qué relación tiene la parábola
-    - narrada por Jesús con el perdón y la misericordia?
+    - ¿Qué relación tiene la parábola narrada por Jesús con el perdón y la misericordia?
     - ¿Cuántas veces se debe perdonar a
   summary_application:
     items:
@@ -88,22 +86,22 @@ source_trace:
   page_end: 53
   line_start: 791
   line_end: 931
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 803
       line_end: 803
       page_start: 46
       page_end: 46
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 833
       line_end: 836
       page_start: 47
       page_end: 47
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 812
       line_end: 831
       page_start: 47

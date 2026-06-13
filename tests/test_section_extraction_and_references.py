@@ -88,7 +88,8 @@ class SectionExtractorTest(unittest.TestCase):
                         "LECCIÓN Sample title",
                         "Lectura Bíblica: Isaías 5:1-7; Jeremías 2:21",
                         "Notas para el Maestro",
-                        "Pregunta guia",
+                        "¿De qué aprovechará si alguno dice que",
+                        "tiene fe, pero no tiene obras?",
                         "Introducción a la Lección",
                         "Bosquejo de la Lección",
                         "I. Primer punto",
@@ -134,7 +135,10 @@ class SectionExtractorTest(unittest.TestCase):
                 ],
                 "Isaiah",
             )
-            self.assertEqual(sections["teacher_notes"]["items"], ["Pregunta guia"])
+            self.assertEqual(
+                sections["teacher_notes"]["items"],
+                ["¿De qué aprovechará si alguno dice que tiene fe, pero no tiene obras?"],
+            )
             self.assertEqual(
                 sections["lesson_outline"]["items"],
                 ["I. Primer punto", "A. Subpunto"],

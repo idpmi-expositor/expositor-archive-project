@@ -50,10 +50,8 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. Comience la clase con una
-    - oración.
-    - 2. Pregunte a la clase la diferencia
-    - entre la ley y la gracia.
+    - 1. Comience la clase con una oración.
+    - 2. Pregunte a la clase la diferencia entre la ley y la gracia.
     - 3. Lea y discuta la afirmación
   summary_application:
     items:
@@ -86,22 +84,22 @@ source_trace:
   page_end: 198
   line_start: 3135
   line_end: 3263
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3172
       line_end: 3172
       page_start: 192
       page_end: 192
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3198
       line_end: 3203
       page_start: 193
       page_end: 193
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3185
       line_end: 3196
       page_start: 193

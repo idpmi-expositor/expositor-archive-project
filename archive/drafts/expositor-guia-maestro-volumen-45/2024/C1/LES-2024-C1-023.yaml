@@ -47,12 +47,9 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. Comience la clase con una
-    - oración.
-    - 2. Traiga a la clase una nota
-    - noticiosa reciente y léala al grupo, pida reacciones.
-    - 3. Lea y discuta la afirmación
-    - fundamental brevemente.
+    - 1. Comience la clase con una oración.
+    - 2. Traiga a la clase una nota noticiosa reciente y léala al grupo, pida reacciones.
+    - 3. Lea y discuta la afirmación fundamental brevemente.
   summary_application:
     items:
     - TBD
@@ -84,22 +81,22 @@ source_trace:
   page_end: 190
   line_start: 2966
   line_end: 3134
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3000
       line_end: 3000
       page_start: 184
       page_end: 184
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3031
       line_end: 3037
       page_start: 185
       page_end: 185
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3016
       line_end: 3029
       page_start: 185

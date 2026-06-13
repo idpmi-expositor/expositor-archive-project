@@ -35,8 +35,7 @@ lesson_sections:
     - I. La mentoría del apóstol Pablo como teólogo y
   teacher_notes:
     items:
-    - ¿Por qué la mentoría es importante en la preparación de
-    - nuevos líderes?
+    - ¿Por qué la mentoría es importante en la preparación de nuevos líderes?
     - ¿Cómo Pablo preparó a Timoteo y
   summary_application:
     items:
@@ -69,22 +68,22 @@ source_trace:
   page_end: 45
   line_start: 606
   line_end: 749
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 649
       line_end: 649
       page_start: 39
       page_end: 39
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 677
       line_end: 680
       page_start: 40
       page_end: 40
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 656
       line_end: 657
       page_start: 40

@@ -1,6 +1,6 @@
 {
-  "source_segments": "metadata\\lessons\\expositor-guia-maestro-volumen-45.json",
-  "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+  "source_segments": "metadata\\lessons\\maestro\\expositor-guia-maestro-volumen-45.json",
+  "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
   "lessons": [
     {
       "lesson_number": 1,
@@ -17,7 +17,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 106,
             "line_end": 106,
             "page_start": 7,
@@ -26,8 +26,7 @@
         },
         "teacher_notes": {
           "items": [
-            "¿De qué aprovechará si alguno dice que",
-            "tiene fe, pero no tiene obras?",
+            "¿De qué aprovechará si alguno dice que tiene fe, pero no tiene obras?",
             "¿Puede la fe sin obras justificar al creyente?",
             "mandamientos y en los seis restantes, identificó el deber del humano con los demás seres humanos. No obstante, el ser humano no pudo cumplir con las exigencias internas y externas de la ley. En la religiosidad judía, los intérpretes de la Ley enfatizaron más el ceremonial externo expresado en las obras y restaron importancia a la obligación moral que regulaba la fe y la obediencia a la Palabra de Dios. Cuando las obras son realizadas para obedecer a los hombres y se enajenan de la obediencia a Dios, el ser humano no puede ser liberado de la esclavitud al pecado. Por tanto, Dios hizo provisión para la redención del humano por medio de un Salvador (Mt 5:17-48; Ro 7:5, 7-12). A través de los profetas, Dios anunció la llegada del Salvador, por medio del cual la persona que en Él creyere, sería salva. Por tanto, la salvación no se obtiene por divina para el creyente que crea en las promesas de Dios y abrace a Cristo como su Salvador. Jesucristo fue el único que pudo cumplir con las exigencias de la ley divina (Gl 4:4, 5; Ro 5:1821). Por su obediencia, Jesucristo alcanzó la justificación y redención de los pecadores arrepentidos que depositaron su fe en Él. Gracias a la obra realizada por Cristo, el pueblo de Dios ya no está sometido al sistema religioso judío, sino, que tanto judíos como gentiles que aceptan la obra redentora provista por Dios por la fe en el Salvador, son justificados sin las obras de la Ley (Ro 3:28). Cristo cumplió con las demandas internas y externas de la Ley, y es el mediador de un nuevo pacto entre Dios y la humanidad. Por tanto, la justificación ante Dios no se logra por el mérito humano, ni por las obras de la ley, sino por la fe en Jesucristo.",
             "I. Justificados pues por la fe en Cristo",
@@ -35,7 +34,7 @@
             "A. Justificados por la fe sin las obras de la Ley"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 136,
             "line_end": 147,
             "page_start": 8,
@@ -58,7 +57,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 123,
             "line_end": 135,
             "page_start": 8,
@@ -83,7 +82,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 241,
             "line_end": 241,
             "page_start": 15,
@@ -92,12 +91,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Qué cuidados debe tener un líder al identificar el",
-            "fundamento sobre el cual va a construir?",
+            "¿Qué cuidados debe tener un líder al identificar el fundamento sobre el cual va a construir?",
             "¿Considera usted como importantes la"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 266,
             "line_end": 269,
             "page_start": 16,
@@ -124,7 +122,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 249,
             "line_end": 265,
             "page_start": 16,
@@ -141,7 +139,7 @@
           "reference_display": "1 Crónica 21:1, 7-13",
           "canonical_references": [],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 375,
             "line_end": 375,
             "page_start": 23,
@@ -150,12 +148,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué es lamentable cuando la persona cree",
-            "que sirve a Dios lo hace equivocadamente?",
+            "¿Por qué es lamentable cuando la persona cree que sirve a Dios lo hace equivocadamente?",
             "¿Cuál fue la experiencia de Saulo de Tarso que le"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 401,
             "line_end": 404,
             "page_start": 24,
@@ -184,7 +181,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 382,
             "line_end": 400,
             "page_start": 24,
@@ -216,7 +213,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 510,
             "line_end": 510,
             "page_start": 31,
@@ -225,12 +222,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué el cristiano debe vivir conforme a la fe",
-            "de los escogidos de Dios?",
+            "¿Por qué el cristiano debe vivir conforme a la fe de los escogidos de Dios?",
             "¿Cuán importante es tener la convicción del poder del evangelio para transformar vidas?"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 538,
             "line_end": 541,
             "page_start": 32,
@@ -258,7 +254,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 520,
             "line_end": 537,
             "page_start": 32,
@@ -283,7 +279,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 649,
             "line_end": 649,
             "page_start": 39,
@@ -292,12 +288,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué la mentoría es importante en la preparación de",
-            "nuevos líderes?",
+            "¿Por qué la mentoría es importante en la preparación de nuevos líderes?",
             "¿Cómo Pablo preparó a Timoteo y"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 677,
             "line_end": 680,
             "page_start": 40,
@@ -309,7 +304,7 @@
             "I. La mentoría del apóstol Pablo como teólogo y"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 656,
             "line_end": 657,
             "page_start": 40,
@@ -334,7 +329,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 793,
             "line_end": 793,
             "page_start": 47,
@@ -343,12 +338,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué era urgente que Tito nombrara obispos",
-            "irreprensibles para dirigir las iglesias en Creta?",
+            "¿Por qué era urgente que Tito nombrara obispos irreprensibles para dirigir las iglesias en Creta?",
             "¿Cómo eran famosos los habitantes de Creta que"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 820,
             "line_end": 823,
             "page_start": 48,
@@ -376,7 +370,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 802,
             "line_end": 819,
             "page_start": 48,
@@ -422,7 +416,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 939,
             "line_end": 939,
             "page_start": 55,
@@ -431,12 +425,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué es necesario que los",
-            "gobiernos celebren censos poblacionales?",
+            "¿Por qué es necesario que los gobiernos celebren censos poblacionales?",
             "¿Cómo los censos contribuyen"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 969,
             "line_end": 972,
             "page_start": 56,
@@ -466,7 +459,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 948,
             "line_end": 967,
             "page_start": 56,
@@ -498,7 +491,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1080,
             "line_end": 1080,
             "page_start": 63,
@@ -507,12 +500,11 @@
         },
         "teacher_notes": {
           "items": [
-            "1. ¿Cuán importante es tener una buena",
-            "percepción sobre los riesgos y oportunidades que da la vida?",
+            "1. ¿Cuán importante es tener una buena percepción sobre los riesgos y oportunidades que da la vida?",
             "2. ¿Qué enseñanzas recibimos al leer"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1102,
             "line_end": 1105,
             "page_start": 64,
@@ -536,7 +528,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1088,
             "line_end": 1101,
             "page_start": 64,
@@ -575,7 +567,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1206,
             "line_end": 1206,
             "page_start": 71,
@@ -584,14 +576,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Lea la carta de Filipenses para conocer los",
-            "temas importantes de la misma.",
-            "2. Repase Hechos 15 y 16 para comprender",
-            "el trasfondo de la evangelización en Filipos.",
+            "1. Lea la carta de Filipenses para conocer los temas importantes de la misma.",
+            "2. Repase Hechos 15 y 16 para comprender el trasfondo de la evangelización en Filipos.",
             "3. Utilice un mapa para localizar las iglesias"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1226,
             "line_end": 1231,
             "page_start": 72,
@@ -614,7 +604,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1213,
             "line_end": 1225,
             "page_start": 72,
@@ -646,7 +636,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1333,
             "line_end": 1333,
             "page_start": 79,
@@ -655,14 +645,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. ¿Qué significa el vivir en Cristo, y en qué",
-            "sentido el morir es ganancia?",
-            "2. Establezca la importancia de la unidad",
-            "cristiana para el éxito del evangelio.",
+            "1. ¿Qué significa el vivir en Cristo, y en qué sentido el morir es ganancia?",
+            "2. Establezca la importancia de la unidad cristiana para el éxito del evangelio.",
             "3. Enfatice en la necesidad de la solidaridad del"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1356,
             "line_end": 1361,
             "page_start": 80,
@@ -687,7 +675,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1341,
             "line_end": 1355,
             "page_start": 80,
@@ -712,7 +700,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1466,
             "line_end": 1466,
             "page_start": 87,
@@ -721,15 +709,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. ¿Cómo se explica la kenosis a la luz del himno",
-            "cristológico?",
-            "2. ¿Qué es la «teología kenótica» y cuáles son sus",
-            "representantes?",
-            "3. ¿Cuál es el impacto del modelo cristológico en",
-            "nuestra sociedad moderna? Esta tercera lección sobre el estudio a la carta a los Filipenses analiza lo que es considerado por muchos como el pasaje clave de toda la epístola y uno de los textos más importantes sobre la preexistencia, divinidad, humillación y exaltación de Cristo en todo el NT. Con ello, Pablo quiere asegurarles a sus lectores que el verdadero carácter de Dios se revela en la entrega en favor de los demás, acción llevada a cabo por medio de Cristo."
+            "1. ¿Cómo se explica la kenosis a la luz del himno cristológico?",
+            "2. ¿Qué es la «teología kenótica» y cuáles son sus representantes?",
+            "3. ¿Cuál es el impacto del modelo cristológico en nuestra sociedad moderna? Esta tercera lección sobre el estudio a la carta a los Filipenses analiza lo que es considerado por muchos como el pasaje clave de toda la epístola y uno de los textos más importantes sobre la preexistencia, divinidad, humillación y exaltación de Cristo en todo el NT. Con ello, Pablo quiere asegurarles a sus lectores que el verdadero carácter de Dios se revela en la entrega en favor de los demás, acción llevada a cabo por medio de Cristo."
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1486,
             "line_end": 1492,
             "page_start": 88,
@@ -750,7 +735,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1475,
             "line_end": 1485,
             "page_start": 88,
@@ -775,7 +760,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1597,
             "line_end": 1597,
             "page_start": 95,
@@ -784,14 +769,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. ¿Qué significa el «ocuparse de la salvación con",
-            "temor y temblor»?",
-            "2. ¿Cómo ha entendido la teología moderna las",
-            "frases «el querer como el hacer»?",
+            "1. ¿Qué significa el «ocuparse de la salvación con temor y temblor»?",
+            "2. ¿Cómo ha entendido la teología moderna las frases «el querer como el hacer»?",
             "3. Dé las razones por las que Pablo usa a Timoteo y"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1619,
             "line_end": 1624,
             "page_start": 96,
@@ -813,7 +796,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1607,
             "line_end": 1618,
             "page_start": 96,
@@ -838,7 +821,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1727,
             "line_end": 1727,
             "page_start": 103,
@@ -847,13 +830,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. ¿Cuál es la finalidad espiritual de la",
-            "circuncisión?",
+            "1. ¿Cuál es la finalidad espiritual de la circuncisión?",
             "2. ¿Qué se entiende por «la fe de Cristo»?",
             "3. Explique las diferentes maneras de explicar el"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1745,
             "line_end": 1749,
             "page_start": 104,
@@ -874,7 +856,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1734,
             "line_end": 1744,
             "page_start": 104,
@@ -906,7 +888,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1849,
             "line_end": 1849,
             "page_start": 112,
@@ -915,12 +897,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Cómo actuó Saraí frente al",
-            "llamado de Dios a Abram?",
+            "¿Cómo actuó Saraí frente al llamado de Dios a Abram?",
             "¿Cuáles fueron los mayores desafíos enfrentados por Saraí en su"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1879,
             "line_end": 1882,
             "page_start": 113,
@@ -949,7 +930,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1859,
             "line_end": 1877,
             "page_start": 113,
@@ -995,7 +976,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1975,
             "line_end": 1975,
             "page_start": 120,
@@ -1008,7 +989,7 @@
             "¿Cómo se afecta la familia al imponerse mediante engaño la poliginia"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2011,
             "line_end": 2013,
             "page_start": 121,
@@ -1038,7 +1019,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 1990,
             "line_end": 2009,
             "page_start": 121,
@@ -1055,7 +1036,7 @@
           "reference_display": "Génesis 38: 11, 14-19",
           "canonical_references": [],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2113,
             "line_end": 2113,
             "page_start": 128,
@@ -1064,12 +1045,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Cuál era la situación de la",
-            "mujer viuda sin hijos en la época patriarcal?",
+            "¿Cuál era la situación de la mujer viuda sin hijos en la época patriarcal?",
             "¿Por qué se pensó que la persona"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2140,
             "line_end": 2143,
             "page_start": 129,
@@ -1096,7 +1076,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2122,
             "line_end": 2138,
             "page_start": 129,
@@ -1121,7 +1101,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2240,
             "line_end": 2240,
             "page_start": 136,
@@ -1130,12 +1110,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Qué contraste existía entre",
-            "el patriarca de los hebreos y el Faraón de Egipto?",
+            "¿Qué contraste existía entre el patriarca de los hebreos y el Faraón de Egipto?",
             "¿Cómo Dios modificó la conducta"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2269,
             "line_end": 2272,
             "page_start": 137,
@@ -1162,7 +1141,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2251,
             "line_end": 2267,
             "page_start": 137,
@@ -1194,7 +1173,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2370,
             "line_end": 2370,
             "page_start": 144,
@@ -1203,12 +1182,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Qué importancia posee que",
-            "la persona pueda entender cuál es su llamado a ejercer el liderazgo?",
+            "¿Qué importancia posee que la persona pueda entender cuál es su llamado a ejercer el liderazgo?",
             "¿Por qué Dios escoge a líderes que"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2399,
             "line_end": 2402,
             "page_start": 145,
@@ -1237,7 +1215,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2379,
             "line_end": 2397,
             "page_start": 145,
@@ -1262,7 +1240,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2497,
             "line_end": 2497,
             "page_start": 152,
@@ -1271,12 +1249,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Qué podemos aprender",
-            "sobre la forma en que Dios va preparando a un líder desde su nacimiento?",
+            "¿Qué podemos aprender sobre la forma en que Dios va preparando a un líder desde su nacimiento?",
             "¿Por qué fue necesario que Moisés"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2528,
             "line_end": 2531,
             "page_start": 153,
@@ -1305,7 +1282,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2508,
             "line_end": 2526,
             "page_start": 153,
@@ -1344,7 +1321,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2625,
             "line_end": 2625,
             "page_start": 160,
@@ -1353,12 +1330,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Qué razones tuvieron los",
-            "ancianos de Israel para pedirle a Dios que les nombrara a un rey?",
+            "¿Qué razones tuvieron los ancianos de Israel para pedirle a Dios que les nombrara a un rey?",
             "¿Considera usted que Israel había"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2652,
             "line_end": 2655,
             "page_start": 161,
@@ -1385,7 +1361,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2634,
             "line_end": 2650,
             "page_start": 161,
@@ -1431,7 +1407,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2753,
             "line_end": 2753,
             "page_start": 168,
@@ -1445,14 +1421,12 @@
             "Objetivos: Después de estudiar esta lección el alumno:",
             "1. Reconocerá cómo la presencia de",
             "Jesucristo puede transformar el duelo en victoria.",
-            "2. Comprenderá que Jesús puede",
-            "acompañar a la persona en medio de su sufrimiento y darle consuelo.",
-            "3. Valorará la presencia de Jesús",
-            "combatiendo a la muerte y dando vida.",
+            "2. Comprenderá que Jesús puede acompañar a la persona en medio de su sufrimiento y darle consuelo.",
+            "3. Valorará la presencia de Jesús combatiendo a la muerte y dando vida.",
             "LECCIÓN El duelo, luto y llanto ante la muerte de Lázaro Juan 11:1, 19-20, 30-37, 40-44"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2738,
             "line_end": 2752,
             "page_start": 167,
@@ -1482,7 +1456,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2764,
             "line_end": 2783,
             "page_start": 169,
@@ -1514,7 +1488,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2878,
             "line_end": 2878,
             "page_start": 176,
@@ -1523,8 +1497,7 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Pida los alumnos que expliquen lo",
-            "que entienden por la frase “siervo de Jesucristo”.",
+            "1. Pida los alumnos que expliquen lo que entienden por la frase “siervo de Jesucristo”.",
             "2. Pregunte ¿Qué significa la expresión",
             "“el justo vivirá por la fe”?",
             "178 Maestro Corinto entre muchas otras. La iglesia de Roma pudo haber sido fundada por alguien anónimo que luego del evento de Hechos 2 (Pentecostés) regresara a la ciudad capital del imperio y allí proclamara la fe cristiana logrando un buen grupo de conversos tanto judíos como gentiles. Un dato interesante es la idea del catolicismo romano de que la iglesia romana fue fundada por Pedro, sin embargo, Pablo no le menciona en el extenso listado de hermanos de Roma del capítulo 16 y alguien tan importante no podía ser obviado en dicha lista de saludos. Pablo llama a los romanos “amados de Dios” y “llamados a ser santos” es decir que ya eran de Dios, convertidos, Dios los amó, los ama y los amará siempre. El llamado a la santidad indica que esta no es instantánea como lo es la salvación, sino progresiva y se nos invita o llama a seguir siendo (cada vez más) santos. Es muy probable que Pablo escribiera esta carta desde Corinto según se puede notar en Romanos 16:23 con la mención de Gayo su hospedador. Gayo es mencionado por primera vez en Hechos 19:29 con el gentilicio de macedonio lo que lo ubica cerca de Corinto y se menciona también en 1 Corintios 1:14 como uno de los bautizados por Pablo en esa ciudad. La fecha más apropiada para la carta a los romanos es entre los años 56-58 DC durante el tercer viaje misionero del apóstol Pablo. Pablo culmina el versículo siete con su acostumbrada bendición: “gracia y paz...” La gracia y la paz de Jesucristo, la paz de Dios es necesaria para seguir viviendo en un mundo de competencia y sin pizca de paz.",
@@ -1535,12 +1508,11 @@
             "II. El deseo de Pablo (Romanos 1:8-15)",
             "Lección 22",
             "Notas del Maestro - Parte II",
-            "1. Describa brevemente ¿Cómo puede un",
-            "cristiano avergonzarse del evangelio?",
+            "1. Describa brevemente ¿Cómo puede un cristiano avergonzarse del evangelio?",
             "2. Explique la frase “Porque no me"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2920,
             "line_end": 2942,
             "page_start": 178,
@@ -1563,7 +1535,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 2889,
             "line_end": 2901,
             "page_start": 177,
@@ -1580,7 +1552,7 @@
           "reference_display": "1Romanos 1:18-25",
           "canonical_references": [],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3000,
             "line_end": 3000,
             "page_start": 184,
@@ -1589,15 +1561,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Comience la clase con una",
-            "oración.",
-            "2. Traiga a la clase una nota",
-            "noticiosa reciente y léala al grupo, pida reacciones.",
-            "3. Lea y discuta la afirmación",
-            "fundamental brevemente."
+            "1. Comience la clase con una oración.",
+            "2. Traiga a la clase una nota noticiosa reciente y léala al grupo, pida reacciones.",
+            "3. Lea y discuta la afirmación fundamental brevemente."
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3031,
             "line_end": 3037,
             "page_start": 185,
@@ -1621,7 +1590,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3016,
             "line_end": 3029,
             "page_start": 185,
@@ -1653,7 +1622,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3172,
             "line_end": 3172,
             "page_start": 192,
@@ -1662,14 +1631,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Comience la clase con una",
-            "oración.",
-            "2. Pregunte a la clase la diferencia",
-            "entre la ley y la gracia.",
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase la diferencia entre la ley y la gracia.",
             "3. Lea y discuta la afirmación"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3198,
             "line_end": 3203,
             "page_start": 193,
@@ -1691,7 +1658,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3185,
             "line_end": 3196,
             "page_start": 193,
@@ -1716,7 +1683,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3299,
             "line_end": 3299,
             "page_start": 200,
@@ -1725,14 +1692,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Comience la clase con una",
-            "oración.",
-            "2. Pregunte a la clase la diferencia",
-            "entre salvación por fe y salvación por obras.",
+            "1. Comience la clase con una oración.",
+            "2. Pregunte a la clase la diferencia entre salvación por fe y salvación por obras.",
             "3. Lea y discuta la afirmación"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3327,
             "line_end": 3332,
             "page_start": 201,
@@ -1755,7 +1720,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3313,
             "line_end": 3325,
             "page_start": 201,
@@ -1780,7 +1745,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3447,
             "line_end": 3447,
             "page_start": 208,
@@ -1796,7 +1761,7 @@
             "Romanos 5:1-11"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3437,
             "line_end": 3446,
             "page_start": 207,
@@ -1818,7 +1783,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-45.txt",
             "line_start": 3458,
             "line_end": 3469,
             "page_start": 209,

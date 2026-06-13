@@ -57,8 +57,7 @@ lesson_sections:
     - 'IV. Resumen y aplicación práctica:'
   teacher_notes:
     items:
-    - ¿Por qué el profeta Isaías utilizó
-    - lenguaje parabólico para transmitir el mensaje de Jehová?
+    - ¿Por qué el profeta Isaías utilizó lenguaje parabólico para transmitir el mensaje de Jehová?
     - ¿Qué enseñanzas se pueden obtener
   summary_application:
     items:
@@ -91,22 +90,22 @@ source_trace:
   page_end: 21
   line_start: 233
   line_end: 374
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 245
       line_end: 245
       page_start: 14
       page_end: 14
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 275
       line_end: 278
       page_start: 15
       page_end: 15
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 255
       line_end: 273
       page_start: 15

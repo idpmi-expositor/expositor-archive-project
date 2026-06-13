@@ -81,19 +81,19 @@ ocr/quality_reports/*.json
   |
   |  scripts/structuring/03_minimal_text_normalizer.py
   v
-normalized/*.txt
+normalized/<classification>/*.txt
   |
   |  scripts/structuring/04_document_structure_detector.py
   v
-structured/document_structure/*.json
+structured/document_structure/<classification>/*.json
   |
   |  scripts/structuring/05_lesson_segmenter.py
   v
-metadata/lessons/*.json
+metadata/lessons/<classification>/*.json
   |
   |  scripts/structuring/06_section_extractor.py
   v
-metadata/lesson_sections/*.json
+metadata/lesson_sections/<classification>/*.json
   |
   |  scripts/canonical/06_yaml_generator.py
   v
@@ -249,7 +249,7 @@ tests/                         Unit tests for pipeline behavior.
 - Reads normalized text and lesson segment metadata.
 - Extracts automated unreviewed biblical reading, outline, teacher notes, and
   summary/application sections.
-- Writes `metadata/lesson_sections/*.json` with section traces.
+- Writes `metadata/lesson_sections/<classification>/*.json` with section traces.
 - Does not mark extracted values as human-reviewed.
 
 ### Canonical

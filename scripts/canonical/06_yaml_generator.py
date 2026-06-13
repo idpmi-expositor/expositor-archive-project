@@ -89,14 +89,13 @@ def load_json(path: Path) -> dict[str, Any]:
     return data
 
 
-def load_section_metadata(section_dir: Path, publication_id: str) -> dict[int, dict[str, Any]]:
+def load_section_metadata(section_path: Path) -> dict[int, dict[str, Any]]:
     """Load automated-unreviewed section extraction for one publication."""
 
-    section_file = section_dir / f"{publication_id}.json"
-    if not section_file.exists():
+    if not section_path.exists():
         return {}
 
-    data = load_json(section_file)
+    data = load_json(section_path)
     sections_by_lesson: dict[int, dict[str, Any]] = {}
     lessons = data.get("lessons", [])
     if not isinstance(lessons, list):
@@ -150,6 +149,7 @@ def write_yaml(path: Path, data: dict[str, Any]) -> None:
             allow_unicode=True,
             sort_keys=False,
             explicit_start=True,
+            width=4096,
         )
 
 
@@ -428,7 +428,8 @@ def main() -> int:
         if not isinstance(segments, list):
             raise ValueError(f"{segment_file}: segments must be a list")
         source_structure = str(metadata.get("source_structure") or "")
-        sections_by_lesson = load_section_metadata(args.section_dir, segment_file.stem)
+        section_file = args.section_dir / segment_file.relative_to(args.input_dir)
+        sections_by_lesson = load_section_metadata(section_file)
 
         for index, segment in enumerate(segments):
             if not isinstance(segment, dict):

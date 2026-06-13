@@ -56,8 +56,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué debemos reconocer
-    - a la agricultura como un oficio digno?
+    - ¿Por qué debemos reconocer a la agricultura como un oficio digno?
     - ¿Qué importancia posee conocer la
   summary_application:
     items:
@@ -90,22 +89,22 @@ source_trace:
   page_end: 69
   line_start: 1071
   line_end: 1207
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1084
       line_end: 1084
       page_start: 62
       page_end: 62
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1111
       line_end: 1114
       page_start: 63
       page_end: 63
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1092
       line_end: 1109
       page_start: 63

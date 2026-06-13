@@ -44,8 +44,7 @@ lesson_sections:
   teacher_notes:
     items:
     - 1. Comience la clase con una oración.
-    - 2. Pregunte a la clase lo que
-    - entienden por el término “nombre”.
+    - 2. Pregunte a la clase lo que entienden por el término “nombre”.
     - 3. Lea y discuta brevemente la afirmación
   summary_application:
     items:
@@ -78,22 +77,22 @@ source_trace:
   page_end: 158
   line_start: 2511
   line_end: 2653
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2518
       line_end: 2518
       page_start: 151
       page_end: 151
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2542
       line_end: 2546
       page_start: 152
       page_end: 152
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2531
       line_end: 2540
       page_start: 152

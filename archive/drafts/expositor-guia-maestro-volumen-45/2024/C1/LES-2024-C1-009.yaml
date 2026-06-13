@@ -56,10 +56,8 @@ lesson_sections:
     - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. Lea la carta de Filipenses para conocer los
-    - temas importantes de la misma.
-    - 2. Repase Hechos 15 y 16 para comprender
-    - el trasfondo de la evangelización en Filipos.
+    - 1. Lea la carta de Filipenses para conocer los temas importantes de la misma.
+    - 2. Repase Hechos 15 y 16 para comprender el trasfondo de la evangelización en Filipos.
     - 3. Utilice un mapa para localizar las iglesias
   summary_application:
     items:
@@ -92,22 +90,22 @@ source_trace:
   page_end: 77
   line_start: 1168
   line_end: 1292
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1206
       line_end: 1206
       page_start: 71
       page_end: 71
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1226
       line_end: 1231
       page_start: 72
       page_end: 72
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1213
       line_end: 1225
       page_start: 72

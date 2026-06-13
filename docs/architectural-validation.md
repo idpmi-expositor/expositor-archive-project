@@ -73,7 +73,7 @@ python -m unittest discover -s tests
 Observed result:
 
 ```text
-Ran 18 tests
+Ran 20 tests
 OK
 ```
 
@@ -446,7 +446,9 @@ These indexes were generated with:
 python scripts\canonical\08_index_builder.py archive\drafts --output-dir indexes\provisional --allow-unreviewed
 ```
 
-The provisional lesson index contains 52 draft lessons. The provisional
+The provisional lesson index contains 52 draft lessons, publication
+classification values, and section-level index entries for extracted lesson
+outline, teacher notes, and summary/application items. The provisional
 scripture index contains 91 scripture-reference entries. Both files include:
 
 ```yaml
@@ -570,7 +572,7 @@ The documentation set was reviewed against current scripts and artifacts.
 Local regression tests pass:
 
 ```text
-Ran 18 tests
+Ran 20 tests
 OK
 ```
 
@@ -622,6 +624,7 @@ been implemented.
 | Canonical Review Readiness | Fail | High | High |
 | Official Indexing and Retrieval | Fail | High | High |
 | Provisional Draft Indexing | Pass | High | High |
+| Classification-Aware Output Layout | Warning | Medium | High |
 | Documentation and Human Revision | Warning | Medium | High |
 | Tests | Warning | Medium | High |
 | CI and Remote Quality Gates | Fail | High | Medium-High |
@@ -646,6 +649,9 @@ Add and keep these matrix areas:
   blocked until reviewed canonical records exist.
 - **Provisional Draft Indexing**: confirms no-human-review pipeline diagnostics
   can be generated without weakening canonical safety gates.
+- **Classification-Aware Output Layout**: confirms generated normalized,
+  structured, and metadata artifacts remain grouped by publication family such
+  as `maestro`, `alumno`, `joven`, `nino`, and `parvulo`.
 - **Tests**: shows whether local regression protection is healthy.
 - **CI and Remote Quality Gates**: shows whether GitHub blocks unsafe changes.
 

@@ -44,8 +44,7 @@ lesson_sections:
     - recoge toda clase de peces (Mt 13:47)
     - B. Comparación en la selección entre los peces buenos y
     - los malos con los justos e injustos (Mt 13:48-51)
-    - III. Semejanza del reino de los cielos con las actividades que realiza un padre
-      de familia
+    - III. Semejanza del reino de los cielos con las actividades que realiza un padre de familia
     - (Mateo 13:52-58)
     - A. Cuando el padre es docto saca de su tesoro cosas nuevas y
     - viejas (Mt 13:52-53)
@@ -54,8 +53,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué Jesús mencionó las
-    - cosas escondidas desde la fundación del mundo?
+    - ¿Por qué Jesús mencionó las cosas escondidas desde la fundación del mundo?
     - ¿Qué respuesta dio Jesús a
   summary_application:
     items:
@@ -88,22 +86,22 @@ source_trace:
   page_end: 110
   line_start: 1782
   line_end: 1912
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1792
       line_end: 1792
       page_start: 102
       page_end: 102
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1818
       line_end: 1821
       page_start: 103
       page_end: 103
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1797
       line_end: 1816
       page_start: 103

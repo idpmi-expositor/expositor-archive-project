@@ -45,8 +45,7 @@ lesson_sections:
   teacher_notes:
     items:
     - 1. Comience la clase con una oración.
-    - 2. Pregunte a la clase la definición de
-    - misión.
+    - 2. Pregunte a la clase la definición de misión.
     - 3. Lea y discuta brevemente la afirmación
   summary_application:
     items:
@@ -79,22 +78,22 @@ source_trace:
   page_end: 150
   line_start: 2384
   line_end: 2510
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2391
       line_end: 2391
       page_start: 143
       page_end: 143
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2416
       line_end: 2420
       page_start: 144
       page_end: 144
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2402
       line_end: 2412
       page_start: 144

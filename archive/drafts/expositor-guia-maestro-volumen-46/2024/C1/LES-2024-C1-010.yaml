@@ -37,8 +37,7 @@ lesson_sections:
       source_text_included: false
   lesson_outline:
     items:
-    - I. La responsabilidad de un mayordomo administrando los bienes ajenos (Lucas
-      16:1-2)
+    - I. La responsabilidad de un mayordomo administrando los bienes ajenos (Lucas 16:1-2)
     - A. La infidelidad del mayordomo (Lc 16:1)
     - B. El mayordomo es llamado a rendir cuentas de su
     - administración (Lc 16:2)
@@ -88,22 +87,22 @@ source_trace:
   page_end: 85
   line_start: 1348
   line_end: 1489
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1361
       line_end: 1361
       page_start: 78
       page_end: 78
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1390
       line_end: 1392
       page_start: 79
       page_end: 79
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1373
       line_end: 1388
       page_start: 79

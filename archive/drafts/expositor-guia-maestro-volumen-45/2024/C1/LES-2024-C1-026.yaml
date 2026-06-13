@@ -47,10 +47,7 @@ lesson_sections:
     items:
     - 1. 2. 3.
     - 'Tema de la Unidad: Una exposición de la Epístola a los Romanos'
-    - 'Objetivos: Después de estudiar esta lección el alumno: • Demostrará bíblicamente
-      que el ser humano es justificado por la fe en Cristo. • Argumentará sobre el
-      amor de Dios en la justificación. • Explicará el significado teológico de la
-      justificación por la fe en Cristo.'
+    - 'Objetivos: Después de estudiar esta lección el alumno: • Demostrará bíblicamente que el ser humano es justificado por la fe en Cristo. • Argumentará sobre el amor de Dios en la justificación. • Explicará el significado teológico de la justificación por la fe en Cristo.'
     - LECCIÓN La justificación, la prueba del amor de Dios
     - Romanos 5:1-11
   summary_application:
@@ -84,22 +81,22 @@ source_trace:
   page_end: 223
   line_start: 3405
   line_end: 3610
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3447
       line_end: 3447
       page_start: 208
       page_end: 208
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3437
       line_end: 3446
       page_start: 207
       page_end: 208
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3458
       line_end: 3469
       page_start: 209

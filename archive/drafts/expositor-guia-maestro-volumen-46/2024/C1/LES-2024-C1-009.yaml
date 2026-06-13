@@ -88,8 +88,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Cuál era el significado de la
-    - dote en el contrato matrimonial en el AT?
+    - ¿Cuál era el significado de la dote en el contrato matrimonial en el AT?
     - ¿Qué aprendemos sobre la dote
   summary_application:
     items:
@@ -122,22 +121,22 @@ source_trace:
   page_end: 77
   line_start: 1208
   line_end: 1347
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1220
       line_end: 1220
       page_start: 70
       page_end: 70
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1250
       line_end: 1253
       page_start: 71
       page_end: 71
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1229
       line_end: 1248
       page_start: 71

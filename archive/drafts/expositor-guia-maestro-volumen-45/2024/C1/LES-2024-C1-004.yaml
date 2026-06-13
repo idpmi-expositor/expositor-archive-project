@@ -56,10 +56,8 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué el cristiano debe vivir conforme a la fe
-    - de los escogidos de Dios?
-    - ¿Cuán importante es tener la convicción del poder del evangelio para transformar
-      vidas?
+    - ¿Por qué el cristiano debe vivir conforme a la fe de los escogidos de Dios?
+    - ¿Cuán importante es tener la convicción del poder del evangelio para transformar vidas?
   summary_application:
     items:
     - TBD
@@ -91,22 +89,22 @@ source_trace:
   page_end: 37
   line_start: 470
   line_end: 605
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 510
       line_end: 510
       page_start: 31
       page_end: 31
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 538
       line_end: 541
       page_start: 32
       page_end: 32
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 520
       line_end: 537
       page_start: 32

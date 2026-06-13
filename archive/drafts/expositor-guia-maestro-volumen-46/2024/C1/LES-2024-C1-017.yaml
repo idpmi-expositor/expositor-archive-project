@@ -43,8 +43,7 @@ lesson_sections:
   teacher_notes:
     items:
     - 1. Comience la clase con una oración.
-    - 2. Pregunte a la clase la definición
-    - omnisciencia.
+    - 2. Pregunte a la clase la definición omnisciencia.
     - 3. Lea y discuta brevemente la afirmación
   summary_application:
     items:
@@ -77,22 +76,22 @@ source_trace:
   page_end: 142
   line_start: 2261
   line_end: 2383
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2268
       line_end: 2268
       page_start: 135
       page_end: 135
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2295
       line_end: 2299
       page_start: 136
       page_end: 136
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2285
       line_end: 2293
       page_start: 136

@@ -53,10 +53,8 @@ lesson_sections:
     - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. ¿Qué significa el vivir en Cristo, y en qué
-    - sentido el morir es ganancia?
-    - 2. Establezca la importancia de la unidad
-    - cristiana para el éxito del evangelio.
+    - 1. ¿Qué significa el vivir en Cristo, y en qué sentido el morir es ganancia?
+    - 2. Establezca la importancia de la unidad cristiana para el éxito del evangelio.
     - 3. Enfatice en la necesidad de la solidaridad del
   summary_application:
     items:
@@ -89,22 +87,22 @@ source_trace:
   page_end: 85
   line_start: 1293
   line_end: 1419
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1333
       line_end: 1333
       page_start: 79
       page_end: 79
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1356
       line_end: 1361
       page_start: 80
       page_end: 80
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1341
       line_end: 1355
       page_start: 80

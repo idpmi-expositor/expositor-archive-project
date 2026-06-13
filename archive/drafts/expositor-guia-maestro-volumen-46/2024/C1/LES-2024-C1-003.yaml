@@ -52,8 +52,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué Jehová habló por
-    - parábolas a Su pueblo?
+    - ¿Por qué Jehová habló por parábolas a Su pueblo?
     - ¿Cuál es el simbolismo de la gran
   summary_application:
     items:
@@ -86,22 +85,22 @@ source_trace:
   page_end: 29
   line_start: 375
   line_end: 506
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 386
       line_end: 386
       page_start: 22
       page_end: 22
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 413
       line_end: 416
       page_start: 23
       page_end: 23
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 393
       line_end: 411
       page_start: 23

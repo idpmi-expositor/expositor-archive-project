@@ -52,8 +52,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué es lamentable cuando la persona cree
-    - que sirve a Dios lo hace equivocadamente?
+    - ¿Por qué es lamentable cuando la persona cree que sirve a Dios lo hace equivocadamente?
     - ¿Cuál fue la experiencia de Saulo de Tarso que le
   summary_application:
     items:
@@ -86,22 +85,22 @@ source_trace:
   page_end: 29
   line_start: 336
   line_end: 469
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 375
       line_end: 375
       page_start: 23
       page_end: 23
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 401
       line_end: 404
       page_start: 24
       page_end: 24
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 382
       line_end: 400
       page_start: 24

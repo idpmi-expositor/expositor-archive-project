@@ -43,8 +43,7 @@ lesson_sections:
   teacher_notes:
     items:
     - 1. Comience la clase con una oración.
-    - 2. Pregunte a la clase la definición de
-    - bautismo en agua.
+    - 2. Pregunte a la clase la definición de bautismo en agua.
     - 3. Lea y discuta brevemente la afirmación
   summary_application:
     items:
@@ -77,22 +76,22 @@ source_trace:
   page_end: 134
   line_start: 2146
   line_end: 2260
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2153
       line_end: 2153
       page_start: 127
       page_end: 127
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2174
       line_end: 2178
       page_start: 128
       page_end: 128
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2164
       line_end: 2172
       page_start: 128

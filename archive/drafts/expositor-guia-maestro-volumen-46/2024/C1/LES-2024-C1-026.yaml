@@ -53,10 +53,8 @@ lesson_sections:
     - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. Estudie los pasajes sobre las
-    - apariciones de Cristo en los cuatro evangelios.
-    - 2. Enfatice en la importancia del testimonio
-    - oral sobre la resurrección de Cristo.
+    - 1. Estudie los pasajes sobre las apariciones de Cristo en los cuatro evangelios.
+    - 2. Enfatice en la importancia del testimonio oral sobre la resurrección de Cristo.
     - 3. Mencione las señales del evangelio de Juan
   summary_application:
     items:
@@ -89,22 +87,22 @@ source_trace:
   page_end: 220
   line_start: 3396
   line_end: 3558
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3403
       line_end: 3403
       page_start: 205
       page_end: 205
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3428
       line_end: 3433
       page_start: 206
       page_end: 206
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3412
       line_end: 3426
       page_start: 206

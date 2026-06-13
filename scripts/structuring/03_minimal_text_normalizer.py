@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import sys
 import unicodedata
 from pathlib import Path
 
@@ -34,6 +35,11 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_RAW_TEXT_DIR = PROJECT_ROOT / "ocr" / "raw_txt"
 DEFAULT_NORMALIZED_DIR = PROJECT_ROOT / "normalized"
+SCRIPTS_DIR = PROJECT_ROOT / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+
+from pipeline_classification import classified_relative_path  # noqa: E402
 
 PAGE_MARKER_PATTERN = re.compile(r"^===== PDF_PAGE \d+ =====$")
 LESSON_HEADER_PATTERN = re.compile(r"^LECCI[OÓ]N\s+\d+\b", re.IGNORECASE)
@@ -245,7 +251,7 @@ def main() -> int:
         return 0
 
     for input_file in input_files:
-        output_file = args.output_dir / input_file.relative_to(args.input_dir)
+        output_file = args.output_dir / classified_relative_path(input_file, args.input_dir)
         normalize_file(input_file, output_file)
         print(f"Normalized {input_file} -> {output_file}")
 

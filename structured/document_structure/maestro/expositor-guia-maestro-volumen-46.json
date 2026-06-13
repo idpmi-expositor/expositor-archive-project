@@ -1,5 +1,5 @@
 {
-  "source_text": "normalized\\expositor-guia-maestro-volumen-45.txt",
+  "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
   "markers": [
     {
       "line_number": 1,
@@ -7,7 +7,7 @@
       "text": "===== PDF_PAGE 1 ====="
     },
     {
-      "line_number": 4,
+      "line_number": 7,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 2 ====="
     },
@@ -17,587 +17,587 @@
       "text": "===== PDF_PAGE 3 ====="
     },
     {
-      "line_number": 15,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 4 ====="
-    },
-    {
-      "line_number": 17,
+      "line_number": 12,
       "marker_type": "section_label",
       "text": "Lectura Bíblica presenta la base para la lección y"
     },
     {
-      "line_number": 26,
+      "line_number": 21,
       "marker_type": "section_label",
       "text": "Bosquejo de la Lección. Si el maestro o maestra"
     },
     {
-      "line_number": 31,
+      "line_number": 26,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 5 ====="
+      "text": "===== PDF_PAGE 4 ====="
     },
     {
-      "line_number": 32,
+      "line_number": 27,
       "marker_type": "section_label",
       "text": "CONTENIDO"
     },
     {
-      "line_number": 90,
+      "line_number": 83,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 5 ====="
+    },
+    {
+      "line_number": 86,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 6 ====="
     },
     {
-      "line_number": 93,
+      "line_number": 98,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Isaías 5:1-7; Jeremías 2:21"
+    },
+    {
+      "line_number": 107,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 7 ====="
     },
     {
-      "line_number": 106,
+      "line_number": 108,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Santiago 2:14-24"
+      "text": "Notas para el Maestro"
     },
     {
-      "line_number": 113,
+      "line_number": 115,
+      "marker_type": "lesson_header",
+      "text": "Lección 1"
+    },
+    {
+      "line_number": 121,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 139,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 8 ====="
     },
     {
-      "line_number": 117,
-      "marker_type": "lesson_header",
-      "text": "Lección 1"
-    },
-    {
-      "line_number": 123,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 136,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 141,
+      "line_number": 148,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 9 ====="
     },
     {
-      "line_number": 150,
+      "line_number": 149,
+      "marker_type": "lesson_header",
+      "text": "Lección 1"
+    },
+    {
+      "line_number": 154,
+      "marker_type": "section_label",
+      "text": "contenidos en la Ley dada a Moisés,"
+    },
+    {
+      "line_number": 159,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 10 ====="
     },
     {
-      "line_number": 151,
-      "marker_type": "lesson_header",
-      "text": "Lección 1"
-    },
-    {
-      "line_number": 161,
+      "line_number": 167,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 166,
+      "line_number": 173,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 11 ====="
     },
     {
-      "line_number": 176,
+      "line_number": 174,
+      "marker_type": "lesson_header",
+      "text": "Lección 1"
+    },
+    {
+      "line_number": 186,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 12 ====="
     },
     {
-      "line_number": 177,
-      "marker_type": "lesson_header",
-      "text": "Lección 1"
-    },
-    {
-      "line_number": 185,
+      "line_number": 196,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte III"
     },
     {
-      "line_number": 190,
+      "line_number": 204,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 13 ====="
     },
     {
-      "line_number": 197,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 14 ====="
-    },
-    {
-      "line_number": 199,
+      "line_number": 206,
       "marker_type": "lesson_header",
       "text": "Lección 1"
     },
     {
-      "line_number": 226,
+      "line_number": 233,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 14 ====="
+    },
+    {
+      "line_number": 245,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Isaías 28:23-29; Amós 1:2-3"
+    },
+    {
+      "line_number": 253,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 15 ====="
     },
     {
-      "line_number": 241,
+      "line_number": 255,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: I Corintios 3:10-19"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 247,
+      "line_number": 275,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 280,
+      "marker_type": "lesson_header",
+      "text": "Lección 2"
+    },
+    {
+      "line_number": 285,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 16 ====="
     },
     {
-      "line_number": 249,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 266,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 271,
-      "marker_type": "lesson_header",
-      "text": "Lección 2"
-    },
-    {
-      "line_number": 276,
+      "line_number": 296,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 17 ====="
     },
     {
-      "line_number": 287,
+      "line_number": 298,
+      "marker_type": "lesson_header",
+      "text": "Lección 2"
+    },
+    {
+      "line_number": 307,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 18 ====="
     },
     {
-      "line_number": 291,
-      "marker_type": "lesson_header",
-      "text": "Lección 2"
-    },
-    {
-      "line_number": 297,
+      "line_number": 317,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 303,
+      "line_number": 323,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 19 ====="
     },
     {
-      "line_number": 310,
+      "line_number": 324,
+      "marker_type": "lesson_header",
+      "text": "Lección 2"
+    },
+    {
+      "line_number": 333,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte III"
+    },
+    {
+      "line_number": 339,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 20 ====="
     },
     {
-      "line_number": 311,
-      "marker_type": "lesson_header",
-      "text": "Lección 2"
-    },
-    {
-      "line_number": 323,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 329,
+      "line_number": 346,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 21 ====="
     },
     {
-      "line_number": 336,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 22 ====="
-    },
-    {
-      "line_number": 358,
+      "line_number": 368,
       "marker_type": "lesson_header",
       "text": "Lección 2"
     },
     {
-      "line_number": 365,
+      "line_number": 375,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 22 ====="
+    },
+    {
+      "line_number": 386,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Ezequiel 17:1-10"
+    },
+    {
+      "line_number": 391,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 23 ====="
     },
     {
-      "line_number": 375,
+      "line_number": 393,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: 1 Crónica 21:1, 7-13"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 380,
+      "line_number": 413,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 418,
+      "marker_type": "lesson_header",
+      "text": "Lección 3"
+    },
+    {
+      "line_number": 423,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 24 ====="
     },
     {
-      "line_number": 382,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 401,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 406,
-      "marker_type": "lesson_header",
-      "text": "Lección 3"
-    },
-    {
-      "line_number": 411,
+      "line_number": 432,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 25 ====="
     },
     {
-      "line_number": 425,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 26 ====="
-    },
-    {
-      "line_number": 426,
+      "line_number": 433,
       "marker_type": "lesson_header",
       "text": "Lección 3"
     },
     {
-      "line_number": 435,
+      "line_number": 443,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 441,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 27 ====="
     },
     {
       "line_number": 449,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 28 ====="
+      "text": "===== PDF_PAGE 26 ====="
     },
     {
-      "line_number": 450,
+      "line_number": 459,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 27 ====="
+    },
+    {
+      "line_number": 460,
       "marker_type": "lesson_header",
       "text": "Lección 3"
     },
     {
-      "line_number": 459,
+      "line_number": 468,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte III"
     },
     {
-      "line_number": 463,
+      "line_number": 474,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 28 ====="
+    },
+    {
+      "line_number": 483,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 29 ====="
     },
     {
-      "line_number": 470,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 30 ====="
-    },
-    {
-      "line_number": 472,
+      "line_number": 485,
       "marker_type": "lesson_header",
       "text": "Lección 3"
     },
     {
-      "line_number": 497,
+      "line_number": 507,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 31 ====="
+      "text": "===== PDF_PAGE 30 ====="
     },
     {
-      "line_number": 510,
+      "line_number": 517,
       "marker_type": "section_label",
       "text": "Lectura Bíblica: Tito 1:1-9; Romanos 1:8"
     },
     {
-      "line_number": 518,
+      "line_number": 525,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 31 ====="
+    },
+    {
+      "line_number": 527,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 547,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 552,
+      "marker_type": "lesson_header",
+      "text": "Lección 4"
+    },
+    {
+      "line_number": 558,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 32 ====="
     },
     {
-      "line_number": 520,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 538,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 543,
-      "marker_type": "lesson_header",
-      "text": "Lección 4"
-    },
-    {
-      "line_number": 549,
+      "line_number": 569,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 33 ====="
     },
     {
-      "line_number": 559,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 34 ====="
-    },
-    {
-      "line_number": 560,
+      "line_number": 570,
       "marker_type": "lesson_header",
       "text": "Lección 4"
     },
     {
-      "line_number": 570,
+      "line_number": 578,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 576,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 35 ====="
     },
     {
       "line_number": 584,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 36 ====="
+      "text": "===== PDF_PAGE 34 ====="
     },
     {
-      "line_number": 585,
+      "line_number": 593,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 35 ====="
+    },
+    {
+      "line_number": 594,
       "marker_type": "lesson_header",
       "text": "Lección 4"
     },
     {
-      "line_number": 594,
+      "line_number": 603,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte III"
     },
     {
-      "line_number": 599,
+      "line_number": 609,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 36 ====="
+    },
+    {
+      "line_number": 618,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 37 ====="
     },
     {
-      "line_number": 606,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 38 ====="
-    },
-    {
-      "line_number": 630,
+      "line_number": 643,
       "marker_type": "lesson_header",
       "text": "Lección 4"
     },
     {
-      "line_number": 636,
+      "line_number": 649,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 38 ====="
+    },
+    {
+      "line_number": 662,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Ezequiel 23:1-7; 14-16"
+    },
+    {
+      "line_number": 667,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 39 ====="
     },
     {
-      "line_number": 649,
+      "line_number": 669,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Tito 2:1-15"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 654,
+      "line_number": 689,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 694,
+      "marker_type": "lesson_header",
+      "text": "Lección 5"
+    },
+    {
+      "line_number": 700,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 40 ====="
     },
     {
-      "line_number": 656,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 677,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 682,
-      "marker_type": "lesson_header",
-      "text": "Lección 5"
-    },
-    {
-      "line_number": 688,
+      "line_number": 711,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 41 ====="
     },
     {
-      "line_number": 699,
+      "line_number": 712,
+      "marker_type": "lesson_header",
+      "text": "Lección 5"
+    },
+    {
+      "line_number": 720,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 728,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 42 ====="
     },
     {
-      "line_number": 700,
-      "marker_type": "lesson_header",
-      "text": "Lección 5"
-    },
-    {
-      "line_number": 708,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 716,
+      "line_number": 737,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 43 ====="
     },
     {
-      "line_number": 725,
+      "line_number": 738,
+      "marker_type": "lesson_header",
+      "text": "Lección 5"
+    },
+    {
+      "line_number": 745,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte III"
+    },
+    {
+      "line_number": 753,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 44 ====="
     },
     {
-      "line_number": 726,
-      "marker_type": "lesson_header",
-      "text": "Lección 5"
-    },
-    {
-      "line_number": 735,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 743,
+      "line_number": 762,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 45 ====="
     },
     {
-      "line_number": 750,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 46 ====="
-    },
-    {
-      "line_number": 752,
+      "line_number": 764,
       "marker_type": "lesson_header",
       "text": "Lección 5"
     },
     {
-      "line_number": 781,
+      "line_number": 791,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 46 ====="
+    },
+    {
+      "line_number": 803,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Mateo 18:23-33"
+    },
+    {
+      "line_number": 810,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 47 ====="
     },
     {
-      "line_number": 793,
+      "line_number": 812,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Tito 3:1-11"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 800,
+      "line_number": 833,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 838,
+      "marker_type": "lesson_header",
+      "text": "Lección 6"
+    },
+    {
+      "line_number": 844,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 48 ====="
     },
     {
-      "line_number": 802,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 820,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 825,
-      "marker_type": "lesson_header",
-      "text": "Lección 6"
-    },
-    {
-      "line_number": 831,
+      "line_number": 855,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 49 ====="
     },
     {
-      "line_number": 842,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 50 ====="
-    },
-    {
-      "line_number": 843,
+      "line_number": 856,
       "marker_type": "lesson_header",
       "text": "Lección 6"
     },
     {
-      "line_number": 852,
+      "line_number": 865,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 858,
+      "line_number": 871,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 50 ====="
+    },
+    {
+      "line_number": 879,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 51 ====="
     },
     {
-      "line_number": 866,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 52 ====="
-    },
-    {
-      "line_number": 867,
+      "line_number": 880,
       "marker_type": "lesson_header",
       "text": "Lección 6"
     },
     {
-      "line_number": 878,
+      "line_number": 892,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte III"
     },
     {
-      "line_number": 884,
+      "line_number": 898,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 52 ====="
+    },
+    {
+      "line_number": 904,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 53 ====="
     },
     {
-      "line_number": 891,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 54 ====="
-    },
-    {
-      "line_number": 917,
+      "line_number": 925,
       "marker_type": "lesson_header",
       "text": "Lección 6"
     },
     {
-      "line_number": 924,
+      "line_number": 932,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 54 ====="
+    },
+    {
+      "line_number": 945,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Lucas 15:1-7; Juan 10:11-12, 14-15"
+    },
+    {
+      "line_number": 950,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 55 ====="
     },
     {
-      "line_number": 939,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Éxodo 30:14-15; Mateo 17:24-27; 22:17, 19-21"
-    },
-    {
-      "line_number": 946,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 56 ====="
-    },
-    {
-      "line_number": 948,
+      "line_number": 952,
       "marker_type": "section_label",
       "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 969,
+      "line_number": 971,
       "marker_type": "section_label",
       "text": "Notas para el Maestro"
     },
     {
-      "line_number": 974,
+      "line_number": 976,
       "marker_type": "lesson_header",
       "text": "Lección 7"
     },
     {
-      "line_number": 980,
+      "line_number": 982,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 56 ====="
+    },
+    {
+      "line_number": 993,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 57 ====="
     },
     {
-      "line_number": 991,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 58 ====="
-    },
-    {
-      "line_number": 992,
+      "line_number": 994,
       "marker_type": "lesson_header",
       "text": "Lección 7"
     },
@@ -609,12 +609,12 @@
     {
       "line_number": 1008,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 59 ====="
+      "text": "===== PDF_PAGE 58 ====="
     },
     {
       "line_number": 1015,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 60 ====="
+      "text": "===== PDF_PAGE 59 ====="
     },
     {
       "line_number": 1016,
@@ -622,154 +622,134 @@
       "text": "Lección 7"
     },
     {
-      "line_number": 1025,
+      "line_number": 1027,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte III"
     },
     {
-      "line_number": 1031,
+      "line_number": 1033,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 60 ====="
+    },
+    {
+      "line_number": 1042,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 61 ====="
     },
     {
-      "line_number": 1038,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 62 ====="
-    },
-    {
-      "line_number": 1040,
+      "line_number": 1044,
       "marker_type": "lesson_header",
       "text": "Lección 7"
     },
     {
-      "line_number": 1067,
+      "line_number": 1071,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 62 ====="
+    },
+    {
+      "line_number": 1084,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Lucas 8:5-9, 11-15"
+    },
+    {
+      "line_number": 1090,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 63 ====="
     },
     {
-      "line_number": 1080,
+      "line_number": 1092,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Eclesiastés 11:1-6, 8-10"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 1086,
+      "line_number": 1111,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 1116,
+      "marker_type": "lesson_header",
+      "text": "Lección 8"
+    },
+    {
+      "line_number": 1121,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 64 ====="
     },
     {
-      "line_number": 1088,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 1102,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 1107,
-      "marker_type": "lesson_header",
-      "text": "Lección 8"
-    },
-    {
-      "line_number": 1112,
+      "line_number": 1130,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 65 ====="
     },
     {
-      "line_number": 1123,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 66 ====="
-    },
-    {
-      "line_number": 1124,
+      "line_number": 1131,
       "marker_type": "lesson_header",
       "text": "Lección 8"
     },
     {
-      "line_number": 1133,
+      "line_number": 1139,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 1139,
+      "line_number": 1145,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 66 ====="
+    },
+    {
+      "line_number": 1154,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 67 ====="
     },
     {
-      "line_number": 1147,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 68 ====="
-    },
-    {
-      "line_number": 1148,
+      "line_number": 1155,
       "marker_type": "lesson_header",
       "text": "Lección 8"
     },
     {
-      "line_number": 1155,
+      "line_number": 1162,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte III"
     },
     {
-      "line_number": 1161,
+      "line_number": 1168,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 68 ====="
+    },
+    {
+      "line_number": 1175,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 69 ====="
     },
     {
-      "line_number": 1168,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 70 ====="
-    },
-    {
-      "line_number": 1194,
+      "line_number": 1202,
       "marker_type": "lesson_header",
       "text": "Lección 8"
     },
     {
-      "line_number": 1200,
+      "line_number": 1208,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 70 ====="
+    },
+    {
+      "line_number": 1220,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Génesis 24:53, 58; 29:18-19, 21, 23, 26-27; Lucas 15:3, 8-10"
+    },
+    {
+      "line_number": 1227,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 71 ====="
     },
     {
-      "line_number": 1206,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Hechos 15:36-40; 16:1, 9-10"
-    },
-    {
-      "line_number": 1211,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 72 ====="
-    },
-    {
-      "line_number": 1213,
+      "line_number": 1229,
       "marker_type": "section_label",
       "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 1226,
+      "line_number": 1250,
       "marker_type": "section_label",
       "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 1233,
-      "marker_type": "lesson_header",
-      "text": "Lección 9"
-    },
-    {
-      "line_number": 1238,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 73 ====="
-    },
-    {
-      "line_number": 1248,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
-    },
-    {
-      "line_number": 1254,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 74 ====="
     },
     {
       "line_number": 1255,
@@ -777,1585 +757,1575 @@
       "text": "Lección 9"
     },
     {
-      "line_number": 1262,
+      "line_number": 1260,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 72 ====="
+    },
+    {
+      "line_number": 1271,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 73 ====="
+    },
+    {
+      "line_number": 1272,
+      "marker_type": "lesson_header",
+      "text": "Lección 9"
+    },
+    {
+      "line_number": 1281,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 74 ====="
+    },
+    {
+      "line_number": 1292,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 1298,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 75 ====="
     },
     {
-      "line_number": 1271,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
+      "line_number": 1303,
+      "marker_type": "lesson_header",
+      "text": "Lección 9"
     },
     {
-      "line_number": 1277,
+      "line_number": 1309,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte III"
+    },
+    {
+      "line_number": 1315,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 76 ====="
     },
     {
-      "line_number": 1279,
-      "marker_type": "lesson_header",
-      "text": "Lección 9"
-    },
-    {
-      "line_number": 1288,
+      "line_number": 1322,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 77 ====="
     },
     {
-      "line_number": 1293,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 78 ====="
-    },
-    {
-      "line_number": 1295,
+      "line_number": 1324,
       "marker_type": "lesson_header",
       "text": "Lección 9"
     },
     {
-      "line_number": 1326,
+      "line_number": 1348,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 78 ====="
+    },
+    {
+      "line_number": 1361,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Lucas 16:1-8, 11-12"
+    },
+    {
+      "line_number": 1371,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 79 ====="
     },
     {
-      "line_number": 1333,
+      "line_number": 1373,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Filipenses 1:1-2, 12-15; 18-20"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 1339,
+      "line_number": 1390,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 1394,
+      "marker_type": "lesson_header",
+      "text": "Lección 10"
+    },
+    {
+      "line_number": 1399,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 80 ====="
     },
     {
-      "line_number": 1341,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 1356,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 1363,
-      "marker_type": "lesson_header",
-      "text": "Lección 10"
-    },
-    {
-      "line_number": 1368,
+      "line_number": 1410,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 81 ====="
     },
     {
-      "line_number": 1375,
+      "line_number": 1411,
+      "marker_type": "lesson_header",
+      "text": "Lección 10"
+    },
+    {
+      "line_number": 1420,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 1381,
+      "line_number": 1426,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 82 ====="
     },
     {
-      "line_number": 1382,
-      "marker_type": "lesson_header",
-      "text": "Lección 10"
-    },
-    {
-      "line_number": 1390,
+      "line_number": 1434,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 83 ====="
     },
     {
-      "line_number": 1398,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
+      "line_number": 1435,
+      "marker_type": "lesson_header",
+      "text": "Lección 10"
     },
     {
-      "line_number": 1404,
+      "line_number": 1448,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte III"
+    },
+    {
+      "line_number": 1454,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 84 ====="
     },
     {
-      "line_number": 1405,
-      "marker_type": "lesson_header",
-      "text": "Lección 10"
-    },
-    {
-      "line_number": 1413,
+      "line_number": 1459,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 85 ====="
     },
     {
-      "line_number": 1420,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 86 ====="
-    },
-    {
-      "line_number": 1448,
+      "line_number": 1484,
       "marker_type": "lesson_header",
       "text": "Lección 10"
     },
     {
-      "line_number": 1459,
+      "line_number": 1490,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 86 ====="
+    },
+    {
+      "line_number": 1502,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Mateo 13:9-11, 24-30"
+    },
+    {
+      "line_number": 1513,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 87 ====="
     },
     {
-      "line_number": 1466,
+      "line_number": 1515,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Filipenses 2:1-9"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 1473,
+      "line_number": 1536,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 1541,
+      "marker_type": "lesson_header",
+      "text": "Lección 11"
+    },
+    {
+      "line_number": 1546,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 88 ====="
     },
     {
-      "line_number": 1475,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 1486,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 1495,
-      "marker_type": "lesson_header",
-      "text": "Lección 11"
-    },
-    {
-      "line_number": 1500,
+      "line_number": 1557,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 89 ====="
     },
     {
-      "line_number": 1508,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
+      "line_number": 1558,
+      "marker_type": "lesson_header",
+      "text": "Lección 11"
     },
     {
-      "line_number": 1514,
+      "line_number": 1567,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 1573,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 90 ====="
     },
     {
-      "line_number": 1515,
-      "marker_type": "lesson_header",
-      "text": "Lección 11"
-    },
-    {
-      "line_number": 1526,
+      "line_number": 1581,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 91 ====="
     },
     {
-      "line_number": 1533,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 1539,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 92 ====="
-    },
-    {
-      "line_number": 1540,
+      "line_number": 1582,
       "marker_type": "lesson_header",
       "text": "Lección 11"
     },
     {
-      "line_number": 1549,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 93 ====="
-    },
-    {
-      "line_number": 1556,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 94 ====="
-    },
-    {
-      "line_number": 1560,
-      "marker_type": "lesson_header",
-      "text": "Lección 11"
-    },
-    {
-      "line_number": 1590,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 95 ====="
-    },
-    {
-      "line_number": 1597,
+      "line_number": 1599,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Filipenses 2:12-20"
+      "text": "Notas para el Maestro - Parte III"
     },
     {
       "line_number": 1605,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 96 ====="
+      "text": "===== PDF_PAGE 92 ====="
     },
     {
-      "line_number": 1607,
+      "line_number": 1612,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 93 ====="
+    },
+    {
+      "line_number": 1614,
+      "marker_type": "lesson_header",
+      "text": "Lección 11"
+    },
+    {
+      "line_number": 1641,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 94 ====="
+    },
+    {
+      "line_number": 1652,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica:Mateo 20:1-11"
+    },
+    {
+      "line_number": 1658,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 95 ====="
+    },
+    {
+      "line_number": 1660,
       "marker_type": "section_label",
       "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 1619,
+      "line_number": 1679,
       "marker_type": "section_label",
       "text": "Notas para el Maestro"
     },
     {
-      "line_number": 1626,
+      "line_number": 1684,
       "marker_type": "lesson_header",
       "text": "Lección 12"
     },
     {
-      "line_number": 1632,
+      "line_number": 1690,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 96 ====="
+    },
+    {
+      "line_number": 1698,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 97 ====="
     },
     {
-      "line_number": 1639,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
+      "line_number": 1700,
+      "marker_type": "lesson_header",
+      "text": "Lección 12"
     },
     {
-      "line_number": 1644,
+      "line_number": 1709,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 98 ====="
     },
     {
-      "line_number": 1646,
-      "marker_type": "lesson_header",
-      "text": "Lección 12"
+      "line_number": 1722,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 1653,
+      "line_number": 1728,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 99 ====="
     },
     {
-      "line_number": 1661,
+      "line_number": 1729,
+      "marker_type": "lesson_header",
+      "text": "Lección 12"
+    },
+    {
+      "line_number": 1743,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte III"
+    },
+    {
+      "line_number": 1749,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 100 ====="
     },
     {
-      "line_number": 1662,
-      "marker_type": "lesson_header",
-      "text": "Lección 12"
-    },
-    {
-      "line_number": 1672,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 1678,
+      "line_number": 1752,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 101 ====="
     },
     {
-      "line_number": 1683,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 102 ====="
-    },
-    {
-      "line_number": 1708,
+      "line_number": 1774,
       "marker_type": "lesson_header",
       "text": "Lección 12"
     },
     {
-      "line_number": 1720,
+      "line_number": 1782,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 102 ====="
+    },
+    {
+      "line_number": 1792,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Mateo 13:34-35; 47-48, 50-54, 58"
+    },
+    {
+      "line_number": 1795,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 103 ====="
     },
     {
-      "line_number": 1727,
+      "line_number": 1797,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Filipenses 3:1-8"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 1732,
+      "line_number": 1818,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 1823,
+      "marker_type": "lesson_header",
+      "text": "Lección 13"
+    },
+    {
+      "line_number": 1828,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 104 ====="
     },
     {
-      "line_number": 1734,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 1745,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 1751,
-      "marker_type": "lesson_header",
-      "text": "Lección 13"
-    },
-    {
-      "line_number": 1756,
+      "line_number": 1837,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 105 ====="
     },
     {
-      "line_number": 1762,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
+      "line_number": 1838,
+      "marker_type": "lesson_header",
+      "text": "Lección 13"
     },
     {
-      "line_number": 1767,
+      "line_number": 1845,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 1851,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 106 ====="
     },
     {
-      "line_number": 1768,
-      "marker_type": "lesson_header",
-      "text": "Lección 13"
-    },
-    {
-      "line_number": 1776,
+      "line_number": 1858,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 107 ====="
     },
     {
-      "line_number": 1779,
+      "line_number": 1859,
+      "marker_type": "lesson_header",
+      "text": "Lección 13"
+    },
+    {
+      "line_number": 1867,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte III"
+    },
+    {
+      "line_number": 1873,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 108 ====="
     },
     {
-      "line_number": 1780,
-      "marker_type": "lesson_header",
-      "text": "Lección 13"
-    },
-    {
-      "line_number": 1788,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 1793,
+      "line_number": 1878,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 109 ====="
     },
     {
-      "line_number": 1800,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 110 ====="
-    },
-    {
-      "line_number": 1825,
+      "line_number": 1902,
       "marker_type": "lesson_header",
       "text": "Lección 13"
     },
     {
-      "line_number": 1833,
+      "line_number": 1910,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 110 ====="
+    },
+    {
+      "line_number": 1913,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 111 ====="
     },
     {
-      "line_number": 1836,
+      "line_number": 1920,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Lucas 4:14-21"
+    },
+    {
+      "line_number": 1924,
+      "marker_type": "lesson_header",
+      "text": "Lección 14"
+    },
+    {
+      "line_number": 1928,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 112 ====="
     },
     {
-      "line_number": 1849,
+      "line_number": 1930,
       "marker_type": "section_label",
-      "text": "Lectura Bíblica: Génesis 23:1-6, 14-18"
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 1853,
-      "marker_type": "lesson_header",
-      "text": "Lección 14"
+      "line_number": 1942,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
     },
     {
-      "line_number": 1857,
+      "line_number": 1949,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 113 ====="
     },
     {
-      "line_number": 1859,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 1879,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 1885,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 114 ====="
-    },
-    {
-      "line_number": 1891,
+      "line_number": 1956,
       "marker_type": "lesson_header",
       "text": "Lección 14"
     },
     {
-      "line_number": 1895,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 115 ====="
-    },
-    {
-      "line_number": 1900,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 116 ====="
-    },
-    {
-      "line_number": 1908,
-      "marker_type": "lesson_header",
-      "text": "Lección 14"
-    },
-    {
-      "line_number": 1912,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 1918,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 117 ====="
-    },
-    {
-      "line_number": 1924,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 1930,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 118 ====="
-    },
-    {
-      "line_number": 1931,
-      "marker_type": "lesson_header",
-      "text": "Lección 14"
-    },
-    {
-      "line_number": 1939,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 119 ====="
-    },
-    {
-      "line_number": 1962,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 120 ====="
-    },
-    {
-      "line_number": 1975,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Génesis 37:23-24, 26, 28, 31-35"
-    },
-    {
-      "line_number": 1977,
-      "marker_type": "lesson_header",
-      "text": "Lección 15"
-    },
-    {
-      "line_number": 1988,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 121 ====="
-    },
-    {
-      "line_number": 1990,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2011,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 2016,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 122 ====="
-    },
-    {
-      "line_number": 2017,
-      "marker_type": "lesson_header",
-      "text": "Lección 15"
-    },
-    {
-      "line_number": 2030,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 123 ====="
-    },
-    {
-      "line_number": 2036,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 2042,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 124 ====="
-    },
-    {
-      "line_number": 2044,
-      "marker_type": "lesson_header",
-      "text": "Lección 15"
-    },
-    {
-      "line_number": 2052,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 125 ====="
-    },
-    {
-      "line_number": 2058,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 2064,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 126 ====="
-    },
-    {
-      "line_number": 2068,
-      "marker_type": "lesson_header",
-      "text": "Lección 15"
-    },
-    {
-      "line_number": 2073,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 2076,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 127 ====="
-    },
-    {
-      "line_number": 2100,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 128 ====="
-    },
-    {
-      "line_number": 2113,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Génesis 38: 11, 14-19"
-    },
-    {
-      "line_number": 2115,
-      "marker_type": "lesson_header",
-      "text": "Lección 16"
-    },
-    {
-      "line_number": 2120,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 129 ====="
-    },
-    {
-      "line_number": 2122,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2140,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 2146,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 130 ====="
-    },
-    {
-      "line_number": 2154,
-      "marker_type": "lesson_header",
-      "text": "Lección 16"
-    },
-    {
-      "line_number": 2160,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 131 ====="
-    },
-    {
-      "line_number": 2166,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 2171,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 2174,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 132 ====="
-    },
-    {
-      "line_number": 2180,
-      "marker_type": "lesson_header",
-      "text": "Lección 16"
-    },
-    {
-      "line_number": 2185,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 133 ====="
-    },
-    {
-      "line_number": 2191,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 2197,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 134 ====="
-    },
-    {
-      "line_number": 2198,
-      "marker_type": "lesson_header",
-      "text": "Lección 16"
-    },
-    {
-      "line_number": 2205,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 135 ====="
-    },
-    {
-      "line_number": 2228,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 136 ====="
-    },
-    {
-      "line_number": 2240,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Marcos 7:1-9"
-    },
-    {
-      "line_number": 2242,
-      "marker_type": "lesson_header",
-      "text": "Lección 17"
-    },
-    {
-      "line_number": 2249,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 137 ====="
-    },
-    {
-      "line_number": 2251,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2269,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 2275,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 138 ====="
-    },
-    {
-      "line_number": 2276,
-      "marker_type": "lesson_header",
-      "text": "Lección 17"
-    },
-    {
-      "line_number": 2286,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 139 ====="
-    },
-    {
-      "line_number": 2294,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 2300,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 140 ====="
-    },
-    {
-      "line_number": 2302,
-      "marker_type": "lesson_header",
-      "text": "Lección 17"
-    },
-    {
-      "line_number": 2310,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 141 ====="
-    },
-    {
-      "line_number": 2316,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 2322,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 142 ====="
-    },
-    {
-      "line_number": 2325,
-      "marker_type": "lesson_header",
-      "text": "Lección 17"
-    },
-    {
-      "line_number": 2330,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 2333,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 143 ====="
-    },
-    {
-      "line_number": 2357,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 144 ====="
-    },
-    {
-      "line_number": 2370,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Éxodo 28:2; Números 20:22-29"
-    },
-    {
-      "line_number": 2372,
-      "marker_type": "lesson_header",
-      "text": "Lección 18"
-    },
-    {
-      "line_number": 2377,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 145 ====="
-    },
-    {
-      "line_number": 2379,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2399,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 2405,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 146 ====="
-    },
-    {
-      "line_number": 2413,
-      "marker_type": "lesson_header",
-      "text": "Lección 18"
-    },
-    {
-      "line_number": 2419,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 147 ====="
-    },
-    {
-      "line_number": 2423,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 2429,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 148 ====="
-    },
-    {
-      "line_number": 2435,
-      "marker_type": "lesson_header",
-      "text": "Lección 18"
-    },
-    {
-      "line_number": 2440,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 149 ====="
-    },
-    {
-      "line_number": 2449,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 150 ====="
-    },
-    {
-      "line_number": 2450,
-      "marker_type": "lesson_header",
-      "text": "Lección 18"
-    },
-    {
-      "line_number": 2460,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 151 ====="
-    },
-    {
-      "line_number": 2484,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 152 ====="
-    },
-    {
-      "line_number": 2497,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Deuteronomio 34:4-11"
-    },
-    {
-      "line_number": 2499,
-      "marker_type": "lesson_header",
-      "text": "Lección 19"
-    },
-    {
-      "line_number": 2506,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 153 ====="
-    },
-    {
-      "line_number": 2508,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2528,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 2534,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 154 ====="
-    },
-    {
-      "line_number": 2535,
-      "marker_type": "lesson_header",
-      "text": "Lección 19"
-    },
-    {
-      "line_number": 2547,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 155 ====="
-    },
-    {
-      "line_number": 2553,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 2559,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 156 ====="
-    },
-    {
-      "line_number": 2561,
-      "marker_type": "lesson_header",
-      "text": "Lección 19"
-    },
-    {
-      "line_number": 2569,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 157 ====="
-    },
-    {
-      "line_number": 2575,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 2581,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 158 ====="
-    },
-    {
-      "line_number": 2584,
-      "marker_type": "lesson_header",
-      "text": "Lección 19"
-    },
-    {
-      "line_number": 2589,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 159 ====="
-    },
-    {
-      "line_number": 2613,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 160 ====="
-    },
-    {
-      "line_number": 2625,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: 1 Samuel 31:2-5, 8, 10-12"
-    },
-    {
-      "line_number": 2627,
-      "marker_type": "lesson_header",
-      "text": "Lección 19"
-    },
-    {
-      "line_number": 2632,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 161 ====="
-    },
-    {
-      "line_number": 2634,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2652,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 2658,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 162 ====="
-    },
-    {
-      "line_number": 2666,
-      "marker_type": "lesson_header",
-      "text": "Lección 20"
-    },
-    {
-      "line_number": 2672,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 163 ====="
-    },
-    {
-      "line_number": 2674,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 2677,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 164 ====="
-    },
-    {
-      "line_number": 2678,
-      "marker_type": "lesson_header",
-      "text": "Lección 20"
-    },
-    {
-      "line_number": 2688,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 2694,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 165 ====="
-    },
-    {
-      "line_number": 2700,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
-    },
-    {
-      "line_number": 2706,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 166 ====="
-    },
-    {
-      "line_number": 2707,
-      "marker_type": "lesson_header",
-      "text": "Lección 20"
-    },
-    {
-      "line_number": 2715,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 167 ====="
-    },
-    {
-      "line_number": 2738,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 2741,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 168 ====="
-    },
-    {
-      "line_number": 2753,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Juan 11:17, 19-20, 30-37, 40-41"
-    },
-    {
-      "line_number": 2757,
-      "marker_type": "lesson_header",
-      "text": "Lección 21"
-    },
-    {
-      "line_number": 2762,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 169 ====="
-    },
-    {
-      "line_number": 2764,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2785,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
-      "line_number": 2791,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 170 ====="
-    },
-    {
-      "line_number": 2792,
-      "marker_type": "lesson_header",
-      "text": "Lección 21"
-    },
-    {
-      "line_number": 2803,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 171 ====="
-    },
-    {
-      "line_number": 2813,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 2816,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 172 ====="
-    },
-    {
-      "line_number": 2819,
-      "marker_type": "lesson_header",
-      "text": "Lección 21"
-    },
-    {
-      "line_number": 2825,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 173 ====="
-    },
-    {
-      "line_number": 2834,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 2837,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 174 ====="
-    },
-    {
-      "line_number": 2841,
-      "marker_type": "lesson_header",
-      "text": "Lección 21"
-    },
-    {
-      "line_number": 2847,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 175 ====="
-    },
-    {
-      "line_number": 2871,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 176 ====="
-    },
-    {
-      "line_number": 2878,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Romanos 1:1-7, 16-17"
-    },
-    {
-      "line_number": 2882,
-      "marker_type": "lesson_header",
-      "text": "Lección 22"
-    },
-    {
-      "line_number": 2887,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 177 ====="
-    },
-    {
-      "line_number": 2889,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 2910,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 178 ====="
-    },
-    {
-      "line_number": 2915,
-      "marker_type": "lesson_header",
-      "text": "Lección 22"
-    },
-    {
-      "line_number": 2920,
+      "line_number": 1959,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte I"
     },
     {
-      "line_number": 2926,
+      "line_number": 1965,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 179 ====="
+      "text": "===== PDF_PAGE 114 ====="
     },
     {
-      "line_number": 2931,
+      "line_number": 1968,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 180 ====="
+      "text": "===== PDF_PAGE 115 ====="
     },
     {
-      "line_number": 2935,
+      "line_number": 1974,
+      "marker_type": "lesson_header",
+      "text": "Lección 14"
+    },
+    {
+      "line_number": 1978,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 1984,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 116 ====="
+    },
+    {
+      "line_number": 1989,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 117 ====="
+    },
+    {
+      "line_number": 1990,
+      "marker_type": "lesson_header",
+      "text": "Lección 14"
+    },
+    {
+      "line_number": 1996,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 118 ====="
+    },
+    {
+      "line_number": 2023,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 119 ====="
+    },
+    {
+      "line_number": 2030,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Mateo 4:1-11"
+    },
+    {
+      "line_number": 2032,
+      "marker_type": "lesson_header",
+      "text": "Lección 15"
+    },
+    {
+      "line_number": 2043,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 120 ====="
+    },
+    {
+      "line_number": 2045,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2056,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 2063,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 121 ====="
+    },
+    {
+      "line_number": 2064,
+      "marker_type": "lesson_header",
+      "text": "Lección 15"
+    },
+    {
+      "line_number": 2074,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 2080,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 122 ====="
+    },
+    {
+      "line_number": 2085,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 123 ====="
+    },
+    {
+      "line_number": 2089,
+      "marker_type": "lesson_header",
+      "text": "Lección 15"
+    },
+    {
+      "line_number": 2094,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 2099,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 124 ====="
+    },
+    {
+      "line_number": 2108,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 125 ====="
+    },
+    {
+      "line_number": 2110,
+      "marker_type": "lesson_header",
+      "text": "Lección 15"
+    },
+    {
+      "line_number": 2114,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 2119,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 126 ====="
+    },
+    {
+      "line_number": 2146,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 127 ====="
+    },
+    {
+      "line_number": 2153,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Marcos 1:4-11"
+    },
+    {
+      "line_number": 2157,
+      "marker_type": "lesson_header",
+      "text": "Lección 16"
+    },
+    {
+      "line_number": 2162,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 128 ====="
+    },
+    {
+      "line_number": 2164,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2174,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 2181,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 129 ====="
+    },
+    {
+      "line_number": 2186,
+      "marker_type": "lesson_header",
+      "text": "Lección 16"
+    },
+    {
+      "line_number": 2191,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 2197,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 130 ====="
+    },
+    {
+      "line_number": 2204,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 131 ====="
+    },
+    {
+      "line_number": 2210,
+      "marker_type": "lesson_header",
+      "text": "Lección 16"
+    },
+    {
+      "line_number": 2214,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 2219,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 132 ====="
+    },
+    {
+      "line_number": 2224,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 133 ====="
+    },
+    {
+      "line_number": 2225,
+      "marker_type": "lesson_header",
+      "text": "Lección 16"
+    },
+    {
+      "line_number": 2233,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 134 ====="
+    },
+    {
+      "line_number": 2261,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 135 ====="
+    },
+    {
+      "line_number": 2268,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Juan 1:47-51"
+    },
+    {
+      "line_number": 2270,
+      "marker_type": "lesson_header",
+      "text": "Lección 17"
+    },
+    {
+      "line_number": 2283,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 136 ====="
+    },
+    {
+      "line_number": 2285,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2295,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 2302,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 137 ====="
+    },
+    {
+      "line_number": 2303,
+      "marker_type": "lesson_header",
+      "text": "Lección 17"
+    },
+    {
+      "line_number": 2312,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 2318,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 138 ====="
+    },
+    {
+      "line_number": 2323,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 139 ====="
+    },
+    {
+      "line_number": 2326,
+      "marker_type": "lesson_header",
+      "text": "Lección 17"
+    },
+    {
+      "line_number": 2332,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 2338,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 140 ====="
+    },
+    {
+      "line_number": 2345,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 141 ====="
+    },
+    {
+      "line_number": 2348,
+      "marker_type": "lesson_header",
+      "text": "Lección 17"
+    },
+    {
+      "line_number": 2354,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 142 ====="
+    },
+    {
+      "line_number": 2384,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 143 ====="
+    },
+    {
+      "line_number": 2391,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Lucas 4:16-22"
+    },
+    {
+      "line_number": 2395,
+      "marker_type": "lesson_header",
+      "text": "Lección 18"
+    },
+    {
+      "line_number": 2400,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 144 ====="
+    },
+    {
+      "line_number": 2402,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2416,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 2425,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 145 ====="
+    },
+    {
+      "line_number": 2431,
+      "marker_type": "lesson_header",
+      "text": "Lección 18"
+    },
+    {
+      "line_number": 2436,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 2442,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 146 ====="
+    },
+    {
+      "line_number": 2447,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 147 ====="
+    },
+    {
+      "line_number": 2449,
+      "marker_type": "lesson_header",
+      "text": "Lección 18"
+    },
+    {
+      "line_number": 2454,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 148 ====="
+    },
+    {
+      "line_number": 2465,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 149 ====="
+    },
+    {
+      "line_number": 2466,
+      "marker_type": "lesson_header",
+      "text": "Lección 18"
+    },
+    {
+      "line_number": 2482,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 150 ====="
+    },
+    {
+      "line_number": 2511,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 151 ====="
+    },
+    {
+      "line_number": 2518,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Juan 18:1-11"
+    },
+    {
+      "line_number": 2520,
+      "marker_type": "lesson_header",
+      "text": "Lección 19"
+    },
+    {
+      "line_number": 2529,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 152 ====="
+    },
+    {
+      "line_number": 2531,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2542,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 2549,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 153 ====="
+    },
+    {
+      "line_number": 2550,
+      "marker_type": "lesson_header",
+      "text": "Lección 19"
+    },
+    {
+      "line_number": 2558,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 2563,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 154 ====="
+    },
+    {
+      "line_number": 2568,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 155 ====="
+    },
+    {
+      "line_number": 2573,
+      "marker_type": "lesson_header",
+      "text": "Lección 19"
+    },
+    {
+      "line_number": 2578,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 2602,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 156 ====="
+    },
+    {
+      "line_number": 2607,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 157 ====="
+    },
+    {
+      "line_number": 2610,
+      "marker_type": "lesson_header",
+      "text": "Lección 19"
+    },
+    {
+      "line_number": 2624,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 158 ====="
+    },
+    {
+      "line_number": 2651,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 2654,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 159 ====="
+    },
+    {
+      "line_number": 2661,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Marcos 6:46-51"
+    },
+    {
+      "line_number": 2665,
+      "marker_type": "lesson_header",
+      "text": "Lección 19"
+    },
+    {
+      "line_number": 2670,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 160 ====="
+    },
+    {
+      "line_number": 2672,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2686,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 2691,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 161 ====="
+    },
+    {
+      "line_number": 2702,
+      "marker_type": "lesson_header",
+      "text": "Lección 20"
+    },
+    {
+      "line_number": 2707,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 2711,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 162 ====="
+    },
+    {
+      "line_number": 2715,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte II"
+    },
+    {
+      "line_number": 2718,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 2721,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 163 ====="
+    },
+    {
+      "line_number": 2722,
+      "marker_type": "lesson_header",
+      "text": "Lección 20"
+    },
+    {
+      "line_number": 2730,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 164 ====="
+    },
+    {
+      "line_number": 2760,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 165 ====="
+    },
+    {
+      "line_number": 2767,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Mateo 9:27-34"
+    },
+    {
+      "line_number": 2775,
+      "marker_type": "lesson_header",
+      "text": "Lección 21"
+    },
+    {
+      "line_number": 2780,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 166 ====="
+    },
+    {
+      "line_number": 2782,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2794,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 2800,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 167 ====="
+    },
+    {
+      "line_number": 2801,
+      "marker_type": "lesson_header",
+      "text": "Lección 21"
+    },
+    {
+      "line_number": 2818,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 168 ====="
+    },
+    {
+      "line_number": 2822,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 2825,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 169 ====="
+    },
+    {
+      "line_number": 2829,
+      "marker_type": "lesson_header",
+      "text": "Lección 21"
+    },
+    {
+      "line_number": 2843,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 170 ====="
+    },
+    {
+      "line_number": 2846,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 171 ====="
+    },
+    {
+      "line_number": 2849,
+      "marker_type": "lesson_header",
+      "text": "Lección 21"
+    },
+    {
+      "line_number": 2853,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 2856,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 172 ====="
+    },
+    {
+      "line_number": 2883,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 2886,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 173 ====="
+    },
+    {
+      "line_number": 2897,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Marcos 1:21-28"
+    },
+    {
+      "line_number": 2905,
+      "marker_type": "lesson_header",
+      "text": "Lección 22"
+    },
+    {
+      "line_number": 2910,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 174 ====="
+    },
+    {
+      "line_number": 2912,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 2934,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 175 ====="
+    },
+    {
+      "line_number": 2940,
       "marker_type": "lesson_header",
       "text": "Lección 22"
     },
     {
       "line_number": 2945,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 2951,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 181 ====="
+      "text": "===== PDF_PAGE 176 ====="
     },
     {
       "line_number": 2956,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 182 ====="
+      "text": "===== PDF_PAGE 177 ====="
     },
     {
-      "line_number": 2957,
+      "line_number": 2960,
       "marker_type": "lesson_header",
       "text": "Lección 22"
     },
     {
-      "line_number": 2963,
+      "line_number": 2971,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 178 ====="
+    },
+    {
+      "line_number": 2976,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 179 ====="
+    },
+    {
+      "line_number": 2977,
+      "marker_type": "lesson_header",
+      "text": "Lección 22"
+    },
+    {
+      "line_number": 2993,
       "marker_type": "section_label",
       "text": "Notas para el Maestro:"
     },
     {
-      "line_number": 2966,
+      "line_number": 2996,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 180 ====="
+    },
+    {
+      "line_number": 3025,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 3028,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 181 ====="
+    },
+    {
+      "line_number": 3033,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Lucas 6:1-2, 5-10; 14:1-3"
+    },
+    {
+      "line_number": 3035,
+      "marker_type": "lesson_header",
+      "text": "Lección 23"
+    },
+    {
+      "line_number": 3047,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 182 ====="
+    },
+    {
+      "line_number": 3049,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
+    },
+    {
+      "line_number": 3061,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 3069,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 183 ====="
     },
     {
-      "line_number": 2995,
+      "line_number": 3070,
+      "marker_type": "lesson_header",
+      "text": "Lección 23"
+    },
+    {
+      "line_number": 3076,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 3082,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 184 ====="
     },
     {
-      "line_number": 3000,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: 1Romanos 1:18-25"
-    },
-    {
-      "line_number": 3002,
-      "marker_type": "lesson_header",
-      "text": "Lección 23"
-    },
-    {
-      "line_number": 3014,
+      "line_number": 3087,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 185 ====="
     },
     {
-      "line_number": 3016,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
+      "line_number": 3088,
+      "marker_type": "lesson_header",
+      "text": "Lección 23"
     },
     {
-      "line_number": 3031,
+      "line_number": 3096,
       "marker_type": "section_label",
-      "text": "Notas para el Maestro"
+      "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 3041,
+      "line_number": 3102,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 186 ====="
     },
     {
-      "line_number": 3042,
-      "marker_type": "lesson_header",
-      "text": "Lección 23"
-    },
-    {
-      "line_number": 3048,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
-    },
-    {
-      "line_number": 3054,
+      "line_number": 3107,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 187 ====="
     },
     {
-      "line_number": 3058,
+      "line_number": 3108,
+      "marker_type": "lesson_header",
+      "text": "Lección 23"
+    },
+    {
+      "line_number": 3113,
       "marker_type": "section_label",
       "text": "Notas para el Maestro:"
     },
     {
-      "line_number": 3061,
+      "line_number": 3116,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 188 ====="
     },
     {
-      "line_number": 3062,
-      "marker_type": "lesson_header",
-      "text": "Lección 23"
-    },
-    {
-      "line_number": 3067,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
-    },
-    {
-      "line_number": 3079,
+      "line_number": 3142,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 189 ====="
     },
     {
-      "line_number": 3098,
+      "line_number": 3149,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Mateo 12:22-31"
+    },
+    {
+      "line_number": 3153,
+      "marker_type": "lesson_header",
+      "text": "Lección 24"
+    },
+    {
+      "line_number": 3158,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 190 ====="
     },
     {
-      "line_number": 3099,
-      "marker_type": "lesson_header",
-      "text": "Lección 23"
+      "line_number": 3160,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 3135,
+      "line_number": 3174,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 3182,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 191 ====="
     },
     {
-      "line_number": 3165,
+      "line_number": 3188,
+      "marker_type": "lesson_header",
+      "text": "Lección 24"
+    },
+    {
+      "line_number": 3192,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 3197,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 192 ====="
     },
     {
-      "line_number": 3172,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Romanos 2:1-3, 12-16"
-    },
-    {
-      "line_number": 3178,
-      "marker_type": "lesson_header",
-      "text": "Lección 24"
-    },
-    {
-      "line_number": 3183,
+      "line_number": 3204,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 193 ====="
     },
     {
-      "line_number": 3185,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 3198,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
-    },
-    {
       "line_number": 3206,
+      "marker_type": "lesson_header",
+      "text": "Lección 24"
+    },
+    {
+      "line_number": 3211,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 3214,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 194 ====="
     },
     {
-      "line_number": 3213,
+      "line_number": 3215,
       "marker_type": "lesson_header",
       "text": "Lección 24"
     },
     {
-      "line_number": 3217,
+      "line_number": 3222,
       "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
+      "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 3223,
+      "line_number": 3228,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 195 ====="
     },
     {
-      "line_number": 3227,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
+      "line_number": 3229,
+      "marker_type": "lesson_header",
+      "text": "Lección 24"
     },
     {
-      "line_number": 3230,
+      "line_number": 3237,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 196 ====="
     },
     {
-      "line_number": 3238,
-      "marker_type": "lesson_header",
-      "text": "Lección 24"
-    },
-    {
-      "line_number": 3242,
+      "line_number": 3260,
       "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte II"
+      "text": "Notas para el Maestro:"
     },
     {
-      "line_number": 3246,
+      "line_number": 3263,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 197 ====="
     },
     {
-      "line_number": 3247,
-      "marker_type": "lesson_header",
-      "text": "Lección 24"
+      "line_number": 3276,
+      "marker_type": "section_label",
+      "text": "Lectura Bíblica: Mateo 14:34-36; Lucas 6:17-19"
     },
     {
-      "line_number": 3257,
+      "line_number": 3278,
+      "marker_type": "lesson_header",
+      "text": "Lección 25"
+    },
+    {
+      "line_number": 3287,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 198 ====="
     },
     {
-      "line_number": 3258,
-      "marker_type": "lesson_header",
-      "text": "Lección 24"
+      "line_number": 3289,
+      "marker_type": "section_label",
+      "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 3264,
+      "line_number": 3300,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro"
+    },
+    {
+      "line_number": 3304,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 199 ====="
     },
     {
-      "line_number": 3292,
+      "line_number": 3305,
+      "marker_type": "lesson_header",
+      "text": "Lección 25"
+    },
+    {
+      "line_number": 3314,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro - Parte I"
+    },
+    {
+      "line_number": 3320,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 200 ====="
     },
     {
-      "line_number": 3299,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Romanos 3:21-28"
-    },
-    {
-      "line_number": 3301,
-      "marker_type": "lesson_header",
-      "text": "Lección 25"
-    },
-    {
-      "line_number": 3311,
+      "line_number": 3325,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 201 ====="
     },
     {
-      "line_number": 3313,
-      "marker_type": "section_label",
-      "text": "Bosquejo de la Lección"
-    },
-    {
-      "line_number": 3327,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro"
+      "line_number": 3326,
+      "marker_type": "lesson_header",
+      "text": "Lección 25"
     },
     {
       "line_number": 3337,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 202 ====="
-    },
-    {
-      "line_number": 3338,
-      "marker_type": "lesson_header",
-      "text": "Lección 25"
-    },
-    {
-      "line_number": 3350,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
-    },
-    {
-      "line_number": 3362,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 203 ====="
-    },
-    {
-      "line_number": 3367,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 204 ====="
-    },
-    {
-      "line_number": 3372,
-      "marker_type": "lesson_header",
-      "text": "Lección 25"
-    },
-    {
-      "line_number": 3378,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte I"
-    },
-    {
-      "line_number": 3380,
       "marker_type": "section_label",
       "text": "Notas para el Maestro - Parte II"
     },
     {
-      "line_number": 3385,
+      "line_number": 3346,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 205 ====="
+      "text": "===== PDF_PAGE 202 ====="
     },
     {
-      "line_number": 3394,
+      "line_number": 3356,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 206 ====="
+      "text": "===== PDF_PAGE 203 ====="
     },
     {
-      "line_number": 3398,
+      "line_number": 3358,
       "marker_type": "lesson_header",
       "text": "Lección 25"
     },
     {
-      "line_number": 3402,
+      "line_number": 3369,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 204 ====="
+    },
+    {
+      "line_number": 3396,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 205 ====="
+    },
+    {
+      "line_number": 3403,
       "marker_type": "section_label",
-      "text": "Notas para el Maestro - Parte III"
+      "text": "Lectura Bíblica: Juan 20:1-9, 30-31"
     },
     {
       "line_number": 3405,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 207 ====="
-    },
-    {
-      "line_number": 3437,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 3440,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 208 ====="
-    },
-    {
-      "line_number": 3447,
-      "marker_type": "section_label",
-      "text": "Lectura Bíblica: Romanos 5:1-11"
-    },
-    {
-      "line_number": 3451,
       "marker_type": "lesson_header",
       "text": "Lección 26"
     },
     {
-      "line_number": 3456,
+      "line_number": 3410,
       "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 209 ====="
+      "text": "===== PDF_PAGE 206 ====="
     },
     {
-      "line_number": 3458,
+      "line_number": 3412,
       "marker_type": "section_label",
       "text": "Bosquejo de la Lección"
     },
     {
-      "line_number": 3471,
+      "line_number": 3428,
       "marker_type": "section_label",
       "text": "Notas para el Maestro"
     },
     {
-      "line_number": 3479,
+      "line_number": 3436,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 207 ====="
+    },
+    {
+      "line_number": 3442,
+      "marker_type": "lesson_header",
+      "text": "Lección 26"
+    },
+    {
+      "line_number": 3453,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 208 ====="
+    },
+    {
+      "line_number": 3458,
+      "marker_type": "page_marker",
+      "text": "===== PDF_PAGE 209 ====="
+    },
+    {
+      "line_number": 3463,
+      "marker_type": "lesson_header",
+      "text": "Lección 26"
+    },
+    {
+      "line_number": 3477,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 210 ====="
     },
     {
-      "line_number": 3487,
-      "marker_type": "lesson_header",
-      "text": "Lección 26"
-    },
-    {
-      "line_number": 3498,
+      "line_number": 3482,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 211 ====="
     },
     {
-      "line_number": 3509,
+      "line_number": 3483,
+      "marker_type": "lesson_header",
+      "text": "Lección 26"
+    },
+    {
+      "line_number": 3490,
+      "marker_type": "section_label",
+      "text": "Notas para el Maestro:"
+    },
+    {
+      "line_number": 3493,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 212 ====="
     },
     {
-      "line_number": 3513,
-      "marker_type": "lesson_header",
-      "text": "Lección 26"
-    },
-    {
-      "line_number": 3517,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 3520,
+      "line_number": 3522,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 213 ====="
     },
     {
-      "line_number": 3528,
+      "line_number": 3525,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 214 ====="
     },
     {
-      "line_number": 3529,
-      "marker_type": "lesson_header",
-      "text": "Lección 26"
-    },
-    {
-      "line_number": 3534,
-      "marker_type": "section_label",
-      "text": "Notas para el Maestro:"
-    },
-    {
-      "line_number": 3537,
+      "line_number": 3528,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 215 ====="
     },
     {
-      "line_number": 3568,
+      "line_number": 3531,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 216 ====="
     },
     {
-      "line_number": 3571,
+      "line_number": 3546,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 217 ====="
     },
     {
-      "line_number": 3574,
+      "line_number": 3549,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 218 ====="
     },
     {
-      "line_number": 3577,
+      "line_number": 3552,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 219 ====="
     },
     {
-      "line_number": 3592,
+      "line_number": 3555,
       "marker_type": "page_marker",
       "text": "===== PDF_PAGE 220 ====="
-    },
-    {
-      "line_number": 3595,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 221 ====="
-    },
-    {
-      "line_number": 3598,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 222 ====="
-    },
-    {
-      "line_number": 3601,
-      "marker_type": "page_marker",
-      "text": "===== PDF_PAGE 223 ====="
     }
   ],
   "content_index_detection": {
     "detection_method": "dynamic_contenido_label",
-    "selected_pdf_page": 5,
+    "selected_pdf_page": 4,
     "candidate_pdf_pages": [
-      5
+      4
     ],
     "attempted_pages": [
       {
-        "pdf_page": 5,
+        "pdf_page": 4,
         "entry_count": 26
       }
     ],
@@ -2364,185 +2334,185 @@
   "content_index": [
     {
       "lesson_number": 1,
-      "title": "La fe que transforma la conducta y pensamientos del creyente",
+      "title": "El fruto producido en la canción de la viña",
       "page_start": 6,
-      "lesson_date": "03/mar/24",
-      "source_pdf_page": 5
+      "lesson_date": "01/sep/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 2,
-      "title": "¿Por qué surgen problemas en algunas iglesias?",
+      "title": "Metodología utilizada por el Sembrador Sabio",
       "page_start": 14,
-      "lesson_date": "10/mar/24",
-      "source_pdf_page": 5
+      "lesson_date": "08/sep/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 3,
-      "title": "La vida cristiana incluye libertad y disciplina",
+      "title": "El simbolismo de la parábola de las dos águilas y la vid",
       "page_start": 22,
-      "lesson_date": "17/mar/24",
-      "source_pdf_page": 5
+      "lesson_date": "15/sep/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 4,
-      "title": "La buena reputación de la Iglesia se refleja en la vida del creyente",
+      "title": "Mejor es la sabiduría que la fuerza",
       "page_start": 30,
-      "lesson_date": "24/mar/24",
-      "source_pdf_page": 5
+      "lesson_date": "22/sep/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 5,
-      "title": "La manera recta de vivir en la Iglesia",
+      "title": "Dos hermanas rameras: Ahola y Aholiba",
       "page_start": 38,
-      "lesson_date": "31/mar/24",
-      "source_pdf_page": 5
+      "lesson_date": "29/sep/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 6,
-      "title": "La manera recta de vivir en la sociedad",
+      "title": "La reacción de un prestamista frente a sus dos deudores",
       "page_start": 46,
-      "lesson_date": "07/abr/24",
-      "source_pdf_page": 5
+      "lesson_date": "06/oct/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 7,
-      "title": "¿Quiénes deben de pagar los impuestos?",
+      "title": "Buscando a la oveja perdida",
       "page_start": 54,
-      "lesson_date": "14/abr/24",
-      "source_pdf_page": 5
+      "lesson_date": "13/oct/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 8,
-      "title": "La esperanza para enfrentar los riesgos y oportunidades de la vida",
+      "title": "El sembrador que salió a volear la semilla en un gran terreno",
       "page_start": 62,
-      "lesson_date": "21/abr/24",
-      "source_pdf_page": 5
+      "lesson_date": "20/oct/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 9,
-      "title": "Introducción y aspectos contextuales de la carta",
+      "title": "Importancia de hallar a la moneda perdida",
       "page_start": 70,
-      "lesson_date": "28/abr/24",
-      "source_pdf_page": 5
+      "lesson_date": "27/oct/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 10,
-      "title": "¡El vivir es Cristo, y el morir es ganancia!",
+      "title": "La conducta del mayordomo infiel",
       "page_start": 78,
-      "lesson_date": "05/may/24",
-      "source_pdf_page": 5
+      "lesson_date": "03/nov/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 11,
-      "title": "¡Cristo, Mesías crucificado y exaltado!",
+      "title": "Invasión de la cizaña en un campo sembrado de semillas",
       "page_start": 86,
-      "lesson_date": "12/may/24",
-      "source_pdf_page": 5
+      "lesson_date": "10/nov/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 12,
-      "title": "Timoteo y Epafrodito, ejemplos de servicio",
+      "title": "Contratando obreros en horarios diferentes con igual salario",
       "page_start": 94,
-      "lesson_date": "19/may/24",
-      "source_pdf_page": 5
+      "lesson_date": "17/nov/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 13,
-      "title": "Los creyentes son ciudadanos del cielo",
+      "title": "El reino de los cielos y la red del pescador durante la pesca",
       "page_start": 102,
-      "lesson_date": "26/may/24",
-      "source_pdf_page": 5
+      "lesson_date": "24/nov/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 14,
-      "title": "Abraham y su experiencia de duelo al morir su esposa Sara",
+      "title": "La enseñanza de los milagros",
       "page_start": 111,
-      "lesson_date": "02/jun/24",
-      "source_pdf_page": 5
+      "lesson_date": "01/dic/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 15,
-      "title": "El duelo causado a un padre mediante engaño en una familia disfuncional",
+      "title": "La tentación de Jesús",
       "page_start": 119,
-      "lesson_date": "09/jun/24",
-      "source_pdf_page": 5
+      "lesson_date": "08/dic/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 16,
-      "title": "El duelo y estrategia de Tamar para lograr el cumplimiento del levirato",
+      "title": "La voz del cielo",
       "page_start": 127,
-      "lesson_date": "16/jun/24",
-      "source_pdf_page": 5
+      "lesson_date": "15/dic/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 17,
-      "title": "El duelo y sepultura de Jacob efectuado por su hijo José",
+      "title": "Un milagro de omnisciencia",
       "page_start": 135,
-      "lesson_date": "23/jun/24",
-      "source_pdf_page": 5
+      "lesson_date": "22/dic/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 18,
-      "title": "El duelo por la muerte del primer sacerdote de Israel: Aarón",
+      "title": "La extraordinaria misión de Jesús",
       "page_start": 143,
-      "lesson_date": "30/jun/24",
-      "source_pdf_page": 5
+      "lesson_date": "29/dic/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 19,
-      "title": "El duelo por la muerte del caudillo y libertador de Israel",
+      "title": "El poder del nombre de Jesús",
       "page_start": 151,
-      "lesson_date": "07/jul/24",
-      "source_pdf_page": 5
+      "lesson_date": "05/ene/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 20,
-      "title": "Suicidio, duelo y cremación de Saúl y sus hijos",
+      "title": "El poder sobrenatural de Jesús",
       "page_start": 159,
-      "lesson_date": "14/jul/24",
-      "source_pdf_page": 5
+      "lesson_date": "12/ene/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 21,
-      "title": "El duelo, luto y llanto ante la muerte de Lázaro",
+      "title": "Los ciegos ven, el sordo oye",
       "page_start": 167,
-      "lesson_date": "21/jul/24",
-      "source_pdf_page": 5
+      "lesson_date": "19/ene/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 22,
-      "title": "El Evangelio es Poder de Dios",
+      "title": "El poder de Jesús sobre los demonios",
       "page_start": 175,
-      "lesson_date": "28/jul/24",
-      "source_pdf_page": 5
+      "lesson_date": "26/ene/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 23,
-      "title": "La humanidad es culpable",
-      "page_start": 183,
-      "lesson_date": "04/ago/24",
-      "source_pdf_page": 5
+      "title": "Jesús, Señor del sábado",
+      "page_start": 181,
+      "lesson_date": "02/feb/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 24,
-      "title": "Dios es justo",
-      "page_start": 191,
-      "lesson_date": "11/ago/24",
-      "source_pdf_page": 5
+      "title": "Jesús contra el reino de las tinieblas",
+      "page_start": 189,
+      "lesson_date": "09/feb/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 25,
-      "title": "Fidelidad y justicia divina",
-      "page_start": 199,
-      "lesson_date": "18/ago/24",
-      "source_pdf_page": 5
+      "title": "Jesús sana",
+      "page_start": 197,
+      "lesson_date": "16/feb/24",
+      "source_pdf_page": 4
     },
     {
       "lesson_number": 26,
-      "title": "La justificación, la prueba del amor de Dios",
-      "page_start": 207,
-      "lesson_date": "25/ago/24",
-      "source_pdf_page": 5
+      "title": "El milagro de la Resurrección",
+      "page_start": 205,
+      "lesson_date": "23/feb/24",
+      "source_pdf_page": 4
     }
   ]
 }

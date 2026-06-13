@@ -52,8 +52,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Qué podemos aprender
-    - sobre la forma en que Dios va preparando a un líder desde su nacimiento?
+    - ¿Qué podemos aprender sobre la forma en que Dios va preparando a un líder desde su nacimiento?
     - ¿Por qué fue necesario que Moisés
   summary_application:
     items:
@@ -86,22 +85,22 @@ source_trace:
   page_end: 158
   line_start: 2460
   line_end: 2588
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2497
       line_end: 2497
       page_start: 152
       page_end: 152
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2528
       line_end: 2531
       page_start: 153
       page_end: 153
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2508
       line_end: 2526
       page_start: 153

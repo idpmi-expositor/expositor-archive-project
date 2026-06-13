@@ -42,8 +42,7 @@ lesson_sections:
       source_text_included: false
   lesson_outline:
     items:
-    - I. Las críticas realizadas por los fariseos y los escribas contra Jesús (Lucas
-      15:1-2)
+    - I. Las críticas realizadas por los fariseos y los escribas contra Jesús (Lucas 15:1-2)
     - A. Actitud de los fariseos y los escribas cuando se acercaban
     - para oír a Jesús (Lc 15:1)
     - B. Murmuraciones contra el ministerio realizado por Jesús
@@ -56,15 +55,13 @@ lesson_sections:
     - hombro y celebra el rescate (Lc 15:5-6)
     - III. Hay celebración en el cielo por un pecador que
     - se arrepiente (Lucas 15:7; Juan10:11-12, 14-15)
-    - A. Contrastes entre la conducta del buen pastor y la del asalariado que cuida
-      a las ovejas (Lc 15:7; Jn 10:11-12)
+    - A. Contrastes entre la conducta del buen pastor y la del asalariado que cuida a las ovejas (Lc 15:7; Jn 10:11-12)
     - B. El pastor conoce a sus ovejas, su vida da por ellas; ellas
     - conocen a su pastor y lo siguen (Jn 10:14-15)
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Qué contraste existía entre el
-    - ministerio realizado por Jesús y el de los líderes religiosos judíos?
+    - ¿Qué contraste existía entre el ministerio realizado por Jesús y el de los líderes religiosos judíos?
     - ¿Por qué los fariseos y los escribas
   summary_application:
     items:
@@ -97,22 +94,22 @@ source_trace:
   page_end: 61
   line_start: 932
   line_end: 1070
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 945
       line_end: 945
       page_start: 54
       page_end: 54
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 971
       line_end: 974
       page_start: 55
       page_end: 55
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 952
       line_end: 969
       page_start: 55

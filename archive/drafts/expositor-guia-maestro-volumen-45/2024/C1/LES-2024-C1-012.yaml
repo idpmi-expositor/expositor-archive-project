@@ -45,10 +45,8 @@ lesson_sections:
     - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. ¿Qué significa el «ocuparse de la salvación con
-    - temor y temblor»?
-    - 2. ¿Cómo ha entendido la teología moderna las
-    - frases «el querer como el hacer»?
+    - 1. ¿Qué significa el «ocuparse de la salvación con temor y temblor»?
+    - 2. ¿Cómo ha entendido la teología moderna las frases «el querer como el hacer»?
     - 3. Dé las razones por las que Pablo usa a Timoteo y
   summary_application:
     items:
@@ -81,22 +79,22 @@ source_trace:
   page_end: 101
   line_start: 1556
   line_end: 1682
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1597
       line_end: 1597
       page_start: 95
       page_end: 95
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1619
       line_end: 1624
       page_start: 96
       page_end: 96
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1607
       line_end: 1618
       page_start: 96

@@ -54,10 +54,8 @@ lesson_sections:
     - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. Estudie los pasajes de las
-    - controversias sobre el sábado en los evangelios sinópticos.
-    - 2. Enfatice en la importancia que los fariseos
-    - daban a su tradición oral.
+    - 1. Estudie los pasajes de las controversias sobre el sábado en los evangelios sinópticos.
+    - 2. Enfatice en la importancia que los fariseos daban a su tradición oral.
     - 3. Repase los textos en Levítico 23 y 25 que
   summary_application:
     items:
@@ -90,22 +88,22 @@ source_trace:
   page_end: 188
   line_start: 3028
   line_end: 3141
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3033
       line_end: 3033
       page_start: 181
       page_end: 181
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3061
       line_end: 3066
       page_start: 182
       page_end: 182
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3049
       line_end: 3059
       page_start: 182

@@ -79,10 +79,10 @@ python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config path/to/
 | PDF discovery | source discovery report and intake log readiness |
 | Raw text extraction | `ocr/raw_txt/*.txt` and `ocr/processing_logs/*.json`; existing raw text is not overwritten |
 | OCR quality report | `ocr/quality_reports/*.json`; summarizes extraction risk for maintainer review |
-| Normalization | `normalized/*.txt`; first-class input to structure detection |
-| Structure detection | `structured/document_structure/*.json`; reads normalized text |
-| Lesson segmentation | `metadata/lessons/*.json`; reads structure JSON |
-| Section extraction | `metadata/lesson_sections/*.json`; automated unreviewed section and reference extraction |
+| Normalization | `normalized/<classification>/*.txt`; first-class input to structure detection |
+| Structure detection | `structured/document_structure/<classification>/*.json`; reads normalized text |
+| Lesson segmentation | `metadata/lessons/<classification>/*.json`; reads structure JSON |
+| Section extraction | `metadata/lesson_sections/<classification>/*.json`; automated unreviewed section and reference extraction |
 | Draft generation | `archive/drafts/<publication_id>/**/*.yaml`; reads segment and section metadata, not raw text |
 | Canonical validation | pass/fail result for `archive/lessons/**/*.yaml` |
 | Index building | `indexes/lessons_index.yaml` and `indexes/scripture_index.yaml` |
@@ -98,7 +98,7 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
 3. OCR quality gate: extraction logs and raw text meet
    [docs/ocr-quality-policy.md](docs/ocr-quality-policy.md). OCR is fallback
    only for weak or empty embedded text pages.
-4. Normalization gate: `normalized/*.txt` preserves `PDF_PAGE` markers, author
+4. Normalization gate: `normalized/<classification>/*.txt` preserves `PDF_PAGE` markers, author
    wording, and theological content while making whitespace stable.
 5. Structure gate: page markers, lesson headers, section labels, and
    `Contenido` entries are detected correctly.
@@ -127,7 +127,7 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
 - Duplicate generated trees under `ExpositorMain/outputs`: treat that path as
   legacy/non-canonical. Review and promote only from the root pipeline paths.
 - Duplicate or conflicting lesson signals: inspect
-  `structured/document_structure/*.json` and `metadata/lessons/*.json` before
+  `structured/document_structure/<classification>/*.json` and `metadata/lessons/<classification>/*.json` before
   generating or promoting YAML.
 - Malformed scripture references: do not promote until references are
   normalized into positive chapter and verse integers.

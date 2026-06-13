@@ -57,8 +57,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Cómo se puede
-    - contextualizar la parábola de Eclesiastés 9:13-18 con la vida actual?
+    - ¿Cómo se puede contextualizar la parábola de Eclesiastés 9:13-18 con la vida actual?
     - ¿Cómo la conducta del hombre
   summary_application:
     items:
@@ -91,22 +90,22 @@ source_trace:
   page_end: 37
   line_start: 507
   line_end: 648
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 517
       line_end: 517
       page_start: 30
       page_end: 30
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 547
       line_end: 550
       page_start: 31
       page_end: 31
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 527
       line_end: 545
       page_start: 31

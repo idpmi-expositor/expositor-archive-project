@@ -58,10 +58,8 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Por qué Jesús utilizaba en
-    - ciertas ocasiones lenguaje parabólico?
-    - ¿Qué relación guardaban las parábolas con los públicos y las enseñanzas dadas
-      por Jesús?
+    - ¿Por qué Jesús utilizaba en ciertas ocasiones lenguaje parabólico?
+    - ¿Qué relación guardaban las parábolas con los públicos y las enseñanzas dadas por Jesús?
   summary_application:
     items:
     - TBD
@@ -93,22 +91,22 @@ source_trace:
   page_end: 93
   line_start: 1490
   line_end: 1640
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1502
       line_end: 1502
       page_start: 86
       page_end: 86
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1536
       line_end: 1539
       page_start: 87
       page_end: 87
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1515
       line_end: 1534
       page_start: 87

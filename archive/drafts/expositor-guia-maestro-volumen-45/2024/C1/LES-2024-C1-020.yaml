@@ -60,8 +60,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Qué razones tuvieron los
-    - ancianos de Israel para pedirle a Dios que les nombrara a un rey?
+    - ¿Qué razones tuvieron los ancianos de Israel para pedirle a Dios que les nombrara a un rey?
     - ¿Considera usted que Israel había
   summary_application:
     items:
@@ -94,22 +93,22 @@ source_trace:
   page_end: 166
   line_start: 2589
   line_end: 2714
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2625
       line_end: 2625
       page_start: 160
       page_end: 160
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2652
       line_end: 2655
       page_start: 161
       page_end: 161
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2634
       line_end: 2650
       page_start: 161

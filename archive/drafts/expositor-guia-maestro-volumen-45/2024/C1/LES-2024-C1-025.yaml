@@ -46,10 +46,8 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. Comience la clase con una
-    - oración.
-    - 2. Pregunte a la clase la diferencia
-    - entre salvación por fe y salvación por obras.
+    - 1. Comience la clase con una oración.
+    - 2. Pregunte a la clase la diferencia entre salvación por fe y salvación por obras.
     - 3. Lea y discuta la afirmación
   summary_application:
     items:
@@ -82,22 +80,22 @@ source_trace:
   page_end: 206
   line_start: 3264
   line_end: 3404
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3299
       line_end: 3299
       page_start: 200
       page_end: 200
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3327
       line_end: 3332
       page_start: 201
       page_end: 201
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 3313
       line_end: 3325
       page_start: 201

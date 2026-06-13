@@ -46,10 +46,8 @@ lesson_sections:
     - 'III. Resumen y aplicación práctica:'
   teacher_notes:
     items:
-    - 1. Repase las distintas narrativas de
-    - posesión demoníaca en los evangelios sinópticos.
-    - 2. Enfatice en las imágenes de la victoria del
-    - reino de Dios contra el reino de las tinieblas.
+    - 1. Repase las distintas narrativas de posesión demoníaca en los evangelios sinópticos.
+    - 2. Enfatice en las imágenes de la victoria del reino de Dios contra el reino de las tinieblas.
     - 3. Destaque el texto de Daniel 10 como parte
   summary_application:
     items:
@@ -82,22 +80,22 @@ source_trace:
   page_end: 196
   line_start: 3142
   line_end: 3262
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3149
       line_end: 3149
       page_start: 189
       page_end: 189
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3174
       line_end: 3179
       page_start: 190
       page_end: 190
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 3160
       line_end: 3172
       page_start: 190

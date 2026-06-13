@@ -14,6 +14,8 @@ import yaml
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 GENERATOR_PATH = PROJECT_ROOT / "scripts" / "canonical" / "06_yaml_generator.py"
+INDEX_BUILDER_PATH = PROJECT_ROOT / "scripts" / "canonical" / "08_index_builder.py"
+NORMALIZER_PATH = PROJECT_ROOT / "scripts" / "structuring" / "03_minimal_text_normalizer.py"
 DRIVE_VALIDATOR_PATH = (
     PROJECT_ROOT / "scripts" / "ingestion" / "00_validate_source_pdf_sync.py"
 )
@@ -30,6 +32,8 @@ def load_module(name: str, path: Path):
 
 
 generator = load_module("yaml_generator", GENERATOR_PATH)
+index_builder = load_module("index_builder", INDEX_BUILDER_PATH)
+normalizer = load_module("minimal_text_normalizer", NORMALIZER_PATH)
 drive_validator = load_module("drive_validator", DRIVE_VALIDATOR_PATH)
 
 
@@ -108,6 +112,92 @@ class DraftGenerationTest(unittest.TestCase):
                 generated["source_integrity"]["imported_at"],
                 "2026-06-06T15:27:09+00:00",
             )
+
+
+class OutputLayoutTest(unittest.TestCase):
+    def test_normalizer_writes_classified_output_path(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_root:
+            root = Path(temp_root)
+            input_dir = root / "raw"
+            output_dir = root / "normalized"
+            input_dir.mkdir()
+            source = input_dir / "expositor-guia-maestro-volumen-45.txt"
+            source.write_text("sample text\n", encoding="utf-8")
+
+            with patch.object(
+                sys,
+                "argv",
+                [
+                    "03_minimal_text_normalizer.py",
+                    "--input-dir",
+                    str(input_dir),
+                    "--output-dir",
+                    str(output_dir),
+                ],
+            ):
+                self.assertEqual(normalizer.main(), 0)
+
+            self.assertTrue(
+                (output_dir / "maestro" / "expositor-guia-maestro-volumen-45.txt").exists()
+            )
+
+
+class LessonIndexBuilderTest(unittest.TestCase):
+    def test_lessons_index_includes_section_items_for_formatting(self) -> None:
+        lesson = {
+            "lesson_id": "LES-2024-C1-001",
+            "publication_id": "expositor-guia-maestro-volumen-45",
+            "collection_type": "Expositor Maestro",
+            "year": 2024,
+            "cycle": "C1",
+            "lesson_number": 1,
+            "title": "Sample lesson",
+            "lesson_sections": {
+                "biblical_reading": {
+                    "reference_display": "Santiago 2:14-24",
+                    "replacement_policy": {
+                        "provider": "api.bible",
+                        "strategy": "replace_by_canonical_reference",
+                    },
+                },
+                "lesson_outline": {
+                    "items": [
+                        "I. Primer punto",
+                        "(Romanos 3:28; 5:1-5)",
+                        "A. Subpunto",
+                    ],
+                },
+                "teacher_notes": {"items": ["¿Pregunta guia?"]},
+                "summary_application": {"items": ["TBD"]},
+            },
+            "source_trace": {
+                "section_traces": {
+                    "lesson_outline": {
+                        "source_text": "normalized/maestro/source.txt",
+                        "line_start": 10,
+                        "line_end": 12,
+                    }
+                }
+            },
+        }
+
+        result = index_builder.build_lessons_index(
+            [lesson],
+            index_scope="automated_unreviewed_draft",
+            source_archive="archive/drafts",
+        )
+
+        indexed_lesson = result["lessons"][0]
+        self.assertEqual(indexed_lesson["publication_classification"], "maestro")
+        outline = indexed_lesson["lesson_sections"]["lesson_outline"]
+        self.assertEqual(outline["item_count"], 3)
+        self.assertEqual(outline["items"][0]["kind"], "roman_heading")
+        self.assertEqual(outline["items"][1]["kind"], "scripture_reference")
+        self.assertEqual(outline["items"][2]["kind"], "letter_subpoint")
+        self.assertEqual(
+            outline["items"][0]["item_id"],
+            "LES-2024-C1-001-lesson-outline-001",
+        )
 
 
 class DriveValidatorConfigTest(unittest.TestCase):

@@ -44,8 +44,7 @@ lesson_sections:
     - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. ¿Cuál es la finalidad espiritual de la
-    - circuncisión?
+    - 1. ¿Cuál es la finalidad espiritual de la circuncisión?
     - 2. ¿Qué se entiende por «la fe de Cristo»?
     - 3. Explique las diferentes maneras de explicar el
   summary_application:
@@ -79,22 +78,22 @@ source_trace:
   page_end: 110
   line_start: 1683
   line_end: 1832
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1727
       line_end: 1727
       page_start: 103
       page_end: 103
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1745
       line_end: 1749
       page_start: 104
       page_end: 104
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1734
       line_end: 1744
       page_start: 104

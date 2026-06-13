@@ -1,6 +1,6 @@
 {
-  "source_segments": "metadata\\lessons\\expositor-guia-maestro-volumen-46.json",
-  "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+  "source_segments": "metadata\\lessons\\maestro\\expositor-guia-maestro-volumen-46.json",
+  "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
   "lessons": [
     {
       "lesson_number": 1,
@@ -24,7 +24,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 98,
             "line_end": 98,
             "page_start": 6,
@@ -38,7 +38,7 @@
             "¿Por qué el profeta Isaías utilizó la figura"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 108,
             "line_end": 111,
             "page_start": 7,
@@ -65,7 +65,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 121,
             "line_end": 137,
             "page_start": 7,
@@ -97,7 +97,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 245,
             "line_end": 245,
             "page_start": 14,
@@ -106,12 +106,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué el profeta Isaías utilizó",
-            "lenguaje parabólico para transmitir el mensaje de Jehová?",
+            "¿Por qué el profeta Isaías utilizó lenguaje parabólico para transmitir el mensaje de Jehová?",
             "¿Qué enseñanzas se pueden obtener"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 275,
             "line_end": 278,
             "page_start": 15,
@@ -140,7 +139,7 @@
             "IV. Resumen y aplicación práctica:"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 255,
             "line_end": 273,
             "page_start": 15,
@@ -165,7 +164,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 386,
             "line_end": 386,
             "page_start": 22,
@@ -174,12 +173,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué Jehová habló por",
-            "parábolas a Su pueblo?",
+            "¿Por qué Jehová habló por parábolas a Su pueblo?",
             "¿Cuál es el simbolismo de la gran"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 413,
             "line_end": 416,
             "page_start": 23,
@@ -208,7 +206,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 393,
             "line_end": 411,
             "page_start": 23,
@@ -240,7 +238,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 517,
             "line_end": 517,
             "page_start": 30,
@@ -249,12 +247,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Cómo se puede",
-            "contextualizar la parábola de Eclesiastés 9:13-18 con la vida actual?",
+            "¿Cómo se puede contextualizar la parábola de Eclesiastés 9:13-18 con la vida actual?",
             "¿Cómo la conducta del hombre"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 547,
             "line_end": 550,
             "page_start": 31,
@@ -283,7 +280,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 527,
             "line_end": 545,
             "page_start": 31,
@@ -308,7 +305,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 662,
             "line_end": 662,
             "page_start": 38,
@@ -317,12 +314,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué dos hermanas son",
-            "juzgadas como rameras?",
+            "¿Por qué dos hermanas son juzgadas como rameras?",
             "¿Por qué Ahola y Aholiba adoptaron las prácticas idolátricas de sus"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 689,
             "line_end": 692,
             "page_start": 39,
@@ -351,7 +347,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 669,
             "line_end": 687,
             "page_start": 39,
@@ -376,7 +372,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 803,
             "line_end": 803,
             "page_start": 46,
@@ -385,12 +381,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Qué relación tiene la parábola",
-            "narrada por Jesús con el perdón y la misericordia?",
+            "¿Qué relación tiene la parábola narrada por Jesús con el perdón y la misericordia?",
             "¿Cuántas veces se debe perdonar a"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 833,
             "line_end": 836,
             "page_start": 47,
@@ -420,7 +415,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 812,
             "line_end": 831,
             "page_start": 47,
@@ -459,7 +454,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 945,
             "line_end": 945,
             "page_start": 54,
@@ -468,12 +463,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Qué contraste existía entre el",
-            "ministerio realizado por Jesús y el de los líderes religiosos judíos?",
+            "¿Qué contraste existía entre el ministerio realizado por Jesús y el de los líderes religiosos judíos?",
             "¿Por qué los fariseos y los escribas"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 971,
             "line_end": 974,
             "page_start": 55,
@@ -501,7 +495,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 952,
             "line_end": 969,
             "page_start": 55,
@@ -533,7 +527,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1084,
             "line_end": 1084,
             "page_start": 62,
@@ -542,12 +536,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué debemos reconocer",
-            "a la agricultura como un oficio digno?",
+            "¿Por qué debemos reconocer a la agricultura como un oficio digno?",
             "¿Qué importancia posee conocer la"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1111,
             "line_end": 1114,
             "page_start": 63,
@@ -575,7 +568,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1092,
             "line_end": 1109,
             "page_start": 63,
@@ -649,7 +642,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1220,
             "line_end": 1220,
             "page_start": 70,
@@ -658,12 +651,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Cuál era el significado de la",
-            "dote en el contrato matrimonial en el AT?",
+            "¿Cuál era el significado de la dote en el contrato matrimonial en el AT?",
             "¿Qué aprendemos sobre la dote"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1250,
             "line_end": 1253,
             "page_start": 71,
@@ -693,7 +685,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1229,
             "line_end": 1248,
             "page_start": 71,
@@ -725,7 +717,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1361,
             "line_end": 1361,
             "page_start": 78,
@@ -738,7 +730,7 @@
             "¿Cómo debe conducirse la persona a"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1390,
             "line_end": 1392,
             "page_start": 79,
@@ -764,7 +756,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1373,
             "line_end": 1388,
             "page_start": 79,
@@ -796,7 +788,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1502,
             "line_end": 1502,
             "page_start": 86,
@@ -805,12 +797,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué Jesús utilizaba en",
-            "ciertas ocasiones lenguaje parabólico?",
+            "¿Por qué Jesús utilizaba en ciertas ocasiones lenguaje parabólico?",
             "¿Qué relación guardaban las parábolas con los públicos y las enseñanzas dadas por Jesús?"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1536,
             "line_end": 1539,
             "page_start": 87,
@@ -840,7 +831,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1515,
             "line_end": 1534,
             "page_start": 87,
@@ -865,7 +856,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1652,
             "line_end": 1652,
             "page_start": 94,
@@ -874,12 +865,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Cómo Jesús contrastó el trato",
-            "de Dios con el ser humano en el reino de los cielos con el mundo?",
+            "¿Cómo Jesús contrastó el trato de Dios con el ser humano en el reino de los cielos con el mundo?",
             "¿Considera usted que la salvación"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1679,
             "line_end": 1682,
             "page_start": 95,
@@ -907,7 +897,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1660,
             "line_end": 1677,
             "page_start": 95,
@@ -932,7 +922,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1792,
             "line_end": 1792,
             "page_start": 102,
@@ -941,12 +931,11 @@
         },
         "teacher_notes": {
           "items": [
-            "¿Por qué Jesús mencionó las",
-            "cosas escondidas desde la fundación del mundo?",
+            "¿Por qué Jesús mencionó las cosas escondidas desde la fundación del mundo?",
             "¿Qué respuesta dio Jesús a"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1818,
             "line_end": 1821,
             "page_start": 103,
@@ -976,7 +965,7 @@
             "IV. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1797,
             "line_end": 1816,
             "page_start": 103,
@@ -1001,7 +990,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1920,
             "line_end": 1920,
             "page_start": 111,
@@ -1011,12 +1000,11 @@
         "teacher_notes": {
           "items": [
             "1. Comience la clase con una oración.",
-            "2. Pregunte a la clase la definición de",
-            "milagro.",
+            "2. Pregunte a la clase la definición de milagro.",
             "3. Lea y discuta la afirmación fundamental"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1942,
             "line_end": 1946,
             "page_start": 112,
@@ -1037,7 +1025,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 1930,
             "line_end": 1940,
             "page_start": 112,
@@ -1062,7 +1050,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2030,
             "line_end": 2030,
             "page_start": 119,
@@ -1072,12 +1060,11 @@
         "teacher_notes": {
           "items": [
             "1. Comience la clase con una oración.",
-            "2. Pregunte a la clase la definición de",
-            "tentación.",
+            "2. Pregunte a la clase la definición de tentación.",
             "3. Lea y discuta la afirmación fundamental"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2056,
             "line_end": 2060,
             "page_start": 120,
@@ -1097,7 +1084,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2045,
             "line_end": 2054,
             "page_start": 120,
@@ -1122,7 +1109,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2153,
             "line_end": 2153,
             "page_start": 127,
@@ -1132,12 +1119,11 @@
         "teacher_notes": {
           "items": [
             "1. Comience la clase con una oración.",
-            "2. Pregunte a la clase la definición de",
-            "bautismo en agua.",
+            "2. Pregunte a la clase la definición de bautismo en agua.",
             "3. Lea y discuta brevemente la afirmación"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2174,
             "line_end": 2178,
             "page_start": 128,
@@ -1156,7 +1142,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2164,
             "line_end": 2172,
             "page_start": 128,
@@ -1181,7 +1167,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2268,
             "line_end": 2268,
             "page_start": 135,
@@ -1191,12 +1177,11 @@
         "teacher_notes": {
           "items": [
             "1. Comience la clase con una oración.",
-            "2. Pregunte a la clase la definición",
-            "omnisciencia.",
+            "2. Pregunte a la clase la definición omnisciencia.",
             "3. Lea y discuta brevemente la afirmación"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2295,
             "line_end": 2299,
             "page_start": 136,
@@ -1215,7 +1200,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2285,
             "line_end": 2293,
             "page_start": 136,
@@ -1240,7 +1225,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2391,
             "line_end": 2391,
             "page_start": 143,
@@ -1250,12 +1235,11 @@
         "teacher_notes": {
           "items": [
             "1. Comience la clase con una oración.",
-            "2. Pregunte a la clase la definición de",
-            "misión.",
+            "2. Pregunte a la clase la definición de misión.",
             "3. Lea y discuta brevemente la afirmación"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2416,
             "line_end": 2420,
             "page_start": 144,
@@ -1276,7 +1260,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2402,
             "line_end": 2412,
             "page_start": 144,
@@ -1301,7 +1285,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2518,
             "line_end": 2518,
             "page_start": 151,
@@ -1311,12 +1295,11 @@
         "teacher_notes": {
           "items": [
             "1. Comience la clase con una oración.",
-            "2. Pregunte a la clase lo que",
-            "entienden por el término “nombre”.",
+            "2. Pregunte a la clase lo que entienden por el término “nombre”.",
             "3. Lea y discuta brevemente la afirmación"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2542,
             "line_end": 2546,
             "page_start": 152,
@@ -1336,7 +1319,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2531,
             "line_end": 2540,
             "page_start": 152,
@@ -1361,7 +1344,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2661,
             "line_end": 2661,
             "page_start": 159,
@@ -1374,7 +1357,7 @@
             "2. Explique de manera breve el"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2686,
             "line_end": 2688,
             "page_start": 160,
@@ -1397,7 +1380,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2672,
             "line_end": 2684,
             "page_start": 160,
@@ -1422,7 +1405,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2897,
             "line_end": 2897,
             "page_start": 173,
@@ -1446,7 +1429,7 @@
             "2. Pregunte ¿Por qué Jesús utilizó"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2822,
             "line_end": 2840,
             "page_start": 168,
@@ -1470,7 +1453,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2912,
             "line_end": 2925,
             "page_start": 174,
@@ -1498,12 +1481,11 @@
             "Lección 22",
             "Aplicación de Maestro - Parte I",
             "1. ¿Quién le había dado autoridad a Cristo?",
-            "2. ¿Pueden haber endemoniados en el",
-            "templo? Notas del Maestro - Parte II",
+            "2. ¿Pueden haber endemoniados en el templo? Notas del Maestro - Parte II",
             "1. «¿Qué es esto? ¡Una enseñanza nueva,"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 2945,
             "line_end": 2968,
             "page_start": 175,
@@ -1542,7 +1524,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3033,
             "line_end": 3033,
             "page_start": 181,
@@ -1551,14 +1533,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Estudie los pasajes de las",
-            "controversias sobre el sábado en los evangelios sinópticos.",
-            "2. Enfatice en la importancia que los fariseos",
-            "daban a su tradición oral.",
+            "1. Estudie los pasajes de las controversias sobre el sábado en los evangelios sinópticos.",
+            "2. Enfatice en la importancia que los fariseos daban a su tradición oral.",
             "3. Repase los textos en Levítico 23 y 25 que"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3061,
             "line_end": 3066,
             "page_start": 182,
@@ -1579,7 +1559,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3049,
             "line_end": 3059,
             "page_start": 182,
@@ -1604,7 +1584,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3149,
             "line_end": 3149,
             "page_start": 189,
@@ -1613,14 +1593,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Repase las distintas narrativas de",
-            "posesión demoníaca en los evangelios sinópticos.",
-            "2. Enfatice en las imágenes de la victoria del",
-            "reino de Dios contra el reino de las tinieblas.",
+            "1. Repase las distintas narrativas de posesión demoníaca en los evangelios sinópticos.",
+            "2. Enfatice en las imágenes de la victoria del reino de Dios contra el reino de las tinieblas.",
             "3. Destaque el texto de Daniel 10 como parte"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3174,
             "line_end": 3179,
             "page_start": 190,
@@ -1643,7 +1621,7 @@
             "III. Resumen y aplicación práctica:"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3160,
             "line_end": 3172,
             "page_start": 190,
@@ -1675,7 +1653,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3276,
             "line_end": 3276,
             "page_start": 197,
@@ -1687,7 +1665,7 @@
             "1. Jesús decía: “He venido para traer vida"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3300,
             "line_end": 3301,
             "page_start": 198,
@@ -1707,7 +1685,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3289,
             "line_end": 3298,
             "page_start": 198,
@@ -1739,7 +1717,7 @@
             }
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3403,
             "line_end": 3403,
             "page_start": 205,
@@ -1748,14 +1726,12 @@
         },
         "teacher_notes": {
           "items": [
-            "1. Estudie los pasajes sobre las",
-            "apariciones de Cristo en los cuatro evangelios.",
-            "2. Enfatice en la importancia del testimonio",
-            "oral sobre la resurrección de Cristo.",
+            "1. Estudie los pasajes sobre las apariciones de Cristo en los cuatro evangelios.",
+            "2. Enfatice en la importancia del testimonio oral sobre la resurrección de Cristo.",
             "3. Mencione las señales del evangelio de Juan"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3428,
             "line_end": 3433,
             "page_start": 206,
@@ -1780,7 +1756,7 @@
             "III. Resumen y aplicación práctica"
           ],
           "source_trace": {
-            "source_text": "normalized\\expositor-guia-maestro-volumen-46.txt",
+            "source_text": "normalized\\maestro\\expositor-guia-maestro-volumen-46.txt",
             "line_start": 3412,
             "line_end": 3426,
             "page_start": 206,

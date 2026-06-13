@@ -44,8 +44,7 @@ lesson_sections:
   teacher_notes:
     items:
     - 1. Comience la clase con una oración.
-    - 2. Pregunte a la clase la definición de
-    - tentación.
+    - 2. Pregunte a la clase la definición de tentación.
     - 3. Lea y discuta la afirmación fundamental
   summary_application:
     items:
@@ -78,22 +77,22 @@ source_trace:
   page_end: 126
   line_start: 2023
   line_end: 2145
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2030
       line_end: 2030
       page_start: 119
       page_end: 119
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2056
       line_end: 2060
       page_start: 120
       page_end: 120
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 2045
       line_end: 2054
       page_start: 120

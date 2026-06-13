@@ -40,10 +40,8 @@ lesson_sections:
     - del día (Mt 20:3-4)
     - II. Formas en que el dueño de la viña continúo
     - contratando obreros para su viña (Mt 20:5-7)
-    - A. Durante la hora sexta y novena el dueño de la viña contrató a otros obreros
-      (Mt 20:5)
-    - B. La contratación de otros obreros que estaban desocupados porque nadie los
-      había contratado (Mt 20:6-7)
+    - A. Durante la hora sexta y novena el dueño de la viña contrató a otros obreros (Mt 20:5)
+    - B. La contratación de otros obreros que estaban desocupados porque nadie los había contratado (Mt 20:6-7)
     - III. La forma en que el padre de familia compensó a los
     - obreros que había contratado (Mateo 20:8-16)
     - A. Al llegar la noche el mayordomo pagó a los obreros
@@ -53,8 +51,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Cómo Jesús contrastó el trato
-    - de Dios con el ser humano en el reino de los cielos con el mundo?
+    - ¿Cómo Jesús contrastó el trato de Dios con el ser humano en el reino de los cielos con el mundo?
     - ¿Considera usted que la salvación
   summary_application:
     items:
@@ -87,22 +84,22 @@ source_trace:
   page_end: 101
   line_start: 1641
   line_end: 1781
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-46.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-46.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1652
       line_end: 1652
       page_start: 94
       page_end: 94
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1679
       line_end: 1682
       page_start: 95
       page_end: 95
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-46.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-46.txt
       line_start: 1660
       line_end: 1677
       page_start: 95

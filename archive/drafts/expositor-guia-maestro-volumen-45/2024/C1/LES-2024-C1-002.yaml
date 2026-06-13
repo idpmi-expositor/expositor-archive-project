@@ -50,8 +50,7 @@ lesson_sections:
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Qué cuidados debe tener un líder al identificar el
-    - fundamento sobre el cual va a construir?
+    - ¿Qué cuidados debe tener un líder al identificar el fundamento sobre el cual va a construir?
     - ¿Considera usted como importantes la
   summary_application:
     items:
@@ -84,22 +83,22 @@ source_trace:
   page_end: 21
   line_start: 197
   line_end: 335
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 241
       line_end: 241
       page_start: 15
       page_end: 15
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 266
       line_end: 269
       page_start: 16
       page_end: 16
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 249
       line_end: 265
       page_start: 16

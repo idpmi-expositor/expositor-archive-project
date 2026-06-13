@@ -44,15 +44,13 @@ lesson_sections:
     - (Gn 49:1-28)
     - B. La muerte de Jacob en tierra extranjera y su petición
     - (Gn 49:29-33)
-    - III. El duelo de José por su padre y las honras fúnebres en Macpela (Génesis
-      50:1-14)
+    - III. El duelo de José por su padre y las honras fúnebres en Macpela (Génesis 50:1-14)
     - A. El duelo de José ante la muerte de Jacob (Gn 50:1-6)
     - B. Numeroso séquito de israelitas y egipcios brindan sepultura a Jacob (Gn 50:10-14)
     - IV. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - ¿Qué contraste existía entre
-    - el patriarca de los hebreos y el Faraón de Egipto?
+    - ¿Qué contraste existía entre el patriarca de los hebreos y el Faraón de Egipto?
     - ¿Cómo Dios modificó la conducta
   summary_application:
     items:
@@ -85,22 +83,22 @@ source_trace:
   page_end: 142
   line_start: 2205
   line_end: 2332
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2240
       line_end: 2240
       page_start: 136
       page_end: 136
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2269
       line_end: 2272
       page_start: 137
       page_end: 137
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 2251
       line_end: 2267
       page_start: 137

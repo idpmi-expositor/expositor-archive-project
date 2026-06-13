@@ -44,17 +44,9 @@ lesson_sections:
     - III. Resumen y aplicación práctica
   teacher_notes:
     items:
-    - 1. ¿Cómo se explica la kenosis a la luz del himno
-    - cristológico?
-    - 2. ¿Qué es la «teología kenótica» y cuáles son sus
-    - representantes?
-    - 3. ¿Cuál es el impacto del modelo cristológico en
-    - nuestra sociedad moderna? Esta tercera lección sobre el estudio a la carta a
-      los Filipenses analiza lo que es considerado por muchos como el pasaje clave
-      de toda la epístola y uno de los textos más importantes sobre la preexistencia,
-      divinidad, humillación y exaltación de Cristo en todo el NT. Con ello, Pablo
-      quiere asegurarles a sus lectores que el verdadero carácter de Dios se revela
-      en la entrega en favor de los demás, acción llevada a cabo por medio de Cristo.
+    - 1. ¿Cómo se explica la kenosis a la luz del himno cristológico?
+    - 2. ¿Qué es la «teología kenótica» y cuáles son sus representantes?
+    - 3. ¿Cuál es el impacto del modelo cristológico en nuestra sociedad moderna? Esta tercera lección sobre el estudio a la carta a los Filipenses analiza lo que es considerado por muchos como el pasaje clave de toda la epístola y uno de los textos más importantes sobre la preexistencia, divinidad, humillación y exaltación de Cristo en todo el NT. Con ello, Pablo quiere asegurarles a sus lectores que el verdadero carácter de Dios se revela en la entrega en favor de los demás, acción llevada a cabo por medio de Cristo.
   summary_application:
     items:
     - TBD
@@ -86,22 +78,22 @@ source_trace:
   page_end: 93
   line_start: 1420
   line_end: 1555
-  extraction_block: structured\document_structure\expositor-guia-maestro-volumen-45.json
+  extraction_block: structured\document_structure\maestro\expositor-guia-maestro-volumen-45.json
   section_traces:
     biblical_reading:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1466
       line_end: 1466
       page_start: 87
       page_end: 87
     teacher_notes:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1486
       line_end: 1492
       page_start: 88
       page_end: 88
     lesson_outline:
-      source_text: normalized\expositor-guia-maestro-volumen-45.txt
+      source_text: normalized\maestro\expositor-guia-maestro-volumen-45.txt
       line_start: 1475
       line_end: 1485
       page_start: 88
