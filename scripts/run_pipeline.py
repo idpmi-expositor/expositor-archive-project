@@ -16,6 +16,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_STEPS_CONFIG = PROJECT_ROOT / "config" / "pipeline_steps.json"
 
 
 def run_step(command: list[str], *, optional: bool = False) -> dict[str, object]:
@@ -51,14 +52,73 @@ def write_run_log(run_log_dir: Path, steps: list[dict[str, object]]) -> Path:
     return path
 
 
+def load_steps_config(path: Path) -> list[dict[str, Any]]:
+    """Load pipeline steps from a JSON configuration file."""
+    with path.open("r", encoding="utf-8") as handle:
+        data = json.load(handle)
+    steps = data.get("steps")
+    if not isinstance(steps, list):
+        raise ValueError(f"{path}: 'steps' must be a list")
+    return steps
+
+
+def filter_steps(
+    all_steps: list[dict[str, Any]],
+    run_tags: set[str],
+    skip_tags: set[str],
+) -> list[dict[str, Any]]:
+    """Filter pipeline steps based on command-line tags."""
+    if not run_tags and not skip_tags:
+        return all_steps
+
+    filtered_steps: list[dict[str, Any]] = []
+    for step in all_steps:
+        step_tags = set(step.get("tags", []))
+        if skip_tags and step_tags.intersection(skip_tags):
+            continue
+        if run_tags and not step_tags.intersection(run_tags):
+            continue
+        filtered_steps.append(step)
+    return filtered_steps
+
+
+def build_command(step: dict[str, Any], python_executable: str, args: argparse.Namespace) -> list[str]:
+    """Build the command list for a single pipeline step."""
+    command = [python_executable, step["command"]]
+    step_name = step["name"]
+
+    if step_name == "validate-drive-sync" and args.drive_root_folder_id:
+        command.extend(["--drive-root-folder-id", args.drive_root_folder_id])
+        if args.rclone_config:
+            command.extend(["--rclone-config", str(args.rclone_config)])
+
+    if step_name == "extract-raw-text" and args.no_ocr_fallback:
+        command.append("--no-ocr-fallback")
+
+    return command
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run the Expositor archive pipeline.")
+    parser.add_argument(
+        "--steps-config",
+        default=DEFAULT_STEPS_CONFIG,
+        type=Path,
+        help="Path to the JSON file defining pipeline steps.",
+    )
+    parser.add_argument(
+        "--run-tags",
+        help="Comma-separated list of tags to run (e.g., 'ingestion,structuring').",
+    )
+    parser.add_argument(
+        "--skip-tags",
+        help="Comma-separated list of tags to skip (e.g., 'pre-flight,ocr').",
+    )
+    # Arguments for specific steps
     parser.add_argument("--drive-root-folder-id")
     parser.add_argument("--rclone-config", type=Path)
-    parser.add_argument("--skip-drive-validation", action="store_true")
-    parser.add_argument("--skip-rename", action="store_true")
-    parser.add_argument("--skip-raw-extraction", action="store_true")
     parser.add_argument("--no-ocr-fallback", action="store_true")
+    # Run log arguments
     parser.add_argument(
         "--write-run-log",
         action="store_true",
@@ -70,63 +130,22 @@ def main() -> int:
         type=Path,
         help="Folder for optional performance run logs.",
     )
-    parser.add_argument(
-        "--build-indexes",
-        action="store_true",
-        help=(
-            "Attempt canonical validation and index generation after drafts are "
-            "built. This only succeeds when reviewed files already exist under "
-            "archive/lessons."
-        ),
-    )
     args = parser.parse_args()
 
-    python = sys.executable
-    steps: list[tuple[list[str], bool]] = []
+    all_steps = load_steps_config(args.steps_config)
+    run_tags = set(args.run_tags.split(",")) if args.run_tags else set()
+    skip_tags = set(args.skip_tags.split(",")) if args.skip_tags else set()
 
-    if not args.skip_drive_validation and args.drive_root_folder_id:
-        command = [
-            python,
-            "scripts/ingestion/00_validate_source_pdf_sync.py",
-            "--drive-root-folder-id",
-            args.drive_root_folder_id,
-        ]
-        if args.rclone_config:
-            command.extend(["--rclone-config", str(args.rclone_config)])
-        steps.append((command, False))
+    # By default, don't run indexing steps unless explicitly requested.
+    if "indexing" not in run_tags:
+        skip_tags.add("indexing")
 
-    if not args.skip_rename:
-        steps.append(([python, "scripts/ingestion/00_rename_source_pdfs.py"], False))
-
-    steps.append(([python, "scripts/ingestion/01_pdf_discovery.py"], False))
-
-    if not args.skip_raw_extraction:
-        command = [python, "scripts/ingestion/02_pdf_to_raw_text.py"]
-        if args.no_ocr_fallback:
-            command.append("--no-ocr-fallback")
-        steps.append((command, False))
-
-    steps.extend(
-        [
-            ([python, "scripts/ingestion/03_quality_report.py"], False),
-            ([python, "scripts/structuring/03_minimal_text_normalizer.py"], False),
-            ([python, "scripts/structuring/04_document_structure_detector.py"], False),
-            ([python, "scripts/structuring/05_lesson_segmenter.py"], False),
-            ([python, "scripts/structuring/06_section_extractor.py"], False),
-            ([python, "scripts/canonical/06_yaml_generator.py"], False),
-        ]
-    )
-
-    if args.build_indexes:
-        steps.extend(
-            [
-                ([python, "scripts/canonical/07_schema_validator.py"], False),
-                ([python, "scripts/canonical/08_index_builder.py"], False),
-            ]
-        )
+    steps_to_run = filter_steps(all_steps, run_tags, skip_tags)
 
     step_results: list[dict[str, object]] = []
-    for command, optional in steps:
+    for step in steps_to_run:
+        command = build_command(step, sys.executable, args)
+        optional = bool(step.get("optional", False))
         step_result = run_step(command, optional=optional)
         step_results.append(step_result)
         if int(step_result["returncode"]) != 0 and not optional:

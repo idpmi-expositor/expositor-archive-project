@@ -31,6 +31,12 @@ from pipeline_classification import (  # noqa: E402
     load_profile,
 )
 
+CRITICAL_SECTIONS = (
+    "biblical_reading",
+    "lesson_outline",
+    "teacher_notes",
+)
+
 
 def count_files(path: Path, pattern: str) -> int:
     return len(list(path.rglob(pattern))) if path.exists() else 0
@@ -175,6 +181,42 @@ def ocr_audit(root: Path) -> dict[str, Any]:
     return {"reports": reports}
 
 
+def other_audits(root: Path) -> dict[str, Any]:
+    """Summarize the findings from other dedicated audit reports."""
+    missing_sections_report = load_json_file(
+        root / "reports" / "missing_sections" / "missing_sections.json"
+    )
+    title_consistency_report = load_json_file(
+        root / "reports" / "title_consistency" / "title_consistency_audit.json"
+    )
+    low_confidence_scripture_report = load_json_file(
+        root / "reports" / "low_confidence_scripture" / "low_confidence_scripture_audit.json"
+    )
+
+    missing_items = missing_sections_report.get("missing_items", [])
+    critical_missing = [
+        item
+        for item in missing_items
+        if isinstance(item, dict) and item.get("missing_section") in CRITICAL_SECTIONS
+    ]
+
+    return {
+        "missing_sections": {
+            "total_missing": missing_sections_report.get("total_missing", 0),
+            "critical_missing_count": len(critical_missing),
+            "has_critical_gaps": bool(critical_missing),
+        },
+        "title_consistency": {
+            "total_inconsistencies": title_consistency_report.get("total_inconsistencies", 0),
+        },
+        "low_confidence_scripture": {
+            "total_low_confidence": low_confidence_scripture_report.get(
+                "total_low_confidence", 0
+            ),
+        },
+    }
+
+
 def build_report(root: Path) -> dict[str, Any]:
     return {
         "generated_at": datetime.now(UTC).replace(microsecond=0).isoformat(),
@@ -182,6 +224,7 @@ def build_report(root: Path) -> dict[str, Any]:
         "yaml": yaml_audit(root),
         "indexing": indexing_audit(root),
         "ocr": ocr_audit(root),
+        "content_audits": other_audits(root),
         "sizes": {
             "raw_text_bytes": file_size_total(root / "ocr" / "raw_txt", "*.txt"),
             "normalized_text_bytes": file_size_total(root / "normalized", "*.txt"),
@@ -207,6 +250,9 @@ def write_markdown(path: Path, report: dict[str, Any]) -> None:
         f"- Section index entries: {report['indexing']['section_entry_count']}",
         f"- Translation alignment lessons: {report['indexing']['translation_lesson_count']}",
         f"- Scripture references: {report['indexing']['scripture_reference_count']}",
+        f"- Missing section items: {report['content_audits']['missing_sections']['total_missing']}",
+        f"- Inconsistent lesson titles: {report['content_audits']['title_consistency']['total_inconsistencies']}",
+        f"- Low-confidence scripture references: {report['content_audits']['low_confidence_scripture']['total_low_confidence']}",
         "",
         "## Warnings And Gaps",
         "",
@@ -216,6 +262,12 @@ def write_markdown(path: Path, report: dict[str, Any]) -> None:
         + report["yaml"]["warnings"]
         + report["indexing"]["warnings"]
     )
+    if report["content_audits"]["missing_sections"]["has_critical_gaps"]:
+        warnings.append(
+            f"critical content gaps exist: {report['content_audits']['missing_sections']['critical_missing_count']} missing required sections"
+        )
+    if report["content_audits"]["title_consistency"]["total_inconsistencies"] > 0:
+        warnings.append("lesson title inconsistencies exist between Contenido and headers")
     if warnings:
         lines.extend(f"- {warning}" for warning in warnings)
     else:

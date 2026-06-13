@@ -1,0 +1,12 @@
+{
+  "waivers": [
+    {
+      "publication_id": "expositor-guia-maestro-volumen-45",
+      "pdf_page": 1,
+      "issue_code": "zero_text",
+      "waived_by": "system-architect",
+      "waived_at": "2026-06-14",
+      "reason": "Page is the front cover of the publication, which is expected to have no extractable text. The image is preserved, and no lesson content is lost."
+    }
+  ]
+}

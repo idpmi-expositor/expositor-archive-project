@@ -54,6 +54,10 @@ BIBLE_REFERENCE_ONLY_PATTERN = re.compile(
     r"(?:\d?\s?[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚáéíóúñÑ]+(?:\s+[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚáéíóúñÑ]+)?\s+)?"
     r"\d+:\d+(?:-\d+)?)*$"
 )
+HEADER_FOOTER_PATTERN = re.compile(
+    r"^(?:Expositor|Guía del Maestro|TRIMESTRE)\b",
+    re.IGNORECASE
+)
 
 SECTION_LABELS = (
     "titulo",
@@ -149,6 +153,8 @@ def is_structural_line(line: str) -> bool:
     if normalize_for_matching(stripped) in SHORT_STANDALONE_LABELS:
         return True
     if is_bible_reference_only(stripped):
+        return True
+    if HEADER_FOOTER_PATTERN.match(stripped):
         return True
     return False
 

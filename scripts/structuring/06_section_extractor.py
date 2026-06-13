@@ -30,7 +30,11 @@ SECTION_ALIASES = {
     "biblical_reading": ("lectura biblica",),
     "teacher_notes": ("notas para el maestro",),
     "lesson_outline": ("bosquejo de la leccion",),
-    "summary_application": ("resumen y aplicacion practica",),
+    "summary_application": (
+        "resumen y aplicacion practica",
+        "iv. resumen y aplicacion practica",
+        "resumen",
+    ),
 }
 STOP_LABELS = {
     "lectura biblica",
@@ -44,7 +48,10 @@ STOP_LABELS = {
     "bibliografia",
     "resumen y aplicacion practica",
 }
-REFERENCE_PREFIX_RE = re.compile(r"^Lectura B[ií]blica:\s*(?P<reference>.+)$", re.I)
+BIBLICAL_READING_RE = re.compile(
+    r"(?:^|\b)Lectura\s+B[ií]blica:\s*(?P<reference>.+)",
+    re.IGNORECASE,
+)
 OUTLINE_MARKER_RE = re.compile(r"^(?:[IVXLCDM]+\.|[A-Z]\.)\s+", re.I)
 PARENTHESIZED_REFERENCE_RE = re.compile(r"^\(.+\)$")
 TERMINAL_PUNCTUATION = (".", "?", "!", ":", ";", ")", "]")
@@ -108,7 +115,7 @@ def is_stop_label(line: str) -> bool:
 def find_label(lines: list[str], start: int, end: int, aliases: tuple[str, ...]) -> int | None:
     for index in range(start, min(end, len(lines))):
         normalized = normalize_for_matching(lines[index])
-        if any(normalized.startswith(alias) for alias in aliases):
+        if any(alias in normalized for alias in aliases):
             return index
     return None
 
@@ -122,7 +129,11 @@ def collect_block(
 ) -> tuple[list[str], int]:
     items: list[str] = []
     first_line = lines[label_index].strip()
-    if include_label_remainder and ":" in first_line:
+    # Handle cases like "IV. Resumen y aplicación práctica" where the content
+    # is on the same line, separated by a colon or just following the label.
+    normalized_first = normalize_for_matching(first_line)
+    is_summary_label = any(alias in normalized_first for alias in SECTION_ALIASES["summary_application"])
+    if (include_label_remainder and ":" in first_line) or is_summary_label:
         remainder = first_line.split(":", 1)[1].strip()
         if remainder:
             items.append(remainder)
@@ -163,8 +174,6 @@ def collect_outline_block(lines: list[str], label_index: int, end: int) -> tuple
                 break
             continue
         normalized = normalize_for_matching(line)
-        if normalized.startswith("resumen y aplicacion practica") and not outline_item_re.match(line):
-            break
         if any(normalized.startswith(label) for label in STOP_LABELS - {"resumen y aplicacion practica"}):
             break
         if re.fullmatch(r"\d{1,4}", line) or normalized in {"maestro", "alumno"}:
@@ -174,7 +183,7 @@ def collect_outline_block(lines: list[str], label_index: int, end: int) -> tuple
             items.append(line)
             block_end = index
             seen_outline_item = True
-            if normalize_for_matching(line).startswith("iv. resumen"):
+            if any(line.lower().strip().startswith(alias) for alias in ("iv. resumen", "resumen y aplicacion")):
                 break
             continue
 
@@ -265,11 +274,14 @@ def extract_biblical_reading(
     if label_index is None:
         return None
 
+    # Find the reference text on the line containing the label. This regex
+    # handles cases where the label is at the start of the line or in the middle.
     line = lines[label_index].strip()
-    match = REFERENCE_PREFIX_RE.match(line)
+    match = BIBLICAL_READING_RE.search(line)
     if not match:
         return None
 
+    # The reference is whatever text comes after "Lectura Bíblica:".
     reference_display = match.group("reference").strip()
     return {
         "reference_display": reference_display,
