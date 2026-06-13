@@ -117,23 +117,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-@@ -118,13 +118,13 @@
- When raw text already exists and you want to regenerate downstream artifacts,
- run:
- 
- ```text
--python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
-+python scripts/run_pipeline.py --skip-tags pre-flight,ocr
- ```
- 
- To write a timing log during a downstream regeneration run:
- 
- ```text
--python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction --write-run-log
-+python scripts/run_pipeline.py --skip-tags pre-flight,ocr --write-run-log
- ```
- 
- Generated YAML from this command remains draft/unreviewed until promoted
 
 ```
 
