@@ -1,0 +1,21 @@
+[flake8]
+max-line-length = 127
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    ocr,
+    normalized,
+    structured,
+    metadata,
+    archive,
+    indexes,
+    reports,
+    source_assets,
+    ExpositorMain
+ignore =
+    # whitespace before ':' - conflicts with the black code formatter
+    E203,
+    # line break before binary operator - conflicts with the black code formatter
+    W503

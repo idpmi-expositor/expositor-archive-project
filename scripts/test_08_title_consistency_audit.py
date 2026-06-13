@@ -105,7 +105,7 @@ class TestTitleConsistencyAudit(unittest.TestCase):
         )
 
         # 4. Run the audit logic
-        inconsistencies = find_inconsistencies(segment_file_path, threshold=90)
+        inconsistencies = find_inconsistencies(segment_file_path, threshold=90, lines_cache={})
 
         # 5. Assert the results
         self.assertEqual(len(inconsistencies), 1)
