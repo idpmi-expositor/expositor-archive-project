@@ -39,6 +39,14 @@ jobs:
           coverage report -m --fail-under=80
           coverage html
 
+      - name: Generate draft YAML files
+        run: |
+          python scripts/canonical/06_yaml_generator.py
+
+      - name: Build provisional indexes (safety check)
+        run: |
+          python scripts/canonical/08_index_builder.py archive/drafts --output-dir indexes/provisional --allow-unreviewed
+
       - name: Run schema validator on canonical archive
         run: |
           python scripts/canonical/07_schema_validator.py
