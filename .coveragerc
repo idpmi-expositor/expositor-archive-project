@@ -1,0 +1,14 @@
+# Configuration for coverage.py
+
+[run]
+source = scripts
+omit =
+    # Exclude the test suite from coverage reports
+    tests/*
+    # Exclude the main pipeline runner, which is orchestration code
+    scripts/run_pipeline.py
+    # Exclude any test files that might be in other directories
+    */test_*.py
+    # Exclude virtual environment directories
+    .venv/*
+    venv/*
