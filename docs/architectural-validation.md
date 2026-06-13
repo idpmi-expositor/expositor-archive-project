@@ -695,7 +695,7 @@ Remaining work:
 
 ### Stage 3: Section Extraction
 
-Status: In progress.
+Status: Completed.
 
 Completed work:
 
@@ -703,12 +703,13 @@ Completed work:
 - Biblical reading, outline, and teacher notes extraction works for most
   lessons.
 - Source traceability is preserved for extracted sections.
+- Improved `summary_application` extraction to achieve 100% coverage.
+- Fixed volume 46 lesson 22 extraction for biblical reading and outline.
+- Produced a reviewer-friendly missing-section report.
 
 Remaining work:
 
-- Improve `summary_application` extraction, currently 0 of 52 lessons.
-- Fix volume 46 lesson 22 missing biblical reading and outline extraction.
-- Produce a reviewer-friendly missing-section report.
+- Fine-tune extraction rules for edge cases discovered during the canonical pilot.
 
 ### Stage 4: Scripture Normalization
 
