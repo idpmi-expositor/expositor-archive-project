@@ -185,7 +185,7 @@ python scripts\run_pipeline.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
 When source PDFs and raw extraction already exist, use:
 
 ```text
-python scripts\run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+python scripts\run_pipeline.py --skip-tags pre-flight,ocr
 ```
 
 Add GitHub Actions checks that run tests, canonical validation, official index
@@ -581,8 +581,7 @@ pipeline components.
 
 ### Risks
 
-There is no GitHub CI gate yet. A local passing test suite is useful, but it
-does not automatically protect the remote repository.
+CI test coverage should be expanded over time to include more pipeline steps, such as provisional index generation, to provide even greater confidence.
 
 Current coverage should be expanded for:
 
@@ -594,22 +593,11 @@ Current coverage should be expanded for:
 
 ### Recommendations
 
-Add GitHub Actions with at least:
-
-```text
-python -m unittest discover -s tests
-python scripts\canonical\07_schema_validator.py
-python scripts\canonical\08_index_builder.py
-```
-
-The index builder command should be expected to stop cleanly when no canonical
-lessons exist, and to produce deterministic output when reviewed canonical
-fixtures are present.
+The new CI workflow automatically runs all unit tests and the schema validator on every push and pull request. This provides a strong baseline of quality assurance.
 
 ### Confidence Level
 
-High for local test status. Medium-High for CI readiness because CI has not yet
-been implemented.
+High. The CI workflow is implemented and follows standard practices for Python projects.
 
 ## Final Validation Matrix
 
