@@ -10,8 +10,8 @@ Use ASCII folder names on disk:
 
 | Family | Folder name | Current status |
 | --- | --- | --- |
-| Expositor Maestro | `maestro` | Active pilot family |
-| Expositor Alumno | `alumno` | Profile required before full ingestion |
+| Expositor Maestro | `maestro` | Active |
+| Expositor Alumno | `alumno` | Onboarding in progress |
 | Expositor Joven | `joven` | Profile required before full ingestion |
 | Expositor Adolescente | `adolescente` | Profile required before full ingestion |
 | Expositor Nino | `nino` | Profile required before full ingestion |

@@ -23,19 +23,13 @@ CANONICAL_DIR = PROJECT_ROOT / "scripts" / "canonical"
 if str(CANONICAL_DIR) not in sys.path:
     sys.path.insert(0, str(CANONICAL_DIR))
 
+from pipeline_classification import (  # noqa: E402
+    infer_publication_classification,
+    load_profile,
+)
 from scripture_reference_parser import parse_scripture_references  # noqa: E402
 
-
-SECTION_ALIASES = {
-    "biblical_reading": ("lectura biblica",),
-    "teacher_notes": ("notas para el maestro",),
-    "lesson_outline": ("bosquejo de la leccion",),
-    "summary_application": (
-        "resumen y aplicacion practica",
-        "iv. resumen y aplicacion practica",
-        "resumen",
-    ),
-}
+# TODO: Move STOP_LABELS into family profiles.
 STOP_LABELS = {
     "lectura biblica",
     "notas para el maestro",
@@ -125,6 +119,7 @@ def collect_block(
     label_index: int,
     end: int,
     *,
+    section_aliases: dict[str, Any],
     include_label_remainder: bool = True,
 ) -> tuple[list[str], int]:
     items: list[str] = []
@@ -132,7 +127,7 @@ def collect_block(
     # Handle cases like "IV. Resumen y aplicación práctica" where the content
     # is on the same line, separated by a colon or just following the label.
     normalized_first = normalize_for_matching(first_line)
-    is_summary_label = any(alias in normalized_first for alias in SECTION_ALIASES["summary_application"])
+    is_summary_label = any(alias in normalized_first for alias in section_aliases.get("summary_application", ()))
     if is_summary_label:
         # For summary, content can follow the label on the same line.
         summary_pattern = r"(?:iv\.\s*)?resumen(?: y aplicaci[oó]n pr[aá]ctica)?:?"
@@ -277,8 +272,9 @@ def extract_biblical_reading(
     source_text: Path,
     start: int,
     end: int,
+    section_aliases: dict[str, Any],
 ) -> dict[str, Any] | None:
-    label_index = find_label(lines, start, end, SECTION_ALIASES["biblical_reading"])
+    label_index = find_label(lines, start, end, section_aliases.get("biblical_reading", ()))
     if label_index is None:
         return None
 
@@ -304,15 +300,16 @@ def extract_list_section(
     start: int,
     end: int,
     section_name: str,
+    section_aliases: dict[str, Any],
 ) -> dict[str, Any] | None:
-    label_index = find_label(lines, start, end, SECTION_ALIASES[section_name])
+    label_index = find_label(lines, start, end, section_aliases.get(section_name, ()))
     if label_index is None:
         return None
 
     if section_name == "lesson_outline":
         items, block_end = collect_outline_block(lines, label_index, end)
     else:
-        items, block_end = collect_block(lines, label_index, end, include_label_remainder=True)
+        items, block_end = collect_block(lines, label_index, end, section_aliases=section_aliases, include_label_remainder=True)
         items = merge_wrapped_prose_items(items)
     if not items:
         return None
@@ -327,17 +324,20 @@ def extract_sections_for_segment(
     lines: list[str],
     source_text: Path,
     segment: dict[str, Any],
+    section_aliases: dict[str, Any],
 ) -> dict[str, Any]:
     start = max(0, int(segment.get("start_line") or 1) - 1)
     end = int(segment.get("end_line") or len(lines))
     extracted: dict[str, Any] = {}
 
-    biblical_reading = extract_biblical_reading(lines, source_text, start, end)
+    biblical_reading = extract_biblical_reading(lines, source_text, start, end, section_aliases)
     if biblical_reading:
         extracted["biblical_reading"] = biblical_reading
 
-    for section_name in ("teacher_notes", "lesson_outline", "summary_application"):
-        section = extract_list_section(lines, source_text, start, end, section_name)
+    for section_name in section_aliases:
+        if section_name == "biblical_reading":
+            continue
+        section = extract_list_section(lines, source_text, start, end, section_name, section_aliases)
         if section:
             extracted[section_name] = section
 
@@ -349,11 +349,14 @@ def write_section_file(input_path: Path, output_path: Path) -> dict[str, Any]:
     source_text = source_text_for_segment_file(input_path, metadata)
     lines = source_text.read_text(encoding="utf-8").splitlines()
     lessons: list[dict[str, Any]] = []
+    classification = infer_publication_classification(input_path.stem)
+    profile = load_profile(classification)
+    section_aliases = profile.get("section_aliases", {})
 
     for segment in metadata.get("segments", []):
         if not isinstance(segment, dict):
             continue
-        sections = extract_sections_for_segment(lines, source_text, segment)
+        sections = extract_sections_for_segment(lines, source_text, segment, section_aliases)
         lessons.append(
             {
                 "lesson_number": int(segment["lesson_number"]),

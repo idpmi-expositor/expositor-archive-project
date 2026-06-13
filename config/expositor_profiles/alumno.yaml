@@ -1,14 +1,19 @@
----
+# Configuration profile for Expositor Alumno publications.
+
 profile_id: alumno
-profile_version: 0.1.0
-status: scaffold_waiting_for_source_pdfs
-display_name: Expositor Alumno
-classification_terms:
-  - alumno
-expected_sections: []
-section_labels: {}
-index_views:
-  - compact_lessons
-  - detailed_lessons
-  - scripture
-notes: Profile scaffold only. Add source PDFs before treating YAML or indexes as reliable.
+profile_version: "1.0.0"
+description: "Structure profile for Expositor Alumno publications."
+
+# Sections expected to be found in a canonical lesson for this family.
+expected_sections:
+  - biblical_reading
+  - lesson_outline
+  - student_notes # Using student_notes instead of teacher_notes
+  - summary_application
+
+# Aliases used by the section extractor to find section labels.
+section_aliases:
+  biblical_reading: ["lectura biblica"]
+  lesson_outline: ["bosquejo de la leccion"]
+  student_notes: ["notas para el alumno", "actividades"]
+  summary_application: ["resumen y aplicacion practica", "resumen"]
