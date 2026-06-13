@@ -3,9 +3,9 @@ schema_version: 1.0.0
 index_scope: automated_unreviewed_draft
 index_view: scripture
 profiles:
-- profile_id: maestro
+- publication_classification: maestro
+  profile_id: maestro
   profile_version: 1.0.0
-  publication_classification: maestro
 source_archive: archive\drafts
 warning: This index was built from unreviewed draft YAML. Do not use it as canonical archive truth.
 scripture_references:
