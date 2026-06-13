@@ -1,0 +1,15 @@
+---
+profile_id: parvulo
+profile_version: 0.1.0
+status: scaffold_waiting_for_source_pdfs
+display_name: Expositor Parvulo
+classification_terms:
+  - parvulo
+  - párvulo
+expected_sections: []
+section_labels: {}
+index_views:
+  - compact_lessons
+  - detailed_lessons
+  - scripture
+notes: Profile scaffold only. Folder names stay ASCII even when source titles use Párvulo.

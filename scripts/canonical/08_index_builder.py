@@ -43,7 +43,7 @@ SCRIPTS_DIR = PROJECT_ROOT / "scripts"
 if str(SCRIPTS_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPTS_DIR))
 
-from pipeline_classification import infer_publication_classification  # noqa: E402
+from pipeline_classification import profile_metadata  # noqa: E402
 
 
 def load_validator_module() -> Any:
@@ -148,6 +148,8 @@ def indexed_section_items(
     lesson_id: str,
     section_key: str,
     raw_items: Any,
+    *,
+    has_section_trace: bool = False,
 ) -> list[dict[str, Any]]:
     """Build stable, item-level index entries for one lesson section."""
 
@@ -160,14 +162,15 @@ def indexed_section_items(
         text = str(item).strip()
         if not text:
             continue
-        indexed_items.append(
-            {
-                "item_id": f"{lesson_id}-{item_slug}-{index:03d}",
-                "order": index,
-                "kind": section_item_kind(text),
-                "text": text,
-            }
-        )
+        entry = {
+            "item_id": f"{lesson_id}-{item_slug}-{index:03d}",
+            "order": index,
+            "kind": section_item_kind(text),
+            "text": text,
+        }
+        if has_section_trace:
+            entry["source_trace_ref"] = section_key
+        indexed_items.append(entry)
     return indexed_items
 
 
@@ -179,15 +182,63 @@ def indexed_section(
     """Return a section index block with item IDs, kinds, and source trace."""
 
     section = lesson.get("lesson_sections", {}).get(section_key, {})
-    items = indexed_section_items(lesson["lesson_id"], section_key, section.get("items"))
+    section_traces = source_trace.get("section_traces")
+    has_section_trace = isinstance(section_traces, dict) and isinstance(
+        section_traces.get(section_key), dict
+    )
+    items = indexed_section_items(
+        lesson["lesson_id"],
+        section_key,
+        section.get("items"),
+        has_section_trace=has_section_trace,
+    )
     result: dict[str, Any] = {
         "item_count": len(items),
         "items": items,
     }
-    section_traces = source_trace.get("section_traces")
-    if isinstance(section_traces, dict) and isinstance(section_traces.get(section_key), dict):
+    if has_section_trace:
         result["source_trace"] = section_traces[section_key]
     return result
+
+
+def index_header(
+    *,
+    index_scope: str,
+    source_archive: str | None,
+    view: str,
+    lessons: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Return shared index metadata for all index views."""
+
+    profile_values = {
+        tuple(profile_metadata(lesson["publication_id"]).items()) for lesson in lessons
+    }
+    profile_entries = [dict(items) for items in sorted(profile_values)]
+    header: dict[str, Any] = {
+        "schema_version": "1.0.0",
+        "index_scope": index_scope,
+        "index_view": view,
+        "profiles": profile_entries,
+    }
+    if source_archive:
+        header["source_archive"] = source_archive
+    if index_scope != "canonical_reviewed":
+        header["warning"] = (
+            "This index was built from unreviewed draft YAML. Do not use it as "
+            "canonical archive truth."
+        )
+    return header
+
+
+def lesson_profile_fields(lesson: dict[str, Any]) -> dict[str, str]:
+    """Return profile metadata fields for one lesson entry."""
+
+    metadata = profile_metadata(lesson["publication_id"])
+    return {
+        "publication_classification": metadata["publication_classification"],
+        "profile_id": metadata["profile_id"],
+        "profile_version": metadata["profile_version"],
+    }
 
 
 def build_lessons_index(
@@ -210,13 +261,9 @@ def build_lessons_index(
         source_trace = lesson.get("source_trace", {})
         if not isinstance(source_trace, dict):
             source_trace = {}
-        entries.append(
-            {
+        entry = {
                 "lesson_id": lesson["lesson_id"],
                 "publication_id": lesson["publication_id"],
-                "publication_classification": infer_publication_classification(
-                    lesson["publication_id"]
-                ),
                 "collection_type": lesson["collection_type"],
                 "year": lesson["year"],
                 "cycle": lesson["cycle"],
@@ -238,20 +285,129 @@ def build_lessons_index(
                         lesson, "summary_application", source_trace
                     ),
                 },
+        }
+        entry.update(lesson_profile_fields(lesson))
+        entries.append(entry)
+    index = index_header(
+        index_scope=index_scope,
+        source_archive=source_archive,
+        view="detailed_lessons",
+        lessons=lessons,
+    )
+    index["lessons"] = entries
+    return index
+
+
+def build_compact_lessons_index(
+    lessons: list[dict[str, Any]],
+    *,
+    index_scope: str = "canonical_reviewed",
+    source_archive: str | None = None,
+) -> dict[str, Any]:
+    """Build a small lookup index without section item text."""
+
+    entries = []
+    for lesson in lessons:
+        reading = lesson["lesson_sections"]["biblical_reading"]
+        entry = {
+            "lesson_id": lesson["lesson_id"],
+            "publication_id": lesson["publication_id"],
+            "year": lesson["year"],
+            "cycle": lesson["cycle"],
+            "lesson_number": lesson["lesson_number"],
+            "title": lesson["title"],
+            "biblical_reading": reading["reference_display"],
+        }
+        entry.update(lesson_profile_fields(lesson))
+        entries.append(entry)
+    index = index_header(
+        index_scope=index_scope,
+        source_archive=source_archive,
+        view="compact_lessons",
+        lessons=lessons,
+    )
+    index["lessons"] = entries
+    return index
+
+
+def build_section_outline_index(
+    lessons: list[dict[str, Any]],
+    *,
+    index_scope: str = "canonical_reviewed",
+    source_archive: str | None = None,
+) -> dict[str, Any]:
+    """Build a section/item pointer index for formatting and review."""
+
+    entries = []
+    for lesson in lessons:
+        source_trace = lesson.get("source_trace", {})
+        if not isinstance(source_trace, dict):
+            source_trace = {}
+        for section_key in ("lesson_outline", "teacher_notes", "summary_application"):
+            indexed = indexed_section(lesson, section_key, source_trace)
+            entry = {
+                "lesson_id": lesson["lesson_id"],
+                "publication_id": lesson["publication_id"],
+                "section_key": section_key,
+                "item_count": indexed["item_count"],
+                "items": indexed["items"],
             }
-        )
-    index: dict[str, Any] = {
-        "schema_version": "1.0.0",
-        "index_scope": index_scope,
-        "lessons": entries,
-    }
-    if source_archive:
-        index["source_archive"] = source_archive
-    if index_scope != "canonical_reviewed":
-        index["warning"] = (
-            "This index was built from unreviewed draft YAML. Do not use it as "
-            "canonical archive truth."
-        )
+            if "source_trace" in indexed:
+                entry["source_trace"] = indexed["source_trace"]
+            entry.update(lesson_profile_fields(lesson))
+            entries.append(entry)
+    index = index_header(
+        index_scope=index_scope,
+        source_archive=source_archive,
+        view="section_outline",
+        lessons=lessons,
+    )
+    index["sections"] = entries
+    return index
+
+
+def build_translation_alignment_index(
+    lessons: list[dict[str, Any]],
+    *,
+    index_scope: str = "canonical_reviewed",
+    source_archive: str | None = None,
+) -> dict[str, Any]:
+    """Build stable source item IDs for future translation alignment."""
+
+    entries = []
+    for lesson in lessons:
+        source_trace = lesson.get("source_trace", {})
+        if not isinstance(source_trace, dict):
+            source_trace = {}
+        alignment_items = []
+        for section_key in ("lesson_outline", "teacher_notes", "summary_application"):
+            indexed = indexed_section(lesson, section_key, source_trace)
+            for item in indexed["items"]:
+                alignment_items.append(
+                    {
+                        "source_item_id": item["item_id"],
+                        "section_key": section_key,
+                        "order": item["order"],
+                        "kind": item["kind"],
+                        "source_text": item["text"],
+                    }
+                )
+        entry = {
+            "lesson_id": lesson["lesson_id"],
+            "publication_id": lesson["publication_id"],
+            "source_language": lesson.get("language", "es"),
+            "target_language": "pending",
+            "items": alignment_items,
+        }
+        entry.update(lesson_profile_fields(lesson))
+        entries.append(entry)
+    index = index_header(
+        index_scope=index_scope,
+        source_archive=source_archive,
+        view="translation_alignment",
+        lessons=lessons,
+    )
+    index["lessons"] = entries
     return index
 
 
@@ -280,19 +436,26 @@ def build_scripture_index(
                     "replacement_provider": reading["replacement_policy"]["provider"],
                 }
             )
-    index: dict[str, Any] = {
-        "schema_version": "1.0.0",
-        "index_scope": index_scope,
-        "scripture_references": entries,
-    }
-    if source_archive:
-        index["source_archive"] = source_archive
-    if index_scope != "canonical_reviewed":
-        index["warning"] = (
-            "This index was built from unreviewed draft YAML. Do not use it as "
-            "canonical archive truth."
-        )
+    index = index_header(
+        index_scope=index_scope,
+        source_archive=source_archive,
+        view="scripture",
+        lessons=lessons,
+    )
+    index["scripture_references"] = entries
     return index
+
+
+def lessons_by_classification(lessons: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    """Group lessons by publication classification for smaller index views."""
+
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for lesson in lessons:
+        classification = profile_metadata(lesson["publication_id"])[
+            "publication_classification"
+        ]
+        grouped.setdefault(classification, []).append(lesson)
+    return grouped
 
 
 def main() -> int:
@@ -370,6 +533,57 @@ def main() -> int:
             source_archive=source_archive,
         ),
     )
+    write_yaml(
+        args.output_dir / "compact_lessons_index.yaml",
+        build_compact_lessons_index(
+            lessons,
+            index_scope=index_scope,
+            source_archive=source_archive,
+        ),
+    )
+    write_yaml(
+        args.output_dir / "section_outline_index.yaml",
+        build_section_outline_index(
+            lessons,
+            index_scope=index_scope,
+            source_archive=source_archive,
+        ),
+    )
+    write_yaml(
+        args.output_dir / "translation_alignment_index.yaml",
+        build_translation_alignment_index(
+            lessons,
+            index_scope=index_scope,
+            source_archive=source_archive,
+        ),
+    )
+
+    for classification, family_lessons in lessons_by_classification(lessons).items():
+        family_output_dir = args.output_dir / classification
+        write_yaml(
+            family_output_dir / "compact_lessons_index.yaml",
+            build_compact_lessons_index(
+                family_lessons,
+                index_scope=index_scope,
+                source_archive=source_archive,
+            ),
+        )
+        write_yaml(
+            family_output_dir / "section_outline_index.yaml",
+            build_section_outline_index(
+                family_lessons,
+                index_scope=index_scope,
+                source_archive=source_archive,
+            ),
+        )
+        write_yaml(
+            family_output_dir / "translation_alignment_index.yaml",
+            build_translation_alignment_index(
+                family_lessons,
+                index_scope=index_scope,
+                source_archive=source_archive,
+            ),
+        )
 
     print(f"Indexed {len(lessons)} lesson YAML file(s).")
     return 0

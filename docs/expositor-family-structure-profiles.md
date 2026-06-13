@@ -51,6 +51,12 @@ archive/drafts/expositor-guia-maestro-volumen-*/
 indexes/provisional/
 ```
 
+Profile configuration lives under:
+
+```text
+config/expositor_profiles/maestro.yaml
+```
+
 The provisional lesson index currently includes:
 
 - `publication_classification`
@@ -65,14 +71,16 @@ canonical until reviewed lesson YAML exists under `archive/lessons`.
 ## Rules For New Families
 
 1. Add or confirm the family name in `scripts/pipeline_classification.py`.
-2. Add sample source PDFs for the family.
-3. Run extraction and normalization into `normalized/<family>/`.
-4. Inspect source layout before changing extraction logic.
-5. Add family-specific section labels only when source evidence proves they are
+2. Add or update `config/expositor_profiles/<family>.yaml`.
+3. Add sample source PDFs for the family.
+4. Run extraction and normalization into `normalized/<family>/`.
+5. Inspect source layout before changing extraction logic.
+6. Add family-specific section labels only when source evidence proves they are
    needed.
-6. Generate draft YAML under `archive/drafts`.
-7. Generate provisional indexes with `--allow-unreviewed` for audit only.
-8. Do not promote into `archive/lessons` until human review is complete.
+7. Generate draft YAML under `archive/drafts`.
+8. Generate provisional indexes with `--allow-unreviewed` for audit only.
+9. Run `python scripts/audit/10_pipeline_quality_audit.py`.
+10. Do not promote into `archive/lessons` until human review is complete.
 
 ## Design Decision
 

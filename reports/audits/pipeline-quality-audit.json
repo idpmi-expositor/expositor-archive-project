@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-06-13T16:25:24+00:00",
+  "normalization": {
+    "txt_file_count": 2,
+    "by_family": {
+      "maestro": 2
+    },
+    "root_level_files": [],
+    "unknown_families": [],
+    "warnings": []
+  },
+  "yaml": {
+    "draft_yaml_count": 52,
+    "canonical_yaml_count": 0,
+    "review_statuses": {
+      "automated_unreviewed": 52
+    },
+    "profiles": {
+      "maestro": 52
+    },
+    "missing_sections": {},
+    "warnings": [
+      "no reviewed canonical YAML exists under archive/lessons",
+      "draft YAML remains automated_unreviewed and cannot be official"
+    ]
+  },
+  "indexing": {
+    "detailed_lesson_count": 52,
+    "compact_lesson_count": 52,
+    "section_entry_count": 156,
+    "translation_lesson_count": 52,
+    "scripture_reference_count": 91,
+    "family_index_folders": [
+      "maestro"
+    ],
+    "warnings": []
+  },
+  "ocr": {
+    "reports": [
+      {
+        "source": "expositor-guia-maestro-volumen-45",
+        "status": "BLOCKED",
+        "page_count": 223,
+        "issue_counts": {
+          "low_ocr_confidence": 1,
+          "low_word_count": 2,
+          "malformed_scripture_reference": 3,
+          "repeated_header_footer": 177,
+          "zero_text": 1
+        }
+      },
+      {
+        "source": "expositor-guia-maestro-volumen-46",
+        "status": "WARNING",
+        "page_count": 220,
+        "issue_counts": {
+          "low_word_count": 1,
+          "malformed_scripture_reference": 3,
+          "repeated_header_footer": 177
+        }
+      }
+    ]
+  },
+  "sizes": {
+    "raw_text_bytes": 1231635,
+    "normalized_text_bytes": 1204231,
+    "draft_yaml_bytes": 198828,
+    "provisional_index_bytes": 1163000
+  }
+}

@@ -1,0 +1,28 @@
+---
+profile_id: maestro
+profile_version: 1.0.0
+status: active_pilot
+display_name: Expositor Maestro
+classification_terms:
+  - maestro
+expected_sections:
+  - biblical_reading
+  - lesson_outline
+  - teacher_notes
+  - summary_application
+section_labels:
+  biblical_reading:
+    - Lectura Bíblica
+  lesson_outline:
+    - Bosquejo de la Lección
+  teacher_notes:
+    - Notas para el Maestro
+  summary_application:
+    - Resumen y aplicación práctica
+index_views:
+  - compact_lessons
+  - detailed_lessons
+  - section_outline
+  - scripture
+  - translation_alignment
+notes: Current active pilot profile. Other family profiles are scaffolds until source PDFs are added.

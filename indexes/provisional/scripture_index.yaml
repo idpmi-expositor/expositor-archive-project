@@ -1,6 +1,13 @@
 ---
 schema_version: 1.0.0
 index_scope: automated_unreviewed_draft
+index_view: scripture
+profiles:
+- profile_id: maestro
+  profile_version: 1.0.0
+  publication_classification: maestro
+source_archive: archive\drafts
+warning: This index was built from unreviewed draft YAML. Do not use it as canonical archive truth.
 scripture_references:
 - lesson_id: LES-2024-C1-001
   reference_display: Santiago 2:14-24
@@ -821,5 +828,3 @@ scripture_references:
     verse_start: 30
     verse_end: 31
   replacement_provider: api.bible
-source_archive: archive\drafts
-warning: This index was built from unreviewed draft YAML. Do not use it as canonical archive truth.

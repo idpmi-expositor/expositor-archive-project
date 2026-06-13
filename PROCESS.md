@@ -57,6 +57,7 @@ python scripts/structuring/06_section_extractor.py
 python scripts/canonical/06_yaml_generator.py
 python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py
+python scripts/audit/10_pipeline_quality_audit.py
 ```
 
 To regenerate downstream artifacts from existing raw text without rerunning PDF
@@ -65,6 +66,9 @@ extraction:
 ```text
 python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
 ```
+
+To also write a per-stage timing log under `reports/pipeline_runs`, add
+`--write-run-log`.
 
 When the rclone remote is not configured in the default user location, pass the
 config file explicitly:
@@ -88,7 +92,8 @@ python scripts/ingestion/00_validate_source_pdf_sync.py --rclone-config path/to/
 | Section extraction | `metadata/lesson_sections/<classification>/*.json`; automated unreviewed section and reference extraction |
 | Draft generation | `archive/drafts/<publication_id>/**/*.yaml`; reads segment and section metadata, not raw text |
 | Canonical validation | pass/fail result for `archive/lessons/**/*.yaml` |
-| Index building | `indexes/lessons_index.yaml` and `indexes/scripture_index.yaml` |
+| Index building | detailed, compact, section-outline, scripture, translation-alignment, and family-specific YAML indexes |
+| Quality audit | `reports/audits/pipeline-quality-audit.json` and `.md` |
 
 ## Review Gates
 

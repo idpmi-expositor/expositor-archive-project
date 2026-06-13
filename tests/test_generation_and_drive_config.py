@@ -16,6 +16,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 GENERATOR_PATH = PROJECT_ROOT / "scripts" / "canonical" / "06_yaml_generator.py"
 INDEX_BUILDER_PATH = PROJECT_ROOT / "scripts" / "canonical" / "08_index_builder.py"
 NORMALIZER_PATH = PROJECT_ROOT / "scripts" / "structuring" / "03_minimal_text_normalizer.py"
+CLASSIFICATION_PATH = PROJECT_ROOT / "scripts" / "pipeline_classification.py"
 DRIVE_VALIDATOR_PATH = (
     PROJECT_ROOT / "scripts" / "ingestion" / "00_validate_source_pdf_sync.py"
 )
@@ -34,6 +35,7 @@ def load_module(name: str, path: Path):
 generator = load_module("yaml_generator", GENERATOR_PATH)
 index_builder = load_module("index_builder", INDEX_BUILDER_PATH)
 normalizer = load_module("minimal_text_normalizer", NORMALIZER_PATH)
+classification = load_module("pipeline_classification_test", CLASSIFICATION_PATH)
 drive_validator = load_module("drive_validator", DRIVE_VALIDATOR_PATH)
 
 
@@ -189,15 +191,51 @@ class LessonIndexBuilderTest(unittest.TestCase):
 
         indexed_lesson = result["lessons"][0]
         self.assertEqual(indexed_lesson["publication_classification"], "maestro")
+        self.assertEqual(indexed_lesson["profile_id"], "maestro")
+        self.assertEqual(indexed_lesson["profile_version"], "1.0.0")
         outline = indexed_lesson["lesson_sections"]["lesson_outline"]
         self.assertEqual(outline["item_count"], 3)
         self.assertEqual(outline["items"][0]["kind"], "roman_heading")
         self.assertEqual(outline["items"][1]["kind"], "scripture_reference")
         self.assertEqual(outline["items"][2]["kind"], "letter_subpoint")
+        self.assertEqual(outline["items"][0]["source_trace_ref"], "lesson_outline")
         self.assertEqual(
             outline["items"][0]["item_id"],
             "LES-2024-C1-001-lesson-outline-001",
         )
+
+    def test_compact_index_omits_section_item_text(self) -> None:
+        lesson = {
+            "lesson_id": "LES-2024-C1-001",
+            "publication_id": "expositor-guia-maestro-volumen-45",
+            "year": 2024,
+            "cycle": "C1",
+            "lesson_number": 1,
+            "title": "Sample lesson",
+            "lesson_sections": {
+                "biblical_reading": {"reference_display": "Santiago 2:14-24"}
+            },
+        }
+
+        result = index_builder.build_compact_lessons_index(
+            [lesson],
+            index_scope="automated_unreviewed_draft",
+            source_archive="archive/drafts",
+        )
+
+        indexed_lesson = result["lessons"][0]
+        self.assertEqual(result["index_view"], "compact_lessons")
+        self.assertNotIn("lesson_sections", indexed_lesson)
+        self.assertEqual(indexed_lesson["profile_id"], "maestro")
+
+
+class ProfileConfigTest(unittest.TestCase):
+    def test_loads_maestro_profile_metadata(self) -> None:
+        metadata = classification.profile_metadata("expositor-guia-maestro-volumen-45")
+
+        self.assertEqual(metadata["publication_classification"], "maestro")
+        self.assertEqual(metadata["profile_id"], "maestro")
+        self.assertEqual(metadata["profile_version"], "1.0.0")
 
 
 class DriveValidatorConfigTest(unittest.TestCase):

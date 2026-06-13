@@ -187,13 +187,21 @@ indexes/provisional/joven/lessons_index.yaml
 
 ## Recommended Next Implementation Order
 
-1. Create explicit Expositor family profile configuration.
-2. Add a profile-aware normalized-output audit command.
-3. Add profile-specific YAML section maps.
-4. Split provisional indexes into compact and detailed views.
-5. Add item-level source traces.
-6. Add per-stage performance logs.
-7. Run a second-family pilot before scaling to multiple years.
+1. Create explicit Expositor family profile configuration. Status:
+   implemented as `config/expositor_profiles/*.yaml`.
+2. Add a profile-aware normalized-output audit command. Status: implemented in
+   `scripts/audit/10_pipeline_quality_audit.py`.
+3. Add profile-specific YAML section maps. Status: scaffolded in profile YAML;
+   only `maestro` is active until more PDFs are added.
+4. Split provisional indexes into compact and detailed views. Status:
+   implemented with compact, detailed, section-outline, scripture,
+   translation-alignment, and family-specific views.
+5. Add item-level source traces. Status: implemented as item-level
+   `source_trace_ref` pointers to section source traces.
+6. Add per-stage performance logs. Status: implemented with
+   `scripts/run_pipeline.py --write-run-log`.
+7. Run a second-family pilot before scaling to multiple years. Status: blocked
+   until non-`maestro` PDFs are added.
 
 ## Google Drive Output Status
 

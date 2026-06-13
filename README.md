@@ -176,6 +176,8 @@ archive/drafts/                Generated draft lesson YAML awaiting human review
 archive/lessons/               Reviewed canonical one-lesson-per-file YAML only after human review.
 schemas/base/                  Validation contracts for canonical YAML.
 indexes/                       Generated reference indexes.
+config/expositor_profiles/     Family profiles for Maestro, Alumno, Joven, Nino, Parvulo, etc.
+reports/                       Audit reports and optional pipeline run timing logs.
 scripts/                       Deterministic pipeline scripts.
 docs/                          Architecture, contracts, traceability, and review docs.
 tests/                         Unit tests for pipeline behavior.
@@ -278,8 +280,16 @@ tests/                         Unit tests for pipeline behavior.
 `scripts/canonical/08_index_builder.py`
 
 - Validates canonical lessons before writing indexes.
-- Writes `indexes/lessons_index.yaml` and `indexes/scripture_index.yaml`.
+- Writes detailed, compact, section-outline, scripture, translation-alignment,
+  and family-specific index views.
 - Excludes draft YAML, legacy output trees, and Bible passage text.
+
+`scripts/audit/10_pipeline_quality_audit.py`
+
+- Generates `reports/audits/pipeline-quality-audit.json`.
+- Generates `reports/audits/pipeline-quality-audit.md`.
+- Reports normalization layout, draft YAML status, canonical YAML availability,
+  provisional index coverage, OCR warnings, and remaining gaps.
 
 ## Current Pipeline Commands
 
@@ -299,6 +309,7 @@ python scripts/structuring/06_section_extractor.py
 python scripts/canonical/06_yaml_generator.py
 python scripts/canonical/07_schema_validator.py
 python scripts/canonical/08_index_builder.py
+python scripts/audit/10_pipeline_quality_audit.py
 ```
 
 When raw text already exists and you want to regenerate downstream artifacts,
@@ -306,6 +317,12 @@ run:
 
 ```text
 python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction
+```
+
+To write a timing log during a downstream regeneration run:
+
+```text
+python scripts/run_pipeline.py --skip-drive-validation --skip-rename --skip-raw-extraction --write-run-log
 ```
 
 Generated YAML from this command remains draft/unreviewed until promoted

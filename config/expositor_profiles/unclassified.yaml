@@ -1,0 +1,11 @@
+---
+profile_id: unclassified
+profile_version: 0.1.0
+status: audit_only
+display_name: Unclassified Expositor Source
+classification_terms: []
+expected_sections: []
+section_labels: {}
+index_views:
+  - compact_lessons
+notes: Any output here requires classification review before YAML or indexes are trusted.

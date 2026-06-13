@@ -7,20 +7,48 @@ It does not promote drafts into `archive/lessons` or complete human review.
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
+import time
+from datetime import UTC, datetime
 from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 
-def run_step(command: list[str], *, optional: bool = False) -> int:
+def run_step(command: list[str], *, optional: bool = False) -> dict[str, object]:
     print(f"\n$ {' '.join(command)}")
+    started = time.perf_counter()
     result = subprocess.run(command, cwd=PROJECT_ROOT)
+    elapsed = round(time.perf_counter() - started, 3)
+    step_result = {
+        "command": command,
+        "returncode": result.returncode,
+        "elapsed_seconds": elapsed,
+        "optional": optional,
+    }
     if result.returncode != 0 and not optional:
-        return result.returncode
-    return 0
+        return step_result
+    return step_result
+
+
+def write_run_log(run_log_dir: Path, steps: list[dict[str, object]]) -> Path:
+    """Write a beginner-readable JSON timing log for one pipeline run."""
+
+    run_log_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    path = run_log_dir / f"pipeline-run-{timestamp}.json"
+    payload = {
+        "generated_at": datetime.now(UTC).replace(microsecond=0).isoformat(),
+        "total_elapsed_seconds": round(
+            sum(float(step["elapsed_seconds"]) for step in steps), 3
+        ),
+        "steps": steps,
+    }
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    return path
 
 
 def main() -> int:
@@ -31,6 +59,17 @@ def main() -> int:
     parser.add_argument("--skip-rename", action="store_true")
     parser.add_argument("--skip-raw-extraction", action="store_true")
     parser.add_argument("--no-ocr-fallback", action="store_true")
+    parser.add_argument(
+        "--write-run-log",
+        action="store_true",
+        help="Write a JSON performance log under reports/pipeline_runs.",
+    )
+    parser.add_argument(
+        "--run-log-dir",
+        default=PROJECT_ROOT / "reports" / "pipeline_runs",
+        type=Path,
+        help="Folder for optional performance run logs.",
+    )
     parser.add_argument(
         "--build-indexes",
         action="store_true",
@@ -86,12 +125,20 @@ def main() -> int:
             ]
         )
 
+    step_results: list[dict[str, object]] = []
     for command, optional in steps:
-        exit_code = run_step(command, optional=optional)
-        if exit_code:
+        step_result = run_step(command, optional=optional)
+        step_results.append(step_result)
+        if int(step_result["returncode"]) != 0 and not optional:
             print(f"Pipeline stopped at: {' '.join(command)}")
-            return exit_code
+            if args.write_run_log:
+                log_path = write_run_log(args.run_log_dir, step_results)
+                print(f"Pipeline run log written: {log_path}")
+            return int(step_result["returncode"])
 
+    if args.write_run_log:
+        log_path = write_run_log(args.run_log_dir, step_results)
+        print(f"Pipeline run log written: {log_path}")
     print("\nPipeline completed. Generated YAML remains draft/unreviewed unless promoted separately.")
     return 0
 

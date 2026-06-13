@@ -1,0 +1,14 @@
+---
+profile_id: alumno
+profile_version: 0.1.0
+status: scaffold_waiting_for_source_pdfs
+display_name: Expositor Alumno
+classification_terms:
+  - alumno
+expected_sections: []
+section_labels: {}
+index_views:
+  - compact_lessons
+  - detailed_lessons
+  - scripture
+notes: Profile scaffold only. Add source PDFs before treating YAML or indexes as reliable.

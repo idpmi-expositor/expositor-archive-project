@@ -1,0 +1,91 @@
+{
+  "generated_at": "2026-06-13T16:25:12+00:00",
+  "total_elapsed_seconds": 20.819,
+  "steps": [
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/ingestion/00_validate_source_pdf_sync.py",
+        "--drive-root-folder-id",
+        "1LX-wYECeqZVD_Uwe8ZEpfFL9oicVdeG7",
+        "--rclone-config",
+        "rclone\\rclone.conf"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.942,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/ingestion/00_rename_source_pdfs.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.232,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/ingestion/01_pdf_discovery.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.249,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/ingestion/03_quality_report.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.431,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/structuring/03_minimal_text_normalizer.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.831,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/structuring/04_document_structure_detector.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 2.536,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/structuring/05_lesson_segmenter.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.626,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/structuring/06_section_extractor.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 3.114,
+      "optional": false
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python313\\python.exe",
+        "scripts/canonical/06_yaml_generator.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 6.858,
+      "optional": false
+    }
+  ]
+}

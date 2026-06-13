@@ -29,6 +29,8 @@ PDF
 | Draft YAML | segment and section metadata | `archive/drafts/<publication_id>/**/*.yaml` | Drafts are generated scaffolds for review. They are not canonical and must not be indexed. |
 | Human review | drafts plus source evidence | reviewed lesson records | Reviewers resolve placeholders, OCR/extraction concerns, scripture references, section content, and traceability. |
 | Canonical YAML | reviewed records | `archive/lessons/**/*.yaml` | Canonical only after human review and schema validation. |
+| Provisional audit indexes | draft YAML when `--allow-unreviewed` is used | `indexes/provisional/*.yaml`, `indexes/provisional/<classification>/*.yaml` | Diagnostic only. Provides compact, detailed, section, scripture, and translation-alignment views without weakening official canonical gates. |
+| Quality audit | generated artifacts and indexes | `reports/audits/pipeline-quality-audit.*` | Summarizes normalization, YAML, indexing, OCR warnings, gaps, and errors for maintainers. |
 
 ## Non-Negotiable Rules
 
@@ -45,6 +47,8 @@ PDF
   human review.
 - Treat `archive/lessons` as canonical only after human review and validation.
 - Treat `ExpositorMain/outputs` as legacy/non-canonical generated output, even when it contains files with canonical-looking names.
+- Treat `reports/audits` as evidence for pipeline health, not as canonical
+  lesson content.
 
 ## Canonical And Legacy Paths
 

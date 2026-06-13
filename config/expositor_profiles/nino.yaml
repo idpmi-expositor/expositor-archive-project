@@ -1,0 +1,15 @@
+---
+profile_id: nino
+profile_version: 0.1.0
+status: scaffold_waiting_for_source_pdfs
+display_name: Expositor Nino
+classification_terms:
+  - nino
+  - niño
+expected_sections: []
+section_labels: {}
+index_views:
+  - compact_lessons
+  - detailed_lessons
+  - scripture
+notes: Profile scaffold only. Folder names stay ASCII even when source titles use Niño.
