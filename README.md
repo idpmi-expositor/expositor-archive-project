@@ -151,6 +151,10 @@ out of official indexes. See
   Python knowledge.
 - File-based pipeline state: each stage writes concrete artifacts to stable
   repository paths so maintainers can inspect, diff, rerun, and recover.
+- Family structure profiles: `maestro`, `alumno`, `joven`, `nino`, `parvulo`,
+  and future families may have different source layouts, section labels, YAML
+  shapes, and index needs. Classification selects the profile; it is not only a
+  storage folder.
 - Human review requirements: generated drafts and OCR-derived text are not
   archival truth until a reviewer resolves placeholders and quality issues.
 - Author wording preservation: normalization and structuring must preserve source
@@ -386,6 +390,8 @@ Use these documents before moving any generated draft into `archive/lessons`:
 - [docs/master-architecture-specification.md](docs/master-architecture-specification.md)
 - [docs/pipeline.md](docs/pipeline.md)
 - [docs/pipeline-traceability.md](docs/pipeline-traceability.md)
+- [docs/expositor-family-structure-profiles.md](docs/expositor-family-structure-profiles.md)
+- [docs/pipeline-optimization-audit-2026-06-13.md](docs/pipeline-optimization-audit-2026-06-13.md)
 - [docs/lesson-yaml-contract.md](docs/lesson-yaml-contract.md)
 - [docs/google-drive-sync.md](docs/google-drive-sync.md)
 - [docs/architectural-validation.md](docs/architectural-validation.md)

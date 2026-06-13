@@ -625,6 +625,7 @@ been implemented.
 | Official Indexing and Retrieval | Fail | High | High |
 | Provisional Draft Indexing | Pass | High | High |
 | Classification-Aware Output Layout | Warning | Medium | High |
+| Family Structure Profiles | Warning | Medium | High |
 | Documentation and Human Revision | Warning | Medium | High |
 | Tests | Warning | Medium | High |
 | CI and Remote Quality Gates | Fail | High | Medium-High |
@@ -652,6 +653,8 @@ Add and keep these matrix areas:
 - **Classification-Aware Output Layout**: confirms generated normalized,
   structured, and metadata artifacts remain grouped by publication family such
   as `maestro`, `alumno`, `joven`, `nino`, and `parvulo`.
+- **Family Structure Profiles**: confirms each Expositor family has explicit
+  profile rules before its YAML and index structure are treated as reliable.
 - **Tests**: shows whether local regression protection is healthy.
 - **CI and Remote Quality Gates**: shows whether GitHub blocks unsafe changes.
 

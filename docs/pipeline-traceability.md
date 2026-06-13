@@ -33,6 +33,10 @@ canonical only after placeholders are replaced, automated values are
 human-reviewed, source traceability is reviewed, and the file is promoted into
 `archive/lessons`.
 
+The `<classification>` folder also identifies the structure profile. Future
+families such as `alumno`, `joven`, `nino`, and `parvulo` may require different
+section labels, boundary rules, YAML sections, and index views.
+
 ## Layer Responsibilities
 
 | Layer | Script | Reads | Writes | Trace responsibility |
@@ -42,6 +46,7 @@ human-reviewed, source traceability is reviewed, and the file is promoted into
 | Ingestion | `01_pdf_discovery.py` | `source_assets/original_pdfs/*.pdf` | console report, intake log directory | Establishes the immutable source set. |
 | Ingestion | `02_pdf_to_raw_text.py` | source PDFs | `ocr/raw_txt/*.txt`, `ocr/processing_logs/*.json` | Preserves page boundaries with `PDF_PAGE` markers, records extraction counts, uses OCR only as fallback, and refuses to overwrite existing raw text. |
 | Ingestion | `03_quality_report.py` | processing logs | `ocr/quality_reports/*.json` | Summarizes OCR and extraction risk for maintainer review and promotion decisions. |
+| Structuring | `pipeline_classification.py` | source filename or publication id | classification folder/profile key | Identifies the Expositor family profile before classified artifacts are written. |
 | Structuring | `03_minimal_text_normalizer.py` | `ocr/raw_txt/*.txt` | `normalized/<classification>/*.txt` | First-class stage that keeps page and section markers visible, preserves author wording, and makes prose stable for detection. |
 | Structuring | `04_document_structure_detector.py` | `normalized/<classification>/*.txt` | `structured/document_structure/<classification>/*.json` | Records marker type, line number, source text path, and `Contenido` expectations after normalization. |
 | Structuring | `05_lesson_segmenter.py` | structure JSON | `metadata/lessons/<classification>/*.json` | Converts source markers into lesson segment records with page/line spans and validation summaries. |

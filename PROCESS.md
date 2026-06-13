@@ -31,6 +31,9 @@ whether it can overwrite anything, and what warnings require attention. See
 - Every output must remain traceable to the previous layer.
 - Raw extracted text is preserved as-is and is not overwritten by normalization.
 - Normalization preserves author wording and does not rewrite theological content.
+- Each Expositor family can require a different structure profile. Classify
+  first, then apply the correct profile for structure detection, section
+  extraction, YAML shape, and indexing.
 - Human review is required before any draft lesson becomes canonical YAML.
 - Canonical YAML under `archive/lessons` is the source of truth.
 - UI, publishing, rendering, and AI translation systems are outside this
@@ -101,7 +104,8 @@ Do not skip gates. Each layer depends on the previous layer being explainable.
 4. Normalization gate: `normalized/<classification>/*.txt` preserves `PDF_PAGE` markers, author
    wording, and theological content while making whitespace stable.
 5. Structure gate: page markers, lesson headers, section labels, and
-   `Contenido` entries are detected correctly.
+   `Contenido` entries are detected correctly for the identified Expositor
+   family profile.
 6. Segment gate: lesson numbers, titles, page spans, and validation summaries
    are explainable from source evidence.
 7. Automated section gate: extracted sections and references are traceable and

@@ -5097,7 +5097,7 @@ lessons:
         kind: placeholder
         text: TBD
     teacher_notes:
-      item_count: 16
+      item_count: 15
       items:
       - item_id: LES-2024-C1-022-teacher-notes-001
         order: 1
@@ -5154,13 +5154,9 @@ lessons:
       - item_id: LES-2024-C1-022-teacher-notes-014
         order: 14
         kind: paragraph
-        text: 2. ¿Pueden haber endemoniados en el
+        text: 2. ¿Pueden haber endemoniados en el templo? Notas del Maestro - Parte II
       - item_id: LES-2024-C1-022-teacher-notes-015
         order: 15
-        kind: paragraph
-        text: templo? Notas del Maestro - Parte II
-      - item_id: LES-2024-C1-022-teacher-notes-016
-        order: 16
         kind: paragraph
         text: 1. «¿Qué es esto? ¡Una enseñanza nueva,
       source_trace:
@@ -5239,26 +5235,18 @@ lessons:
         page_start: 182
         page_end: 182
     teacher_notes:
-      item_count: 5
+      item_count: 3
       items:
       - item_id: LES-2024-C1-023-teacher-notes-001
         order: 1
         kind: paragraph
-        text: 1. Estudie los pasajes de las
+        text: 1. Estudie los pasajes de las controversias sobre el sábado en los evangelios sinópticos.
       - item_id: LES-2024-C1-023-teacher-notes-002
         order: 2
         kind: paragraph
-        text: controversias sobre el sábado en los evangelios sinópticos.
+        text: 2. Enfatice en la importancia que los fariseos daban a su tradición oral.
       - item_id: LES-2024-C1-023-teacher-notes-003
         order: 3
-        kind: paragraph
-        text: 2. Enfatice en la importancia que los fariseos
-      - item_id: LES-2024-C1-023-teacher-notes-004
-        order: 4
-        kind: paragraph
-        text: daban a su tradición oral.
-      - item_id: LES-2024-C1-023-teacher-notes-005
-        order: 5
         kind: paragraph
         text: 3. Repase los textos en Levítico 23 y 25 que
       source_trace:
@@ -5345,26 +5333,18 @@ lessons:
         page_start: 190
         page_end: 190
     teacher_notes:
-      item_count: 5
+      item_count: 3
       items:
       - item_id: LES-2024-C1-024-teacher-notes-001
         order: 1
         kind: paragraph
-        text: 1. Repase las distintas narrativas de
+        text: 1. Repase las distintas narrativas de posesión demoníaca en los evangelios sinópticos.
       - item_id: LES-2024-C1-024-teacher-notes-002
         order: 2
         kind: paragraph
-        text: posesión demoníaca en los evangelios sinópticos.
+        text: 2. Enfatice en las imágenes de la victoria del reino de Dios contra el reino de las tinieblas.
       - item_id: LES-2024-C1-024-teacher-notes-003
         order: 3
-        kind: paragraph
-        text: 2. Enfatice en las imágenes de la victoria del
-      - item_id: LES-2024-C1-024-teacher-notes-004
-        order: 4
-        kind: paragraph
-        text: reino de Dios contra el reino de las tinieblas.
-      - item_id: LES-2024-C1-024-teacher-notes-005
-        order: 5
         kind: paragraph
         text: 3. Destaque el texto de Daniel 10 como parte
       source_trace:
@@ -5537,26 +5517,18 @@ lessons:
         page_start: 206
         page_end: 206
     teacher_notes:
-      item_count: 5
+      item_count: 3
       items:
       - item_id: LES-2024-C1-026-teacher-notes-001
         order: 1
         kind: paragraph
-        text: 1. Estudie los pasajes sobre las
+        text: 1. Estudie los pasajes sobre las apariciones de Cristo en los cuatro evangelios.
       - item_id: LES-2024-C1-026-teacher-notes-002
         order: 2
         kind: paragraph
-        text: apariciones de Cristo en los cuatro evangelios.
+        text: 2. Enfatice en la importancia del testimonio oral sobre la resurrección de Cristo.
       - item_id: LES-2024-C1-026-teacher-notes-003
         order: 3
-        kind: paragraph
-        text: 2. Enfatice en la importancia del testimonio
-      - item_id: LES-2024-C1-026-teacher-notes-004
-        order: 4
-        kind: paragraph
-        text: oral sobre la resurrección de Cristo.
-      - item_id: LES-2024-C1-026-teacher-notes-005
-        order: 5
         kind: paragraph
         text: 3. Mencione las señales del evangelio de Juan
       source_trace:

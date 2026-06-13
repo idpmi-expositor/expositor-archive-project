@@ -5,6 +5,7 @@ The confirmed archival pipeline is:
 ```text
 PDF
 -> raw text extraction
+-> family classification and structure profile selection
 -> normalized text
 -> document structure detection
 -> lesson segmentation
@@ -20,6 +21,7 @@ PDF
 | --- | --- | --- | --- |
 | PDF source | `source_assets/original_pdfs/*.pdf` | unchanged source PDFs | Source PDFs are immutable inputs and must not be deleted by pipeline work. |
 | Raw text extraction | PDFs | `ocr/raw_txt/*.txt`, `ocr/processing_logs/*.json` | Extract embedded text first, preserve `PDF_PAGE` markers, and do not overwrite existing raw text. OCR is fallback only for weak or empty embedded-text pages. |
+| Family classification | source filename and profile evidence | classification value such as `maestro`, `alumno`, `joven`, `nino`, or `parvulo` | Classification selects the structure profile for downstream rules. It is not only a folder name. |
 | Normalization | `ocr/raw_txt/*.txt` | `normalized/<classification>/*.txt` | First-class stage. Normalize Unicode, line endings, whitespace, and safe hyphen breaks while preserving author wording, theological content, and page markers. |
 | Document structure detection | `normalized/<classification>/*.txt` | `structured/document_structure/<classification>/*.json` | Detect page markers, lesson headers, section labels, and `Contenido` rows from normalized text. |
 | Lesson segmentation | structure JSON | `metadata/lessons/<classification>/*.json` | Convert detected structure into lesson spans with page and line traceability. |
@@ -32,6 +34,9 @@ PDF
 
 - Do not generate YAML directly from raw text.
 - Do not overwrite raw extracted text.
+- Do not assume all Expositor families use the same structure. `maestro`,
+  `alumno`, `joven`, `nino`, `parvulo`, and later families need profile-aware
+  extraction and indexing rules.
 - Preserve `PDF_PAGE` markers so each downstream artifact can be traced back to the source PDF.
 - Preserve author wording. Do not rewrite theological content during normalization, structuring, segmentation, or draft generation.
 - Treat OCR as extraction-only fallback. Most Expositor PDFs have embedded text after page 1, so OCR should only be attempted for weak or empty text-layer pages.

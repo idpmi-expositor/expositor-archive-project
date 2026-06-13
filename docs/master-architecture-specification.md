@@ -23,6 +23,11 @@ The system is responsible for preserving and structuring:
 - Expositor Niño
 - Expositor Párvulo
 
+Each Expositor family may have its own source layout, section labels, lesson
+boundary signals, YAML section needs, and indexing needs. The architecture must
+therefore classify the family first and apply a family-specific structure
+profile instead of assuming that the `maestro` layout applies to every source.
+
 The architecture must support:
 
 - 20+ years of publications
@@ -60,6 +65,10 @@ Canonical processing flow:
 ```text
 PDF -> RAW TEXT EXTRACTION -> NORMALIZED TEXT -> DOCUMENT STRUCTURE DETECTION -> LESSON SEGMENTATION -> SECTION EXTRACTION -> DRAFT YAML -> HUMAN REVIEW -> CANONICAL YAML
 ```
+
+Family classification and profile selection happen before profile-sensitive
+normalization checks, structure detection, section extraction, YAML generation,
+and indexing.
 
 ## 4. Canonical Unit of Truth
 
