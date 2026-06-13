@@ -174,6 +174,8 @@ def collect_outline_block(lines: list[str], label_index: int, end: int) -> tuple
                 break
             continue
         normalized = normalize_for_matching(line)
+        if "resumen" in normalized and "aplicacion" in normalized:
+            break
         if any(normalized.startswith(label) for label in STOP_LABELS - {"resumen y aplicacion practica"}):
             break
         if re.fullmatch(r"\d{1,4}", line) or normalized in {"maestro", "alumno"}:
