@@ -1,6 +1,6 @@
 # Architectural Validation
 
-Validation date: 2026-06-12
+Validation date: 2026-06-16
 
 Validated repository state:
 
@@ -14,8 +14,8 @@ document_structure_json: 2
 lesson_segment_json: 2
 lesson_section_json: 2
 draft_yaml: 52
-canonical_yaml: 0
-official_indexes: 0
+canonical_yaml: 1
+official_indexes: 12
 provisional_draft_indexes: 2
 quality_reports: 2
 ```
