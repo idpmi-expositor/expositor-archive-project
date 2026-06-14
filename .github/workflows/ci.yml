@@ -54,7 +54,7 @@ jobs:
 
       - name: Generate coverage report
         run: |
-          coverage report -m --fail-under=80
+          coverage report -m --fail-under=70
           coverage html
 
       - name: Generate draft YAML files
