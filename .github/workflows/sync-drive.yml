@@ -1,76 +1,59 @@
+# GitHub Actions workflow to sync the ExpositorMain folder from Google Drive.
+#
+# This workflow is manually triggered and allows for a dry run before
+# committing any changes. It uses rclone and requires the RCLONE_CONFIG
+# secret to be configured in the repository settings as per
+# docs/google-drive-sync.md.
+
 name: Sync Google Drive folder
 
 on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: Preview changes without committing
+        description: 'Run rclone with --dry-run to preview changes without applying them.'
         required: true
-        default: "true"
-        type: choice
-        options:
-          - "true"
-          - "false"
-
-permissions:
-  contents: write
-
-concurrency:
-  group: google-drive-sync
-  cancel-in-progress: false
+        type: boolean
+        default: true
 
 jobs:
   sync:
-    name: Sync ExpositorMain from Google Drive
     runs-on: ubuntu-latest
-
-    env:
-      DRIVE_REMOTE: gdrive
-      DRIVE_FOLDER_ID: 18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n
-      DESTINATION_DIR: ExpositorMain
-
     steps:
-      - name: Check out repository
+      - name: Check out repository code
         uses: actions/checkout@v4
 
       - name: Install rclone
         run: |
-          curl https://rclone.org/install.sh | sudo bash
-          rclone version
+          sudo apt-get update
+          sudo apt-get -y install rclone
 
       - name: Configure rclone
-        env:
-          RCLONE_CONFIG_CONTENT: ${{ secrets.RCLONE_CONFIG }}
         run: |
-          if [ -z "$RCLONE_CONFIG_CONTENT" ]; then
-            echo "Missing required repository secret: RCLONE_CONFIG" >&2
-            exit 1
-          fi
+          echo "Configuring rclone from repository secret..."
           mkdir -p ~/.config/rclone
-          printf '%s' "$RCLONE_CONFIG_CONTENT" > ~/.config/rclone/rclone.conf
-          chmod 600 ~/.config/rclone/rclone.conf
-          rclone listremotes
+          echo "${{ secrets.RCLONE_CONFIG }}" > ~/.config/rclone/rclone.conf
+          echo "rclone config created."
 
-      - name: Sync Drive folder into repository
+      - name: Sync from Google Drive
         env:
-          DRIVE_SOURCE: "${{ env.DRIVE_REMOTE }},root_folder_id=${{ env.DRIVE_FOLDER_ID }}:"
+          # Set --dry-run flag if the workflow input is true, otherwise set an empty string.
+          DRY_RUN_FLAG: ${{ github.event.inputs.dry_run && '--dry-run' || '' }}
         run: |
-          mkdir -p "$DESTINATION_DIR"
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            rclone copy "$DRIVE_SOURCE" "$DESTINATION_DIR" --drive-export-formats docx,xlsx,pptx,pdf --dry-run --verbose
-          else
-            rclone sync "$DRIVE_SOURCE" "$DESTINATION_DIR" --drive-export-formats docx,xlsx,pptx,pdf --verbose
-          fi
+          echo "Syncing from Google Drive..."
+          # The Drive folder ID for ExpositorMain, from docs/google-drive-sync.md
+          DRIVE_FOLDER_ID="18J7kB4mUpNU7J7aPn17xl7SQOSYYyO7n"
+          REMOTE_PATH="gdrive,root_folder_id=$DRIVE_FOLDER_ID:"
+          LOCAL_PATH="ExpositorMain"
 
-      - name: Commit synced files
-        if: ${{ inputs.dry_run == 'false' }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$DESTINATION_DIR"
-          if git diff --cached --quiet; then
-            echo "No Drive changes to commit."
-          else
-            git commit -m "Sync Google Drive folder"
-            git push
-          fi
+          # Run the sync command. --verbose shows transferred files.
+          rclone sync "$REMOTE_PATH" "$LOCAL_PATH" --verbose $DRY_RUN_FLAG
+
+      - name: Commit and push changes
+        if: ${{ !github.event.inputs.dry_run }}
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Sync ExpositorMain from Google Drive"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"

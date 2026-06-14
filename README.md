@@ -20,8 +20,7 @@ Run commands from the repository root.
 
 ```text
 python -m pip install -r requirements.txt
-python scripts/ingestion/01_pdf_discovery.py
-python scripts/run_pipeline.py --skip-tags pre-flight,ocr
+python scripts/run_pipeline.py --run-tags ingestion,structuring,audit,canonical,indexing
 ```
 
 Optional setup checks:

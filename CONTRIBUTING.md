@@ -30,15 +30,7 @@ workflow, see [PROCESS.md](PROCESS.md).
 4. Run the ingestion and structuring pipeline from the repository root:
 
 ```text
-python scripts/ingestion/00_rename_source_pdfs.py
-python scripts/ingestion/00_rename_source_pdfs.py --apply
-python scripts/ingestion/00_validate_source_pdf_sync.py --drive-root-folder-id GOOGLE_DRIVE_FOLDER_ID
-python scripts/ingestion/01_pdf_discovery.py
-python scripts/ingestion/02_pdf_to_raw_text.py
-python scripts/structuring/03_minimal_text_normalizer.py
-python scripts/structuring/04_document_structure_detector.py
-python scripts/structuring/05_lesson_segmenter.py
-python scripts/structuring/06_section_extractor.py
+python scripts/run_pipeline.py --run-tags ingestion,structuring
 ```
 
 Use `--rclone-config path/to/rclone.conf` with
@@ -124,4 +116,3 @@ For canonical YAML changes, include:
 - reviewer identity or review marker
 - validator output
 - index generation status, when indexes are expected
-

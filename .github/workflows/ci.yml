@@ -37,13 +37,24 @@ jobs:
           # exit-zero treats all errors as warnings.
           flake8 . --count --exit-zero --max-complexity=10 --statistics
 
+      - name: Check for misplaced test files
+        run: |
+          # Fails the build if any test files are found in the 'scripts' directory.
+          if find scripts -type f -name "test_*.py" | grep -q .; then
+            echo "::error::Misplaced test files found in the 'scripts/' directory."
+            echo "The following test files should be moved to the 'tests/' directory:"
+            find scripts -type f -name "test_*.py"
+            echo "Please run './scripts/maintenance/fix_test_locations.sh' locally and commit the changes."
+            exit 1
+          fi
+
       - name: Run tests
         run: |
           coverage run -m unittest discover -s tests
 
       - name: Generate coverage report
         run: |
-          coverage report -m --fail-under=70
+          coverage report -m --fail-under=80
           coverage html
 
       - name: Generate draft YAML files

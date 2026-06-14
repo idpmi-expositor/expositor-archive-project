@@ -7,6 +7,10 @@ Automated extraction can prefill draft fields, but an automated draft is still
 not reviewed. Check [human-revision-levels.md](human-revision-levels.md) before
 promotion.
 
+When reviewing an entire publication, follow the bulk promotion workflow
+documented in `PROCESS.md`. This checklist applies to each individual lesson
+within that workflow.
+
 ## Reviewer Requirements
 
 A reviewer must have access to the source PDF and the generated pipeline
